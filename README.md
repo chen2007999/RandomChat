@@ -1,3 +1,3 @@
-# WebSocketApp
+# Dunno
 
-An anonymous photo sharing mobile app inspired by Rando.
+Dunno is an anonymous photo sharing mobile app inspired by Rando.
