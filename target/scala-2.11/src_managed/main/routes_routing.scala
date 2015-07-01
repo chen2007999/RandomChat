@@ -1,6 +1,6 @@
 // @SOURCE:/Users/apple/Desktop/RandChat/conf/routes
-// @HASH:e548248260359d5235e1e7a77e832aa55ea083d4
-// @DATE:Wed Jul 01 15:28:34 CST 2015
+// @HASH:15a9ad0b38f65300de95044cf1207fa875d0e04c
+// @DATE:Wed Jul 01 15:47:39 CST 2015
 
 
 import scala.language.reflectiveCalls
@@ -69,26 +69,26 @@ HandlerDef(this.getClass.getClassLoader, "", "controllers.Application", "landing
         
 
 // @LINE:23
-private[this] lazy val controllers_Application_createUser5_route = Route("POST", PathPattern(List(StaticPart(Routes.prefix),StaticPart(Routes.defaultPrefix),StaticPart("createUser"))))
-private[this] lazy val controllers_Application_createUser5_invoker = createInvoker(
-controllers.Application.createUser(),
-HandlerDef(this.getClass.getClassLoader, "", "controllers.Application", "createUser", Nil,"POST", """ Add a new client to database""", Routes.prefix + """createUser"""))
+private[this] lazy val controllers_Application_createClient5_route = Route("POST", PathPattern(List(StaticPart(Routes.prefix),StaticPart(Routes.defaultPrefix),StaticPart("createClient"))))
+private[this] lazy val controllers_Application_createClient5_invoker = createInvoker(
+controllers.Application.createClient(),
+HandlerDef(this.getClass.getClassLoader, "", "controllers.Application", "createClient", Nil,"POST", """ Add a new client to database""", Routes.prefix + """createClient"""))
         
 
 // @LINE:26
-private[this] lazy val controllers_Application_deleteUserFromDB6_route = Route("POST", PathPattern(List(StaticPart(Routes.prefix),StaticPart(Routes.defaultPrefix),StaticPart("deleteUser/"),DynamicPart("email", """[^/]+""",true),StaticPart("/delete"))))
-private[this] lazy val controllers_Application_deleteUserFromDB6_invoker = createInvoker(
-controllers.Application.deleteUserFromDB(fakeValue[String]),
-HandlerDef(this.getClass.getClassLoader, "", "controllers.Application", "deleteUserFromDB", Seq(classOf[String]),"POST", """ Delete a registered client from database""", Routes.prefix + """deleteUser/$email<[^/]+>/delete"""))
+private[this] lazy val controllers_Application_deleteClientFromDB6_route = Route("POST", PathPattern(List(StaticPart(Routes.prefix),StaticPart(Routes.defaultPrefix),StaticPart("deleteClient/"),DynamicPart("email", """[^/]+""",true),StaticPart("/delete"))))
+private[this] lazy val controllers_Application_deleteClientFromDB6_invoker = createInvoker(
+controllers.Application.deleteClientFromDB(fakeValue[String]),
+HandlerDef(this.getClass.getClassLoader, "", "controllers.Application", "deleteClientFromDB", Seq(classOf[String]),"POST", """ Delete a registered client from database""", Routes.prefix + """deleteClient/$email<[^/]+>/delete"""))
         
 
 // @LINE:29
-private[this] lazy val controllers_Application_displayAllUsersFromDB7_route = Route("GET", PathPattern(List(StaticPart(Routes.prefix),StaticPart(Routes.defaultPrefix),StaticPart("clients"))))
-private[this] lazy val controllers_Application_displayAllUsersFromDB7_invoker = createInvoker(
-controllers.Application.displayAllUsersFromDB(),
-HandlerDef(this.getClass.getClassLoader, "", "controllers.Application", "displayAllUsersFromDB", Nil,"GET", """ Display all clients in the database""", Routes.prefix + """clients"""))
+private[this] lazy val controllers_Application_displayAllClientsFromDB7_route = Route("GET", PathPattern(List(StaticPart(Routes.prefix),StaticPart(Routes.defaultPrefix),StaticPart("clients"))))
+private[this] lazy val controllers_Application_displayAllClientsFromDB7_invoker = createInvoker(
+controllers.Application.displayAllClientsFromDB(),
+HandlerDef(this.getClass.getClassLoader, "", "controllers.Application", "displayAllClientsFromDB", Nil,"GET", """ Display all clients in the database""", Routes.prefix + """clients"""))
         
-def documentation = List(("""GET""", prefix,"""controllers.Application.index()"""),("""GET""", prefix + (if(prefix.endsWith("/")) "" else "/") + """assets/$file<.+>""","""controllers.Assets.at(path:String = "/public", file:String)"""),("""POST""", prefix + (if(prefix.endsWith("/")) "" else "/") + """logIn""","""controllers.Application.logIn()"""),("""GET""", prefix + (if(prefix.endsWith("/")) "" else "/") + """register""","""controllers.Application.register(error:String ?= "")"""),("""GET""", prefix + (if(prefix.endsWith("/")) "" else "/") + """landing""","""controllers.Application.landing()"""),("""POST""", prefix + (if(prefix.endsWith("/")) "" else "/") + """createUser""","""controllers.Application.createUser()"""),("""POST""", prefix + (if(prefix.endsWith("/")) "" else "/") + """deleteUser/$email<[^/]+>/delete""","""controllers.Application.deleteUserFromDB(email:String)"""),("""GET""", prefix + (if(prefix.endsWith("/")) "" else "/") + """clients""","""controllers.Application.displayAllUsersFromDB()""")).foldLeft(List.empty[(String,String,String)]) { (s,e) => e.asInstanceOf[Any] match {
+def documentation = List(("""GET""", prefix,"""controllers.Application.index()"""),("""GET""", prefix + (if(prefix.endsWith("/")) "" else "/") + """assets/$file<.+>""","""controllers.Assets.at(path:String = "/public", file:String)"""),("""POST""", prefix + (if(prefix.endsWith("/")) "" else "/") + """logIn""","""controllers.Application.logIn()"""),("""GET""", prefix + (if(prefix.endsWith("/")) "" else "/") + """register""","""controllers.Application.register(error:String ?= "")"""),("""GET""", prefix + (if(prefix.endsWith("/")) "" else "/") + """landing""","""controllers.Application.landing()"""),("""POST""", prefix + (if(prefix.endsWith("/")) "" else "/") + """createClient""","""controllers.Application.createClient()"""),("""POST""", prefix + (if(prefix.endsWith("/")) "" else "/") + """deleteClient/$email<[^/]+>/delete""","""controllers.Application.deleteClientFromDB(email:String)"""),("""GET""", prefix + (if(prefix.endsWith("/")) "" else "/") + """clients""","""controllers.Application.displayAllClientsFromDB()""")).foldLeft(List.empty[(String,String,String)]) { (s,e) => e.asInstanceOf[Any] match {
   case r @ (_,_,_) => s :+ r.asInstanceOf[(String,String,String)]
   case l => s ++ l.asInstanceOf[List[(String,String,String)]]
 }}
@@ -137,25 +137,25 @@ case controllers_Application_landing4_route(params) => {
         
 
 // @LINE:23
-case controllers_Application_createUser5_route(params) => {
+case controllers_Application_createClient5_route(params) => {
    call { 
-        controllers_Application_createUser5_invoker.call(controllers.Application.createUser())
+        controllers_Application_createClient5_invoker.call(controllers.Application.createClient())
    }
 }
         
 
 // @LINE:26
-case controllers_Application_deleteUserFromDB6_route(params) => {
+case controllers_Application_deleteClientFromDB6_route(params) => {
    call(params.fromPath[String]("email", None)) { (email) =>
-        controllers_Application_deleteUserFromDB6_invoker.call(controllers.Application.deleteUserFromDB(email))
+        controllers_Application_deleteClientFromDB6_invoker.call(controllers.Application.deleteClientFromDB(email))
    }
 }
         
 
 // @LINE:29
-case controllers_Application_displayAllUsersFromDB7_route(params) => {
+case controllers_Application_displayAllClientsFromDB7_route(params) => {
    call { 
-        controllers_Application_displayAllUsersFromDB7_invoker.call(controllers.Application.displayAllUsersFromDB())
+        controllers_Application_displayAllClientsFromDB7_invoker.call(controllers.Application.displayAllClientsFromDB())
    }
 }
         

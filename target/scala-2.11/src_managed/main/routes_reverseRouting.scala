@@ -1,6 +1,6 @@
 // @SOURCE:/Users/apple/Desktop/RandChat/conf/routes
-// @HASH:e548248260359d5235e1e7a77e832aa55ea083d4
-// @DATE:Wed Jul 01 15:28:34 CST 2015
+// @HASH:15a9ad0b38f65300de95044cf1207fa875d0e04c
+// @DATE:Wed Jul 01 15:47:39 CST 2015
 
 import Routes.{prefix => _prefix, defaultPrefix => _defaultPrefix}
 import play.core._
@@ -49,10 +49,24 @@ def at(file:String): Call = {
 class ReverseApplication {
 
 
+// @LINE:23
+def createClient(): Call = {
+   import ReverseRouteContext.empty
+   Call("POST", _prefix + { _defaultPrefix } + "createClient")
+}
+                        
+
 // @LINE:12
 def logIn(): Call = {
    import ReverseRouteContext.empty
    Call("POST", _prefix + { _defaultPrefix } + "logIn")
+}
+                        
+
+// @LINE:26
+def deleteClientFromDB(email:String): Call = {
+   import ReverseRouteContext.empty
+   Call("POST", _prefix + { _defaultPrefix } + "deleteClient/" + implicitly[PathBindable[String]].unbind("email", dynamicString(email)) + "/delete")
 }
                         
 
@@ -63,13 +77,6 @@ def landing(): Call = {
 }
                         
 
-// @LINE:23
-def createUser(): Call = {
-   import ReverseRouteContext.empty
-   Call("POST", _prefix + { _defaultPrefix } + "createUser")
-}
-                        
-
 // @LINE:15
 def register(error:String = ""): Call = {
    import ReverseRouteContext.empty
@@ -77,15 +84,8 @@ def register(error:String = ""): Call = {
 }
                         
 
-// @LINE:26
-def deleteUserFromDB(email:String): Call = {
-   import ReverseRouteContext.empty
-   Call("POST", _prefix + { _defaultPrefix } + "deleteUser/" + implicitly[PathBindable[String]].unbind("email", dynamicString(email)) + "/delete")
-}
-                        
-
 // @LINE:29
-def displayAllUsersFromDB(): Call = {
+def displayAllClientsFromDB(): Call = {
    import ReverseRouteContext.empty
    Call("GET", _prefix + { _defaultPrefix } + "clients")
 }
@@ -143,12 +143,34 @@ def at : JavascriptReverseRoute = JavascriptReverseRoute(
 class ReverseApplication {
 
 
+// @LINE:23
+def createClient : JavascriptReverseRoute = JavascriptReverseRoute(
+   "controllers.Application.createClient",
+   """
+      function() {
+      return _wA({method:"POST", url:"""" + _prefix + { _defaultPrefix } + """" + "createClient"})
+      }
+   """
+)
+                        
+
 // @LINE:12
 def logIn : JavascriptReverseRoute = JavascriptReverseRoute(
    "controllers.Application.logIn",
    """
       function() {
       return _wA({method:"POST", url:"""" + _prefix + { _defaultPrefix } + """" + "logIn"})
+      }
+   """
+)
+                        
+
+// @LINE:26
+def deleteClientFromDB : JavascriptReverseRoute = JavascriptReverseRoute(
+   "controllers.Application.deleteClientFromDB",
+   """
+      function(email) {
+      return _wA({method:"POST", url:"""" + _prefix + { _defaultPrefix } + """" + "deleteClient/" + (""" + implicitly[PathBindable[String]].javascriptUnbind + """)("email", encodeURIComponent(email)) + "/delete"})
       }
    """
 )
@@ -165,17 +187,6 @@ def landing : JavascriptReverseRoute = JavascriptReverseRoute(
 )
                         
 
-// @LINE:23
-def createUser : JavascriptReverseRoute = JavascriptReverseRoute(
-   "controllers.Application.createUser",
-   """
-      function() {
-      return _wA({method:"POST", url:"""" + _prefix + { _defaultPrefix } + """" + "createUser"})
-      }
-   """
-)
-                        
-
 // @LINE:15
 def register : JavascriptReverseRoute = JavascriptReverseRoute(
    "controllers.Application.register",
@@ -187,20 +198,9 @@ def register : JavascriptReverseRoute = JavascriptReverseRoute(
 )
                         
 
-// @LINE:26
-def deleteUserFromDB : JavascriptReverseRoute = JavascriptReverseRoute(
-   "controllers.Application.deleteUserFromDB",
-   """
-      function(email) {
-      return _wA({method:"POST", url:"""" + _prefix + { _defaultPrefix } + """" + "deleteUser/" + (""" + implicitly[PathBindable[String]].javascriptUnbind + """)("email", encodeURIComponent(email)) + "/delete"})
-      }
-   """
-)
-                        
-
 // @LINE:29
-def displayAllUsersFromDB : JavascriptReverseRoute = JavascriptReverseRoute(
-   "controllers.Application.displayAllUsersFromDB",
+def displayAllClientsFromDB : JavascriptReverseRoute = JavascriptReverseRoute(
+   "controllers.Application.displayAllClientsFromDB",
    """
       function() {
       return _wA({method:"GET", url:"""" + _prefix + { _defaultPrefix } + """" + "clients"})
@@ -260,9 +260,21 @@ def at(path:String, file:String): play.api.mvc.HandlerRef[_] = new play.api.mvc.
 class ReverseApplication {
 
 
+// @LINE:23
+def createClient(): play.api.mvc.HandlerRef[_] = new play.api.mvc.HandlerRef(
+   controllers.Application.createClient(), HandlerDef(this.getClass.getClassLoader, "", "controllers.Application", "createClient", Seq(), "POST", """ Add a new client to database""", _prefix + """createClient""")
+)
+                      
+
 // @LINE:12
 def logIn(): play.api.mvc.HandlerRef[_] = new play.api.mvc.HandlerRef(
    controllers.Application.logIn(), HandlerDef(this.getClass.getClassLoader, "", "controllers.Application", "logIn", Seq(), "POST", """ Check client's login information and determines success or failure""", _prefix + """logIn""")
+)
+                      
+
+// @LINE:26
+def deleteClientFromDB(email:String): play.api.mvc.HandlerRef[_] = new play.api.mvc.HandlerRef(
+   controllers.Application.deleteClientFromDB(email), HandlerDef(this.getClass.getClassLoader, "", "controllers.Application", "deleteClientFromDB", Seq(classOf[String]), "POST", """ Delete a registered client from database""", _prefix + """deleteClient/$email<[^/]+>/delete""")
 )
                       
 
@@ -272,27 +284,15 @@ def landing(): play.api.mvc.HandlerRef[_] = new play.api.mvc.HandlerRef(
 )
                       
 
-// @LINE:23
-def createUser(): play.api.mvc.HandlerRef[_] = new play.api.mvc.HandlerRef(
-   controllers.Application.createUser(), HandlerDef(this.getClass.getClassLoader, "", "controllers.Application", "createUser", Seq(), "POST", """ Add a new client to database""", _prefix + """createUser""")
-)
-                      
-
 // @LINE:15
 def register(error:String): play.api.mvc.HandlerRef[_] = new play.api.mvc.HandlerRef(
    controllers.Application.register(error), HandlerDef(this.getClass.getClassLoader, "", "controllers.Application", "register", Seq(classOf[String]), "GET", """ Take client's registration information and create a new account""", _prefix + """register""")
 )
                       
 
-// @LINE:26
-def deleteUserFromDB(email:String): play.api.mvc.HandlerRef[_] = new play.api.mvc.HandlerRef(
-   controllers.Application.deleteUserFromDB(email), HandlerDef(this.getClass.getClassLoader, "", "controllers.Application", "deleteUserFromDB", Seq(classOf[String]), "POST", """ Delete a registered client from database""", _prefix + """deleteUser/$email<[^/]+>/delete""")
-)
-                      
-
 // @LINE:29
-def displayAllUsersFromDB(): play.api.mvc.HandlerRef[_] = new play.api.mvc.HandlerRef(
-   controllers.Application.displayAllUsersFromDB(), HandlerDef(this.getClass.getClassLoader, "", "controllers.Application", "displayAllUsersFromDB", Seq(), "GET", """ Display all clients in the database""", _prefix + """clients""")
+def displayAllClientsFromDB(): play.api.mvc.HandlerRef[_] = new play.api.mvc.HandlerRef(
+   controllers.Application.displayAllClientsFromDB(), HandlerDef(this.getClass.getClassLoader, "", "controllers.Application", "displayAllClientsFromDB", Seq(), "GET", """ Display all clients in the database""", _prefix + """clients""")
 )
                       
 

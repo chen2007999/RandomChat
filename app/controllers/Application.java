@@ -19,43 +19,43 @@ public class Application extends Controller {
         return ok(landing.render());
     }
 
-    // get the information that the user just typed
-    public static Client getUser() {
-        play.data.Form<Client> userForm = play.data.Form.form(Client.class);
-        return userForm.bindFromRequest().get();
+    // get the information that the client just typed
+    public static Client getClient() {
+        play.data.Form<Client> clientForm = play.data.Form.form(Client.class);
+        return clientForm.bindFromRequest().get();
     }
 
-    // methods deal with user account
-    public static  Result createUser() {
+    // methods deal with client account
+    public static  Result createClient() {
 
-        Client client = getUser();
+        Client client = getClient();
         if(Client.checkNull(client) || Client.checkEmpty(client)){
             return redirect(routes.Application.register("Empty details"));
         } else if(!client.emailFormat()){
             return redirect(routes.Application.register("Wrong email format"));
         } else if(!Client.checkPasswordConsistency(client)){
             return redirect(routes.Application.register("Passwords do not match"));
-        } else if(Client.userEmailExists(client)){
+        } else if(Client.clientEmailExists(client)){
             return redirect(routes.Application.register("Client with email " + client.email + " already exists"));
         }
-        Client.createUser(client);
+        Client.createClient(client);
         currentClient = client;
         return ok(mainPage.render());
     }
 
-    public static  Result deleteUserFromDB(String email) {
-        Client.deleteUser(email);
-        return redirect(routes.Application.displayAllUsersFromDB());
+    public static  Result deleteClientFromDB(String email) {
+        Client.deleteClient(email);
+        return redirect(routes.Application.displayAllClientsFromDB());
     }
 
-    public static  Result displayAllUsersFromDB() {
+    public static  Result displayAllClientsFromDB() {
         return ok(registration.render(Client.find.findList(), ""));
     }
 
     public static Result logIn() {
-        Client client = getUser();
+        Client client = getClient();
         if(Client.validate(client)) {
-            currentClient = Client.findUser(client);
+            currentClient = Client.findClient(client);
             return ok(mainPage.render());
         }
         return ok(landing.render());

@@ -645,3 +645,9 @@ database [default] connected at jdbc:h2:mem:play
 2015-07-01 15:36:00,141 - [INFO] - from play in play-internal-execution-context-1 
 Application started (Dev)
 
+2015-07-01 15:47:51,090 - [INFO] - from play in play-internal-execution-context-1 
+database [default] connected at jdbc:h2:mem:play
+
+2015-07-01 15:48:04,975 - [INFO] - from play in play-internal-execution-context-1 
+Application started (Dev)
+

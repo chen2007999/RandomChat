@@ -74,7 +74,7 @@ public class Client extends Model{
                 || client.getName() == null || client.getPassword2()== null;
     }
 
-    public static boolean checkUserEmail(Client client) {
+    public static boolean checkClientEmail(Client client) {
         return !client.getEmail().equals("") && client.getEmail() != null;
     }
     
@@ -94,12 +94,12 @@ public class Client extends Model{
         return client.getPassword().equals(client.getPassword2());
     }
 
-    public static void createUser(Client client) {
+    public static void createClient(Client client) {
         client.setImage("http://tmdup.com/assets/images/default.jpg");
         client.save();
     }
 
-    public static void deleteUser(String login) {
+    public static void deleteClient(String login) {
         find.ref(login).delete();
     }
 
@@ -116,18 +116,18 @@ public class Client extends Model{
         return false;
     }
 
-    public static boolean userEmailExists(Client client) {
+    public static boolean clientEmailExists(Client client) {
         return find.byId(client.getEmail()) != null;
     }
 
 
 
     
-    public static Client findUser(Client client) {
+    public static Client findClient(Client client) {
         return find.byId(client.getEmail());
     }
     
-    public static Client findUserByEmail(String email) {
+    public static Client findClientByEmail(String email) {
         return find.byId(email);
     }
     

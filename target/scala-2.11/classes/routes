@@ -20,10 +20,10 @@ GET    /landing                           controllers.Application.landing()
 #GET    /mainPage                          controllers.Application.mainPage()
 
 # Add a new client to database
-POST   /createUser                        controllers.Application.createUser()
+POST   /createClient                        controllers.Application.createClient()
 
 # Delete a registered client from database
-POST   /deleteUser/:email/delete          controllers.Application.deleteUserFromDB(email:String)
+POST   /deleteClient/:email/delete          controllers.Application.deleteClientFromDB(email:String)
 
 # Display all clients in the database
-GET    /clients                           controllers.Application.displayAllUsersFromDB()
+GET    /clients                           controllers.Application.displayAllClientsFromDB()
