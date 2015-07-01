@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+@import helper.twitterBootstrap._
+@main("RandChat") {
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="@routes.Assets.at("stylesheets/style.css")" type="text/css">
+        <link href='http://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700' rel='stylesheet' type='text/css'>
+        <link rel="stylesheet" type="text/css" href="@routes.Assets.at("stylesheets/bootmetro.css")">
+        <link rel="stylesheet" type="text/css" href="@routes.Assets.at("stylesheets/bootmetro-responsive.css")">
+        <link rel="stylesheet" type="text/css" href="@routes.Assets.at("stylesheets/bootmetro-icons.css")">
+        <link rel="stylesheet" type="text/css" href="@routes.Assets.at("stylesheets/bootmetro-ui-light.css")">
+        <link rel="stylesheet" type="text/css" href="@routes.Assets.at("stylesheets/datepicker.css")">
+        <script src="@routes.Assets.at("javascripts/bootstrap/jquery.js")"></script>
+        <script src="@routes.Assets.at("javascripts/bootstrap/bootstrap.js")"></script>
+        <script src="@routes.Assets.at("javascripts/bootstrap/bootstrap.min.js")"></script>
+        
+        <style>
+            body, html {
+            height: 100%;
+            }
+            .mouse-bg {
+            left: 0;
+            right: 0;
+            bottom: 0;
+            top: 0;
+            position: fixed;
+            }
+            #background {
+            background-image: url('http://tmdup.com/assets/images/new.jpg');
+            }
+        </style>
+
+    
+<body class="body-landing">
+    <div id="background" class="mouse-bg"></div>
+    <script src="@routes.Assets.at("javascripts/parallax/mouse.parallax.js")"></script>
+    <script>
+    $(document).ready(function() {
+    				$('#background').mouseParallax({ moveFactor: 5 });
+    			});
+    </script>
+    <div class="container">
+        <h1 align="center">Welcome to RandChat</h1>
+        
+        <div class="row-fluid" id="login-div"> 
+            <div class="well span4 offset4"  style="background: rgba(234, 239, 244, .5);" align="center">
+            @helper.form(routes.Application.logIn()) {
+               <input class="stretch" name="email" placeholder="Email Address"> <br>
+               <input class="stretch" type="password" name="password" placeholder="Password">  <br>
+               <button class="btstretch" type="submit">Log in</button>
+            }
+            @helper.form(routes.Application.register("")) {
+               <button class="btstretch" type="submit">Register</button>
+            }
+            </div>
+        </div>
+    </div>
+</body>
+}
+</html>

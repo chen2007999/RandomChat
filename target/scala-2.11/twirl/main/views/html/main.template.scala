@@ -30,12 +30,12 @@ Seq[Any](format.raw/*1.32*/("""
 
 """),format.raw/*3.1*/("""<!DOCTYPE html>
 
-<html lang="en">
+<html>
     <head>
         <title>"""),_display_(/*7.17*/title),format.raw/*7.22*/("""</title>
-        <link rel="stylesheet" media="screen" href=""""),_display_(/*8.54*/routes/*8.60*/.Assets.versioned("stylesheets/main.css")),format.raw/*8.101*/("""">
-        <link rel="shortcut icon" type="image/png" href=""""),_display_(/*9.59*/routes/*9.65*/.Assets.versioned("images/favicon.png")),format.raw/*9.104*/("""">
-        <script src=""""),_display_(/*10.23*/routes/*10.29*/.Assets.versioned("javascripts/hello.js")),format.raw/*10.70*/("""" type="text/javascript"></script>
+        <link rel="stylesheet" media="screen" href=""""),_display_(/*8.54*/routes/*8.60*/.Assets.at("stylesheets/main.css")),format.raw/*8.94*/("""">
+        <link rel="shortcut icon" type="image/png" href=""""),_display_(/*9.59*/routes/*9.65*/.Assets.at("images/favicon.png")),format.raw/*9.97*/("""">
+        <script src=""""),_display_(/*10.23*/routes/*10.29*/.Assets.at("javascripts/hello.js")),format.raw/*10.63*/("""" type="text/javascript"></script>
     </head>
     <body>
         """),_display_(/*13.10*/content),format.raw/*13.17*/("""
@@ -53,10 +53,10 @@ Seq[Any](format.raw/*1.32*/("""
 }
               /*
                   -- GENERATED --
-                  DATE: Tue Jun 30 20:15:16 CST 2015
+                  DATE: Wed Jul 01 15:22:35 CST 2015
                   SOURCE: /Users/apple/Desktop/RandChat/app/views/main.scala.html
-                  HASH: 09fc7e8c4701f9a0b77807bec408b8b86fb7cff1
-                  MATRIX: 727->1|845->31|873->33|960->94|985->99|1073->161|1087->167|1149->208|1236->269|1250->275|1310->314|1362->339|1377->345|1439->386|1533->453|1561->460|1593->465
+                  HASH: 2161330b6434d5bb9afcd5e16006e0def9590b71
+                  MATRIX: 727->1|845->31|873->33|950->84|975->89|1063->151|1077->157|1131->191|1218->252|1232->258|1284->290|1336->315|1351->321|1406->355|1500->422|1528->429|1560->434
                   LINES: 26->1|29->1|31->3|35->7|35->7|36->8|36->8|36->8|37->9|37->9|37->9|38->10|38->10|38->10|41->13|41->13|42->14
                   -- GENERATED --
               */

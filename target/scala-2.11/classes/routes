@@ -6,4 +6,24 @@
 GET      /                           controllers.Application.index()
 
 # Map static resources from the /public folder to the /assets URL path
-GET     /assets/*file               controllers.Assets.versioned(path="/public", file: Asset)
+GET     /assets/*file               controllers.Assets.at(path="/public", file)
+
+# Check client's login information and determines success or failure
+POST   /logIn                             controllers.Application.logIn()
+
+# Take client's registration information and create a new account
+GET    /register                          controllers.Application.register(error:String?="")
+
+
+# Diaplay the landing page
+GET    /landing                           controllers.Application.landing()
+#GET    /mainPage                          controllers.Application.mainPage()
+
+# Add a new client to database
+POST   /createUser                        controllers.Application.createUser()
+
+# Delete a registered client from database
+POST   /deleteUser/:email/delete          controllers.Application.deleteUserFromDB(email:String)
+
+# Display all clients in the database
+GET    /clients                           controllers.Application.displayAllUsersFromDB()

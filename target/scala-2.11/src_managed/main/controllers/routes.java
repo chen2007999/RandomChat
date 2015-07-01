@@ -1,6 +1,6 @@
 // @SOURCE:/Users/apple/Desktop/RandChat/conf/routes
-// @HASH:0904639dda5f2e89dca6b9d217980a9a232e8313
-// @DATE:Tue Jun 30 20:19:00 CST 2015
+// @HASH:e548248260359d5235e1e7a77e832aa55ea083d4
+// @DATE:Wed Jul 01 15:28:34 CST 2015
 
 package controllers;
 

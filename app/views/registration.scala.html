@@ -1,0 +1,151 @@
+@(clients: java.util.List[models.Client], error: String)
+<!DOCTYPE html>
+
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="@routes.Assets.at("stylesheets/style.css")" type="text/css">
+        <link href='http://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700' rel='stylesheet' type='text/css'>
+        <link rel="stylesheet" type="text/css" href="@routes.Assets.at("stylesheets/bootmetro.css")">
+        <link rel="stylesheet" type="text/css" href="@routes.Assets.at("stylesheets/bootmetro-responsive.css")">
+        <link rel="stylesheet" type="text/css" href="@routes.Assets.at("stylesheets/bootmetro-icons.css")">
+        <link rel="stylesheet" type="text/css" href="@routes.Assets.at("stylesheets/bootmetro-ui-light.css")">
+        <link rel="stylesheet" type="text/css" href="@routes.Assets.at("formvalidation/formValidation.css")">
+        <script src="@routes.Assets.at("javascripts/bootstrap/jquery.js")"></script>
+        <script src="@routes.Assets.at("javascripts/bootstrap/bootstrap.js")"></script>
+        <script src="@routes.Assets.at("javascripts/bootstrap/bootstrap.min.js")"></script>
+        <script src="@routes.Assets.at("formvalidation/formValidation.js")"></script>
+        <script src="@routes.Assets.at("formvalidation/bootstrap.js")"></script>
+
+        <style>
+            body, html {
+            height: 100%;
+            }
+            .mouse-bg {
+            left: 0;
+            right: 0;
+            bottom: 0;
+            top: 0;
+            position: fixed;
+            }
+            #background {
+            background-image: url('http://tmdup.com/assets/images/new.jpg');
+            }
+        </style>
+            @if(error.length() >0){
+         <div class="alert">
+          <button type="button" class="close" data-dismiss="alert"><a data-dismiss="alert" href="#"></a></button>
+          <strong>Warning!</strong> There must have been an error in your entered details. Please try again. @error
+        </div>
+        <script>
+            $(".alert").alert()     
+        </script>
+        }
+       </div>
+       
+    </head>
+
+<body class="body-landing">
+
+    <div id="background" class="mouse-bg"></div>
+        <script src="@routes.Assets.at("javascripts/parallax/mouse.parallax.js")"></script>
+    <script>
+    $(document).ready(function() {
+    				$('#background').mouseParallax({ moveFactor: 5 });
+    			});
+    </script>
+    <div class="container">
+
+        <h1 align="center">Create a new account</h1>
+        <div class="row-fluid" id="login-div">
+        
+            <div class="well span4 offset4" style="background: rgba(234, 239, 244, .5);" align="center">
+                   <form id="defaultForm" action="/createUser" method="POST" _lpchecked="1">
+                    <div class="form-group">
+                        <label class="col-sm-3 control-label">Name</label>
+                        <div class="col-sm-4">
+                        <input style="margin-bottom: 0px;" type="text" class="form-control" name="name" placeholder="Name">
+                        </div>
+                    </div>
+                        <div class="form-group">
+                            <label class="col-sm-3 control-label">Email address</label>
+                            <div class="col-sm-5">
+                                <input style="margin-bottom: 0px;" type="text" class="form-control" name="email" placeholder="Email address">
+                            </div>
+                       </div>
+                    <div class="form-group">
+                        <label class="col-sm-3 control-label">Password</label>
+                        <div class="col-sm-5">
+                            <input style="margin-bottom: 0px;" type="password" class="form-control" name="password">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="col-sm-3 control-label">Confirm password</label>
+                        <div class="col-sm-3">
+                            <input style="margin-bottom: 0px;" type="password" class="form-control" name="password2">
+                        </div>
+                    </div>
+                       <button type="submit">Create</button>
+                   </form>
+                   @helper.form(routes.Application.landing()) {
+                       <button type="submit">Go back</button>
+                   }
+               </div>
+           </div>
+    </div>
+ 
+    <!-- Authentication scripts -->
+    <script type="text/javascript">
+    $(document).ready(function() {
+        $('#defaultForm').formValidation({
+            message: 'This value is not valid',
+            icon: {
+                valid: 'glyphicon glyphicon-ok',
+                invalid: 'glyphicon glyphicon-remove',
+                validating: 'glyphicon glyphicon-refresh'
+            },
+            fields: {
+                name: {
+                    row: '.col-sm-4',
+                    validators: {
+                        notEmpty: {
+                            message: 'Name is required'
+                        }
+                    }
+                },
+                email: {
+                    validators: {
+                        notEmpty: {
+                            message: 'The email address is required'
+                        },
+                        emailAddress: {
+                            message: 'The input is not a valid email address'
+                        }
+                    }
+                },
+                password: {
+                    validators: {
+                        notEmpty: {
+                            message: 'The password is required'
+                        },
+                        different: {
+                            field: 'username',
+                            message: 'The password cannot be the same as username'
+                        }
+                    }
+                },
+                password2: {
+                    validators: {
+                        identical:{
+                            field: 'password',
+                            message: 'Passwords do not match up'
+                        }
+                    }
+                }
+            }
+        });
+    });
+    </script>
+</body>
+
+
+</html>
