@@ -38,8 +38,8 @@ Seq[Any](format.raw/*1.1*/(""""main page to be done""""))}
 }
               /*
                   -- GENERATED --
-                  DATE: Wed Jul 01 15:17:56 CST 2015
-                  SOURCE: /Users/apple/Desktop/RandChat/app/views/mainPage.scala.html
+                  DATE: Tue Jul 07 06:33:53 BST 2015
+                  SOURCE: /Users/jiaqichen/Desktop/RandChat/app/views/mainPage.scala.html
                   HASH: 4ae1166193fb396a5ed642837a69cb9696fb72cc
                   MATRIX: 801->0
                   LINES: 29->1

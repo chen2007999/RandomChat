@@ -43,8 +43,8 @@ Seq[Any](_display_(/*3.2*/main("RandChat")/*3.18*/ {_display_(Seq[Any](format.ra
 }
               /*
                   -- GENERATED --
-                  DATE: Tue Jun 30 20:19:52 CST 2015
-                  SOURCE: /Users/apple/Desktop/RandChat/app/views/index.scala.html
+                  DATE: Tue Jul 07 06:33:53 BST 2015
+                  SOURCE: /Users/jiaqichen/Desktop/RandChat/app/views/index.scala.html
                   HASH: c8f03f7f94a43bc6a03076b323d266580ae598d8
                   MATRIX: 798->3|822->19|861->21|892->26|943->48
                   LINES: 29->3|29->3|29->3|31->5|33->7
