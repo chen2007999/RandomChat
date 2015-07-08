@@ -65,6 +65,16 @@ public class Application extends Controller {
         return ok(registration.render(Client.find.findList(), error));
     }
 
+    // Websocket interface
+    public static WebSocket<String> wsInterface(){
+        return new WebSocket<String>(){
+
+            // called when websocket handshake is done
+            public void onReady(WebSocket.In<String> in, WebSocket.Out<String> out){
+              //  RandChat.start(in, out);
+            }
+        };
+    }
 
    /* public static WebSocket<String> socket() {
         return new WebSocket<String>() {
