@@ -1,6 +1,6 @@
 // @SOURCE:/Users/jiaqichen/Desktop/RandChat/conf/routes
-// @HASH:15a9ad0b38f65300de95044cf1207fa875d0e04c
-// @DATE:Tue Jul 07 06:33:53 BST 2015
+// @HASH:a1d336519bc941d93bde8c33969d8b624c5cf056
+// @DATE:Thu Jul 09 21:23:11 BST 2015
 
 import Routes.{prefix => _prefix, defaultPrefix => _defaultPrefix}
 import play.core._
@@ -15,6 +15,7 @@ import _root_.play.libs.F
 import Router.queryString
 
 
+// @LINE:33
 // @LINE:29
 // @LINE:26
 // @LINE:23
@@ -39,6 +40,7 @@ def at(file:String): Call = {
 }
                           
 
+// @LINE:33
 // @LINE:29
 // @LINE:26
 // @LINE:23
@@ -91,6 +93,13 @@ def displayAllClientsFromDB(): Call = {
 }
                         
 
+// @LINE:33
+def wsInterface(): Call = {
+   import ReverseRouteContext.empty
+   Call("GET", _prefix + { _defaultPrefix } + "wsInterface")
+}
+                        
+
 // @LINE:6
 def index(): Call = {
    import ReverseRouteContext.empty
@@ -104,6 +113,7 @@ def index(): Call = {
                   
 
 
+// @LINE:33
 // @LINE:29
 // @LINE:26
 // @LINE:23
@@ -133,6 +143,7 @@ def at : JavascriptReverseRoute = JavascriptReverseRoute(
 }
               
 
+// @LINE:33
 // @LINE:29
 // @LINE:26
 // @LINE:23
@@ -209,6 +220,17 @@ def displayAllClientsFromDB : JavascriptReverseRoute = JavascriptReverseRoute(
 )
                         
 
+// @LINE:33
+def wsInterface : JavascriptReverseRoute = JavascriptReverseRoute(
+   "controllers.Application.wsInterface",
+   """
+      function() {
+      return _wA({method:"GET", url:"""" + _prefix + { _defaultPrefix } + """" + "wsInterface"})
+      }
+   """
+)
+                        
+
 // @LINE:6
 def index : JavascriptReverseRoute = JavascriptReverseRoute(
    "controllers.Application.index",
@@ -226,6 +248,7 @@ def index : JavascriptReverseRoute = JavascriptReverseRoute(
         
 
 
+// @LINE:33
 // @LINE:29
 // @LINE:26
 // @LINE:23
@@ -250,6 +273,7 @@ def at(path:String, file:String): play.api.mvc.HandlerRef[_] = new play.api.mvc.
 }
                           
 
+// @LINE:33
 // @LINE:29
 // @LINE:26
 // @LINE:23
@@ -293,6 +317,12 @@ def register(error:String): play.api.mvc.HandlerRef[_] = new play.api.mvc.Handle
 // @LINE:29
 def displayAllClientsFromDB(): play.api.mvc.HandlerRef[_] = new play.api.mvc.HandlerRef(
    controllers.Application.displayAllClientsFromDB(), HandlerDef(this.getClass.getClassLoader, "", "controllers.Application", "displayAllClientsFromDB", Seq(), "GET", """ Display all clients in the database""", _prefix + """clients""")
+)
+                      
+
+// @LINE:33
+def wsInterface(): play.api.mvc.HandlerRef[_] = new play.api.mvc.HandlerRef(
+   controllers.Application.wsInterface(), HandlerDef(this.getClass.getClassLoader, "", "controllers.Application", "wsInterface", Seq(), "GET", """""", _prefix + """wsInterface""")
 )
                       
 

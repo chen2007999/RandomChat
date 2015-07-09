@@ -27,3 +27,7 @@ POST   /deleteClient/:email/delete          controllers.Application.deleteClient
 
 # Display all clients in the database
 GET    /clients                           controllers.Application.displayAllClientsFromDB()
+
+
+
+GET /wsInterface                controllers.Application.wsInterface()

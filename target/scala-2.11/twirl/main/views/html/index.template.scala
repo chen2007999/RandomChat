@@ -27,10 +27,14 @@ object index extends BaseScalaTemplate[play.twirl.api.HtmlFormat.Appendable,Form
       _display_ {
 
 Seq[Any](_display_(/*3.2*/main("RandChat")/*3.18*/ {_display_(Seq[Any](format.raw/*3.20*/("""
+"""),format.raw/*4.1*/("""<section>
+   <h1>Random Chat</h1>
 
-   """),format.raw/*5.4*/("""Welcome to RandChat
+   <input type="text" id="socket-input" />
 
-""")))}),format.raw/*7.2*/("""
+
+</section>
+""")))}),format.raw/*11.2*/("""
 """))}
   }
 
@@ -43,11 +47,11 @@ Seq[Any](_display_(/*3.2*/main("RandChat")/*3.18*/ {_display_(Seq[Any](format.ra
 }
               /*
                   -- GENERATED --
-                  DATE: Tue Jul 07 06:33:53 BST 2015
-                  SOURCE: /Users/jiaqichen/Desktop/RandChat/app/views/index.scala.html
-                  HASH: c8f03f7f94a43bc6a03076b323d266580ae598d8
-                  MATRIX: 798->3|822->19|861->21|892->26|943->48
-                  LINES: 29->3|29->3|29->3|31->5|33->7
+                  DATE: Thu Jul 09 21:22:45 BST 2015
+                  SOURCE: /Users/jiaqichen/Desktop/RandChat/app/views/randChat.scala.html
+                  HASH: 70741c4f0a47da4302909ac8b71d4bdd0da003ca
+                  MATRIX: 798->3|822->19|861->21|888->22|1010->114
+                  LINES: 29->3|29->3|29->3|30->4|37->11
                   -- GENERATED --
               */
           

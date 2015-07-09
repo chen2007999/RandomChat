@@ -29,6 +29,8 @@ public class Application extends Controller {
     public static  Result createClient() {
 
         Client client = getClient();
+        if(client.getEmail() == null) return redirect(routes.Application.register("wtffff"));
+
         if(Client.checkNull(client) || Client.checkEmpty(client)){
             return redirect(routes.Application.register("Empty details"));
         } else if(!client.emailFormat()){
@@ -40,7 +42,7 @@ public class Application extends Controller {
         }
         Client.createClient(client);
         currentClient = client;
-        return ok(mainPage.render());
+        return ok(randChat.render(""));
     }
 
     public static  Result deleteClientFromDB(String email) {
@@ -56,7 +58,7 @@ public class Application extends Controller {
         Client client = getClient();
         if(Client.validate(client)) {
             currentClient = Client.findClient(client);
-            return ok(mainPage.render());
+            return ok(randChat.render(""));
         }
         return ok(landing.render());
     }
@@ -71,10 +73,17 @@ public class Application extends Controller {
 
             // called when websocket handshake is done
             public void onReady(WebSocket.In<String> in, WebSocket.Out<String> out){
-              //  RandChat.start(in, out);
+                RandChat.start(in, out);
             }
         };
     }
+
+   /* public static Result newChatMessage() {
+
+    }*/
+
+
+
 
    /* public static WebSocket<String> socket() {
         return new WebSocket<String>() {

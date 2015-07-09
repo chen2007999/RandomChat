@@ -1,6 +1,6 @@
 // @SOURCE:/Users/jiaqichen/Desktop/RandChat/conf/routes
-// @HASH:15a9ad0b38f65300de95044cf1207fa875d0e04c
-// @DATE:Tue Jul 07 06:33:53 BST 2015
+// @HASH:a1d336519bc941d93bde8c33969d8b624c5cf056
+// @DATE:Thu Jul 09 21:23:11 BST 2015
 
 
 import scala.language.reflectiveCalls
@@ -88,7 +88,14 @@ private[this] lazy val controllers_Application_displayAllClientsFromDB7_invoker 
 controllers.Application.displayAllClientsFromDB(),
 HandlerDef(this.getClass.getClassLoader, "", "controllers.Application", "displayAllClientsFromDB", Nil,"GET", """ Display all clients in the database""", Routes.prefix + """clients"""))
         
-def documentation = List(("""GET""", prefix,"""controllers.Application.index()"""),("""GET""", prefix + (if(prefix.endsWith("/")) "" else "/") + """assets/$file<.+>""","""controllers.Assets.at(path:String = "/public", file:String)"""),("""POST""", prefix + (if(prefix.endsWith("/")) "" else "/") + """logIn""","""controllers.Application.logIn()"""),("""GET""", prefix + (if(prefix.endsWith("/")) "" else "/") + """register""","""controllers.Application.register(error:String ?= "")"""),("""GET""", prefix + (if(prefix.endsWith("/")) "" else "/") + """landing""","""controllers.Application.landing()"""),("""POST""", prefix + (if(prefix.endsWith("/")) "" else "/") + """createClient""","""controllers.Application.createClient()"""),("""POST""", prefix + (if(prefix.endsWith("/")) "" else "/") + """deleteClient/$email<[^/]+>/delete""","""controllers.Application.deleteClientFromDB(email:String)"""),("""GET""", prefix + (if(prefix.endsWith("/")) "" else "/") + """clients""","""controllers.Application.displayAllClientsFromDB()""")).foldLeft(List.empty[(String,String,String)]) { (s,e) => e.asInstanceOf[Any] match {
+
+// @LINE:33
+private[this] lazy val controllers_Application_wsInterface8_route = Route("GET", PathPattern(List(StaticPart(Routes.prefix),StaticPart(Routes.defaultPrefix),StaticPart("wsInterface"))))
+private[this] lazy val controllers_Application_wsInterface8_invoker = createInvoker(
+controllers.Application.wsInterface(),
+HandlerDef(this.getClass.getClassLoader, "", "controllers.Application", "wsInterface", Nil,"GET", """""", Routes.prefix + """wsInterface"""))
+        
+def documentation = List(("""GET""", prefix,"""controllers.Application.index()"""),("""GET""", prefix + (if(prefix.endsWith("/")) "" else "/") + """assets/$file<.+>""","""controllers.Assets.at(path:String = "/public", file:String)"""),("""POST""", prefix + (if(prefix.endsWith("/")) "" else "/") + """logIn""","""controllers.Application.logIn()"""),("""GET""", prefix + (if(prefix.endsWith("/")) "" else "/") + """register""","""controllers.Application.register(error:String ?= "")"""),("""GET""", prefix + (if(prefix.endsWith("/")) "" else "/") + """landing""","""controllers.Application.landing()"""),("""POST""", prefix + (if(prefix.endsWith("/")) "" else "/") + """createClient""","""controllers.Application.createClient()"""),("""POST""", prefix + (if(prefix.endsWith("/")) "" else "/") + """deleteClient/$email<[^/]+>/delete""","""controllers.Application.deleteClientFromDB(email:String)"""),("""GET""", prefix + (if(prefix.endsWith("/")) "" else "/") + """clients""","""controllers.Application.displayAllClientsFromDB()"""),("""GET""", prefix + (if(prefix.endsWith("/")) "" else "/") + """wsInterface""","""controllers.Application.wsInterface()""")).foldLeft(List.empty[(String,String,String)]) { (s,e) => e.asInstanceOf[Any] match {
   case r @ (_,_,_) => s :+ r.asInstanceOf[(String,String,String)]
   case l => s ++ l.asInstanceOf[List[(String,String,String)]]
 }}
@@ -156,6 +163,14 @@ case controllers_Application_deleteClientFromDB6_route(params) => {
 case controllers_Application_displayAllClientsFromDB7_route(params) => {
    call { 
         controllers_Application_displayAllClientsFromDB7_invoker.call(controllers.Application.displayAllClientsFromDB())
+   }
+}
+        
+
+// @LINE:33
+case controllers_Application_wsInterface8_route(params) => {
+   call { 
+        controllers_Application_wsInterface8_invoker.call(controllers.Application.wsInterface())
    }
 }
         
