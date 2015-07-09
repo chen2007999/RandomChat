@@ -4,7 +4,7 @@
 		module="randchat-build"
 		revision="0.1-SNAPSHOT"
 		status="integration"
-		publication="20150707080651"
+		publication="20150709195917"
 		e:sbtVersion="0.13" e:scalaVersion="2.10"
 	>
 		<description>
