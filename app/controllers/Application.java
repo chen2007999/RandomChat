@@ -42,7 +42,7 @@ public class Application extends Controller {
         }
         Client.createClient(client);
         currentClient = client;
-        return ok(randChat.render(""));
+        return ok(views.js.randChat.render());
     }
 
     public static  Result deleteClientFromDB(String email) {
@@ -58,7 +58,7 @@ public class Application extends Controller {
         Client client = getClient();
         if(Client.validate(client)) {
             currentClient = Client.findClient(client);
-            return ok(randChat.render(""));
+            return ok(views.js.randChat.render());
         }
         return ok(landing.render());
     }
@@ -76,6 +76,10 @@ public class Application extends Controller {
                 RandChat.start(in, out);
             }
         };
+    }
+
+    public static Result wsJs() {
+        return ok(views.js.randChat.render());
     }
 
    /* public static Result newChatMessage() {

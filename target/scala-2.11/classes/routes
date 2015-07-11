@@ -31,3 +31,5 @@ GET    /clients                           controllers.Application.displayAllClie
 
 
 GET /wsInterface                controllers.Application.wsInterface()
+
+GET /assets.javascript.randChat.js     controllers.Application.wsJs()

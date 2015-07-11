@@ -1,6 +1,6 @@
 // @SOURCE:/Users/jiaqichen/Desktop/RandChat/conf/routes
-// @HASH:a1d336519bc941d93bde8c33969d8b624c5cf056
-// @DATE:Thu Jul 09 21:23:11 BST 2015
+// @HASH:a17fe0b90c87ce1c4df61bfdde3d0e78aa50b288
+// @DATE:Sat Jul 11 10:49:11 BST 2015
 
 import Routes.{prefix => _prefix, defaultPrefix => _defaultPrefix}
 import play.core._
@@ -15,6 +15,7 @@ import _root_.play.libs.F
 import Router.queryString
 
 
+// @LINE:35
 // @LINE:33
 // @LINE:29
 // @LINE:26
@@ -40,6 +41,7 @@ def at(file:String): Call = {
 }
                           
 
+// @LINE:35
 // @LINE:33
 // @LINE:29
 // @LINE:26
@@ -79,6 +81,13 @@ def landing(): Call = {
 }
                         
 
+// @LINE:35
+def wsJs(): Call = {
+   import ReverseRouteContext.empty
+   Call("GET", _prefix + { _defaultPrefix } + "assets.javascript.randChat.js")
+}
+                        
+
 // @LINE:15
 def register(error:String = ""): Call = {
    import ReverseRouteContext.empty
@@ -113,6 +122,7 @@ def index(): Call = {
                   
 
 
+// @LINE:35
 // @LINE:33
 // @LINE:29
 // @LINE:26
@@ -143,6 +153,7 @@ def at : JavascriptReverseRoute = JavascriptReverseRoute(
 }
               
 
+// @LINE:35
 // @LINE:33
 // @LINE:29
 // @LINE:26
@@ -198,6 +209,17 @@ def landing : JavascriptReverseRoute = JavascriptReverseRoute(
 )
                         
 
+// @LINE:35
+def wsJs : JavascriptReverseRoute = JavascriptReverseRoute(
+   "controllers.Application.wsJs",
+   """
+      function() {
+      return _wA({method:"GET", url:"""" + _prefix + { _defaultPrefix } + """" + "assets.javascript.randChat.js"})
+      }
+   """
+)
+                        
+
 // @LINE:15
 def register : JavascriptReverseRoute = JavascriptReverseRoute(
    "controllers.Application.register",
@@ -248,6 +270,7 @@ def index : JavascriptReverseRoute = JavascriptReverseRoute(
         
 
 
+// @LINE:35
 // @LINE:33
 // @LINE:29
 // @LINE:26
@@ -273,6 +296,7 @@ def at(path:String, file:String): play.api.mvc.HandlerRef[_] = new play.api.mvc.
 }
                           
 
+// @LINE:35
 // @LINE:33
 // @LINE:29
 // @LINE:26
@@ -305,6 +329,12 @@ def deleteClientFromDB(email:String): play.api.mvc.HandlerRef[_] = new play.api.
 // @LINE:19
 def landing(): play.api.mvc.HandlerRef[_] = new play.api.mvc.HandlerRef(
    controllers.Application.landing(), HandlerDef(this.getClass.getClassLoader, "", "controllers.Application", "landing", Seq(), "GET", """ Diaplay the landing page""", _prefix + """landing""")
+)
+                      
+
+// @LINE:35
+def wsJs(): play.api.mvc.HandlerRef[_] = new play.api.mvc.HandlerRef(
+   controllers.Application.wsJs(), HandlerDef(this.getClass.getClassLoader, "", "controllers.Application", "wsJs", Seq(), "GET", """""", _prefix + """assets.javascript.randChat.js""")
 )
                       
 

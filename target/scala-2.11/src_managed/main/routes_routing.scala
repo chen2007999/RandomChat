@@ -1,6 +1,6 @@
 // @SOURCE:/Users/jiaqichen/Desktop/RandChat/conf/routes
-// @HASH:a1d336519bc941d93bde8c33969d8b624c5cf056
-// @DATE:Thu Jul 09 21:23:11 BST 2015
+// @HASH:a17fe0b90c87ce1c4df61bfdde3d0e78aa50b288
+// @DATE:Sat Jul 11 10:49:11 BST 2015
 
 
 import scala.language.reflectiveCalls
@@ -95,7 +95,14 @@ private[this] lazy val controllers_Application_wsInterface8_invoker = createInvo
 controllers.Application.wsInterface(),
 HandlerDef(this.getClass.getClassLoader, "", "controllers.Application", "wsInterface", Nil,"GET", """""", Routes.prefix + """wsInterface"""))
         
-def documentation = List(("""GET""", prefix,"""controllers.Application.index()"""),("""GET""", prefix + (if(prefix.endsWith("/")) "" else "/") + """assets/$file<.+>""","""controllers.Assets.at(path:String = "/public", file:String)"""),("""POST""", prefix + (if(prefix.endsWith("/")) "" else "/") + """logIn""","""controllers.Application.logIn()"""),("""GET""", prefix + (if(prefix.endsWith("/")) "" else "/") + """register""","""controllers.Application.register(error:String ?= "")"""),("""GET""", prefix + (if(prefix.endsWith("/")) "" else "/") + """landing""","""controllers.Application.landing()"""),("""POST""", prefix + (if(prefix.endsWith("/")) "" else "/") + """createClient""","""controllers.Application.createClient()"""),("""POST""", prefix + (if(prefix.endsWith("/")) "" else "/") + """deleteClient/$email<[^/]+>/delete""","""controllers.Application.deleteClientFromDB(email:String)"""),("""GET""", prefix + (if(prefix.endsWith("/")) "" else "/") + """clients""","""controllers.Application.displayAllClientsFromDB()"""),("""GET""", prefix + (if(prefix.endsWith("/")) "" else "/") + """wsInterface""","""controllers.Application.wsInterface()""")).foldLeft(List.empty[(String,String,String)]) { (s,e) => e.asInstanceOf[Any] match {
+
+// @LINE:35
+private[this] lazy val controllers_Application_wsJs9_route = Route("GET", PathPattern(List(StaticPart(Routes.prefix),StaticPart(Routes.defaultPrefix),StaticPart("assets.javascript.randChat.js"))))
+private[this] lazy val controllers_Application_wsJs9_invoker = createInvoker(
+controllers.Application.wsJs(),
+HandlerDef(this.getClass.getClassLoader, "", "controllers.Application", "wsJs", Nil,"GET", """""", Routes.prefix + """assets.javascript.randChat.js"""))
+        
+def documentation = List(("""GET""", prefix,"""controllers.Application.index()"""),("""GET""", prefix + (if(prefix.endsWith("/")) "" else "/") + """assets/$file<.+>""","""controllers.Assets.at(path:String = "/public", file:String)"""),("""POST""", prefix + (if(prefix.endsWith("/")) "" else "/") + """logIn""","""controllers.Application.logIn()"""),("""GET""", prefix + (if(prefix.endsWith("/")) "" else "/") + """register""","""controllers.Application.register(error:String ?= "")"""),("""GET""", prefix + (if(prefix.endsWith("/")) "" else "/") + """landing""","""controllers.Application.landing()"""),("""POST""", prefix + (if(prefix.endsWith("/")) "" else "/") + """createClient""","""controllers.Application.createClient()"""),("""POST""", prefix + (if(prefix.endsWith("/")) "" else "/") + """deleteClient/$email<[^/]+>/delete""","""controllers.Application.deleteClientFromDB(email:String)"""),("""GET""", prefix + (if(prefix.endsWith("/")) "" else "/") + """clients""","""controllers.Application.displayAllClientsFromDB()"""),("""GET""", prefix + (if(prefix.endsWith("/")) "" else "/") + """wsInterface""","""controllers.Application.wsInterface()"""),("""GET""", prefix + (if(prefix.endsWith("/")) "" else "/") + """assets.javascript.randChat.js""","""controllers.Application.wsJs()""")).foldLeft(List.empty[(String,String,String)]) { (s,e) => e.asInstanceOf[Any] match {
   case r @ (_,_,_) => s :+ r.asInstanceOf[(String,String,String)]
   case l => s ++ l.asInstanceOf[List[(String,String,String)]]
 }}
@@ -171,6 +178,14 @@ case controllers_Application_displayAllClientsFromDB7_route(params) => {
 case controllers_Application_wsInterface8_route(params) => {
    call { 
         controllers_Application_wsInterface8_invoker.call(controllers.Application.wsInterface())
+   }
+}
+        
+
+// @LINE:35
+case controllers_Application_wsJs9_route(params) => {
+   call { 
+        controllers_Application_wsJs9_invoker.call(controllers.Application.wsJs())
    }
 }
         
