@@ -15505,7 +15505,7 @@
 [0m[[0mdebug[0m] [0m	[NOT REQUIRED] org.scala-sbt#apply-macro;0.13.8!apply-macro.jar[0m
 [0m[[0mdebug[0m] [0m	[NOT REQUIRED] org.scala-lang#jline;2.10.4!jline.jar[0m
 [0m[[0mdebug[0m] [0m	[NOT REQUIRED] org.fusesource.jansi#jansi;1.4!jansi.jar[0m
-[0m[[0mdebug[0m] [0m:: resolution report :: resolve 2473ms :: artifacts dl 82ms[0m
+[0m[[0mdebug[0m] [0m:: resolution report :: resolve 2331ms :: artifacts dl 56ms[0m
 [0m[[0mdebug[0m] [0m	report for default#randchat-build;0.1-SNAPSHOT compile produced in /Users/jiaqichen/Desktop/RandChat/project/target/resolution-cache/reports/default-randchat-build-compile.xml[0m
 [0m[[0mdebug[0m] [0m	report for default#randchat-build;0.1-SNAPSHOT runtime produced in /Users/jiaqichen/Desktop/RandChat/project/target/resolution-cache/reports/default-randchat-build-runtime.xml[0m
 [0m[[0mdebug[0m] [0m	report for default#randchat-build;0.1-SNAPSHOT test produced in /Users/jiaqichen/Desktop/RandChat/project/target/resolution-cache/reports/default-randchat-build-test.xml[0m
@@ -15519,5 +15519,5 @@
 [0m[[0mdebug[0m] [0m	report for default#randchat-build;0.1-SNAPSHOT docs produced in /Users/jiaqichen/Desktop/RandChat/project/target/resolution-cache/reports/default-randchat-build-docs.xml[0m
 [0m[[0mdebug[0m] [0m	report for default#randchat-build;0.1-SNAPSHOT pom produced in /Users/jiaqichen/Desktop/RandChat/project/target/resolution-cache/reports/default-randchat-build-pom.xml[0m
 [0m[[0mdebug[0m] [0m	report for default#randchat-build;0.1-SNAPSHOT scala-tool produced in /Users/jiaqichen/Desktop/RandChat/project/target/resolution-cache/reports/default-randchat-build-scala-tool.xml[0m
-[0m[[0mdebug[0m] [0m	resolve done (2473ms resolve - 82ms download)[0m
+[0m[[0mdebug[0m] [0m	resolve done (2331ms resolve - 56ms download)[0m
 [0m[[0minfo[0m] [0mDone updating.[0m

@@ -1,6 +1,5 @@
 package controllers;
 import models.*;
-import play.*;
 import play.mvc.*;
 
 import views.html.*;
@@ -29,7 +28,6 @@ public class Application extends Controller {
     public static  Result createClient() {
 
         Client client = getClient();
-        if(client.getEmail() == null) return redirect(routes.Application.register("wtffff"));
 
         if(Client.checkNull(client) || Client.checkEmpty(client)){
             return redirect(routes.Application.register("Empty details"));
@@ -42,7 +40,7 @@ public class Application extends Controller {
         }
         Client.createClient(client);
         currentClient = client;
-        return ok(views.js.randChat.render());
+        return ok(index.render());
     }
 
     public static  Result deleteClientFromDB(String email) {
@@ -58,7 +56,7 @@ public class Application extends Controller {
         Client client = getClient();
         if(Client.validate(client)) {
             currentClient = Client.findClient(client);
-            return ok(views.js.randChat.render());
+            return ok(index.render());
         }
         return ok(landing.render());
     }
@@ -73,13 +71,13 @@ public class Application extends Controller {
 
             // called when websocket handshake is done
             public void onReady(WebSocket.In<String> in, WebSocket.Out<String> out){
-                RandChat.start(in, out);
+                SimpleChat.start(in, out);
             }
         };
     }
 
     public static Result wsJs() {
-        return ok(views.js.randChat.render());
+        return ok(views.js.ws.render());
     }
 
    /* public static Result newChatMessage() {

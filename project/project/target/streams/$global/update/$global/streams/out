@@ -1,4 +1,4 @@
-[0m[[0minfo[0m] [0mUpdating {file:/Users/apple/Desktop/RandChat/project/project/}randchat-build-build...[0m
+[0m[[0minfo[0m] [0mUpdating {file:/Users/jiaqichen/Desktop/RandChat/project/project/}randchat-build-build...[0m
 [0m[[0mdebug[0m] [0m:: resolving dependencies :: default#randchat-build-build;0.1-SNAPSHOT[0m
 [0m[[0mdebug[0m] [0m	confs: [compile, runtime, test, provided, optional, compile-internal, runtime-internal, test-internal, plugin, sources, docs, pom, scala-tool][0m
 [0m[[0mdebug[0m] [0m	validate = true[0m
@@ -16,7 +16,7 @@
 [0m[[0mdebug[0m] [0m== resolving dependencies for default#randchat-build-build;0.1-SNAPSHOT [provided][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies default#randchat-build-build;0.1-SNAPSHOT->org.scala-lang#scala-library;2.10.4 [provided->default(compile)][0m
 [0m[[0minfo[0m] [0mResolving org.scala-lang#scala-library;2.10.4 ...[0m
-[0m[[0mdebug[0m] [0msbt-chain: Checking cache for: sbt.ivyint.MergedDescriptors@1e6f2517[0m
+[0m[[0mdebug[0m] [0msbt-chain: Checking cache for: sbt.ivyint.MergedDescriptors@125813e3[0m
 [0m[[0mdebug[0m] [0msbt-chain: module revision found in cache: org.scala-lang#scala-library;2.10.4[0m
 [0m[[0mdebug[0m] [0m	found org.scala-lang#scala-library;2.10.4 in sbt-chain[0m
 [0m[[0mdebug[0m] [0m	[2.10.4] org.scala-lang#scala-library;2.10.4[0m
@@ -1766,19 +1766,19 @@
 [0m[[0mdebug[0m] [0m	[NOT REQUIRED] org.scala-sbt#apply-macro;0.13.8!apply-macro.jar[0m
 [0m[[0mdebug[0m] [0m	[NOT REQUIRED] org.scala-lang#jline;2.10.4!jline.jar[0m
 [0m[[0mdebug[0m] [0m	[NOT REQUIRED] org.fusesource.jansi#jansi;1.4!jansi.jar[0m
-[0m[[0mdebug[0m] [0m:: resolution report :: resolve 6634ms :: artifacts dl 48ms[0m
-[0m[[0mdebug[0m] [0m	report for default#randchat-build-build;0.1-SNAPSHOT compile produced in /Users/apple/Desktop/RandChat/project/project/target/resolution-cache/reports/default-randchat-build-build-compile.xml[0m
-[0m[[0mdebug[0m] [0m	report for default#randchat-build-build;0.1-SNAPSHOT runtime produced in /Users/apple/Desktop/RandChat/project/project/target/resolution-cache/reports/default-randchat-build-build-runtime.xml[0m
-[0m[[0mdebug[0m] [0m	report for default#randchat-build-build;0.1-SNAPSHOT test produced in /Users/apple/Desktop/RandChat/project/project/target/resolution-cache/reports/default-randchat-build-build-test.xml[0m
-[0m[[0mdebug[0m] [0m	report for default#randchat-build-build;0.1-SNAPSHOT provided produced in /Users/apple/Desktop/RandChat/project/project/target/resolution-cache/reports/default-randchat-build-build-provided.xml[0m
-[0m[[0mdebug[0m] [0m	report for default#randchat-build-build;0.1-SNAPSHOT optional produced in /Users/apple/Desktop/RandChat/project/project/target/resolution-cache/reports/default-randchat-build-build-optional.xml[0m
-[0m[[0mdebug[0m] [0m	report for default#randchat-build-build;0.1-SNAPSHOT compile-internal produced in /Users/apple/Desktop/RandChat/project/project/target/resolution-cache/reports/default-randchat-build-build-compile-internal.xml[0m
-[0m[[0mdebug[0m] [0m	report for default#randchat-build-build;0.1-SNAPSHOT runtime-internal produced in /Users/apple/Desktop/RandChat/project/project/target/resolution-cache/reports/default-randchat-build-build-runtime-internal.xml[0m
-[0m[[0mdebug[0m] [0m	report for default#randchat-build-build;0.1-SNAPSHOT test-internal produced in /Users/apple/Desktop/RandChat/project/project/target/resolution-cache/reports/default-randchat-build-build-test-internal.xml[0m
-[0m[[0mdebug[0m] [0m	report for default#randchat-build-build;0.1-SNAPSHOT plugin produced in /Users/apple/Desktop/RandChat/project/project/target/resolution-cache/reports/default-randchat-build-build-plugin.xml[0m
-[0m[[0mdebug[0m] [0m	report for default#randchat-build-build;0.1-SNAPSHOT sources produced in /Users/apple/Desktop/RandChat/project/project/target/resolution-cache/reports/default-randchat-build-build-sources.xml[0m
-[0m[[0mdebug[0m] [0m	report for default#randchat-build-build;0.1-SNAPSHOT docs produced in /Users/apple/Desktop/RandChat/project/project/target/resolution-cache/reports/default-randchat-build-build-docs.xml[0m
-[0m[[0mdebug[0m] [0m	report for default#randchat-build-build;0.1-SNAPSHOT pom produced in /Users/apple/Desktop/RandChat/project/project/target/resolution-cache/reports/default-randchat-build-build-pom.xml[0m
-[0m[[0mdebug[0m] [0m	report for default#randchat-build-build;0.1-SNAPSHOT scala-tool produced in /Users/apple/Desktop/RandChat/project/project/target/resolution-cache/reports/default-randchat-build-build-scala-tool.xml[0m
-[0m[[0mdebug[0m] [0m	resolve done (6634ms resolve - 48ms download)[0m
+[0m[[0mdebug[0m] [0m:: resolution report :: resolve 776ms :: artifacts dl 32ms[0m
+[0m[[0mdebug[0m] [0m	report for default#randchat-build-build;0.1-SNAPSHOT compile produced in /Users/jiaqichen/Desktop/RandChat/project/project/target/resolution-cache/reports/default-randchat-build-build-compile.xml[0m
+[0m[[0mdebug[0m] [0m	report for default#randchat-build-build;0.1-SNAPSHOT runtime produced in /Users/jiaqichen/Desktop/RandChat/project/project/target/resolution-cache/reports/default-randchat-build-build-runtime.xml[0m
+[0m[[0mdebug[0m] [0m	report for default#randchat-build-build;0.1-SNAPSHOT test produced in /Users/jiaqichen/Desktop/RandChat/project/project/target/resolution-cache/reports/default-randchat-build-build-test.xml[0m
+[0m[[0mdebug[0m] [0m	report for default#randchat-build-build;0.1-SNAPSHOT provided produced in /Users/jiaqichen/Desktop/RandChat/project/project/target/resolution-cache/reports/default-randchat-build-build-provided.xml[0m
+[0m[[0mdebug[0m] [0m	report for default#randchat-build-build;0.1-SNAPSHOT optional produced in /Users/jiaqichen/Desktop/RandChat/project/project/target/resolution-cache/reports/default-randchat-build-build-optional.xml[0m
+[0m[[0mdebug[0m] [0m	report for default#randchat-build-build;0.1-SNAPSHOT compile-internal produced in /Users/jiaqichen/Desktop/RandChat/project/project/target/resolution-cache/reports/default-randchat-build-build-compile-internal.xml[0m
+[0m[[0mdebug[0m] [0m	report for default#randchat-build-build;0.1-SNAPSHOT runtime-internal produced in /Users/jiaqichen/Desktop/RandChat/project/project/target/resolution-cache/reports/default-randchat-build-build-runtime-internal.xml[0m
+[0m[[0mdebug[0m] [0m	report for default#randchat-build-build;0.1-SNAPSHOT test-internal produced in /Users/jiaqichen/Desktop/RandChat/project/project/target/resolution-cache/reports/default-randchat-build-build-test-internal.xml[0m
+[0m[[0mdebug[0m] [0m	report for default#randchat-build-build;0.1-SNAPSHOT plugin produced in /Users/jiaqichen/Desktop/RandChat/project/project/target/resolution-cache/reports/default-randchat-build-build-plugin.xml[0m
+[0m[[0mdebug[0m] [0m	report for default#randchat-build-build;0.1-SNAPSHOT sources produced in /Users/jiaqichen/Desktop/RandChat/project/project/target/resolution-cache/reports/default-randchat-build-build-sources.xml[0m
+[0m[[0mdebug[0m] [0m	report for default#randchat-build-build;0.1-SNAPSHOT docs produced in /Users/jiaqichen/Desktop/RandChat/project/project/target/resolution-cache/reports/default-randchat-build-build-docs.xml[0m
+[0m[[0mdebug[0m] [0m	report for default#randchat-build-build;0.1-SNAPSHOT pom produced in /Users/jiaqichen/Desktop/RandChat/project/project/target/resolution-cache/reports/default-randchat-build-build-pom.xml[0m
+[0m[[0mdebug[0m] [0m	report for default#randchat-build-build;0.1-SNAPSHOT scala-tool produced in /Users/jiaqichen/Desktop/RandChat/project/project/target/resolution-cache/reports/default-randchat-build-build-scala-tool.xml[0m
+[0m[[0mdebug[0m] [0m	resolve done (776ms resolve - 32ms download)[0m
 [0m[[0minfo[0m] [0mDone updating.[0m

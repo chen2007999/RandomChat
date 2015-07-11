@@ -1,4 +1,4 @@
-name := """productivity"""
+name := """randChat"""
 
 version := "1.0-SNAPSHOT"
 

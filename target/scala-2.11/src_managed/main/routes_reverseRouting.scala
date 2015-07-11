@@ -1,6 +1,6 @@
 // @SOURCE:/Users/jiaqichen/Desktop/RandChat/conf/routes
-// @HASH:a17fe0b90c87ce1c4df61bfdde3d0e78aa50b288
-// @DATE:Sat Jul 11 10:49:11 BST 2015
+// @HASH:4000e9a22b972f75f69d56fc6a2fd17ad44d2ff5
+// @DATE:Sun Jul 12 00:46:03 BST 2015
 
 import Routes.{prefix => _prefix, defaultPrefix => _defaultPrefix}
 import play.core._
@@ -84,7 +84,7 @@ def landing(): Call = {
 // @LINE:35
 def wsJs(): Call = {
    import ReverseRouteContext.empty
-   Call("GET", _prefix + { _defaultPrefix } + "assets.javascript.randChat.js")
+   Call("GET", _prefix + { _defaultPrefix } + "assets.javascript.ws.js")
 }
                         
 
@@ -214,7 +214,7 @@ def wsJs : JavascriptReverseRoute = JavascriptReverseRoute(
    "controllers.Application.wsJs",
    """
       function() {
-      return _wA({method:"GET", url:"""" + _prefix + { _defaultPrefix } + """" + "assets.javascript.randChat.js"})
+      return _wA({method:"GET", url:"""" + _prefix + { _defaultPrefix } + """" + "assets.javascript.ws.js"})
       }
    """
 )
@@ -334,7 +334,7 @@ def landing(): play.api.mvc.HandlerRef[_] = new play.api.mvc.HandlerRef(
 
 // @LINE:35
 def wsJs(): play.api.mvc.HandlerRef[_] = new play.api.mvc.HandlerRef(
-   controllers.Application.wsJs(), HandlerDef(this.getClass.getClassLoader, "", "controllers.Application", "wsJs", Seq(), "GET", """""", _prefix + """assets.javascript.randChat.js""")
+   controllers.Application.wsJs(), HandlerDef(this.getClass.getClassLoader, "", "controllers.Application", "wsJs", Seq(), "GET", """""", _prefix + """assets.javascript.ws.js""")
 )
                       
 

@@ -1,0 +1,15 @@
+
+
+@main("Small things jump around") {
+
+    <h1>Simple chat</h1>
+
+    <input type="text" id="socket-input" placeholder="message to send" />
+    <div id="socket-messages"></div>
+    <p id="test"></p>
+    <button type="button" onclick="myFunction()">Submit</button>
+
+    <script type="text/javascript" charset="utf-8" src="@routes.Application.wsJs()"></script>
+
+}
+

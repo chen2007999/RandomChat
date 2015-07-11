@@ -1,26 +1,26 @@
 [0m[[0minfo[0m] [0mUpdating {file:/Users/jiaqichen/Desktop/RandChat/}root...[0m
-[0m[[0mdebug[0m] [0m:: resolving dependencies :: productivity#productivity_2.11;1.0-SNAPSHOT[0m
+[0m[[0mdebug[0m] [0m:: resolving dependencies :: randchat#randchat_2.11;1.0-SNAPSHOT[0m
 [0m[[0mdebug[0m] [0m	confs: [compile, runtime, test, provided, optional, compile-internal, runtime-internal, test-internal, plugin, sources, docs, pom, scala-tool][0m
 [0m[[0mdebug[0m] [0m	validate = true[0m
 [0m[[0mdebug[0m] [0m	refresh = false[0m
 [0m[[0mdebug[0m] [0mresolving dependencies for configuration 'compile'[0m
-[0m[[0mdebug[0m] [0m== resolving dependencies for productivity#productivity_2.11;1.0-SNAPSHOT [compile][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies productivity#productivity_2.11;1.0-SNAPSHOT->org.scala-lang#scala-library;2.11.6 [compile->default(compile)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies for randchat#randchat_2.11;1.0-SNAPSHOT [compile][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies randchat#randchat_2.11;1.0-SNAPSHOT->org.scala-lang#scala-library;2.11.6 [compile->default(compile)][0m
 [0m[[0minfo[0m] [0mResolving org.scala-lang#scala-library;2.11.6 ...[0m
-[0m[[0mdebug[0m] [0msbt-chain: Checking cache for: sbt.ivyint.MergedDescriptors@674e9e65[0m
+[0m[[0mdebug[0m] [0msbt-chain: Checking cache for: sbt.ivyint.MergedDescriptors@e47a353[0m
 [0m[[0mdebug[0m] [0msbt-chain: module revision found in cache: org.scala-lang#scala-library;2.11.6[0m
 [0m[[0mdebug[0m] [0m	found org.scala-lang#scala-library;2.11.6 in sbt-chain[0m
 [0m[[0mdebug[0m] [0m	[2.11.6] org.scala-lang#scala-library;2.11.6[0m
-[0m[[0mdebug[0m] [0m== resolving dependencies productivity#productivity_2.11;1.0-SNAPSHOT->org.scala-lang#scala-library;2.11.6 [compile->runtime][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies productivity#productivity_2.11;1.0-SNAPSHOT->org.scala-lang#scala-library;2.11.6 [compile->compile][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies productivity#productivity_2.11;1.0-SNAPSHOT->org.scala-lang#scala-library;2.11.6 [compile->master][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies productivity#productivity_2.11;1.0-SNAPSHOT->com.typesafe.play#twirl-api_2.11;1.0.2 [compile->default(compile)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies randchat#randchat_2.11;1.0-SNAPSHOT->org.scala-lang#scala-library;2.11.6 [compile->runtime][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies randchat#randchat_2.11;1.0-SNAPSHOT->org.scala-lang#scala-library;2.11.6 [compile->compile][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies randchat#randchat_2.11;1.0-SNAPSHOT->org.scala-lang#scala-library;2.11.6 [compile->master][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies randchat#randchat_2.11;1.0-SNAPSHOT->com.typesafe.play#twirl-api_2.11;1.0.2 [compile->default(compile)][0m
 [0m[[0minfo[0m] [0mResolving com.typesafe.play#twirl-api_2.11;1.0.2 ...[0m
 [0m[[0mdebug[0m] [0msbt-chain: Checking cache for: dependency: com.typesafe.play#twirl-api_2.11;1.0.2 {compile=[default(compile)]}[0m
 [0m[[0mdebug[0m] [0msbt-chain: module revision found in cache: com.typesafe.play#twirl-api_2.11;1.0.2[0m
 [0m[[0mdebug[0m] [0m	found com.typesafe.play#twirl-api_2.11;1.0.2 in sbt-chain[0m
-[0m[[0mdebug[0m] [0m== resolving dependencies productivity#productivity_2.11;1.0-SNAPSHOT->com.typesafe.play#twirl-api_2.11;1.0.2 [compile->runtime][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies productivity#productivity_2.11;1.0-SNAPSHOT->com.typesafe.play#twirl-api_2.11;1.0.2 [compile->compile][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies randchat#randchat_2.11;1.0-SNAPSHOT->com.typesafe.play#twirl-api_2.11;1.0.2 [compile->runtime][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies randchat#randchat_2.11;1.0-SNAPSHOT->com.typesafe.play#twirl-api_2.11;1.0.2 [compile->compile][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.play#twirl-api_2.11;1.0.2->org.scala-lang#scala-library;2.11.1 [compile->master(compile)][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.play#twirl-api_2.11;1.0.2->org.scala-lang#scala-library;2.11.6 [compile->master(compile)][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.play#twirl-api_2.11;1.0.2->org.scala-lang#scala-library;2.11.1 [compile->compile(*)][0m
@@ -54,14 +54,14 @@
 [0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.play#twirl-api_2.11;1.0.2->org.apache.commons#commons-lang3;3.1 [runtime->compile][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.play#twirl-api_2.11;1.0.2->org.scala-lang.modules#scala-xml_2.11;1.0.1 [runtime->runtime(*)][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.play#twirl-api_2.11;1.0.2->org.scala-lang.modules#scala-xml_2.11;1.0.1 [runtime->compile][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies productivity#productivity_2.11;1.0-SNAPSHOT->com.typesafe.play#twirl-api_2.11;1.0.2 [compile->master][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies productivity#productivity_2.11;1.0-SNAPSHOT->com.typesafe.play#play_2.11;2.3.9 [compile->default(compile)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies randchat#randchat_2.11;1.0-SNAPSHOT->com.typesafe.play#twirl-api_2.11;1.0.2 [compile->master][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies randchat#randchat_2.11;1.0-SNAPSHOT->com.typesafe.play#play_2.11;2.3.9 [compile->default(compile)][0m
 [0m[[0minfo[0m] [0mResolving com.typesafe.play#play_2.11;2.3.9 ...[0m
 [0m[[0mdebug[0m] [0msbt-chain: Checking cache for: dependency: com.typesafe.play#play_2.11;2.3.9 {compile=[default(compile)]}[0m
 [0m[[0mdebug[0m] [0msbt-chain: module revision found in cache: com.typesafe.play#play_2.11;2.3.9[0m
 [0m[[0mdebug[0m] [0m	found com.typesafe.play#play_2.11;2.3.9 in sbt-chain[0m
-[0m[[0mdebug[0m] [0m== resolving dependencies productivity#productivity_2.11;1.0-SNAPSHOT->com.typesafe.play#play_2.11;2.3.9 [compile->runtime][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies productivity#productivity_2.11;1.0-SNAPSHOT->com.typesafe.play#play_2.11;2.3.9 [compile->compile][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies randchat#randchat_2.11;1.0-SNAPSHOT->com.typesafe.play#play_2.11;2.3.9 [compile->runtime][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies randchat#randchat_2.11;1.0-SNAPSHOT->com.typesafe.play#play_2.11;2.3.9 [compile->compile][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.play#play_2.11;2.3.9->org.scala-lang#scala-library;2.11.1 [compile->master(compile)][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.play#play_2.11;2.3.9->org.scala-lang#scala-library;2.11.6 [compile->master(compile)][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.play#play_2.11;2.3.9->org.scala-lang#scala-library;2.11.1 [compile->compile(*)][0m
@@ -500,14 +500,14 @@
 [0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.play#play_2.11;2.3.9->javax.transaction#jta;1.1 [runtime->compile][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.play#play_2.11;2.3.9->org.scala-lang#scala-reflect;2.11.1 [runtime->runtime(*)][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.play#play_2.11;2.3.9->org.scala-lang#scala-reflect;2.11.1 [runtime->compile][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies productivity#productivity_2.11;1.0-SNAPSHOT->com.typesafe.play#play_2.11;2.3.9 [compile->master][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies productivity#productivity_2.11;1.0-SNAPSHOT->com.typesafe.play#play-java_2.11;2.3.9 [compile->default(compile)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies randchat#randchat_2.11;1.0-SNAPSHOT->com.typesafe.play#play_2.11;2.3.9 [compile->master][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies randchat#randchat_2.11;1.0-SNAPSHOT->com.typesafe.play#play-java_2.11;2.3.9 [compile->default(compile)][0m
 [0m[[0minfo[0m] [0mResolving com.typesafe.play#play-java_2.11;2.3.9 ...[0m
 [0m[[0mdebug[0m] [0msbt-chain: Checking cache for: dependency: com.typesafe.play#play-java_2.11;2.3.9 {compile=[default(compile)]}[0m
 [0m[[0mdebug[0m] [0msbt-chain: module revision found in cache: com.typesafe.play#play-java_2.11;2.3.9[0m
 [0m[[0mdebug[0m] [0m	found com.typesafe.play#play-java_2.11;2.3.9 in sbt-chain[0m
-[0m[[0mdebug[0m] [0m== resolving dependencies productivity#productivity_2.11;1.0-SNAPSHOT->com.typesafe.play#play-java_2.11;2.3.9 [compile->runtime][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies productivity#productivity_2.11;1.0-SNAPSHOT->com.typesafe.play#play-java_2.11;2.3.9 [compile->compile][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies randchat#randchat_2.11;1.0-SNAPSHOT->com.typesafe.play#play-java_2.11;2.3.9 [compile->runtime][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies randchat#randchat_2.11;1.0-SNAPSHOT->com.typesafe.play#play-java_2.11;2.3.9 [compile->compile][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.play#play-java_2.11;2.3.9->org.scala-lang#scala-library;2.11.1 [compile->master(compile)][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.play#play-java_2.11;2.3.9->org.scala-lang#scala-library;2.11.6 [compile->master(compile)][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.play#play-java_2.11;2.3.9->org.scala-lang#scala-library;2.11.1 [compile->compile(*)][0m
@@ -713,22 +713,22 @@
 [0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.play#play-java_2.11;2.3.9->com.google.code.findbugs#jsr305;2.0.3 [runtime->compile][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.play#play-java_2.11;2.3.9->org.apache.tomcat#tomcat-servlet-api;8.0.5 [runtime->runtime(*)][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.play#play-java_2.11;2.3.9->org.apache.tomcat#tomcat-servlet-api;8.0.5 [runtime->compile][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies productivity#productivity_2.11;1.0-SNAPSHOT->com.typesafe.play#play-java_2.11;2.3.9 [compile->master][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies productivity#productivity_2.11;1.0-SNAPSHOT->postgresql#postgresql;9.1-901-1.jdbc4 [compile->default(compile)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies randchat#randchat_2.11;1.0-SNAPSHOT->com.typesafe.play#play-java_2.11;2.3.9 [compile->master][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies randchat#randchat_2.11;1.0-SNAPSHOT->postgresql#postgresql;9.1-901-1.jdbc4 [compile->default(compile)][0m
 [0m[[0minfo[0m] [0mResolving postgresql#postgresql;9.1-901-1.jdbc4 ...[0m
 [0m[[0mdebug[0m] [0msbt-chain: Checking cache for: dependency: postgresql#postgresql;9.1-901-1.jdbc4 {compile=[default(compile)]}[0m
 [0m[[0mdebug[0m] [0msbt-chain: module revision found in cache: postgresql#postgresql;9.1-901-1.jdbc4[0m
 [0m[[0mdebug[0m] [0m	found postgresql#postgresql;9.1-901-1.jdbc4 in sbt-chain[0m
-[0m[[0mdebug[0m] [0m== resolving dependencies productivity#productivity_2.11;1.0-SNAPSHOT->postgresql#postgresql;9.1-901-1.jdbc4 [compile->runtime][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies productivity#productivity_2.11;1.0-SNAPSHOT->postgresql#postgresql;9.1-901-1.jdbc4 [compile->compile][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies productivity#productivity_2.11;1.0-SNAPSHOT->postgresql#postgresql;9.1-901-1.jdbc4 [compile->master][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies productivity#productivity_2.11;1.0-SNAPSHOT->com.typesafe.play#play-java-jdbc_2.11;2.3.9 [compile->default(compile)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies randchat#randchat_2.11;1.0-SNAPSHOT->postgresql#postgresql;9.1-901-1.jdbc4 [compile->runtime][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies randchat#randchat_2.11;1.0-SNAPSHOT->postgresql#postgresql;9.1-901-1.jdbc4 [compile->compile][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies randchat#randchat_2.11;1.0-SNAPSHOT->postgresql#postgresql;9.1-901-1.jdbc4 [compile->master][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies randchat#randchat_2.11;1.0-SNAPSHOT->com.typesafe.play#play-java-jdbc_2.11;2.3.9 [compile->default(compile)][0m
 [0m[[0minfo[0m] [0mResolving com.typesafe.play#play-java-jdbc_2.11;2.3.9 ...[0m
 [0m[[0mdebug[0m] [0msbt-chain: Checking cache for: dependency: com.typesafe.play#play-java-jdbc_2.11;2.3.9 {compile=[default(compile)]}[0m
 [0m[[0mdebug[0m] [0msbt-chain: module revision found in cache: com.typesafe.play#play-java-jdbc_2.11;2.3.9[0m
 [0m[[0mdebug[0m] [0m	found com.typesafe.play#play-java-jdbc_2.11;2.3.9 in sbt-chain[0m
-[0m[[0mdebug[0m] [0m== resolving dependencies productivity#productivity_2.11;1.0-SNAPSHOT->com.typesafe.play#play-java-jdbc_2.11;2.3.9 [compile->runtime][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies productivity#productivity_2.11;1.0-SNAPSHOT->com.typesafe.play#play-java-jdbc_2.11;2.3.9 [compile->compile][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies randchat#randchat_2.11;1.0-SNAPSHOT->com.typesafe.play#play-java-jdbc_2.11;2.3.9 [compile->runtime][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies randchat#randchat_2.11;1.0-SNAPSHOT->com.typesafe.play#play-java-jdbc_2.11;2.3.9 [compile->compile][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.play#play-java-jdbc_2.11;2.3.9->org.scala-lang#scala-library;2.11.1 [compile->master(compile)][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.play#play-java-jdbc_2.11;2.3.9->org.scala-lang#scala-library;2.11.6 [compile->master(compile)][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.play#play-java-jdbc_2.11;2.3.9->org.scala-lang#scala-library;2.11.1 [compile->compile(*)][0m
@@ -801,14 +801,14 @@
 [0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.play#play-java-jdbc_2.11;2.3.9->com.typesafe.play#play-jdbc_2.11;2.3.9 [runtime->compile][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.play#play-java-jdbc_2.11;2.3.9->com.typesafe.play#play-java_2.11;2.3.9 [runtime->runtime(*)][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.play#play-java-jdbc_2.11;2.3.9->com.typesafe.play#play-java_2.11;2.3.9 [runtime->compile][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies productivity#productivity_2.11;1.0-SNAPSHOT->com.typesafe.play#play-java-jdbc_2.11;2.3.9 [compile->master][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies productivity#productivity_2.11;1.0-SNAPSHOT->com.typesafe.play#play-java-ebean_2.11;2.3.9 [compile->default(compile)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies randchat#randchat_2.11;1.0-SNAPSHOT->com.typesafe.play#play-java-jdbc_2.11;2.3.9 [compile->master][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies randchat#randchat_2.11;1.0-SNAPSHOT->com.typesafe.play#play-java-ebean_2.11;2.3.9 [compile->default(compile)][0m
 [0m[[0minfo[0m] [0mResolving com.typesafe.play#play-java-ebean_2.11;2.3.9 ...[0m
 [0m[[0mdebug[0m] [0msbt-chain: Checking cache for: dependency: com.typesafe.play#play-java-ebean_2.11;2.3.9 {compile=[default(compile)]}[0m
 [0m[[0mdebug[0m] [0msbt-chain: module revision found in cache: com.typesafe.play#play-java-ebean_2.11;2.3.9[0m
 [0m[[0mdebug[0m] [0m	found com.typesafe.play#play-java-ebean_2.11;2.3.9 in sbt-chain[0m
-[0m[[0mdebug[0m] [0m== resolving dependencies productivity#productivity_2.11;1.0-SNAPSHOT->com.typesafe.play#play-java-ebean_2.11;2.3.9 [compile->runtime][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies productivity#productivity_2.11;1.0-SNAPSHOT->com.typesafe.play#play-java-ebean_2.11;2.3.9 [compile->compile][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies randchat#randchat_2.11;1.0-SNAPSHOT->com.typesafe.play#play-java-ebean_2.11;2.3.9 [compile->runtime][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies randchat#randchat_2.11;1.0-SNAPSHOT->com.typesafe.play#play-java-ebean_2.11;2.3.9 [compile->compile][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.play#play-java-ebean_2.11;2.3.9->org.scala-lang#scala-library;2.11.1 [compile->master(compile)][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.play#play-java-ebean_2.11;2.3.9->org.scala-lang#scala-library;2.11.6 [compile->master(compile)][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.play#play-java-ebean_2.11;2.3.9->org.scala-lang#scala-library;2.11.1 [compile->compile(*)][0m
@@ -854,14 +854,14 @@
 [0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.play#play-java-ebean_2.11;2.3.9->org.avaje.ebeanorm#avaje-ebeanorm-agent;3.2.2 [runtime->compile][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.play#play-java-ebean_2.11;2.3.9->org.hibernate.javax.persistence#hibernate-jpa-2.0-api;1.0.1.Final [runtime->runtime(*)][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.play#play-java-ebean_2.11;2.3.9->org.hibernate.javax.persistence#hibernate-jpa-2.0-api;1.0.1.Final [runtime->compile][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies productivity#productivity_2.11;1.0-SNAPSHOT->com.typesafe.play#play-java-ebean_2.11;2.3.9 [compile->master][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies productivity#productivity_2.11;1.0-SNAPSHOT->com.typesafe.play#play-cache_2.11;2.3.9 [compile->default(compile)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies randchat#randchat_2.11;1.0-SNAPSHOT->com.typesafe.play#play-java-ebean_2.11;2.3.9 [compile->master][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies randchat#randchat_2.11;1.0-SNAPSHOT->com.typesafe.play#play-cache_2.11;2.3.9 [compile->default(compile)][0m
 [0m[[0minfo[0m] [0mResolving com.typesafe.play#play-cache_2.11;2.3.9 ...[0m
 [0m[[0mdebug[0m] [0msbt-chain: Checking cache for: dependency: com.typesafe.play#play-cache_2.11;2.3.9 {compile=[default(compile)]}[0m
 [0m[[0mdebug[0m] [0msbt-chain: module revision found in cache: com.typesafe.play#play-cache_2.11;2.3.9[0m
 [0m[[0mdebug[0m] [0m	found com.typesafe.play#play-cache_2.11;2.3.9 in sbt-chain[0m
-[0m[[0mdebug[0m] [0m== resolving dependencies productivity#productivity_2.11;1.0-SNAPSHOT->com.typesafe.play#play-cache_2.11;2.3.9 [compile->runtime][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies productivity#productivity_2.11;1.0-SNAPSHOT->com.typesafe.play#play-cache_2.11;2.3.9 [compile->compile][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies randchat#randchat_2.11;1.0-SNAPSHOT->com.typesafe.play#play-cache_2.11;2.3.9 [compile->runtime][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies randchat#randchat_2.11;1.0-SNAPSHOT->com.typesafe.play#play-cache_2.11;2.3.9 [compile->compile][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.play#play-cache_2.11;2.3.9->org.scala-lang#scala-library;2.11.1 [compile->master(compile)][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.play#play-cache_2.11;2.3.9->org.scala-lang#scala-library;2.11.6 [compile->master(compile)][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.play#play-cache_2.11;2.3.9->org.scala-lang#scala-library;2.11.1 [compile->compile(*)][0m
@@ -890,14 +890,14 @@
 [0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.play#play-cache_2.11;2.3.9->com.typesafe.play#play_2.11;2.3.9 [runtime->compile][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.play#play-cache_2.11;2.3.9->net.sf.ehcache#ehcache-core;2.6.8 [runtime->runtime(*)][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.play#play-cache_2.11;2.3.9->net.sf.ehcache#ehcache-core;2.6.8 [runtime->compile][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies productivity#productivity_2.11;1.0-SNAPSHOT->com.typesafe.play#play-cache_2.11;2.3.9 [compile->master][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies productivity#productivity_2.11;1.0-SNAPSHOT->com.typesafe.play#play-java-ws_2.11;2.3.9 [compile->default(compile)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies randchat#randchat_2.11;1.0-SNAPSHOT->com.typesafe.play#play-cache_2.11;2.3.9 [compile->master][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies randchat#randchat_2.11;1.0-SNAPSHOT->com.typesafe.play#play-java-ws_2.11;2.3.9 [compile->default(compile)][0m
 [0m[[0minfo[0m] [0mResolving com.typesafe.play#play-java-ws_2.11;2.3.9 ...[0m
 [0m[[0mdebug[0m] [0msbt-chain: Checking cache for: dependency: com.typesafe.play#play-java-ws_2.11;2.3.9 {compile=[default(compile)]}[0m
 [0m[[0mdebug[0m] [0msbt-chain: module revision found in cache: com.typesafe.play#play-java-ws_2.11;2.3.9[0m
 [0m[[0mdebug[0m] [0m	found com.typesafe.play#play-java-ws_2.11;2.3.9 in sbt-chain[0m
-[0m[[0mdebug[0m] [0m== resolving dependencies productivity#productivity_2.11;1.0-SNAPSHOT->com.typesafe.play#play-java-ws_2.11;2.3.9 [compile->runtime][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies productivity#productivity_2.11;1.0-SNAPSHOT->com.typesafe.play#play-java-ws_2.11;2.3.9 [compile->compile][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies randchat#randchat_2.11;1.0-SNAPSHOT->com.typesafe.play#play-java-ws_2.11;2.3.9 [compile->runtime][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies randchat#randchat_2.11;1.0-SNAPSHOT->com.typesafe.play#play-java-ws_2.11;2.3.9 [compile->compile][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.play#play-java-ws_2.11;2.3.9->org.scala-lang#scala-library;2.11.1 [compile->master(compile)][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.play#play-java-ws_2.11;2.3.9->org.scala-lang#scala-library;2.11.6 [compile->master(compile)][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.play#play-java-ws_2.11;2.3.9->org.scala-lang#scala-library;2.11.1 [compile->compile(*)][0m
@@ -1044,17 +1044,17 @@
 [0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.play#play-java-ws_2.11;2.3.9->oauth.signpost#signpost-core;1.2.1.2 [runtime->compile][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.play#play-java-ws_2.11;2.3.9->oauth.signpost#signpost-commonshttp4;1.2.1.2 [runtime->runtime(*)][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.play#play-java-ws_2.11;2.3.9->oauth.signpost#signpost-commonshttp4;1.2.1.2 [runtime->compile][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies productivity#productivity_2.11;1.0-SNAPSHOT->com.typesafe.play#play-java-ws_2.11;2.3.9 [compile->master][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies randchat#randchat_2.11;1.0-SNAPSHOT->com.typesafe.play#play-java-ws_2.11;2.3.9 [compile->master][0m
 [0m[[0mdebug[0m] [0mresolving dependencies for configuration 'runtime'[0m
-[0m[[0mdebug[0m] [0m== resolving dependencies for productivity#productivity_2.11;1.0-SNAPSHOT [runtime][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies for productivity#productivity_2.11;1.0-SNAPSHOT [compile][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies productivity#productivity_2.11;1.0-SNAPSHOT->org.scala-lang#scala-library;2.11.6 [compile->default(compile)][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies productivity#productivity_2.11;1.0-SNAPSHOT->org.scala-lang#scala-library;2.11.6 [compile->runtime][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies productivity#productivity_2.11;1.0-SNAPSHOT->org.scala-lang#scala-library;2.11.6 [compile->compile][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies productivity#productivity_2.11;1.0-SNAPSHOT->org.scala-lang#scala-library;2.11.6 [compile->master][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies productivity#productivity_2.11;1.0-SNAPSHOT->com.typesafe.play#twirl-api_2.11;1.0.2 [compile->default(compile)][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies productivity#productivity_2.11;1.0-SNAPSHOT->com.typesafe.play#twirl-api_2.11;1.0.2 [compile->runtime][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies productivity#productivity_2.11;1.0-SNAPSHOT->com.typesafe.play#twirl-api_2.11;1.0.2 [compile->compile][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies for randchat#randchat_2.11;1.0-SNAPSHOT [runtime][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies for randchat#randchat_2.11;1.0-SNAPSHOT [compile][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies randchat#randchat_2.11;1.0-SNAPSHOT->org.scala-lang#scala-library;2.11.6 [compile->default(compile)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies randchat#randchat_2.11;1.0-SNAPSHOT->org.scala-lang#scala-library;2.11.6 [compile->runtime][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies randchat#randchat_2.11;1.0-SNAPSHOT->org.scala-lang#scala-library;2.11.6 [compile->compile][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies randchat#randchat_2.11;1.0-SNAPSHOT->org.scala-lang#scala-library;2.11.6 [compile->master][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies randchat#randchat_2.11;1.0-SNAPSHOT->com.typesafe.play#twirl-api_2.11;1.0.2 [compile->default(compile)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies randchat#randchat_2.11;1.0-SNAPSHOT->com.typesafe.play#twirl-api_2.11;1.0.2 [compile->runtime][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies randchat#randchat_2.11;1.0-SNAPSHOT->com.typesafe.play#twirl-api_2.11;1.0.2 [compile->compile][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.play#twirl-api_2.11;1.0.2->org.scala-lang#scala-library;2.11.1 [compile->master(compile)][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.play#twirl-api_2.11;1.0.2->org.scala-lang#scala-library;2.11.6 [compile->master(compile)][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.play#twirl-api_2.11;1.0.2->org.scala-lang#scala-library;2.11.1 [compile->compile(*)][0m
@@ -1076,10 +1076,10 @@
 [0m[[0mdebug[0m] [0m== resolving dependencies org.scala-lang.modules#scala-xml_2.11;1.0.1->org.scala-lang#scala-library;2.11.0 [runtime->runtime(*)][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies org.scala-lang.modules#scala-xml_2.11;1.0.1->org.scala-lang#scala-library;2.11.6 [runtime->runtime(*)][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies org.scala-lang.modules#scala-xml_2.11;1.0.1->org.scala-lang#scala-library;2.11.6 [runtime->compile][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies productivity#productivity_2.11;1.0-SNAPSHOT->com.typesafe.play#twirl-api_2.11;1.0.2 [compile->master][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies productivity#productivity_2.11;1.0-SNAPSHOT->com.typesafe.play#play_2.11;2.3.9 [compile->default(compile)][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies productivity#productivity_2.11;1.0-SNAPSHOT->com.typesafe.play#play_2.11;2.3.9 [compile->runtime][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies productivity#productivity_2.11;1.0-SNAPSHOT->com.typesafe.play#play_2.11;2.3.9 [compile->compile][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies randchat#randchat_2.11;1.0-SNAPSHOT->com.typesafe.play#twirl-api_2.11;1.0.2 [compile->master][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies randchat#randchat_2.11;1.0-SNAPSHOT->com.typesafe.play#play_2.11;2.3.9 [compile->default(compile)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies randchat#randchat_2.11;1.0-SNAPSHOT->com.typesafe.play#play_2.11;2.3.9 [compile->runtime][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies randchat#randchat_2.11;1.0-SNAPSHOT->com.typesafe.play#play_2.11;2.3.9 [compile->compile][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.play#play_2.11;2.3.9->org.scala-lang#scala-library;2.11.1 [compile->master(compile)][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.play#play_2.11;2.3.9->org.scala-lang#scala-library;2.11.6 [compile->master(compile)][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.play#play_2.11;2.3.9->org.scala-lang#scala-library;2.11.1 [compile->compile(*)][0m
@@ -1353,10 +1353,10 @@
 [0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.play#play_2.11;2.3.9->javax.transaction#jta;1.1 [runtime->compile][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.play#play_2.11;2.3.9->org.scala-lang#scala-reflect;2.11.1 [runtime->runtime(*)][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.play#play_2.11;2.3.9->org.scala-lang#scala-reflect;2.11.1 [runtime->compile][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies productivity#productivity_2.11;1.0-SNAPSHOT->com.typesafe.play#play_2.11;2.3.9 [compile->master][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies productivity#productivity_2.11;1.0-SNAPSHOT->com.typesafe.play#play-java_2.11;2.3.9 [compile->default(compile)][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies productivity#productivity_2.11;1.0-SNAPSHOT->com.typesafe.play#play-java_2.11;2.3.9 [compile->runtime][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies productivity#productivity_2.11;1.0-SNAPSHOT->com.typesafe.play#play-java_2.11;2.3.9 [compile->compile][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies randchat#randchat_2.11;1.0-SNAPSHOT->com.typesafe.play#play_2.11;2.3.9 [compile->master][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies randchat#randchat_2.11;1.0-SNAPSHOT->com.typesafe.play#play-java_2.11;2.3.9 [compile->default(compile)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies randchat#randchat_2.11;1.0-SNAPSHOT->com.typesafe.play#play-java_2.11;2.3.9 [compile->runtime][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies randchat#randchat_2.11;1.0-SNAPSHOT->com.typesafe.play#play-java_2.11;2.3.9 [compile->compile][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.play#play-java_2.11;2.3.9->org.scala-lang#scala-library;2.11.1 [compile->master(compile)][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.play#play-java_2.11;2.3.9->org.scala-lang#scala-library;2.11.6 [compile->master(compile)][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.play#play-java_2.11;2.3.9->org.scala-lang#scala-library;2.11.1 [compile->compile(*)][0m
@@ -1481,14 +1481,14 @@
 [0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.play#play-java_2.11;2.3.9->com.google.code.findbugs#jsr305;2.0.3 [runtime->compile][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.play#play-java_2.11;2.3.9->org.apache.tomcat#tomcat-servlet-api;8.0.5 [runtime->runtime(*)][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.play#play-java_2.11;2.3.9->org.apache.tomcat#tomcat-servlet-api;8.0.5 [runtime->compile][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies productivity#productivity_2.11;1.0-SNAPSHOT->com.typesafe.play#play-java_2.11;2.3.9 [compile->master][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies productivity#productivity_2.11;1.0-SNAPSHOT->postgresql#postgresql;9.1-901-1.jdbc4 [compile->default(compile)][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies productivity#productivity_2.11;1.0-SNAPSHOT->postgresql#postgresql;9.1-901-1.jdbc4 [compile->runtime][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies productivity#productivity_2.11;1.0-SNAPSHOT->postgresql#postgresql;9.1-901-1.jdbc4 [compile->compile][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies productivity#productivity_2.11;1.0-SNAPSHOT->postgresql#postgresql;9.1-901-1.jdbc4 [compile->master][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies productivity#productivity_2.11;1.0-SNAPSHOT->com.typesafe.play#play-java-jdbc_2.11;2.3.9 [compile->default(compile)][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies productivity#productivity_2.11;1.0-SNAPSHOT->com.typesafe.play#play-java-jdbc_2.11;2.3.9 [compile->runtime][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies productivity#productivity_2.11;1.0-SNAPSHOT->com.typesafe.play#play-java-jdbc_2.11;2.3.9 [compile->compile][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies randchat#randchat_2.11;1.0-SNAPSHOT->com.typesafe.play#play-java_2.11;2.3.9 [compile->master][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies randchat#randchat_2.11;1.0-SNAPSHOT->postgresql#postgresql;9.1-901-1.jdbc4 [compile->default(compile)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies randchat#randchat_2.11;1.0-SNAPSHOT->postgresql#postgresql;9.1-901-1.jdbc4 [compile->runtime][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies randchat#randchat_2.11;1.0-SNAPSHOT->postgresql#postgresql;9.1-901-1.jdbc4 [compile->compile][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies randchat#randchat_2.11;1.0-SNAPSHOT->postgresql#postgresql;9.1-901-1.jdbc4 [compile->master][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies randchat#randchat_2.11;1.0-SNAPSHOT->com.typesafe.play#play-java-jdbc_2.11;2.3.9 [compile->default(compile)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies randchat#randchat_2.11;1.0-SNAPSHOT->com.typesafe.play#play-java-jdbc_2.11;2.3.9 [compile->runtime][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies randchat#randchat_2.11;1.0-SNAPSHOT->com.typesafe.play#play-java-jdbc_2.11;2.3.9 [compile->compile][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.play#play-java-jdbc_2.11;2.3.9->org.scala-lang#scala-library;2.11.1 [compile->master(compile)][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.play#play-java-jdbc_2.11;2.3.9->org.scala-lang#scala-library;2.11.6 [compile->master(compile)][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.play#play-java-jdbc_2.11;2.3.9->org.scala-lang#scala-library;2.11.1 [compile->compile(*)][0m
@@ -1541,10 +1541,10 @@
 [0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.play#play-jdbc_2.11;2.3.9->tyrex#tyrex;1.0.1 [runtime->compile][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.play#play-java-jdbc_2.11;2.3.9->com.typesafe.play#play-java_2.11;2.3.9 [runtime->runtime(*)][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.play#play-java-jdbc_2.11;2.3.9->com.typesafe.play#play-java_2.11;2.3.9 [runtime->compile][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies productivity#productivity_2.11;1.0-SNAPSHOT->com.typesafe.play#play-java-jdbc_2.11;2.3.9 [compile->master][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies productivity#productivity_2.11;1.0-SNAPSHOT->com.typesafe.play#play-java-ebean_2.11;2.3.9 [compile->default(compile)][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies productivity#productivity_2.11;1.0-SNAPSHOT->com.typesafe.play#play-java-ebean_2.11;2.3.9 [compile->runtime][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies productivity#productivity_2.11;1.0-SNAPSHOT->com.typesafe.play#play-java-ebean_2.11;2.3.9 [compile->compile][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies randchat#randchat_2.11;1.0-SNAPSHOT->com.typesafe.play#play-java-jdbc_2.11;2.3.9 [compile->master][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies randchat#randchat_2.11;1.0-SNAPSHOT->com.typesafe.play#play-java-ebean_2.11;2.3.9 [compile->default(compile)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies randchat#randchat_2.11;1.0-SNAPSHOT->com.typesafe.play#play-java-ebean_2.11;2.3.9 [compile->runtime][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies randchat#randchat_2.11;1.0-SNAPSHOT->com.typesafe.play#play-java-ebean_2.11;2.3.9 [compile->compile][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.play#play-java-ebean_2.11;2.3.9->org.scala-lang#scala-library;2.11.1 [compile->master(compile)][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.play#play-java-ebean_2.11;2.3.9->org.scala-lang#scala-library;2.11.6 [compile->master(compile)][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.play#play-java-ebean_2.11;2.3.9->org.scala-lang#scala-library;2.11.1 [compile->compile(*)][0m
@@ -1570,10 +1570,10 @@
 [0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.play#play-java-ebean_2.11;2.3.9->org.avaje.ebeanorm#avaje-ebeanorm-agent;3.2.2 [runtime->compile][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.play#play-java-ebean_2.11;2.3.9->org.hibernate.javax.persistence#hibernate-jpa-2.0-api;1.0.1.Final [runtime->runtime(*)][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.play#play-java-ebean_2.11;2.3.9->org.hibernate.javax.persistence#hibernate-jpa-2.0-api;1.0.1.Final [runtime->compile][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies productivity#productivity_2.11;1.0-SNAPSHOT->com.typesafe.play#play-java-ebean_2.11;2.3.9 [compile->master][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies productivity#productivity_2.11;1.0-SNAPSHOT->com.typesafe.play#play-cache_2.11;2.3.9 [compile->default(compile)][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies productivity#productivity_2.11;1.0-SNAPSHOT->com.typesafe.play#play-cache_2.11;2.3.9 [compile->runtime][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies productivity#productivity_2.11;1.0-SNAPSHOT->com.typesafe.play#play-cache_2.11;2.3.9 [compile->compile][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies randchat#randchat_2.11;1.0-SNAPSHOT->com.typesafe.play#play-java-ebean_2.11;2.3.9 [compile->master][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies randchat#randchat_2.11;1.0-SNAPSHOT->com.typesafe.play#play-cache_2.11;2.3.9 [compile->default(compile)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies randchat#randchat_2.11;1.0-SNAPSHOT->com.typesafe.play#play-cache_2.11;2.3.9 [compile->runtime][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies randchat#randchat_2.11;1.0-SNAPSHOT->com.typesafe.play#play-cache_2.11;2.3.9 [compile->compile][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.play#play-cache_2.11;2.3.9->org.scala-lang#scala-library;2.11.1 [compile->master(compile)][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.play#play-cache_2.11;2.3.9->org.scala-lang#scala-library;2.11.6 [compile->master(compile)][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.play#play-cache_2.11;2.3.9->org.scala-lang#scala-library;2.11.1 [compile->compile(*)][0m
@@ -1596,10 +1596,10 @@
 [0m[[0mdebug[0m] [0m== resolving dependencies net.sf.ehcache#ehcache-core;2.6.8->org.slf4j#slf4j-api;1.6.1 [runtime->runtime(*)][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies net.sf.ehcache#ehcache-core;2.6.8->org.slf4j#slf4j-api;1.7.6 [runtime->runtime(*)][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies net.sf.ehcache#ehcache-core;2.6.8->org.slf4j#slf4j-api;1.7.6 [runtime->compile][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies productivity#productivity_2.11;1.0-SNAPSHOT->com.typesafe.play#play-cache_2.11;2.3.9 [compile->master][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies productivity#productivity_2.11;1.0-SNAPSHOT->com.typesafe.play#play-java-ws_2.11;2.3.9 [compile->default(compile)][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies productivity#productivity_2.11;1.0-SNAPSHOT->com.typesafe.play#play-java-ws_2.11;2.3.9 [compile->runtime][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies productivity#productivity_2.11;1.0-SNAPSHOT->com.typesafe.play#play-java-ws_2.11;2.3.9 [compile->compile][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies randchat#randchat_2.11;1.0-SNAPSHOT->com.typesafe.play#play-cache_2.11;2.3.9 [compile->master][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies randchat#randchat_2.11;1.0-SNAPSHOT->com.typesafe.play#play-java-ws_2.11;2.3.9 [compile->default(compile)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies randchat#randchat_2.11;1.0-SNAPSHOT->com.typesafe.play#play-java-ws_2.11;2.3.9 [compile->runtime][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies randchat#randchat_2.11;1.0-SNAPSHOT->com.typesafe.play#play-java-ws_2.11;2.3.9 [compile->compile][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.play#play-java-ws_2.11;2.3.9->org.scala-lang#scala-library;2.11.1 [compile->master(compile)][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.play#play-java-ws_2.11;2.3.9->org.scala-lang#scala-library;2.11.6 [compile->master(compile)][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.play#play-java-ws_2.11;2.3.9->org.scala-lang#scala-library;2.11.1 [compile->compile(*)][0m
@@ -1710,18 +1710,18 @@
 [0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.play#play-java-ws_2.11;2.3.9->oauth.signpost#signpost-core;1.2.1.2 [runtime->compile][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.play#play-java-ws_2.11;2.3.9->oauth.signpost#signpost-commonshttp4;1.2.1.2 [runtime->runtime(*)][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.play#play-java-ws_2.11;2.3.9->oauth.signpost#signpost-commonshttp4;1.2.1.2 [runtime->compile][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies productivity#productivity_2.11;1.0-SNAPSHOT->com.typesafe.play#play-java-ws_2.11;2.3.9 [compile->master][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies randchat#randchat_2.11;1.0-SNAPSHOT->com.typesafe.play#play-java-ws_2.11;2.3.9 [compile->master][0m
 [0m[[0mdebug[0m] [0mresolving dependencies for configuration 'test'[0m
-[0m[[0mdebug[0m] [0m== resolving dependencies for productivity#productivity_2.11;1.0-SNAPSHOT [test][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies for productivity#productivity_2.11;1.0-SNAPSHOT [runtime][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies for productivity#productivity_2.11;1.0-SNAPSHOT [compile][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies productivity#productivity_2.11;1.0-SNAPSHOT->org.scala-lang#scala-library;2.11.6 [compile->default(compile)][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies productivity#productivity_2.11;1.0-SNAPSHOT->org.scala-lang#scala-library;2.11.6 [compile->runtime][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies productivity#productivity_2.11;1.0-SNAPSHOT->org.scala-lang#scala-library;2.11.6 [compile->compile][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies productivity#productivity_2.11;1.0-SNAPSHOT->org.scala-lang#scala-library;2.11.6 [compile->master][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies productivity#productivity_2.11;1.0-SNAPSHOT->com.typesafe.play#twirl-api_2.11;1.0.2 [compile->default(compile)][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies productivity#productivity_2.11;1.0-SNAPSHOT->com.typesafe.play#twirl-api_2.11;1.0.2 [compile->runtime][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies productivity#productivity_2.11;1.0-SNAPSHOT->com.typesafe.play#twirl-api_2.11;1.0.2 [compile->compile][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies for randchat#randchat_2.11;1.0-SNAPSHOT [test][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies for randchat#randchat_2.11;1.0-SNAPSHOT [runtime][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies for randchat#randchat_2.11;1.0-SNAPSHOT [compile][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies randchat#randchat_2.11;1.0-SNAPSHOT->org.scala-lang#scala-library;2.11.6 [compile->default(compile)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies randchat#randchat_2.11;1.0-SNAPSHOT->org.scala-lang#scala-library;2.11.6 [compile->runtime][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies randchat#randchat_2.11;1.0-SNAPSHOT->org.scala-lang#scala-library;2.11.6 [compile->compile][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies randchat#randchat_2.11;1.0-SNAPSHOT->org.scala-lang#scala-library;2.11.6 [compile->master][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies randchat#randchat_2.11;1.0-SNAPSHOT->com.typesafe.play#twirl-api_2.11;1.0.2 [compile->default(compile)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies randchat#randchat_2.11;1.0-SNAPSHOT->com.typesafe.play#twirl-api_2.11;1.0.2 [compile->runtime][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies randchat#randchat_2.11;1.0-SNAPSHOT->com.typesafe.play#twirl-api_2.11;1.0.2 [compile->compile][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.play#twirl-api_2.11;1.0.2->org.scala-lang#scala-library;2.11.1 [compile->master(compile)][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.play#twirl-api_2.11;1.0.2->org.scala-lang#scala-library;2.11.6 [compile->master(compile)][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.play#twirl-api_2.11;1.0.2->org.scala-lang#scala-library;2.11.1 [compile->compile(*)][0m
@@ -1743,10 +1743,10 @@
 [0m[[0mdebug[0m] [0m== resolving dependencies org.scala-lang.modules#scala-xml_2.11;1.0.1->org.scala-lang#scala-library;2.11.0 [runtime->runtime(*)][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies org.scala-lang.modules#scala-xml_2.11;1.0.1->org.scala-lang#scala-library;2.11.6 [runtime->runtime(*)][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies org.scala-lang.modules#scala-xml_2.11;1.0.1->org.scala-lang#scala-library;2.11.6 [runtime->compile][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies productivity#productivity_2.11;1.0-SNAPSHOT->com.typesafe.play#twirl-api_2.11;1.0.2 [compile->master][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies productivity#productivity_2.11;1.0-SNAPSHOT->com.typesafe.play#play_2.11;2.3.9 [compile->default(compile)][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies productivity#productivity_2.11;1.0-SNAPSHOT->com.typesafe.play#play_2.11;2.3.9 [compile->runtime][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies productivity#productivity_2.11;1.0-SNAPSHOT->com.typesafe.play#play_2.11;2.3.9 [compile->compile][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies randchat#randchat_2.11;1.0-SNAPSHOT->com.typesafe.play#twirl-api_2.11;1.0.2 [compile->master][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies randchat#randchat_2.11;1.0-SNAPSHOT->com.typesafe.play#play_2.11;2.3.9 [compile->default(compile)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies randchat#randchat_2.11;1.0-SNAPSHOT->com.typesafe.play#play_2.11;2.3.9 [compile->runtime][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies randchat#randchat_2.11;1.0-SNAPSHOT->com.typesafe.play#play_2.11;2.3.9 [compile->compile][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.play#play_2.11;2.3.9->org.scala-lang#scala-library;2.11.1 [compile->master(compile)][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.play#play_2.11;2.3.9->org.scala-lang#scala-library;2.11.6 [compile->master(compile)][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.play#play_2.11;2.3.9->org.scala-lang#scala-library;2.11.1 [compile->compile(*)][0m
@@ -2020,10 +2020,10 @@
 [0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.play#play_2.11;2.3.9->javax.transaction#jta;1.1 [runtime->compile][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.play#play_2.11;2.3.9->org.scala-lang#scala-reflect;2.11.1 [runtime->runtime(*)][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.play#play_2.11;2.3.9->org.scala-lang#scala-reflect;2.11.1 [runtime->compile][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies productivity#productivity_2.11;1.0-SNAPSHOT->com.typesafe.play#play_2.11;2.3.9 [compile->master][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies productivity#productivity_2.11;1.0-SNAPSHOT->com.typesafe.play#play-java_2.11;2.3.9 [compile->default(compile)][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies productivity#productivity_2.11;1.0-SNAPSHOT->com.typesafe.play#play-java_2.11;2.3.9 [compile->runtime][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies productivity#productivity_2.11;1.0-SNAPSHOT->com.typesafe.play#play-java_2.11;2.3.9 [compile->compile][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies randchat#randchat_2.11;1.0-SNAPSHOT->com.typesafe.play#play_2.11;2.3.9 [compile->master][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies randchat#randchat_2.11;1.0-SNAPSHOT->com.typesafe.play#play-java_2.11;2.3.9 [compile->default(compile)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies randchat#randchat_2.11;1.0-SNAPSHOT->com.typesafe.play#play-java_2.11;2.3.9 [compile->runtime][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies randchat#randchat_2.11;1.0-SNAPSHOT->com.typesafe.play#play-java_2.11;2.3.9 [compile->compile][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.play#play-java_2.11;2.3.9->org.scala-lang#scala-library;2.11.1 [compile->master(compile)][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.play#play-java_2.11;2.3.9->org.scala-lang#scala-library;2.11.6 [compile->master(compile)][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.play#play-java_2.11;2.3.9->org.scala-lang#scala-library;2.11.1 [compile->compile(*)][0m
@@ -2148,14 +2148,14 @@
 [0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.play#play-java_2.11;2.3.9->com.google.code.findbugs#jsr305;2.0.3 [runtime->compile][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.play#play-java_2.11;2.3.9->org.apache.tomcat#tomcat-servlet-api;8.0.5 [runtime->runtime(*)][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.play#play-java_2.11;2.3.9->org.apache.tomcat#tomcat-servlet-api;8.0.5 [runtime->compile][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies productivity#productivity_2.11;1.0-SNAPSHOT->com.typesafe.play#play-java_2.11;2.3.9 [compile->master][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies productivity#productivity_2.11;1.0-SNAPSHOT->postgresql#postgresql;9.1-901-1.jdbc4 [compile->default(compile)][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies productivity#productivity_2.11;1.0-SNAPSHOT->postgresql#postgresql;9.1-901-1.jdbc4 [compile->runtime][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies productivity#productivity_2.11;1.0-SNAPSHOT->postgresql#postgresql;9.1-901-1.jdbc4 [compile->compile][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies productivity#productivity_2.11;1.0-SNAPSHOT->postgresql#postgresql;9.1-901-1.jdbc4 [compile->master][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies productivity#productivity_2.11;1.0-SNAPSHOT->com.typesafe.play#play-java-jdbc_2.11;2.3.9 [compile->default(compile)][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies productivity#productivity_2.11;1.0-SNAPSHOT->com.typesafe.play#play-java-jdbc_2.11;2.3.9 [compile->runtime][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies productivity#productivity_2.11;1.0-SNAPSHOT->com.typesafe.play#play-java-jdbc_2.11;2.3.9 [compile->compile][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies randchat#randchat_2.11;1.0-SNAPSHOT->com.typesafe.play#play-java_2.11;2.3.9 [compile->master][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies randchat#randchat_2.11;1.0-SNAPSHOT->postgresql#postgresql;9.1-901-1.jdbc4 [compile->default(compile)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies randchat#randchat_2.11;1.0-SNAPSHOT->postgresql#postgresql;9.1-901-1.jdbc4 [compile->runtime][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies randchat#randchat_2.11;1.0-SNAPSHOT->postgresql#postgresql;9.1-901-1.jdbc4 [compile->compile][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies randchat#randchat_2.11;1.0-SNAPSHOT->postgresql#postgresql;9.1-901-1.jdbc4 [compile->master][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies randchat#randchat_2.11;1.0-SNAPSHOT->com.typesafe.play#play-java-jdbc_2.11;2.3.9 [compile->default(compile)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies randchat#randchat_2.11;1.0-SNAPSHOT->com.typesafe.play#play-java-jdbc_2.11;2.3.9 [compile->runtime][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies randchat#randchat_2.11;1.0-SNAPSHOT->com.typesafe.play#play-java-jdbc_2.11;2.3.9 [compile->compile][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.play#play-java-jdbc_2.11;2.3.9->org.scala-lang#scala-library;2.11.1 [compile->master(compile)][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.play#play-java-jdbc_2.11;2.3.9->org.scala-lang#scala-library;2.11.6 [compile->master(compile)][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.play#play-java-jdbc_2.11;2.3.9->org.scala-lang#scala-library;2.11.1 [compile->compile(*)][0m
@@ -2208,10 +2208,10 @@
 [0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.play#play-jdbc_2.11;2.3.9->tyrex#tyrex;1.0.1 [runtime->compile][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.play#play-java-jdbc_2.11;2.3.9->com.typesafe.play#play-java_2.11;2.3.9 [runtime->runtime(*)][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.play#play-java-jdbc_2.11;2.3.9->com.typesafe.play#play-java_2.11;2.3.9 [runtime->compile][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies productivity#productivity_2.11;1.0-SNAPSHOT->com.typesafe.play#play-java-jdbc_2.11;2.3.9 [compile->master][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies productivity#productivity_2.11;1.0-SNAPSHOT->com.typesafe.play#play-java-ebean_2.11;2.3.9 [compile->default(compile)][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies productivity#productivity_2.11;1.0-SNAPSHOT->com.typesafe.play#play-java-ebean_2.11;2.3.9 [compile->runtime][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies productivity#productivity_2.11;1.0-SNAPSHOT->com.typesafe.play#play-java-ebean_2.11;2.3.9 [compile->compile][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies randchat#randchat_2.11;1.0-SNAPSHOT->com.typesafe.play#play-java-jdbc_2.11;2.3.9 [compile->master][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies randchat#randchat_2.11;1.0-SNAPSHOT->com.typesafe.play#play-java-ebean_2.11;2.3.9 [compile->default(compile)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies randchat#randchat_2.11;1.0-SNAPSHOT->com.typesafe.play#play-java-ebean_2.11;2.3.9 [compile->runtime][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies randchat#randchat_2.11;1.0-SNAPSHOT->com.typesafe.play#play-java-ebean_2.11;2.3.9 [compile->compile][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.play#play-java-ebean_2.11;2.3.9->org.scala-lang#scala-library;2.11.1 [compile->master(compile)][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.play#play-java-ebean_2.11;2.3.9->org.scala-lang#scala-library;2.11.6 [compile->master(compile)][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.play#play-java-ebean_2.11;2.3.9->org.scala-lang#scala-library;2.11.1 [compile->compile(*)][0m
@@ -2237,10 +2237,10 @@
 [0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.play#play-java-ebean_2.11;2.3.9->org.avaje.ebeanorm#avaje-ebeanorm-agent;3.2.2 [runtime->compile][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.play#play-java-ebean_2.11;2.3.9->org.hibernate.javax.persistence#hibernate-jpa-2.0-api;1.0.1.Final [runtime->runtime(*)][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.play#play-java-ebean_2.11;2.3.9->org.hibernate.javax.persistence#hibernate-jpa-2.0-api;1.0.1.Final [runtime->compile][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies productivity#productivity_2.11;1.0-SNAPSHOT->com.typesafe.play#play-java-ebean_2.11;2.3.9 [compile->master][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies productivity#productivity_2.11;1.0-SNAPSHOT->com.typesafe.play#play-cache_2.11;2.3.9 [compile->default(compile)][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies productivity#productivity_2.11;1.0-SNAPSHOT->com.typesafe.play#play-cache_2.11;2.3.9 [compile->runtime][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies productivity#productivity_2.11;1.0-SNAPSHOT->com.typesafe.play#play-cache_2.11;2.3.9 [compile->compile][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies randchat#randchat_2.11;1.0-SNAPSHOT->com.typesafe.play#play-java-ebean_2.11;2.3.9 [compile->master][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies randchat#randchat_2.11;1.0-SNAPSHOT->com.typesafe.play#play-cache_2.11;2.3.9 [compile->default(compile)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies randchat#randchat_2.11;1.0-SNAPSHOT->com.typesafe.play#play-cache_2.11;2.3.9 [compile->runtime][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies randchat#randchat_2.11;1.0-SNAPSHOT->com.typesafe.play#play-cache_2.11;2.3.9 [compile->compile][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.play#play-cache_2.11;2.3.9->org.scala-lang#scala-library;2.11.1 [compile->master(compile)][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.play#play-cache_2.11;2.3.9->org.scala-lang#scala-library;2.11.6 [compile->master(compile)][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.play#play-cache_2.11;2.3.9->org.scala-lang#scala-library;2.11.1 [compile->compile(*)][0m
@@ -2263,10 +2263,10 @@
 [0m[[0mdebug[0m] [0m== resolving dependencies net.sf.ehcache#ehcache-core;2.6.8->org.slf4j#slf4j-api;1.6.1 [runtime->runtime(*)][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies net.sf.ehcache#ehcache-core;2.6.8->org.slf4j#slf4j-api;1.7.6 [runtime->runtime(*)][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies net.sf.ehcache#ehcache-core;2.6.8->org.slf4j#slf4j-api;1.7.6 [runtime->compile][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies productivity#productivity_2.11;1.0-SNAPSHOT->com.typesafe.play#play-cache_2.11;2.3.9 [compile->master][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies productivity#productivity_2.11;1.0-SNAPSHOT->com.typesafe.play#play-java-ws_2.11;2.3.9 [compile->default(compile)][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies productivity#productivity_2.11;1.0-SNAPSHOT->com.typesafe.play#play-java-ws_2.11;2.3.9 [compile->runtime][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies productivity#productivity_2.11;1.0-SNAPSHOT->com.typesafe.play#play-java-ws_2.11;2.3.9 [compile->compile][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies randchat#randchat_2.11;1.0-SNAPSHOT->com.typesafe.play#play-cache_2.11;2.3.9 [compile->master][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies randchat#randchat_2.11;1.0-SNAPSHOT->com.typesafe.play#play-java-ws_2.11;2.3.9 [compile->default(compile)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies randchat#randchat_2.11;1.0-SNAPSHOT->com.typesafe.play#play-java-ws_2.11;2.3.9 [compile->runtime][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies randchat#randchat_2.11;1.0-SNAPSHOT->com.typesafe.play#play-java-ws_2.11;2.3.9 [compile->compile][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.play#play-java-ws_2.11;2.3.9->org.scala-lang#scala-library;2.11.1 [compile->master(compile)][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.play#play-java-ws_2.11;2.3.9->org.scala-lang#scala-library;2.11.6 [compile->master(compile)][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.play#play-java-ws_2.11;2.3.9->org.scala-lang#scala-library;2.11.1 [compile->compile(*)][0m
@@ -2377,14 +2377,14 @@
 [0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.play#play-java-ws_2.11;2.3.9->oauth.signpost#signpost-core;1.2.1.2 [runtime->compile][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.play#play-java-ws_2.11;2.3.9->oauth.signpost#signpost-commonshttp4;1.2.1.2 [runtime->runtime(*)][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.play#play-java-ws_2.11;2.3.9->oauth.signpost#signpost-commonshttp4;1.2.1.2 [runtime->compile][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies productivity#productivity_2.11;1.0-SNAPSHOT->com.typesafe.play#play-java-ws_2.11;2.3.9 [compile->master][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies productivity#productivity_2.11;1.0-SNAPSHOT->com.typesafe.play#play-test_2.11;2.3.9 [test->default(compile)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies randchat#randchat_2.11;1.0-SNAPSHOT->com.typesafe.play#play-java-ws_2.11;2.3.9 [compile->master][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies randchat#randchat_2.11;1.0-SNAPSHOT->com.typesafe.play#play-test_2.11;2.3.9 [test->default(compile)][0m
 [0m[[0minfo[0m] [0mResolving com.typesafe.play#play-test_2.11;2.3.9 ...[0m
 [0m[[0mdebug[0m] [0msbt-chain: Checking cache for: dependency: com.typesafe.play#play-test_2.11;2.3.9 {test=[default(compile)]}[0m
 [0m[[0mdebug[0m] [0msbt-chain: module revision found in cache: com.typesafe.play#play-test_2.11;2.3.9[0m
 [0m[[0mdebug[0m] [0m	found com.typesafe.play#play-test_2.11;2.3.9 in sbt-chain[0m
-[0m[[0mdebug[0m] [0m== resolving dependencies productivity#productivity_2.11;1.0-SNAPSHOT->com.typesafe.play#play-test_2.11;2.3.9 [test->runtime][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies productivity#productivity_2.11;1.0-SNAPSHOT->com.typesafe.play#play-test_2.11;2.3.9 [test->compile][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies randchat#randchat_2.11;1.0-SNAPSHOT->com.typesafe.play#play-test_2.11;2.3.9 [test->runtime][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies randchat#randchat_2.11;1.0-SNAPSHOT->com.typesafe.play#play-test_2.11;2.3.9 [test->compile][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.play#play-test_2.11;2.3.9->org.scala-lang#scala-library;2.11.1 [compile->master(compile)][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.play#play-test_2.11;2.3.9->org.scala-lang#scala-library;2.11.6 [compile->master(compile)][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.play#play-test_2.11;2.3.9->org.scala-lang#scala-library;2.11.1 [compile->compile(*)][0m
@@ -3667,21 +3667,21 @@
 [0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.play#play-test_2.11;2.3.9->com.google.code.findbugs#jsr305;2.0.3 [runtime->compile][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.play#play-test_2.11;2.3.9->org.fluentlenium#fluentlenium-festassert;0.9.2 [runtime->runtime(*)][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.play#play-test_2.11;2.3.9->org.fluentlenium#fluentlenium-festassert;0.9.2 [runtime->compile][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies productivity#productivity_2.11;1.0-SNAPSHOT->com.typesafe.play#play-test_2.11;2.3.9 [test->master][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies randchat#randchat_2.11;1.0-SNAPSHOT->com.typesafe.play#play-test_2.11;2.3.9 [test->master][0m
 [0m[[0mdebug[0m] [0mresolving dependencies for configuration 'provided'[0m
-[0m[[0mdebug[0m] [0m== resolving dependencies for productivity#productivity_2.11;1.0-SNAPSHOT [provided][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies for randchat#randchat_2.11;1.0-SNAPSHOT [provided][0m
 [0m[[0mdebug[0m] [0mresolving dependencies for configuration 'optional'[0m
-[0m[[0mdebug[0m] [0m== resolving dependencies for productivity#productivity_2.11;1.0-SNAPSHOT [optional][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies for randchat#randchat_2.11;1.0-SNAPSHOT [optional][0m
 [0m[[0mdebug[0m] [0mresolving dependencies for configuration 'compile-internal'[0m
-[0m[[0mdebug[0m] [0m== resolving dependencies for productivity#productivity_2.11;1.0-SNAPSHOT [compile-internal][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies for productivity#productivity_2.11;1.0-SNAPSHOT [compile][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies productivity#productivity_2.11;1.0-SNAPSHOT->org.scala-lang#scala-library;2.11.6 [compile->default(compile)][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies productivity#productivity_2.11;1.0-SNAPSHOT->org.scala-lang#scala-library;2.11.6 [compile->runtime][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies productivity#productivity_2.11;1.0-SNAPSHOT->org.scala-lang#scala-library;2.11.6 [compile->compile][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies productivity#productivity_2.11;1.0-SNAPSHOT->org.scala-lang#scala-library;2.11.6 [compile->master][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies productivity#productivity_2.11;1.0-SNAPSHOT->com.typesafe.play#twirl-api_2.11;1.0.2 [compile->default(compile)][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies productivity#productivity_2.11;1.0-SNAPSHOT->com.typesafe.play#twirl-api_2.11;1.0.2 [compile->runtime][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies productivity#productivity_2.11;1.0-SNAPSHOT->com.typesafe.play#twirl-api_2.11;1.0.2 [compile->compile][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies for randchat#randchat_2.11;1.0-SNAPSHOT [compile-internal][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies for randchat#randchat_2.11;1.0-SNAPSHOT [compile][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies randchat#randchat_2.11;1.0-SNAPSHOT->org.scala-lang#scala-library;2.11.6 [compile->default(compile)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies randchat#randchat_2.11;1.0-SNAPSHOT->org.scala-lang#scala-library;2.11.6 [compile->runtime][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies randchat#randchat_2.11;1.0-SNAPSHOT->org.scala-lang#scala-library;2.11.6 [compile->compile][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies randchat#randchat_2.11;1.0-SNAPSHOT->org.scala-lang#scala-library;2.11.6 [compile->master][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies randchat#randchat_2.11;1.0-SNAPSHOT->com.typesafe.play#twirl-api_2.11;1.0.2 [compile->default(compile)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies randchat#randchat_2.11;1.0-SNAPSHOT->com.typesafe.play#twirl-api_2.11;1.0.2 [compile->runtime][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies randchat#randchat_2.11;1.0-SNAPSHOT->com.typesafe.play#twirl-api_2.11;1.0.2 [compile->compile][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.play#twirl-api_2.11;1.0.2->org.scala-lang#scala-library;2.11.1 [compile->master(compile)][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.play#twirl-api_2.11;1.0.2->org.scala-lang#scala-library;2.11.6 [compile->master(compile)][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.play#twirl-api_2.11;1.0.2->org.scala-lang#scala-library;2.11.1 [compile->compile(*)][0m
@@ -3703,10 +3703,10 @@
 [0m[[0mdebug[0m] [0m== resolving dependencies org.scala-lang.modules#scala-xml_2.11;1.0.1->org.scala-lang#scala-library;2.11.0 [runtime->runtime(*)][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies org.scala-lang.modules#scala-xml_2.11;1.0.1->org.scala-lang#scala-library;2.11.6 [runtime->runtime(*)][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies org.scala-lang.modules#scala-xml_2.11;1.0.1->org.scala-lang#scala-library;2.11.6 [runtime->compile][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies productivity#productivity_2.11;1.0-SNAPSHOT->com.typesafe.play#twirl-api_2.11;1.0.2 [compile->master][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies productivity#productivity_2.11;1.0-SNAPSHOT->com.typesafe.play#play_2.11;2.3.9 [compile->default(compile)][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies productivity#productivity_2.11;1.0-SNAPSHOT->com.typesafe.play#play_2.11;2.3.9 [compile->runtime][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies productivity#productivity_2.11;1.0-SNAPSHOT->com.typesafe.play#play_2.11;2.3.9 [compile->compile][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies randchat#randchat_2.11;1.0-SNAPSHOT->com.typesafe.play#twirl-api_2.11;1.0.2 [compile->master][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies randchat#randchat_2.11;1.0-SNAPSHOT->com.typesafe.play#play_2.11;2.3.9 [compile->default(compile)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies randchat#randchat_2.11;1.0-SNAPSHOT->com.typesafe.play#play_2.11;2.3.9 [compile->runtime][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies randchat#randchat_2.11;1.0-SNAPSHOT->com.typesafe.play#play_2.11;2.3.9 [compile->compile][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.play#play_2.11;2.3.9->org.scala-lang#scala-library;2.11.1 [compile->master(compile)][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.play#play_2.11;2.3.9->org.scala-lang#scala-library;2.11.6 [compile->master(compile)][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.play#play_2.11;2.3.9->org.scala-lang#scala-library;2.11.1 [compile->compile(*)][0m
@@ -3980,10 +3980,10 @@
 [0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.play#play_2.11;2.3.9->javax.transaction#jta;1.1 [runtime->compile][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.play#play_2.11;2.3.9->org.scala-lang#scala-reflect;2.11.1 [runtime->runtime(*)][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.play#play_2.11;2.3.9->org.scala-lang#scala-reflect;2.11.1 [runtime->compile][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies productivity#productivity_2.11;1.0-SNAPSHOT->com.typesafe.play#play_2.11;2.3.9 [compile->master][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies productivity#productivity_2.11;1.0-SNAPSHOT->com.typesafe.play#play-java_2.11;2.3.9 [compile->default(compile)][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies productivity#productivity_2.11;1.0-SNAPSHOT->com.typesafe.play#play-java_2.11;2.3.9 [compile->runtime][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies productivity#productivity_2.11;1.0-SNAPSHOT->com.typesafe.play#play-java_2.11;2.3.9 [compile->compile][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies randchat#randchat_2.11;1.0-SNAPSHOT->com.typesafe.play#play_2.11;2.3.9 [compile->master][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies randchat#randchat_2.11;1.0-SNAPSHOT->com.typesafe.play#play-java_2.11;2.3.9 [compile->default(compile)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies randchat#randchat_2.11;1.0-SNAPSHOT->com.typesafe.play#play-java_2.11;2.3.9 [compile->runtime][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies randchat#randchat_2.11;1.0-SNAPSHOT->com.typesafe.play#play-java_2.11;2.3.9 [compile->compile][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.play#play-java_2.11;2.3.9->org.scala-lang#scala-library;2.11.1 [compile->master(compile)][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.play#play-java_2.11;2.3.9->org.scala-lang#scala-library;2.11.6 [compile->master(compile)][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.play#play-java_2.11;2.3.9->org.scala-lang#scala-library;2.11.1 [compile->compile(*)][0m
@@ -4108,14 +4108,14 @@
 [0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.play#play-java_2.11;2.3.9->com.google.code.findbugs#jsr305;2.0.3 [runtime->compile][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.play#play-java_2.11;2.3.9->org.apache.tomcat#tomcat-servlet-api;8.0.5 [runtime->runtime(*)][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.play#play-java_2.11;2.3.9->org.apache.tomcat#tomcat-servlet-api;8.0.5 [runtime->compile][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies productivity#productivity_2.11;1.0-SNAPSHOT->com.typesafe.play#play-java_2.11;2.3.9 [compile->master][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies productivity#productivity_2.11;1.0-SNAPSHOT->postgresql#postgresql;9.1-901-1.jdbc4 [compile->default(compile)][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies productivity#productivity_2.11;1.0-SNAPSHOT->postgresql#postgresql;9.1-901-1.jdbc4 [compile->runtime][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies productivity#productivity_2.11;1.0-SNAPSHOT->postgresql#postgresql;9.1-901-1.jdbc4 [compile->compile][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies productivity#productivity_2.11;1.0-SNAPSHOT->postgresql#postgresql;9.1-901-1.jdbc4 [compile->master][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies productivity#productivity_2.11;1.0-SNAPSHOT->com.typesafe.play#play-java-jdbc_2.11;2.3.9 [compile->default(compile)][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies productivity#productivity_2.11;1.0-SNAPSHOT->com.typesafe.play#play-java-jdbc_2.11;2.3.9 [compile->runtime][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies productivity#productivity_2.11;1.0-SNAPSHOT->com.typesafe.play#play-java-jdbc_2.11;2.3.9 [compile->compile][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies randchat#randchat_2.11;1.0-SNAPSHOT->com.typesafe.play#play-java_2.11;2.3.9 [compile->master][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies randchat#randchat_2.11;1.0-SNAPSHOT->postgresql#postgresql;9.1-901-1.jdbc4 [compile->default(compile)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies randchat#randchat_2.11;1.0-SNAPSHOT->postgresql#postgresql;9.1-901-1.jdbc4 [compile->runtime][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies randchat#randchat_2.11;1.0-SNAPSHOT->postgresql#postgresql;9.1-901-1.jdbc4 [compile->compile][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies randchat#randchat_2.11;1.0-SNAPSHOT->postgresql#postgresql;9.1-901-1.jdbc4 [compile->master][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies randchat#randchat_2.11;1.0-SNAPSHOT->com.typesafe.play#play-java-jdbc_2.11;2.3.9 [compile->default(compile)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies randchat#randchat_2.11;1.0-SNAPSHOT->com.typesafe.play#play-java-jdbc_2.11;2.3.9 [compile->runtime][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies randchat#randchat_2.11;1.0-SNAPSHOT->com.typesafe.play#play-java-jdbc_2.11;2.3.9 [compile->compile][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.play#play-java-jdbc_2.11;2.3.9->org.scala-lang#scala-library;2.11.1 [compile->master(compile)][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.play#play-java-jdbc_2.11;2.3.9->org.scala-lang#scala-library;2.11.6 [compile->master(compile)][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.play#play-java-jdbc_2.11;2.3.9->org.scala-lang#scala-library;2.11.1 [compile->compile(*)][0m
@@ -4168,10 +4168,10 @@
 [0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.play#play-jdbc_2.11;2.3.9->tyrex#tyrex;1.0.1 [runtime->compile][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.play#play-java-jdbc_2.11;2.3.9->com.typesafe.play#play-java_2.11;2.3.9 [runtime->runtime(*)][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.play#play-java-jdbc_2.11;2.3.9->com.typesafe.play#play-java_2.11;2.3.9 [runtime->compile][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies productivity#productivity_2.11;1.0-SNAPSHOT->com.typesafe.play#play-java-jdbc_2.11;2.3.9 [compile->master][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies productivity#productivity_2.11;1.0-SNAPSHOT->com.typesafe.play#play-java-ebean_2.11;2.3.9 [compile->default(compile)][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies productivity#productivity_2.11;1.0-SNAPSHOT->com.typesafe.play#play-java-ebean_2.11;2.3.9 [compile->runtime][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies productivity#productivity_2.11;1.0-SNAPSHOT->com.typesafe.play#play-java-ebean_2.11;2.3.9 [compile->compile][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies randchat#randchat_2.11;1.0-SNAPSHOT->com.typesafe.play#play-java-jdbc_2.11;2.3.9 [compile->master][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies randchat#randchat_2.11;1.0-SNAPSHOT->com.typesafe.play#play-java-ebean_2.11;2.3.9 [compile->default(compile)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies randchat#randchat_2.11;1.0-SNAPSHOT->com.typesafe.play#play-java-ebean_2.11;2.3.9 [compile->runtime][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies randchat#randchat_2.11;1.0-SNAPSHOT->com.typesafe.play#play-java-ebean_2.11;2.3.9 [compile->compile][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.play#play-java-ebean_2.11;2.3.9->org.scala-lang#scala-library;2.11.1 [compile->master(compile)][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.play#play-java-ebean_2.11;2.3.9->org.scala-lang#scala-library;2.11.6 [compile->master(compile)][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.play#play-java-ebean_2.11;2.3.9->org.scala-lang#scala-library;2.11.1 [compile->compile(*)][0m
@@ -4197,10 +4197,10 @@
 [0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.play#play-java-ebean_2.11;2.3.9->org.avaje.ebeanorm#avaje-ebeanorm-agent;3.2.2 [runtime->compile][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.play#play-java-ebean_2.11;2.3.9->org.hibernate.javax.persistence#hibernate-jpa-2.0-api;1.0.1.Final [runtime->runtime(*)][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.play#play-java-ebean_2.11;2.3.9->org.hibernate.javax.persistence#hibernate-jpa-2.0-api;1.0.1.Final [runtime->compile][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies productivity#productivity_2.11;1.0-SNAPSHOT->com.typesafe.play#play-java-ebean_2.11;2.3.9 [compile->master][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies productivity#productivity_2.11;1.0-SNAPSHOT->com.typesafe.play#play-cache_2.11;2.3.9 [compile->default(compile)][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies productivity#productivity_2.11;1.0-SNAPSHOT->com.typesafe.play#play-cache_2.11;2.3.9 [compile->runtime][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies productivity#productivity_2.11;1.0-SNAPSHOT->com.typesafe.play#play-cache_2.11;2.3.9 [compile->compile][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies randchat#randchat_2.11;1.0-SNAPSHOT->com.typesafe.play#play-java-ebean_2.11;2.3.9 [compile->master][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies randchat#randchat_2.11;1.0-SNAPSHOT->com.typesafe.play#play-cache_2.11;2.3.9 [compile->default(compile)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies randchat#randchat_2.11;1.0-SNAPSHOT->com.typesafe.play#play-cache_2.11;2.3.9 [compile->runtime][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies randchat#randchat_2.11;1.0-SNAPSHOT->com.typesafe.play#play-cache_2.11;2.3.9 [compile->compile][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.play#play-cache_2.11;2.3.9->org.scala-lang#scala-library;2.11.1 [compile->master(compile)][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.play#play-cache_2.11;2.3.9->org.scala-lang#scala-library;2.11.6 [compile->master(compile)][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.play#play-cache_2.11;2.3.9->org.scala-lang#scala-library;2.11.1 [compile->compile(*)][0m
@@ -4223,10 +4223,10 @@
 [0m[[0mdebug[0m] [0m== resolving dependencies net.sf.ehcache#ehcache-core;2.6.8->org.slf4j#slf4j-api;1.6.1 [runtime->runtime(*)][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies net.sf.ehcache#ehcache-core;2.6.8->org.slf4j#slf4j-api;1.7.6 [runtime->runtime(*)][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies net.sf.ehcache#ehcache-core;2.6.8->org.slf4j#slf4j-api;1.7.6 [runtime->compile][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies productivity#productivity_2.11;1.0-SNAPSHOT->com.typesafe.play#play-cache_2.11;2.3.9 [compile->master][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies productivity#productivity_2.11;1.0-SNAPSHOT->com.typesafe.play#play-java-ws_2.11;2.3.9 [compile->default(compile)][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies productivity#productivity_2.11;1.0-SNAPSHOT->com.typesafe.play#play-java-ws_2.11;2.3.9 [compile->runtime][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies productivity#productivity_2.11;1.0-SNAPSHOT->com.typesafe.play#play-java-ws_2.11;2.3.9 [compile->compile][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies randchat#randchat_2.11;1.0-SNAPSHOT->com.typesafe.play#play-cache_2.11;2.3.9 [compile->master][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies randchat#randchat_2.11;1.0-SNAPSHOT->com.typesafe.play#play-java-ws_2.11;2.3.9 [compile->default(compile)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies randchat#randchat_2.11;1.0-SNAPSHOT->com.typesafe.play#play-java-ws_2.11;2.3.9 [compile->runtime][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies randchat#randchat_2.11;1.0-SNAPSHOT->com.typesafe.play#play-java-ws_2.11;2.3.9 [compile->compile][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.play#play-java-ws_2.11;2.3.9->org.scala-lang#scala-library;2.11.1 [compile->master(compile)][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.play#play-java-ws_2.11;2.3.9->org.scala-lang#scala-library;2.11.6 [compile->master(compile)][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.play#play-java-ws_2.11;2.3.9->org.scala-lang#scala-library;2.11.1 [compile->compile(*)][0m
@@ -4337,20 +4337,20 @@
 [0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.play#play-java-ws_2.11;2.3.9->oauth.signpost#signpost-core;1.2.1.2 [runtime->compile][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.play#play-java-ws_2.11;2.3.9->oauth.signpost#signpost-commonshttp4;1.2.1.2 [runtime->runtime(*)][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.play#play-java-ws_2.11;2.3.9->oauth.signpost#signpost-commonshttp4;1.2.1.2 [runtime->compile][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies productivity#productivity_2.11;1.0-SNAPSHOT->com.typesafe.play#play-java-ws_2.11;2.3.9 [compile->master][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies for productivity#productivity_2.11;1.0-SNAPSHOT [optional][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies for productivity#productivity_2.11;1.0-SNAPSHOT [provided][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies randchat#randchat_2.11;1.0-SNAPSHOT->com.typesafe.play#play-java-ws_2.11;2.3.9 [compile->master][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies for randchat#randchat_2.11;1.0-SNAPSHOT [optional][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies for randchat#randchat_2.11;1.0-SNAPSHOT [provided][0m
 [0m[[0mdebug[0m] [0mresolving dependencies for configuration 'runtime-internal'[0m
-[0m[[0mdebug[0m] [0m== resolving dependencies for productivity#productivity_2.11;1.0-SNAPSHOT [runtime-internal][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies for productivity#productivity_2.11;1.0-SNAPSHOT [runtime][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies for productivity#productivity_2.11;1.0-SNAPSHOT [compile][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies productivity#productivity_2.11;1.0-SNAPSHOT->org.scala-lang#scala-library;2.11.6 [compile->default(compile)][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies productivity#productivity_2.11;1.0-SNAPSHOT->org.scala-lang#scala-library;2.11.6 [compile->runtime][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies productivity#productivity_2.11;1.0-SNAPSHOT->org.scala-lang#scala-library;2.11.6 [compile->compile][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies productivity#productivity_2.11;1.0-SNAPSHOT->org.scala-lang#scala-library;2.11.6 [compile->master][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies productivity#productivity_2.11;1.0-SNAPSHOT->com.typesafe.play#twirl-api_2.11;1.0.2 [compile->default(compile)][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies productivity#productivity_2.11;1.0-SNAPSHOT->com.typesafe.play#twirl-api_2.11;1.0.2 [compile->runtime][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies productivity#productivity_2.11;1.0-SNAPSHOT->com.typesafe.play#twirl-api_2.11;1.0.2 [compile->compile][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies for randchat#randchat_2.11;1.0-SNAPSHOT [runtime-internal][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies for randchat#randchat_2.11;1.0-SNAPSHOT [runtime][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies for randchat#randchat_2.11;1.0-SNAPSHOT [compile][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies randchat#randchat_2.11;1.0-SNAPSHOT->org.scala-lang#scala-library;2.11.6 [compile->default(compile)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies randchat#randchat_2.11;1.0-SNAPSHOT->org.scala-lang#scala-library;2.11.6 [compile->runtime][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies randchat#randchat_2.11;1.0-SNAPSHOT->org.scala-lang#scala-library;2.11.6 [compile->compile][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies randchat#randchat_2.11;1.0-SNAPSHOT->org.scala-lang#scala-library;2.11.6 [compile->master][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies randchat#randchat_2.11;1.0-SNAPSHOT->com.typesafe.play#twirl-api_2.11;1.0.2 [compile->default(compile)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies randchat#randchat_2.11;1.0-SNAPSHOT->com.typesafe.play#twirl-api_2.11;1.0.2 [compile->runtime][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies randchat#randchat_2.11;1.0-SNAPSHOT->com.typesafe.play#twirl-api_2.11;1.0.2 [compile->compile][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.play#twirl-api_2.11;1.0.2->org.scala-lang#scala-library;2.11.1 [compile->master(compile)][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.play#twirl-api_2.11;1.0.2->org.scala-lang#scala-library;2.11.6 [compile->master(compile)][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.play#twirl-api_2.11;1.0.2->org.scala-lang#scala-library;2.11.1 [compile->compile(*)][0m
@@ -4372,10 +4372,10 @@
 [0m[[0mdebug[0m] [0m== resolving dependencies org.scala-lang.modules#scala-xml_2.11;1.0.1->org.scala-lang#scala-library;2.11.0 [runtime->runtime(*)][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies org.scala-lang.modules#scala-xml_2.11;1.0.1->org.scala-lang#scala-library;2.11.6 [runtime->runtime(*)][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies org.scala-lang.modules#scala-xml_2.11;1.0.1->org.scala-lang#scala-library;2.11.6 [runtime->compile][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies productivity#productivity_2.11;1.0-SNAPSHOT->com.typesafe.play#twirl-api_2.11;1.0.2 [compile->master][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies productivity#productivity_2.11;1.0-SNAPSHOT->com.typesafe.play#play_2.11;2.3.9 [compile->default(compile)][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies productivity#productivity_2.11;1.0-SNAPSHOT->com.typesafe.play#play_2.11;2.3.9 [compile->runtime][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies productivity#productivity_2.11;1.0-SNAPSHOT->com.typesafe.play#play_2.11;2.3.9 [compile->compile][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies randchat#randchat_2.11;1.0-SNAPSHOT->com.typesafe.play#twirl-api_2.11;1.0.2 [compile->master][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies randchat#randchat_2.11;1.0-SNAPSHOT->com.typesafe.play#play_2.11;2.3.9 [compile->default(compile)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies randchat#randchat_2.11;1.0-SNAPSHOT->com.typesafe.play#play_2.11;2.3.9 [compile->runtime][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies randchat#randchat_2.11;1.0-SNAPSHOT->com.typesafe.play#play_2.11;2.3.9 [compile->compile][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.play#play_2.11;2.3.9->org.scala-lang#scala-library;2.11.1 [compile->master(compile)][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.play#play_2.11;2.3.9->org.scala-lang#scala-library;2.11.6 [compile->master(compile)][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.play#play_2.11;2.3.9->org.scala-lang#scala-library;2.11.1 [compile->compile(*)][0m
@@ -4649,10 +4649,10 @@
 [0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.play#play_2.11;2.3.9->javax.transaction#jta;1.1 [runtime->compile][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.play#play_2.11;2.3.9->org.scala-lang#scala-reflect;2.11.1 [runtime->runtime(*)][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.play#play_2.11;2.3.9->org.scala-lang#scala-reflect;2.11.1 [runtime->compile][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies productivity#productivity_2.11;1.0-SNAPSHOT->com.typesafe.play#play_2.11;2.3.9 [compile->master][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies productivity#productivity_2.11;1.0-SNAPSHOT->com.typesafe.play#play-java_2.11;2.3.9 [compile->default(compile)][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies productivity#productivity_2.11;1.0-SNAPSHOT->com.typesafe.play#play-java_2.11;2.3.9 [compile->runtime][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies productivity#productivity_2.11;1.0-SNAPSHOT->com.typesafe.play#play-java_2.11;2.3.9 [compile->compile][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies randchat#randchat_2.11;1.0-SNAPSHOT->com.typesafe.play#play_2.11;2.3.9 [compile->master][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies randchat#randchat_2.11;1.0-SNAPSHOT->com.typesafe.play#play-java_2.11;2.3.9 [compile->default(compile)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies randchat#randchat_2.11;1.0-SNAPSHOT->com.typesafe.play#play-java_2.11;2.3.9 [compile->runtime][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies randchat#randchat_2.11;1.0-SNAPSHOT->com.typesafe.play#play-java_2.11;2.3.9 [compile->compile][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.play#play-java_2.11;2.3.9->org.scala-lang#scala-library;2.11.1 [compile->master(compile)][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.play#play-java_2.11;2.3.9->org.scala-lang#scala-library;2.11.6 [compile->master(compile)][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.play#play-java_2.11;2.3.9->org.scala-lang#scala-library;2.11.1 [compile->compile(*)][0m
@@ -4777,14 +4777,14 @@
 [0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.play#play-java_2.11;2.3.9->com.google.code.findbugs#jsr305;2.0.3 [runtime->compile][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.play#play-java_2.11;2.3.9->org.apache.tomcat#tomcat-servlet-api;8.0.5 [runtime->runtime(*)][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.play#play-java_2.11;2.3.9->org.apache.tomcat#tomcat-servlet-api;8.0.5 [runtime->compile][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies productivity#productivity_2.11;1.0-SNAPSHOT->com.typesafe.play#play-java_2.11;2.3.9 [compile->master][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies productivity#productivity_2.11;1.0-SNAPSHOT->postgresql#postgresql;9.1-901-1.jdbc4 [compile->default(compile)][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies productivity#productivity_2.11;1.0-SNAPSHOT->postgresql#postgresql;9.1-901-1.jdbc4 [compile->runtime][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies productivity#productivity_2.11;1.0-SNAPSHOT->postgresql#postgresql;9.1-901-1.jdbc4 [compile->compile][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies productivity#productivity_2.11;1.0-SNAPSHOT->postgresql#postgresql;9.1-901-1.jdbc4 [compile->master][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies productivity#productivity_2.11;1.0-SNAPSHOT->com.typesafe.play#play-java-jdbc_2.11;2.3.9 [compile->default(compile)][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies productivity#productivity_2.11;1.0-SNAPSHOT->com.typesafe.play#play-java-jdbc_2.11;2.3.9 [compile->runtime][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies productivity#productivity_2.11;1.0-SNAPSHOT->com.typesafe.play#play-java-jdbc_2.11;2.3.9 [compile->compile][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies randchat#randchat_2.11;1.0-SNAPSHOT->com.typesafe.play#play-java_2.11;2.3.9 [compile->master][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies randchat#randchat_2.11;1.0-SNAPSHOT->postgresql#postgresql;9.1-901-1.jdbc4 [compile->default(compile)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies randchat#randchat_2.11;1.0-SNAPSHOT->postgresql#postgresql;9.1-901-1.jdbc4 [compile->runtime][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies randchat#randchat_2.11;1.0-SNAPSHOT->postgresql#postgresql;9.1-901-1.jdbc4 [compile->compile][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies randchat#randchat_2.11;1.0-SNAPSHOT->postgresql#postgresql;9.1-901-1.jdbc4 [compile->master][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies randchat#randchat_2.11;1.0-SNAPSHOT->com.typesafe.play#play-java-jdbc_2.11;2.3.9 [compile->default(compile)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies randchat#randchat_2.11;1.0-SNAPSHOT->com.typesafe.play#play-java-jdbc_2.11;2.3.9 [compile->runtime][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies randchat#randchat_2.11;1.0-SNAPSHOT->com.typesafe.play#play-java-jdbc_2.11;2.3.9 [compile->compile][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.play#play-java-jdbc_2.11;2.3.9->org.scala-lang#scala-library;2.11.1 [compile->master(compile)][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.play#play-java-jdbc_2.11;2.3.9->org.scala-lang#scala-library;2.11.6 [compile->master(compile)][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.play#play-java-jdbc_2.11;2.3.9->org.scala-lang#scala-library;2.11.1 [compile->compile(*)][0m
@@ -4837,10 +4837,10 @@
 [0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.play#play-jdbc_2.11;2.3.9->tyrex#tyrex;1.0.1 [runtime->compile][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.play#play-java-jdbc_2.11;2.3.9->com.typesafe.play#play-java_2.11;2.3.9 [runtime->runtime(*)][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.play#play-java-jdbc_2.11;2.3.9->com.typesafe.play#play-java_2.11;2.3.9 [runtime->compile][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies productivity#productivity_2.11;1.0-SNAPSHOT->com.typesafe.play#play-java-jdbc_2.11;2.3.9 [compile->master][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies productivity#productivity_2.11;1.0-SNAPSHOT->com.typesafe.play#play-java-ebean_2.11;2.3.9 [compile->default(compile)][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies productivity#productivity_2.11;1.0-SNAPSHOT->com.typesafe.play#play-java-ebean_2.11;2.3.9 [compile->runtime][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies productivity#productivity_2.11;1.0-SNAPSHOT->com.typesafe.play#play-java-ebean_2.11;2.3.9 [compile->compile][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies randchat#randchat_2.11;1.0-SNAPSHOT->com.typesafe.play#play-java-jdbc_2.11;2.3.9 [compile->master][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies randchat#randchat_2.11;1.0-SNAPSHOT->com.typesafe.play#play-java-ebean_2.11;2.3.9 [compile->default(compile)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies randchat#randchat_2.11;1.0-SNAPSHOT->com.typesafe.play#play-java-ebean_2.11;2.3.9 [compile->runtime][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies randchat#randchat_2.11;1.0-SNAPSHOT->com.typesafe.play#play-java-ebean_2.11;2.3.9 [compile->compile][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.play#play-java-ebean_2.11;2.3.9->org.scala-lang#scala-library;2.11.1 [compile->master(compile)][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.play#play-java-ebean_2.11;2.3.9->org.scala-lang#scala-library;2.11.6 [compile->master(compile)][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.play#play-java-ebean_2.11;2.3.9->org.scala-lang#scala-library;2.11.1 [compile->compile(*)][0m
@@ -4866,10 +4866,10 @@
 [0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.play#play-java-ebean_2.11;2.3.9->org.avaje.ebeanorm#avaje-ebeanorm-agent;3.2.2 [runtime->compile][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.play#play-java-ebean_2.11;2.3.9->org.hibernate.javax.persistence#hibernate-jpa-2.0-api;1.0.1.Final [runtime->runtime(*)][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.play#play-java-ebean_2.11;2.3.9->org.hibernate.javax.persistence#hibernate-jpa-2.0-api;1.0.1.Final [runtime->compile][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies productivity#productivity_2.11;1.0-SNAPSHOT->com.typesafe.play#play-java-ebean_2.11;2.3.9 [compile->master][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies productivity#productivity_2.11;1.0-SNAPSHOT->com.typesafe.play#play-cache_2.11;2.3.9 [compile->default(compile)][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies productivity#productivity_2.11;1.0-SNAPSHOT->com.typesafe.play#play-cache_2.11;2.3.9 [compile->runtime][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies productivity#productivity_2.11;1.0-SNAPSHOT->com.typesafe.play#play-cache_2.11;2.3.9 [compile->compile][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies randchat#randchat_2.11;1.0-SNAPSHOT->com.typesafe.play#play-java-ebean_2.11;2.3.9 [compile->master][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies randchat#randchat_2.11;1.0-SNAPSHOT->com.typesafe.play#play-cache_2.11;2.3.9 [compile->default(compile)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies randchat#randchat_2.11;1.0-SNAPSHOT->com.typesafe.play#play-cache_2.11;2.3.9 [compile->runtime][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies randchat#randchat_2.11;1.0-SNAPSHOT->com.typesafe.play#play-cache_2.11;2.3.9 [compile->compile][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.play#play-cache_2.11;2.3.9->org.scala-lang#scala-library;2.11.1 [compile->master(compile)][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.play#play-cache_2.11;2.3.9->org.scala-lang#scala-library;2.11.6 [compile->master(compile)][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.play#play-cache_2.11;2.3.9->org.scala-lang#scala-library;2.11.1 [compile->compile(*)][0m
@@ -4892,10 +4892,10 @@
 [0m[[0mdebug[0m] [0m== resolving dependencies net.sf.ehcache#ehcache-core;2.6.8->org.slf4j#slf4j-api;1.6.1 [runtime->runtime(*)][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies net.sf.ehcache#ehcache-core;2.6.8->org.slf4j#slf4j-api;1.7.6 [runtime->runtime(*)][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies net.sf.ehcache#ehcache-core;2.6.8->org.slf4j#slf4j-api;1.7.6 [runtime->compile][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies productivity#productivity_2.11;1.0-SNAPSHOT->com.typesafe.play#play-cache_2.11;2.3.9 [compile->master][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies productivity#productivity_2.11;1.0-SNAPSHOT->com.typesafe.play#play-java-ws_2.11;2.3.9 [compile->default(compile)][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies productivity#productivity_2.11;1.0-SNAPSHOT->com.typesafe.play#play-java-ws_2.11;2.3.9 [compile->runtime][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies productivity#productivity_2.11;1.0-SNAPSHOT->com.typesafe.play#play-java-ws_2.11;2.3.9 [compile->compile][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies randchat#randchat_2.11;1.0-SNAPSHOT->com.typesafe.play#play-cache_2.11;2.3.9 [compile->master][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies randchat#randchat_2.11;1.0-SNAPSHOT->com.typesafe.play#play-java-ws_2.11;2.3.9 [compile->default(compile)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies randchat#randchat_2.11;1.0-SNAPSHOT->com.typesafe.play#play-java-ws_2.11;2.3.9 [compile->runtime][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies randchat#randchat_2.11;1.0-SNAPSHOT->com.typesafe.play#play-java-ws_2.11;2.3.9 [compile->compile][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.play#play-java-ws_2.11;2.3.9->org.scala-lang#scala-library;2.11.1 [compile->master(compile)][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.play#play-java-ws_2.11;2.3.9->org.scala-lang#scala-library;2.11.6 [compile->master(compile)][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.play#play-java-ws_2.11;2.3.9->org.scala-lang#scala-library;2.11.1 [compile->compile(*)][0m
@@ -5006,20 +5006,20 @@
 [0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.play#play-java-ws_2.11;2.3.9->oauth.signpost#signpost-core;1.2.1.2 [runtime->compile][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.play#play-java-ws_2.11;2.3.9->oauth.signpost#signpost-commonshttp4;1.2.1.2 [runtime->runtime(*)][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.play#play-java-ws_2.11;2.3.9->oauth.signpost#signpost-commonshttp4;1.2.1.2 [runtime->compile][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies productivity#productivity_2.11;1.0-SNAPSHOT->com.typesafe.play#play-java-ws_2.11;2.3.9 [compile->master][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies for productivity#productivity_2.11;1.0-SNAPSHOT [optional][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies randchat#randchat_2.11;1.0-SNAPSHOT->com.typesafe.play#play-java-ws_2.11;2.3.9 [compile->master][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies for randchat#randchat_2.11;1.0-SNAPSHOT [optional][0m
 [0m[[0mdebug[0m] [0mresolving dependencies for configuration 'test-internal'[0m
-[0m[[0mdebug[0m] [0m== resolving dependencies for productivity#productivity_2.11;1.0-SNAPSHOT [test-internal][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies for productivity#productivity_2.11;1.0-SNAPSHOT [test][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies for productivity#productivity_2.11;1.0-SNAPSHOT [runtime][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies for productivity#productivity_2.11;1.0-SNAPSHOT [compile][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies productivity#productivity_2.11;1.0-SNAPSHOT->org.scala-lang#scala-library;2.11.6 [compile->default(compile)][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies productivity#productivity_2.11;1.0-SNAPSHOT->org.scala-lang#scala-library;2.11.6 [compile->runtime][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies productivity#productivity_2.11;1.0-SNAPSHOT->org.scala-lang#scala-library;2.11.6 [compile->compile][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies productivity#productivity_2.11;1.0-SNAPSHOT->org.scala-lang#scala-library;2.11.6 [compile->master][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies productivity#productivity_2.11;1.0-SNAPSHOT->com.typesafe.play#twirl-api_2.11;1.0.2 [compile->default(compile)][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies productivity#productivity_2.11;1.0-SNAPSHOT->com.typesafe.play#twirl-api_2.11;1.0.2 [compile->runtime][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies productivity#productivity_2.11;1.0-SNAPSHOT->com.typesafe.play#twirl-api_2.11;1.0.2 [compile->compile][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies for randchat#randchat_2.11;1.0-SNAPSHOT [test-internal][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies for randchat#randchat_2.11;1.0-SNAPSHOT [test][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies for randchat#randchat_2.11;1.0-SNAPSHOT [runtime][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies for randchat#randchat_2.11;1.0-SNAPSHOT [compile][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies randchat#randchat_2.11;1.0-SNAPSHOT->org.scala-lang#scala-library;2.11.6 [compile->default(compile)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies randchat#randchat_2.11;1.0-SNAPSHOT->org.scala-lang#scala-library;2.11.6 [compile->runtime][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies randchat#randchat_2.11;1.0-SNAPSHOT->org.scala-lang#scala-library;2.11.6 [compile->compile][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies randchat#randchat_2.11;1.0-SNAPSHOT->org.scala-lang#scala-library;2.11.6 [compile->master][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies randchat#randchat_2.11;1.0-SNAPSHOT->com.typesafe.play#twirl-api_2.11;1.0.2 [compile->default(compile)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies randchat#randchat_2.11;1.0-SNAPSHOT->com.typesafe.play#twirl-api_2.11;1.0.2 [compile->runtime][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies randchat#randchat_2.11;1.0-SNAPSHOT->com.typesafe.play#twirl-api_2.11;1.0.2 [compile->compile][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.play#twirl-api_2.11;1.0.2->org.scala-lang#scala-library;2.11.1 [compile->master(compile)][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.play#twirl-api_2.11;1.0.2->org.scala-lang#scala-library;2.11.6 [compile->master(compile)][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.play#twirl-api_2.11;1.0.2->org.scala-lang#scala-library;2.11.1 [compile->compile(*)][0m
@@ -5041,10 +5041,10 @@
 [0m[[0mdebug[0m] [0m== resolving dependencies org.scala-lang.modules#scala-xml_2.11;1.0.1->org.scala-lang#scala-library;2.11.0 [runtime->runtime(*)][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies org.scala-lang.modules#scala-xml_2.11;1.0.1->org.scala-lang#scala-library;2.11.6 [runtime->runtime(*)][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies org.scala-lang.modules#scala-xml_2.11;1.0.1->org.scala-lang#scala-library;2.11.6 [runtime->compile][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies productivity#productivity_2.11;1.0-SNAPSHOT->com.typesafe.play#twirl-api_2.11;1.0.2 [compile->master][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies productivity#productivity_2.11;1.0-SNAPSHOT->com.typesafe.play#play_2.11;2.3.9 [compile->default(compile)][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies productivity#productivity_2.11;1.0-SNAPSHOT->com.typesafe.play#play_2.11;2.3.9 [compile->runtime][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies productivity#productivity_2.11;1.0-SNAPSHOT->com.typesafe.play#play_2.11;2.3.9 [compile->compile][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies randchat#randchat_2.11;1.0-SNAPSHOT->com.typesafe.play#twirl-api_2.11;1.0.2 [compile->master][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies randchat#randchat_2.11;1.0-SNAPSHOT->com.typesafe.play#play_2.11;2.3.9 [compile->default(compile)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies randchat#randchat_2.11;1.0-SNAPSHOT->com.typesafe.play#play_2.11;2.3.9 [compile->runtime][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies randchat#randchat_2.11;1.0-SNAPSHOT->com.typesafe.play#play_2.11;2.3.9 [compile->compile][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.play#play_2.11;2.3.9->org.scala-lang#scala-library;2.11.1 [compile->master(compile)][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.play#play_2.11;2.3.9->org.scala-lang#scala-library;2.11.6 [compile->master(compile)][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.play#play_2.11;2.3.9->org.scala-lang#scala-library;2.11.1 [compile->compile(*)][0m
@@ -5318,10 +5318,10 @@
 [0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.play#play_2.11;2.3.9->javax.transaction#jta;1.1 [runtime->compile][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.play#play_2.11;2.3.9->org.scala-lang#scala-reflect;2.11.1 [runtime->runtime(*)][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.play#play_2.11;2.3.9->org.scala-lang#scala-reflect;2.11.1 [runtime->compile][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies productivity#productivity_2.11;1.0-SNAPSHOT->com.typesafe.play#play_2.11;2.3.9 [compile->master][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies productivity#productivity_2.11;1.0-SNAPSHOT->com.typesafe.play#play-java_2.11;2.3.9 [compile->default(compile)][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies productivity#productivity_2.11;1.0-SNAPSHOT->com.typesafe.play#play-java_2.11;2.3.9 [compile->runtime][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies productivity#productivity_2.11;1.0-SNAPSHOT->com.typesafe.play#play-java_2.11;2.3.9 [compile->compile][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies randchat#randchat_2.11;1.0-SNAPSHOT->com.typesafe.play#play_2.11;2.3.9 [compile->master][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies randchat#randchat_2.11;1.0-SNAPSHOT->com.typesafe.play#play-java_2.11;2.3.9 [compile->default(compile)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies randchat#randchat_2.11;1.0-SNAPSHOT->com.typesafe.play#play-java_2.11;2.3.9 [compile->runtime][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies randchat#randchat_2.11;1.0-SNAPSHOT->com.typesafe.play#play-java_2.11;2.3.9 [compile->compile][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.play#play-java_2.11;2.3.9->org.scala-lang#scala-library;2.11.1 [compile->master(compile)][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.play#play-java_2.11;2.3.9->org.scala-lang#scala-library;2.11.6 [compile->master(compile)][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.play#play-java_2.11;2.3.9->org.scala-lang#scala-library;2.11.1 [compile->compile(*)][0m
@@ -5446,14 +5446,14 @@
 [0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.play#play-java_2.11;2.3.9->com.google.code.findbugs#jsr305;2.0.3 [runtime->compile][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.play#play-java_2.11;2.3.9->org.apache.tomcat#tomcat-servlet-api;8.0.5 [runtime->runtime(*)][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.play#play-java_2.11;2.3.9->org.apache.tomcat#tomcat-servlet-api;8.0.5 [runtime->compile][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies productivity#productivity_2.11;1.0-SNAPSHOT->com.typesafe.play#play-java_2.11;2.3.9 [compile->master][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies productivity#productivity_2.11;1.0-SNAPSHOT->postgresql#postgresql;9.1-901-1.jdbc4 [compile->default(compile)][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies productivity#productivity_2.11;1.0-SNAPSHOT->postgresql#postgresql;9.1-901-1.jdbc4 [compile->runtime][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies productivity#productivity_2.11;1.0-SNAPSHOT->postgresql#postgresql;9.1-901-1.jdbc4 [compile->compile][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies productivity#productivity_2.11;1.0-SNAPSHOT->postgresql#postgresql;9.1-901-1.jdbc4 [compile->master][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies productivity#productivity_2.11;1.0-SNAPSHOT->com.typesafe.play#play-java-jdbc_2.11;2.3.9 [compile->default(compile)][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies productivity#productivity_2.11;1.0-SNAPSHOT->com.typesafe.play#play-java-jdbc_2.11;2.3.9 [compile->runtime][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies productivity#productivity_2.11;1.0-SNAPSHOT->com.typesafe.play#play-java-jdbc_2.11;2.3.9 [compile->compile][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies randchat#randchat_2.11;1.0-SNAPSHOT->com.typesafe.play#play-java_2.11;2.3.9 [compile->master][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies randchat#randchat_2.11;1.0-SNAPSHOT->postgresql#postgresql;9.1-901-1.jdbc4 [compile->default(compile)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies randchat#randchat_2.11;1.0-SNAPSHOT->postgresql#postgresql;9.1-901-1.jdbc4 [compile->runtime][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies randchat#randchat_2.11;1.0-SNAPSHOT->postgresql#postgresql;9.1-901-1.jdbc4 [compile->compile][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies randchat#randchat_2.11;1.0-SNAPSHOT->postgresql#postgresql;9.1-901-1.jdbc4 [compile->master][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies randchat#randchat_2.11;1.0-SNAPSHOT->com.typesafe.play#play-java-jdbc_2.11;2.3.9 [compile->default(compile)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies randchat#randchat_2.11;1.0-SNAPSHOT->com.typesafe.play#play-java-jdbc_2.11;2.3.9 [compile->runtime][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies randchat#randchat_2.11;1.0-SNAPSHOT->com.typesafe.play#play-java-jdbc_2.11;2.3.9 [compile->compile][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.play#play-java-jdbc_2.11;2.3.9->org.scala-lang#scala-library;2.11.1 [compile->master(compile)][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.play#play-java-jdbc_2.11;2.3.9->org.scala-lang#scala-library;2.11.6 [compile->master(compile)][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.play#play-java-jdbc_2.11;2.3.9->org.scala-lang#scala-library;2.11.1 [compile->compile(*)][0m
@@ -5506,10 +5506,10 @@
 [0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.play#play-jdbc_2.11;2.3.9->tyrex#tyrex;1.0.1 [runtime->compile][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.play#play-java-jdbc_2.11;2.3.9->com.typesafe.play#play-java_2.11;2.3.9 [runtime->runtime(*)][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.play#play-java-jdbc_2.11;2.3.9->com.typesafe.play#play-java_2.11;2.3.9 [runtime->compile][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies productivity#productivity_2.11;1.0-SNAPSHOT->com.typesafe.play#play-java-jdbc_2.11;2.3.9 [compile->master][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies productivity#productivity_2.11;1.0-SNAPSHOT->com.typesafe.play#play-java-ebean_2.11;2.3.9 [compile->default(compile)][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies productivity#productivity_2.11;1.0-SNAPSHOT->com.typesafe.play#play-java-ebean_2.11;2.3.9 [compile->runtime][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies productivity#productivity_2.11;1.0-SNAPSHOT->com.typesafe.play#play-java-ebean_2.11;2.3.9 [compile->compile][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies randchat#randchat_2.11;1.0-SNAPSHOT->com.typesafe.play#play-java-jdbc_2.11;2.3.9 [compile->master][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies randchat#randchat_2.11;1.0-SNAPSHOT->com.typesafe.play#play-java-ebean_2.11;2.3.9 [compile->default(compile)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies randchat#randchat_2.11;1.0-SNAPSHOT->com.typesafe.play#play-java-ebean_2.11;2.3.9 [compile->runtime][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies randchat#randchat_2.11;1.0-SNAPSHOT->com.typesafe.play#play-java-ebean_2.11;2.3.9 [compile->compile][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.play#play-java-ebean_2.11;2.3.9->org.scala-lang#scala-library;2.11.1 [compile->master(compile)][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.play#play-java-ebean_2.11;2.3.9->org.scala-lang#scala-library;2.11.6 [compile->master(compile)][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.play#play-java-ebean_2.11;2.3.9->org.scala-lang#scala-library;2.11.1 [compile->compile(*)][0m
@@ -5535,10 +5535,10 @@
 [0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.play#play-java-ebean_2.11;2.3.9->org.avaje.ebeanorm#avaje-ebeanorm-agent;3.2.2 [runtime->compile][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.play#play-java-ebean_2.11;2.3.9->org.hibernate.javax.persistence#hibernate-jpa-2.0-api;1.0.1.Final [runtime->runtime(*)][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.play#play-java-ebean_2.11;2.3.9->org.hibernate.javax.persistence#hibernate-jpa-2.0-api;1.0.1.Final [runtime->compile][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies productivity#productivity_2.11;1.0-SNAPSHOT->com.typesafe.play#play-java-ebean_2.11;2.3.9 [compile->master][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies productivity#productivity_2.11;1.0-SNAPSHOT->com.typesafe.play#play-cache_2.11;2.3.9 [compile->default(compile)][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies productivity#productivity_2.11;1.0-SNAPSHOT->com.typesafe.play#play-cache_2.11;2.3.9 [compile->runtime][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies productivity#productivity_2.11;1.0-SNAPSHOT->com.typesafe.play#play-cache_2.11;2.3.9 [compile->compile][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies randchat#randchat_2.11;1.0-SNAPSHOT->com.typesafe.play#play-java-ebean_2.11;2.3.9 [compile->master][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies randchat#randchat_2.11;1.0-SNAPSHOT->com.typesafe.play#play-cache_2.11;2.3.9 [compile->default(compile)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies randchat#randchat_2.11;1.0-SNAPSHOT->com.typesafe.play#play-cache_2.11;2.3.9 [compile->runtime][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies randchat#randchat_2.11;1.0-SNAPSHOT->com.typesafe.play#play-cache_2.11;2.3.9 [compile->compile][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.play#play-cache_2.11;2.3.9->org.scala-lang#scala-library;2.11.1 [compile->master(compile)][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.play#play-cache_2.11;2.3.9->org.scala-lang#scala-library;2.11.6 [compile->master(compile)][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.play#play-cache_2.11;2.3.9->org.scala-lang#scala-library;2.11.1 [compile->compile(*)][0m
@@ -5561,10 +5561,10 @@
 [0m[[0mdebug[0m] [0m== resolving dependencies net.sf.ehcache#ehcache-core;2.6.8->org.slf4j#slf4j-api;1.6.1 [runtime->runtime(*)][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies net.sf.ehcache#ehcache-core;2.6.8->org.slf4j#slf4j-api;1.7.6 [runtime->runtime(*)][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies net.sf.ehcache#ehcache-core;2.6.8->org.slf4j#slf4j-api;1.7.6 [runtime->compile][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies productivity#productivity_2.11;1.0-SNAPSHOT->com.typesafe.play#play-cache_2.11;2.3.9 [compile->master][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies productivity#productivity_2.11;1.0-SNAPSHOT->com.typesafe.play#play-java-ws_2.11;2.3.9 [compile->default(compile)][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies productivity#productivity_2.11;1.0-SNAPSHOT->com.typesafe.play#play-java-ws_2.11;2.3.9 [compile->runtime][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies productivity#productivity_2.11;1.0-SNAPSHOT->com.typesafe.play#play-java-ws_2.11;2.3.9 [compile->compile][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies randchat#randchat_2.11;1.0-SNAPSHOT->com.typesafe.play#play-cache_2.11;2.3.9 [compile->master][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies randchat#randchat_2.11;1.0-SNAPSHOT->com.typesafe.play#play-java-ws_2.11;2.3.9 [compile->default(compile)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies randchat#randchat_2.11;1.0-SNAPSHOT->com.typesafe.play#play-java-ws_2.11;2.3.9 [compile->runtime][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies randchat#randchat_2.11;1.0-SNAPSHOT->com.typesafe.play#play-java-ws_2.11;2.3.9 [compile->compile][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.play#play-java-ws_2.11;2.3.9->org.scala-lang#scala-library;2.11.1 [compile->master(compile)][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.play#play-java-ws_2.11;2.3.9->org.scala-lang#scala-library;2.11.6 [compile->master(compile)][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.play#play-java-ws_2.11;2.3.9->org.scala-lang#scala-library;2.11.1 [compile->compile(*)][0m
@@ -5675,10 +5675,10 @@
 [0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.play#play-java-ws_2.11;2.3.9->oauth.signpost#signpost-core;1.2.1.2 [runtime->compile][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.play#play-java-ws_2.11;2.3.9->oauth.signpost#signpost-commonshttp4;1.2.1.2 [runtime->runtime(*)][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.play#play-java-ws_2.11;2.3.9->oauth.signpost#signpost-commonshttp4;1.2.1.2 [runtime->compile][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies productivity#productivity_2.11;1.0-SNAPSHOT->com.typesafe.play#play-java-ws_2.11;2.3.9 [compile->master][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies productivity#productivity_2.11;1.0-SNAPSHOT->com.typesafe.play#play-test_2.11;2.3.9 [test->default(compile)][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies productivity#productivity_2.11;1.0-SNAPSHOT->com.typesafe.play#play-test_2.11;2.3.9 [test->runtime][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies productivity#productivity_2.11;1.0-SNAPSHOT->com.typesafe.play#play-test_2.11;2.3.9 [test->compile][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies randchat#randchat_2.11;1.0-SNAPSHOT->com.typesafe.play#play-java-ws_2.11;2.3.9 [compile->master][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies randchat#randchat_2.11;1.0-SNAPSHOT->com.typesafe.play#play-test_2.11;2.3.9 [test->default(compile)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies randchat#randchat_2.11;1.0-SNAPSHOT->com.typesafe.play#play-test_2.11;2.3.9 [test->runtime][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies randchat#randchat_2.11;1.0-SNAPSHOT->com.typesafe.play#play-test_2.11;2.3.9 [test->compile][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.play#play-test_2.11;2.3.9->org.scala-lang#scala-library;2.11.1 [compile->master(compile)][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.play#play-test_2.11;2.3.9->org.scala-lang#scala-library;2.11.6 [compile->master(compile)][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.play#play-test_2.11;2.3.9->org.scala-lang#scala-library;2.11.1 [compile->compile(*)][0m
@@ -6717,22 +6717,22 @@
 [0m[[0mdebug[0m] [0m== resolving dependencies org.easytesting#fest-assert;1.4->org.easytesting#fest-util;1.1.6 [runtime->runtime(*)][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies org.easytesting#fest-assert;1.4->org.easytesting#fest-util;1.1.6 [runtime->compile][0m
 [0m[[0mdebug[0m] [0mdependency descriptor has been mediated: dependency: junit#junit;4.8.2 {test=[runtime(*), master(compile)]} => dependency: junit#junit;4.11 {test=[runtime(*), master(compile)]}[0m
-[0m[[0mdebug[0m] [0m== resolving dependencies productivity#productivity_2.11;1.0-SNAPSHOT->com.typesafe.play#play-test_2.11;2.3.9 [test->master][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies for productivity#productivity_2.11;1.0-SNAPSHOT [optional][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies for productivity#productivity_2.11;1.0-SNAPSHOT [provided][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies randchat#randchat_2.11;1.0-SNAPSHOT->com.typesafe.play#play-test_2.11;2.3.9 [test->master][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies for randchat#randchat_2.11;1.0-SNAPSHOT [optional][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies for randchat#randchat_2.11;1.0-SNAPSHOT [provided][0m
 [0m[[0mdebug[0m] [0mresolving dependencies for configuration 'plugin'[0m
-[0m[[0mdebug[0m] [0m== resolving dependencies for productivity#productivity_2.11;1.0-SNAPSHOT [plugin][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies for randchat#randchat_2.11;1.0-SNAPSHOT [plugin][0m
 [0m[[0mdebug[0m] [0mresolving dependencies for configuration 'sources'[0m
-[0m[[0mdebug[0m] [0m== resolving dependencies for productivity#productivity_2.11;1.0-SNAPSHOT [sources][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies for randchat#randchat_2.11;1.0-SNAPSHOT [sources][0m
 [0m[[0mdebug[0m] [0mresolving dependencies for configuration 'docs'[0m
-[0m[[0mdebug[0m] [0m== resolving dependencies for productivity#productivity_2.11;1.0-SNAPSHOT [docs][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies productivity#productivity_2.11;1.0-SNAPSHOT->com.typesafe.play#play-docs_2.11;2.3.9 [docs->default(compile)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies for randchat#randchat_2.11;1.0-SNAPSHOT [docs][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies randchat#randchat_2.11;1.0-SNAPSHOT->com.typesafe.play#play-docs_2.11;2.3.9 [docs->default(compile)][0m
 [0m[[0minfo[0m] [0mResolving com.typesafe.play#play-docs_2.11;2.3.9 ...[0m
 [0m[[0mdebug[0m] [0msbt-chain: Checking cache for: dependency: com.typesafe.play#play-docs_2.11;2.3.9 {docs=[default(compile)]}[0m
 [0m[[0mdebug[0m] [0msbt-chain: module revision found in cache: com.typesafe.play#play-docs_2.11;2.3.9[0m
 [0m[[0mdebug[0m] [0m	found com.typesafe.play#play-docs_2.11;2.3.9 in sbt-chain[0m
-[0m[[0mdebug[0m] [0m== resolving dependencies productivity#productivity_2.11;1.0-SNAPSHOT->com.typesafe.play#play-docs_2.11;2.3.9 [docs->runtime][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies productivity#productivity_2.11;1.0-SNAPSHOT->com.typesafe.play#play-docs_2.11;2.3.9 [docs->compile][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies randchat#randchat_2.11;1.0-SNAPSHOT->com.typesafe.play#play-docs_2.11;2.3.9 [docs->runtime][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies randchat#randchat_2.11;1.0-SNAPSHOT->com.typesafe.play#play-docs_2.11;2.3.9 [docs->compile][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.play#play-docs_2.11;2.3.9->org.scala-lang#scala-library;2.11.1 [compile->master(compile)][0m
 [0m[[0minfo[0m] [0mResolving org.scala-lang#scala-library;2.11.1 ...[0m
 [0m[[0mdebug[0m] [0msbt-chain: Checking cache for: dependency: org.scala-lang#scala-library;2.11.1 {compile=[compile(*), master(compile)], runtime=[runtime(*)]}[0m
@@ -7111,18 +7111,18 @@
 [0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.play#play_2.11;2.3.9->org.scala-lang#scala-reflect;2.11.1 [runtime->compile][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.play#play-docs_2.11;2.3.9->com.typesafe.play#play-doc_2.11;1.1.0 [runtime->runtime(*)][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.play#play-docs_2.11;2.3.9->com.typesafe.play#play-doc_2.11;1.1.0 [runtime->compile][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies productivity#productivity_2.11;1.0-SNAPSHOT->com.typesafe.play#play-docs_2.11;2.3.9 [docs->master][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies randchat#randchat_2.11;1.0-SNAPSHOT->com.typesafe.play#play-docs_2.11;2.3.9 [docs->master][0m
 [0m[[0mdebug[0m] [0mresolving dependencies for configuration 'pom'[0m
-[0m[[0mdebug[0m] [0m== resolving dependencies for productivity#productivity_2.11;1.0-SNAPSHOT [pom][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies for randchat#randchat_2.11;1.0-SNAPSHOT [pom][0m
 [0m[[0mdebug[0m] [0mresolving dependencies for configuration 'scala-tool'[0m
-[0m[[0mdebug[0m] [0m== resolving dependencies for productivity#productivity_2.11;1.0-SNAPSHOT [scala-tool][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies productivity#productivity_2.11;1.0-SNAPSHOT->org.scala-lang#scala-compiler;2.11.6 [scala-tool->default][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies for randchat#randchat_2.11;1.0-SNAPSHOT [scala-tool][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies randchat#randchat_2.11;1.0-SNAPSHOT->org.scala-lang#scala-compiler;2.11.6 [scala-tool->default][0m
 [0m[[0minfo[0m] [0mResolving org.scala-lang#scala-compiler;2.11.6 ...[0m
 [0m[[0mdebug[0m] [0msbt-chain: Checking cache for: dependency: org.scala-lang#scala-compiler;2.11.6 {scala-tool=[default, optional(default)]}[0m
 [0m[[0mdebug[0m] [0msbt-chain: module revision found in cache: org.scala-lang#scala-compiler;2.11.6[0m
 [0m[[0mdebug[0m] [0m	found org.scala-lang#scala-compiler;2.11.6 in sbt-chain[0m
-[0m[[0mdebug[0m] [0m== resolving dependencies productivity#productivity_2.11;1.0-SNAPSHOT->org.scala-lang#scala-compiler;2.11.6 [scala-tool->runtime][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies productivity#productivity_2.11;1.0-SNAPSHOT->org.scala-lang#scala-compiler;2.11.6 [scala-tool->compile][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies randchat#randchat_2.11;1.0-SNAPSHOT->org.scala-lang#scala-compiler;2.11.6 [scala-tool->runtime][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies randchat#randchat_2.11;1.0-SNAPSHOT->org.scala-lang#scala-compiler;2.11.6 [scala-tool->compile][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies org.scala-lang#scala-compiler;2.11.6->org.scala-lang#scala-library;2.11.6 [compile->master(compile)][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies org.scala-lang#scala-compiler;2.11.6->org.scala-lang#scala-library;2.11.6 [compile->compile(*)][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies org.scala-lang#scala-compiler;2.11.6->org.scala-lang#scala-library;2.11.6 [compile->default][0m
@@ -7181,19 +7181,19 @@
 [0m[[0mdebug[0m] [0m== resolving dependencies org.scala-lang#scala-compiler;2.11.6->org.scala-lang.modules#scala-xml_2.11;1.0.3 [runtime->compile][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies org.scala-lang#scala-compiler;2.11.6->org.scala-lang.modules#scala-parser-combinators_2.11;1.0.3 [runtime->runtime(*)][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies org.scala-lang#scala-compiler;2.11.6->org.scala-lang.modules#scala-parser-combinators_2.11;1.0.3 [runtime->compile][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies productivity#productivity_2.11;1.0-SNAPSHOT->org.scala-lang#scala-compiler;2.11.6 [scala-tool->master][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies productivity#productivity_2.11;1.0-SNAPSHOT->org.scala-lang#scala-compiler;2.11.6 [scala-tool->optional(default)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies randchat#randchat_2.11;1.0-SNAPSHOT->org.scala-lang#scala-compiler;2.11.6 [scala-tool->master][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies randchat#randchat_2.11;1.0-SNAPSHOT->org.scala-lang#scala-compiler;2.11.6 [scala-tool->optional(default)][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies org.scala-lang#scala-compiler;2.11.6->jline#jline;2.12.1 [optional->master(compile)][0m
 [0m[[0minfo[0m] [0mResolving jline#jline;2.12.1 ...[0m
 [0m[[0mdebug[0m] [0msbt-chain: Checking cache for: dependency: jline#jline;2.12.1 {optional=[compile(*), master(compile)]}[0m
 [0m[[0mdebug[0m] [0msbt-chain: module revision found in cache: jline#jline;2.12.1[0m
 [0m[[0mdebug[0m] [0m	found jline#jline;2.12.1 in sbt-chain[0m
 [0m[[0mdebug[0m] [0m== resolving dependencies org.scala-lang#scala-compiler;2.11.6->jline#jline;2.12.1 [optional->compile(*)][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies productivity#productivity_2.11;1.0-SNAPSHOT->org.scala-lang#scala-library;2.11.6 [scala-tool->default][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies productivity#productivity_2.11;1.0-SNAPSHOT->org.scala-lang#scala-library;2.11.6 [scala-tool->runtime][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies productivity#productivity_2.11;1.0-SNAPSHOT->org.scala-lang#scala-library;2.11.6 [scala-tool->compile][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies productivity#productivity_2.11;1.0-SNAPSHOT->org.scala-lang#scala-library;2.11.6 [scala-tool->master][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies productivity#productivity_2.11;1.0-SNAPSHOT->org.scala-lang#scala-library;2.11.6 [scala-tool->optional(default)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies randchat#randchat_2.11;1.0-SNAPSHOT->org.scala-lang#scala-library;2.11.6 [scala-tool->default][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies randchat#randchat_2.11;1.0-SNAPSHOT->org.scala-lang#scala-library;2.11.6 [scala-tool->runtime][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies randchat#randchat_2.11;1.0-SNAPSHOT->org.scala-lang#scala-library;2.11.6 [scala-tool->compile][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies randchat#randchat_2.11;1.0-SNAPSHOT->org.scala-lang#scala-library;2.11.6 [scala-tool->master][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies randchat#randchat_2.11;1.0-SNAPSHOT->org.scala-lang#scala-library;2.11.6 [scala-tool->optional(default)][0m
 [0m[[0mdebug[0m] [0mcircular dependency found: org.scala-lang.modules#scala-xml_2.11;1.0.1->org.scala-lang#scala-compiler;2.11.0->...[0m
 [0m[[0mdebug[0m] [0mall callers are evicted for commons-logging#commons-logging;1.1.1: evicting too[0m
 [0m[[0mdebug[0m] [0mall callers are evicted for commons-logging#commons-logging;1.1.1: evicting too[0m
@@ -7341,19 +7341,19 @@
 [0m[[0mdebug[0m] [0m	[NOT REQUIRED] org.scala-lang.modules#scala-xml_2.11;1.0.3!scala-xml_2.11.jar(bundle)[0m
 [0m[[0mdebug[0m] [0m	[NOT REQUIRED] org.scala-lang.modules#scala-parser-combinators_2.11;1.0.3!scala-parser-combinators_2.11.jar(bundle)[0m
 [0m[[0mdebug[0m] [0m	[NOT REQUIRED] jline#jline;2.12.1!jline.jar[0m
-[0m[[0mdebug[0m] [0m:: resolution report :: resolve 1680ms :: artifacts dl 50ms[0m
-[0m[[0mdebug[0m] [0m	report for productivity#productivity_2.11;1.0-SNAPSHOT compile produced in /Users/jiaqichen/Desktop/RandChat/target/resolution-cache/reports/productivity-productivity_2.11-compile.xml[0m
-[0m[[0mdebug[0m] [0m	report for productivity#productivity_2.11;1.0-SNAPSHOT runtime produced in /Users/jiaqichen/Desktop/RandChat/target/resolution-cache/reports/productivity-productivity_2.11-runtime.xml[0m
-[0m[[0mdebug[0m] [0m	report for productivity#productivity_2.11;1.0-SNAPSHOT test produced in /Users/jiaqichen/Desktop/RandChat/target/resolution-cache/reports/productivity-productivity_2.11-test.xml[0m
-[0m[[0mdebug[0m] [0m	report for productivity#productivity_2.11;1.0-SNAPSHOT provided produced in /Users/jiaqichen/Desktop/RandChat/target/resolution-cache/reports/productivity-productivity_2.11-provided.xml[0m
-[0m[[0mdebug[0m] [0m	report for productivity#productivity_2.11;1.0-SNAPSHOT optional produced in /Users/jiaqichen/Desktop/RandChat/target/resolution-cache/reports/productivity-productivity_2.11-optional.xml[0m
-[0m[[0mdebug[0m] [0m	report for productivity#productivity_2.11;1.0-SNAPSHOT compile-internal produced in /Users/jiaqichen/Desktop/RandChat/target/resolution-cache/reports/productivity-productivity_2.11-compile-internal.xml[0m
-[0m[[0mdebug[0m] [0m	report for productivity#productivity_2.11;1.0-SNAPSHOT runtime-internal produced in /Users/jiaqichen/Desktop/RandChat/target/resolution-cache/reports/productivity-productivity_2.11-runtime-internal.xml[0m
-[0m[[0mdebug[0m] [0m	report for productivity#productivity_2.11;1.0-SNAPSHOT test-internal produced in /Users/jiaqichen/Desktop/RandChat/target/resolution-cache/reports/productivity-productivity_2.11-test-internal.xml[0m
-[0m[[0mdebug[0m] [0m	report for productivity#productivity_2.11;1.0-SNAPSHOT plugin produced in /Users/jiaqichen/Desktop/RandChat/target/resolution-cache/reports/productivity-productivity_2.11-plugin.xml[0m
-[0m[[0mdebug[0m] [0m	report for productivity#productivity_2.11;1.0-SNAPSHOT sources produced in /Users/jiaqichen/Desktop/RandChat/target/resolution-cache/reports/productivity-productivity_2.11-sources.xml[0m
-[0m[[0mdebug[0m] [0m	report for productivity#productivity_2.11;1.0-SNAPSHOT docs produced in /Users/jiaqichen/Desktop/RandChat/target/resolution-cache/reports/productivity-productivity_2.11-docs.xml[0m
-[0m[[0mdebug[0m] [0m	report for productivity#productivity_2.11;1.0-SNAPSHOT pom produced in /Users/jiaqichen/Desktop/RandChat/target/resolution-cache/reports/productivity-productivity_2.11-pom.xml[0m
-[0m[[0mdebug[0m] [0m	report for productivity#productivity_2.11;1.0-SNAPSHOT scala-tool produced in /Users/jiaqichen/Desktop/RandChat/target/resolution-cache/reports/productivity-productivity_2.11-scala-tool.xml[0m
-[0m[[0mdebug[0m] [0m	resolve done (1680ms resolve - 50ms download)[0m
+[0m[[0mdebug[0m] [0m:: resolution report :: resolve 1821ms :: artifacts dl 77ms[0m
+[0m[[0mdebug[0m] [0m	report for randchat#randchat_2.11;1.0-SNAPSHOT compile produced in /Users/jiaqichen/Desktop/RandChat/target/resolution-cache/reports/randchat-randchat_2.11-compile.xml[0m
+[0m[[0mdebug[0m] [0m	report for randchat#randchat_2.11;1.0-SNAPSHOT runtime produced in /Users/jiaqichen/Desktop/RandChat/target/resolution-cache/reports/randchat-randchat_2.11-runtime.xml[0m
+[0m[[0mdebug[0m] [0m	report for randchat#randchat_2.11;1.0-SNAPSHOT test produced in /Users/jiaqichen/Desktop/RandChat/target/resolution-cache/reports/randchat-randchat_2.11-test.xml[0m
+[0m[[0mdebug[0m] [0m	report for randchat#randchat_2.11;1.0-SNAPSHOT provided produced in /Users/jiaqichen/Desktop/RandChat/target/resolution-cache/reports/randchat-randchat_2.11-provided.xml[0m
+[0m[[0mdebug[0m] [0m	report for randchat#randchat_2.11;1.0-SNAPSHOT optional produced in /Users/jiaqichen/Desktop/RandChat/target/resolution-cache/reports/randchat-randchat_2.11-optional.xml[0m
+[0m[[0mdebug[0m] [0m	report for randchat#randchat_2.11;1.0-SNAPSHOT compile-internal produced in /Users/jiaqichen/Desktop/RandChat/target/resolution-cache/reports/randchat-randchat_2.11-compile-internal.xml[0m
+[0m[[0mdebug[0m] [0m	report for randchat#randchat_2.11;1.0-SNAPSHOT runtime-internal produced in /Users/jiaqichen/Desktop/RandChat/target/resolution-cache/reports/randchat-randchat_2.11-runtime-internal.xml[0m
+[0m[[0mdebug[0m] [0m	report for randchat#randchat_2.11;1.0-SNAPSHOT test-internal produced in /Users/jiaqichen/Desktop/RandChat/target/resolution-cache/reports/randchat-randchat_2.11-test-internal.xml[0m
+[0m[[0mdebug[0m] [0m	report for randchat#randchat_2.11;1.0-SNAPSHOT plugin produced in /Users/jiaqichen/Desktop/RandChat/target/resolution-cache/reports/randchat-randchat_2.11-plugin.xml[0m
+[0m[[0mdebug[0m] [0m	report for randchat#randchat_2.11;1.0-SNAPSHOT sources produced in /Users/jiaqichen/Desktop/RandChat/target/resolution-cache/reports/randchat-randchat_2.11-sources.xml[0m
+[0m[[0mdebug[0m] [0m	report for randchat#randchat_2.11;1.0-SNAPSHOT docs produced in /Users/jiaqichen/Desktop/RandChat/target/resolution-cache/reports/randchat-randchat_2.11-docs.xml[0m
+[0m[[0mdebug[0m] [0m	report for randchat#randchat_2.11;1.0-SNAPSHOT pom produced in /Users/jiaqichen/Desktop/RandChat/target/resolution-cache/reports/randchat-randchat_2.11-pom.xml[0m
+[0m[[0mdebug[0m] [0m	report for randchat#randchat_2.11;1.0-SNAPSHOT scala-tool produced in /Users/jiaqichen/Desktop/RandChat/target/resolution-cache/reports/randchat-randchat_2.11-scala-tool.xml[0m
+[0m[[0mdebug[0m] [0m	resolve done (1821ms resolve - 77ms download)[0m
 [0m[[0minfo[0m] [0mDone updating.[0m

@@ -26,15 +26,19 @@ object index extends BaseScalaTemplate[play.twirl.api.HtmlFormat.Appendable,Form
   def apply():play.twirl.api.HtmlFormat.Appendable = {
       _display_ {
 
-Seq[Any](_display_(/*3.2*/main("RandChat")/*3.18*/ {_display_(Seq[Any](format.raw/*3.20*/("""
-"""),format.raw/*4.1*/("""<section>
-   <h1>Random Chat</h1>
+Seq[Any](_display_(/*3.2*/main("Small things jump around")/*3.34*/ {_display_(Seq[Any](format.raw/*3.36*/("""
 
-   <input type="text" id="socket-input" />
+    """),format.raw/*5.5*/("""<h1>Simple chat</h1>
 
+    <input type="text" id="socket-input" placeholder="message to send" />
+    <div id="socket-messages"></div>
+    <p id="test"></p>
+    <button type="button" onclick="myFunction()">Submit</button>
 
-</section>
-""")))}),format.raw/*11.2*/("""
+    <script type="text/javascript" charset="utf-8" src=""""),_display_(/*12.58*/routes/*12.64*/.Application.wsJs()),format.raw/*12.83*/(""""></script>
+
+""")))}),format.raw/*14.2*/("""
+
 """))}
   }
 
@@ -47,11 +51,11 @@ Seq[Any](_display_(/*3.2*/main("RandChat")/*3.18*/ {_display_(Seq[Any](format.ra
 }
               /*
                   -- GENERATED --
-                  DATE: Thu Jul 09 21:22:45 BST 2015
-                  SOURCE: /Users/jiaqichen/Desktop/RandChat/app/views/randChat.scala.js
-                  HASH: 70741c4f0a47da4302909ac8b71d4bdd0da003ca
-                  MATRIX: 798->3|822->19|861->21|888->22|1010->114
-                  LINES: 29->3|29->3|29->3|30->4|37->11
+                  DATE: Sun Jul 12 00:46:04 BST 2015
+                  SOURCE: /Users/jiaqichen/Desktop/RandChat/app/views/index.scala.html
+                  HASH: 8dc68d999fe3856b5dc619517a9f454a1675812a
+                  MATRIX: 798->3|838->35|877->37|909->43|1214->321|1229->327|1269->346|1313->360
+                  LINES: 29->3|29->3|29->3|31->5|38->12|38->12|38->12|40->14
                   -- GENERATED --
               */
           
