@@ -20,43 +20,46 @@ import play.mvc.Http.Context.Implicit._
 import views.html._
 
 /**/
-object index extends BaseScalaTemplate[play.twirl.api.HtmlFormat.Appendable,Format[play.twirl.api.HtmlFormat.Appendable]](play.twirl.api.HtmlFormat) with play.twirl.api.Template0[play.twirl.api.HtmlFormat.Appendable] {
+object index extends BaseScalaTemplate[play.twirl.api.HtmlFormat.Appendable,Format[play.twirl.api.HtmlFormat.Appendable]](play.twirl.api.HtmlFormat) with play.twirl.api.Template1[models.Client,play.twirl.api.HtmlFormat.Appendable] {
 
   /**/
-  def apply():play.twirl.api.HtmlFormat.Appendable = {
+  def apply/*1.2*/(client: models.Client):play.twirl.api.HtmlFormat.Appendable = {
       _display_ {
 
-Seq[Any](_display_(/*3.2*/main("Small things jump around")/*3.34*/ {_display_(Seq[Any](format.raw/*3.36*/("""
+Seq[Any](format.raw/*1.25*/("""
+
+"""),_display_(/*3.2*/main("RandChat")/*3.18*/ {_display_(Seq[Any](format.raw/*3.20*/("""
 
     """),format.raw/*5.5*/("""<h1>Simple chat</h1>
-
+    <h3>current user: """),_display_(/*6.24*/client/*6.30*/.email),format.raw/*6.36*/("""</h3>
+    <h3>the other side: </h3>
 
     <div id="socket-messages"></div>
 
     <input type="text" id="socket-input" placeholder="message to send" />
 
 
-    <script type="text/javascript" charset="utf-8" src=""""),_display_(/*13.58*/routes/*13.64*/.Application.wsJs()),format.raw/*13.83*/(""""></script>
+    <script type="text/javascript" charset="utf-8" src=""""),_display_(/*14.58*/routes/*14.64*/.Application.wsJs()),format.raw/*14.83*/(""""></script>
 
-""")))}),format.raw/*15.2*/("""
+""")))}),format.raw/*16.2*/("""
 
 """))}
   }
 
-  def render(): play.twirl.api.HtmlFormat.Appendable = apply()
+  def render(client:models.Client): play.twirl.api.HtmlFormat.Appendable = apply(client)
 
-  def f:(() => play.twirl.api.HtmlFormat.Appendable) = () => apply()
+  def f:((models.Client) => play.twirl.api.HtmlFormat.Appendable) = (client) => apply(client)
 
   def ref: this.type = this
 
 }
               /*
                   -- GENERATED --
-                  DATE: Sun Jul 12 21:24:30 BST 2015
+                  DATE: Sun Jul 12 21:27:57 BST 2015
                   SOURCE: /Users/jiaqichen/Desktop/RandChat/app/views/index.scala.html
-                  HASH: 1bd4524413590038c610ca893f019795f96cfbcf
-                  MATRIX: 798->3|838->35|877->37|909->43|1130->237|1145->243|1185->262|1229->276
-                  LINES: 29->3|29->3|29->3|31->5|39->13|39->13|39->13|41->15
+                  HASH: 6a4027fd0254fa4ff1aa95b0270c9edddbd5b3a7
+                  MATRIX: 730->1|841->24|869->27|893->43|932->45|964->51|1034->95|1048->101|1074->107|1309->315|1324->321|1364->340|1408->354
+                  LINES: 26->1|29->1|31->3|31->3|31->3|33->5|34->6|34->6|34->6|42->14|42->14|42->14|44->16
                   -- GENERATED --
               */
           

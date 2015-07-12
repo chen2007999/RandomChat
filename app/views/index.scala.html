@@ -1,9 +1,10 @@
+@(client: models.Client)
 
-
-@main("Small things jump around") {
+@main("RandChat") {
 
     <h1>Simple chat</h1>
-
+    <h3>current user: @client.email</h3>
+    <h3>the other side: </h3>
 
     <div id="socket-messages"></div>
 

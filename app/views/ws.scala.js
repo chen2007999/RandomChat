@@ -1,3 +1,4 @@
+
 $(function(){
 
         var WS = window['MozWebSocket'] ? MozWebSocket : WebSocket

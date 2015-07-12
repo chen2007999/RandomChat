@@ -26,29 +26,29 @@ object ws extends BaseScalaTemplate[play.twirl.api.JavaScriptFormat.Appendable,F
   def apply():play.twirl.api.JavaScriptFormat.Appendable = {
       _display_ {
 
-Seq[Any](format.raw/*1.1*/("""$(function()"""),format.raw/*1.13*/("""{"""),format.raw/*1.14*/("""
+Seq[Any](format.raw/*2.1*/("""$(function()"""),format.raw/*2.13*/("""{"""),format.raw/*2.14*/("""
 
-        """),format.raw/*3.9*/("""var WS = window['MozWebSocket'] ? MozWebSocket : WebSocket
-        var socket = new WS(""""),_display_(/*4.31*/routes/*4.37*/.Application.wsInterface().webSocketURL(request)),format.raw/*4.85*/("""")
+        """),format.raw/*4.9*/("""var WS = window['MozWebSocket'] ? MozWebSocket : WebSocket
+        var socket = new WS(""""),_display_(/*5.31*/routes/*5.37*/.Application.wsInterface().webSocketURL(request)),format.raw/*5.85*/("""")
 
 
-        var writeMessages = function(event)"""),format.raw/*7.44*/("""{"""),format.raw/*7.45*/("""
-            """),format.raw/*8.13*/("""$('#socket-messages').append('<p>'+event.data+'</p>');
-        """),format.raw/*9.9*/("""}"""),format.raw/*9.10*/("""
+        var writeMessages = function(event)"""),format.raw/*8.44*/("""{"""),format.raw/*8.45*/("""
+            """),format.raw/*9.13*/("""$('#socket-messages').append('<p>'+event.data+'</p>');
+        """),format.raw/*10.9*/("""}"""),format.raw/*10.10*/("""
 
-         """),format.raw/*11.10*/("""socket.onmessage = writeMessages;
+         """),format.raw/*12.10*/("""socket.onmessage = writeMessages;
 
-        $('#socket-input').keyup(function(event)"""),format.raw/*13.49*/("""{"""),format.raw/*13.50*/("""
+        $('#socket-input').keyup(function(event)"""),format.raw/*14.49*/("""{"""),format.raw/*14.50*/("""
 
-             """),format.raw/*15.14*/("""var charCode = (event.which) ? event.which : event.keyCode ;
+             """),format.raw/*16.14*/("""var charCode = (event.which) ? event.which : event.keyCode ;
 
             // if enter (charcode 13) is pushed, send message, then clear input field
-            if(charCode === 13)"""),format.raw/*18.32*/("""{"""),format.raw/*18.33*/("""
-               """),format.raw/*19.16*/("""socket.send($(this).val());
+            if(charCode === 13)"""),format.raw/*19.32*/("""{"""),format.raw/*19.33*/("""
+               """),format.raw/*20.16*/("""socket.send($(this).val());
               $(this).val('');
-            """),format.raw/*21.13*/("""}"""),format.raw/*21.14*/("""
-        """),format.raw/*22.9*/("""}"""),format.raw/*22.10*/(""");
-"""),format.raw/*23.1*/("""}"""),format.raw/*23.2*/(""");
+            """),format.raw/*22.13*/("""}"""),format.raw/*22.14*/("""
+        """),format.raw/*23.9*/("""}"""),format.raw/*23.10*/(""");
+"""),format.raw/*24.1*/("""}"""),format.raw/*24.2*/(""");
 """))}
   }
 
@@ -61,11 +61,11 @@ Seq[Any](format.raw/*1.1*/("""$(function()"""),format.raw/*1.13*/("""{"""),forma
 }
               /*
                   -- GENERATED --
-                  DATE: Sun Jul 12 21:24:30 BST 2015
+                  DATE: Sun Jul 12 21:26:31 BST 2015
                   SOURCE: /Users/jiaqichen/Desktop/RandChat/app/views/ws.scala.js
-                  HASH: 13ebec038262331e2248924a603b3daa6c609b0b
-                  MATRIX: 821->0|860->12|888->13|924->23|1039->112|1053->118|1121->166|1196->214|1224->215|1264->228|1353->291|1381->292|1420->303|1531->386|1560->387|1603->402|1810->581|1839->582|1883->598|1982->669|2011->670|2047->679|2076->680|2106->683|2134->684
-                  LINES: 29->1|29->1|29->1|31->3|32->4|32->4|32->4|35->7|35->7|36->8|37->9|37->9|39->11|41->13|41->13|43->15|46->18|46->18|47->19|49->21|49->21|50->22|50->22|51->23|51->23
+                  HASH: d07d0d63e1fd4ce496dc1c04efcbc18149512a91
+                  MATRIX: 821->1|860->13|888->14|924->24|1039->113|1053->119|1121->167|1196->215|1224->216|1264->229|1354->292|1383->293|1422->304|1533->387|1562->388|1605->403|1812->582|1841->583|1885->599|1984->670|2013->671|2049->680|2078->681|2108->684|2136->685
+                  LINES: 29->2|29->2|29->2|31->4|32->5|32->5|32->5|35->8|35->8|36->9|37->10|37->10|39->12|41->14|41->14|43->16|46->19|46->19|47->20|49->22|49->22|50->23|50->23|51->24|51->24
                   -- GENERATED --
               */
           
