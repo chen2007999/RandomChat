@@ -26,35 +26,39 @@ object ws extends BaseScalaTemplate[play.twirl.api.JavaScriptFormat.Appendable,F
   def apply():play.twirl.api.JavaScriptFormat.Appendable = {
       _display_ {
 
-Seq[Any](format.raw/*4.6*/("""$(function()"""),format.raw/*4.18*/("""{"""),format.raw/*4.19*/("""
-
-        """),format.raw/*6.9*/("""var WS = window['MozWebSocket'] ? MozWebSocket : WebSocket
-        var socket = new WS(""""),_display_(/*7.31*/routes/*7.37*/.Application.wsInterface().webSocketURL(request)),format.raw/*7.85*/("""")
-
-        var sendMessage = function()"""),format.raw/*9.37*/("""{"""),format.raw/*9.38*/("""
-              """),format.raw/*10.15*/("""socket.send($("#socket-input").val())
-              $("#socket-input").val('')
-        """),format.raw/*12.9*/("""}"""),format.raw/*12.10*/("""
+Seq[Any](format.raw/*1.1*/("""$(function()"""),format.raw/*1.13*/("""{"""),format.raw/*1.14*/("""
+        """),format.raw/*2.9*/("""alert("Hello! I am an alert box!!");
+        var WS = window['MozWebSocket'] ? MozWebSocket : WebSocket
+        var socket = new WS(""""),_display_(/*4.31*/routes/*4.37*/.Application.wsInterface().webSocketURL(request)),format.raw/*4.85*/("""")
 
 
-        """),format.raw/*15.9*/("""var writeMessages = function(event)"""),format.raw/*15.44*/("""{"""),format.raw/*15.45*/("""
-             """),format.raw/*16.14*/("""$("#socket-messages").html("Last ping: "+event.data);
-        """),format.raw/*17.9*/("""}"""),format.raw/*17.10*/("""
+        var writeMessages = function(event)"""),format.raw/*7.44*/("""{"""),format.raw/*7.45*/("""
+            """),format.raw/*8.13*/("""$('#socket-messages').prepend('<p>'+event.data+'</p>');
+        """),format.raw/*9.9*/("""}"""),format.raw/*9.10*/("""
 
+         """),format.raw/*11.10*/("""socket.onmessage = writeMessages;
 
-         """),format.raw/*20.10*/("""var handleReturnKey = function(e) """),format.raw/*20.44*/("""{"""),format.raw/*20.45*/("""
-                """),format.raw/*21.17*/("""if(e.charCode == 13 || e.keyCode == 13) """),format.raw/*21.57*/("""{"""),format.raw/*21.58*/("""
-                    """),format.raw/*22.21*/("""//e.preventDefault()
-                    sendMessage()
-                """),format.raw/*24.17*/("""}"""),format.raw/*24.18*/("""
-         """),format.raw/*25.10*/("""}"""),format.raw/*25.11*/("""
+        $('#socket-input').keyup(function(event)"""),format.raw/*13.49*/("""{"""),format.raw/*13.50*/("""
 
-        """),format.raw/*27.9*/("""$("#socket-input").keypress(handleReturnKey)
-        socket.onmessage = writeMessages
+             """),format.raw/*15.14*/("""var charCode = (event.which) ? event.which : event.keyCode ;
+
+            // if enter (charcode 13) is pushed, send message, then clear input field
+            if(charCode === 13)"""),format.raw/*18.32*/("""{"""),format.raw/*18.33*/("""
+               """),format.raw/*19.16*/("""socket.send($(this).val());
+              $(this).val('');
+            """),format.raw/*21.13*/("""}"""),format.raw/*21.14*/("""
+        """),format.raw/*22.9*/("""}"""),format.raw/*22.10*/(""");
+"""),format.raw/*23.1*/("""}"""),format.raw/*23.2*/(""");
 
 
 
-    """),format.raw/*32.5*/("""}"""),format.raw/*32.6*/(""")"""))}
+
+     function myFunction() """),format.raw/*28.28*/("""{"""),format.raw/*28.29*/("""
+        """),format.raw/*29.9*/("""document.getElementById("test").innerHTML = "ddddddw22332d";
+     """),format.raw/*30.6*/("""}"""),format.raw/*30.7*/("""
+
+
+"""))}
   }
 
   def render(): play.twirl.api.JavaScriptFormat.Appendable = apply()
@@ -66,11 +70,11 @@ Seq[Any](format.raw/*4.6*/("""$(function()"""),format.raw/*4.18*/("""{"""),forma
 }
               /*
                   -- GENERATED --
-                  DATE: Sun Jul 12 00:50:38 BST 2015
+                  DATE: Sun Jul 12 20:39:19 BST 2015
                   SOURCE: /Users/jiaqichen/Desktop/RandChat/app/views/ws.scala.js
-                  HASH: 2cafa7d3daf31ac8933f7149c9ccfcf37f3b9884
-                  MATRIX: 821->8|860->20|888->21|924->31|1039->120|1053->126|1121->174|1188->214|1216->215|1259->230|1373->317|1402->318|1440->329|1503->364|1532->365|1574->379|1663->441|1692->442|1732->454|1794->488|1823->489|1868->506|1936->546|1965->547|2014->568|2113->639|2142->640|2180->650|2209->651|2246->661|2366->754|2394->755
-                  LINES: 29->4|29->4|29->4|31->6|32->7|32->7|32->7|34->9|34->9|35->10|37->12|37->12|40->15|40->15|40->15|41->16|42->17|42->17|45->20|45->20|45->20|46->21|46->21|46->21|47->22|49->24|49->24|50->25|50->25|52->27|57->32|57->32
+                  HASH: 4791ec0c75108bb018f541b0c07815cd793d4aa5
+                  MATRIX: 821->0|860->12|888->13|923->22|1083->156|1097->162|1165->210|1240->258|1268->259|1308->272|1398->336|1426->337|1465->348|1576->431|1605->432|1648->447|1855->626|1884->627|1928->643|2027->714|2056->715|2092->724|2121->725|2151->728|2179->729|2241->763|2270->764|2306->773|2399->839|2427->840
+                  LINES: 29->1|29->1|29->1|30->2|32->4|32->4|32->4|35->7|35->7|36->8|37->9|37->9|39->11|41->13|41->13|43->15|46->18|46->18|47->19|49->21|49->21|50->22|50->22|51->23|51->23|56->28|56->28|57->29|58->30|58->30
                   -- GENERATED --
               */
           

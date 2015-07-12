@@ -35,11 +35,13 @@ Seq[Any](format.raw/*1.32*/("""
         <title>"""),_display_(/*7.17*/title),format.raw/*7.22*/("""</title>
         <link rel="stylesheet" media="screen" href=""""),_display_(/*8.54*/routes/*8.60*/.Assets.at("stylesheets/main.css")),format.raw/*8.94*/("""">
         <link rel="shortcut icon" type="image/png" href=""""),_display_(/*9.59*/routes/*9.65*/.Assets.at("images/favicon.png")),format.raw/*9.97*/("""">
-        <script src=""""),_display_(/*10.23*/routes/*10.29*/.Assets.at("javascripts/hello.js")),format.raw/*10.63*/("""" type="text/javascript"></script>
+
+
+        <script src=""""),_display_(/*12.23*/routes/*12.29*/.Assets.at("javascripts/jquery-1.9.0.min.js")),format.raw/*12.74*/("""" type="text/javascript"></script>
     </head>
     <body>
-        """),_display_(/*13.10*/content),format.raw/*13.17*/("""
-    """),format.raw/*14.5*/("""</body>
+        """),_display_(/*15.10*/content),format.raw/*15.17*/("""
+    """),format.raw/*16.5*/("""</body>
 </html>
 """))}
   }
@@ -53,11 +55,11 @@ Seq[Any](format.raw/*1.32*/("""
 }
               /*
                   -- GENERATED --
-                  DATE: Sun Jul 12 00:46:04 BST 2015
+                  DATE: Sun Jul 12 20:46:33 BST 2015
                   SOURCE: /Users/jiaqichen/Desktop/RandChat/app/views/main.scala.html
-                  HASH: 2161330b6434d5bb9afcd5e16006e0def9590b71
-                  MATRIX: 727->1|845->31|873->33|950->84|975->89|1063->151|1077->157|1131->191|1218->252|1232->258|1284->290|1336->315|1351->321|1406->355|1500->422|1528->429|1560->434
-                  LINES: 26->1|29->1|31->3|35->7|35->7|36->8|36->8|36->8|37->9|37->9|37->9|38->10|38->10|38->10|41->13|41->13|42->14
+                  HASH: a1f44e5694bd661273a5d14ce29a8ef2721c19fc
+                  MATRIX: 727->1|845->31|873->33|950->84|975->89|1063->151|1077->157|1131->191|1218->252|1232->258|1284->290|1338->317|1353->323|1419->368|1513->435|1541->442|1573->447
+                  LINES: 26->1|29->1|31->3|35->7|35->7|36->8|36->8|36->8|37->9|37->9|37->9|40->12|40->12|40->12|43->15|43->15|44->16
                   -- GENERATED --
               */
           

@@ -47,7 +47,7 @@ Seq[Any](format.raw/*1.1*/("""<!DOCTYPE html>
 }
               /*
                   -- GENERATED --
-                  DATE: Sun Jul 12 00:46:04 BST 2015
+                  DATE: Sun Jul 12 10:20:17 BST 2015
                   SOURCE: /Users/jiaqichen/Desktop/RandChat/app/views/friendList.scala.html
                   HASH: 4195473f8dbc7ead9ee393e3e9383ccc1e96c1d0
                   MATRIX: 803->0

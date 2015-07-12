@@ -32,12 +32,15 @@ Seq[Any](_display_(/*3.2*/main("Small things jump around")/*3.34*/ {_display_(Se
 
     <input type="text" id="socket-input" placeholder="message to send" />
     <div id="socket-messages"></div>
+
+
     <p id="test"></p>
     <button type="button" onclick="myFunction()">Submit</button>
 
-    <script type="text/javascript" charset="utf-8" src=""""),_display_(/*12.58*/routes/*12.64*/.Application.wsJs()),format.raw/*12.83*/(""""></script>
+    <script type="text/javascript" charset="utf-8" src=""""),_display_(/*14.58*/routes/*14.64*/.Application.wsJs()),format.raw/*14.83*/(""""></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.0/jquery.min.js"></script>
 
-""")))}),format.raw/*14.2*/("""
+""")))}),format.raw/*17.2*/("""
 
 """))}
   }
@@ -51,11 +54,11 @@ Seq[Any](_display_(/*3.2*/main("Small things jump around")/*3.34*/ {_display_(Se
 }
               /*
                   -- GENERATED --
-                  DATE: Sun Jul 12 00:46:04 BST 2015
+                  DATE: Sun Jul 12 20:34:04 BST 2015
                   SOURCE: /Users/jiaqichen/Desktop/RandChat/app/views/index.scala.html
-                  HASH: 8dc68d999fe3856b5dc619517a9f454a1675812a
-                  MATRIX: 798->3|838->35|877->37|909->43|1214->321|1229->327|1269->346|1313->360
-                  LINES: 29->3|29->3|29->3|31->5|38->12|38->12|38->12|40->14
+                  HASH: a88e8923c6bfb70f28ac6ecb1a8dd8c00b078bd7
+                  MATRIX: 798->3|838->35|877->37|909->43|1216->323|1231->329|1271->348|1404->451
+                  LINES: 29->3|29->3|29->3|31->5|40->14|40->14|40->14|43->17
                   -- GENERATED --
               */
           

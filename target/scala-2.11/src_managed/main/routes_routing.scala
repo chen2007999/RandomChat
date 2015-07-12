@@ -1,6 +1,6 @@
 // @SOURCE:/Users/jiaqichen/Desktop/RandChat/conf/routes
-// @HASH:4000e9a22b972f75f69d56fc6a2fd17ad44d2ff5
-// @DATE:Sun Jul 12 00:46:03 BST 2015
+// @HASH:34675e5b6e9199fe12578a94b3138896bc75c81d
+// @DATE:Sun Jul 12 10:31:41 BST 2015
 
 
 import scala.language.reflectiveCalls
