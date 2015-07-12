@@ -14,7 +14,6 @@ public class SimpleChat{
     public static void start(WebSocket.In<String> in, WebSocket.Out<String> out){
 
         waiting.add(out);
-        ChatPair chatPair;
 
         if(waiting.size() >= 2) {
             Random rand = new Random();
@@ -23,27 +22,13 @@ public class SimpleChat{
             while(index1 == index2) {
                 index2 = rand.nextInt(waiting.size());
             }
-            chatPair = new ChatPair(waiting.get(index1), waiting.get(index2));
+            ChatPair chatPair = new ChatPair(waiting.get(index1), waiting.get(index2));
+            ChatPair.start(in);
 
-            in.onMessage(new Callback<String>(){
-                public void invoke(String event){
-                    SimpleChat.notifyPair(event, chatPair);
-                }
-            });
-
-            in.onClose(new Callback0(){
-                public void invoke(){
-                    SimpleChat.notifyPair("A connection closed", chatPair);
-                }
-            });
         }
 
 
     }
 
-    // Iterate connection list and write incoming message
-    public static void notifyPair(String message, ChatPair chatPair){
-        chatPair.getClient1().write(message);
-        chatPair.getClient2().write(message);
-    }
+
 }
