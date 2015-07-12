@@ -1,11 +1,11 @@
 $(function(){
-        alert("Hello! I am an alert box!!");
+
         var WS = window['MozWebSocket'] ? MozWebSocket : WebSocket
         var socket = new WS("@routes.Application.wsInterface().webSocketURL(request)")
 
 
         var writeMessages = function(event){
-            $('#socket-messages').prepend('<p>'+event.data+'</p>');
+            $('#socket-messages').append('<p>'+event.data+'</p>');
         }
 
          socket.onmessage = writeMessages;
@@ -21,12 +21,3 @@ $(function(){
             }
         });
 });
-
-
-
-
-     function myFunction() {
-        document.getElementById("test").innerHTML = "ddddddw22332d";
-     }
-
-

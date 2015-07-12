@@ -27,13 +27,13 @@ object ws extends BaseScalaTemplate[play.twirl.api.JavaScriptFormat.Appendable,F
       _display_ {
 
 Seq[Any](format.raw/*1.1*/("""$(function()"""),format.raw/*1.13*/("""{"""),format.raw/*1.14*/("""
-        """),format.raw/*2.9*/("""alert("Hello! I am an alert box!!");
-        var WS = window['MozWebSocket'] ? MozWebSocket : WebSocket
+
+        """),format.raw/*3.9*/("""var WS = window['MozWebSocket'] ? MozWebSocket : WebSocket
         var socket = new WS(""""),_display_(/*4.31*/routes/*4.37*/.Application.wsInterface().webSocketURL(request)),format.raw/*4.85*/("""")
 
 
         var writeMessages = function(event)"""),format.raw/*7.44*/("""{"""),format.raw/*7.45*/("""
-            """),format.raw/*8.13*/("""$('#socket-messages').prepend('<p>'+event.data+'</p>');
+            """),format.raw/*8.13*/("""$('#socket-messages').append('<p>'+event.data+'</p>');
         """),format.raw/*9.9*/("""}"""),format.raw/*9.10*/("""
 
          """),format.raw/*11.10*/("""socket.onmessage = writeMessages;
@@ -49,15 +49,6 @@ Seq[Any](format.raw/*1.1*/("""$(function()"""),format.raw/*1.13*/("""{"""),forma
             """),format.raw/*21.13*/("""}"""),format.raw/*21.14*/("""
         """),format.raw/*22.9*/("""}"""),format.raw/*22.10*/(""");
 """),format.raw/*23.1*/("""}"""),format.raw/*23.2*/(""");
-
-
-
-
-     function myFunction() """),format.raw/*28.28*/("""{"""),format.raw/*28.29*/("""
-        """),format.raw/*29.9*/("""document.getElementById("test").innerHTML = "ddddddw22332d";
-     """),format.raw/*30.6*/("""}"""),format.raw/*30.7*/("""
-
-
 """))}
   }
 
@@ -70,11 +61,11 @@ Seq[Any](format.raw/*1.1*/("""$(function()"""),format.raw/*1.13*/("""{"""),forma
 }
               /*
                   -- GENERATED --
-                  DATE: Sun Jul 12 20:39:19 BST 2015
+                  DATE: Sun Jul 12 21:24:30 BST 2015
                   SOURCE: /Users/jiaqichen/Desktop/RandChat/app/views/ws.scala.js
-                  HASH: 4791ec0c75108bb018f541b0c07815cd793d4aa5
-                  MATRIX: 821->0|860->12|888->13|923->22|1083->156|1097->162|1165->210|1240->258|1268->259|1308->272|1398->336|1426->337|1465->348|1576->431|1605->432|1648->447|1855->626|1884->627|1928->643|2027->714|2056->715|2092->724|2121->725|2151->728|2179->729|2241->763|2270->764|2306->773|2399->839|2427->840
-                  LINES: 29->1|29->1|29->1|30->2|32->4|32->4|32->4|35->7|35->7|36->8|37->9|37->9|39->11|41->13|41->13|43->15|46->18|46->18|47->19|49->21|49->21|50->22|50->22|51->23|51->23|56->28|56->28|57->29|58->30|58->30
+                  HASH: 13ebec038262331e2248924a603b3daa6c609b0b
+                  MATRIX: 821->0|860->12|888->13|924->23|1039->112|1053->118|1121->166|1196->214|1224->215|1264->228|1353->291|1381->292|1420->303|1531->386|1560->387|1603->402|1810->581|1839->582|1883->598|1982->669|2011->670|2047->679|2076->680|2106->683|2134->684
+                  LINES: 29->1|29->1|29->1|31->3|32->4|32->4|32->4|35->7|35->7|36->8|37->9|37->9|39->11|41->13|41->13|43->15|46->18|46->18|47->19|49->21|49->21|50->22|50->22|51->23|51->23
                   -- GENERATED --
               */
           

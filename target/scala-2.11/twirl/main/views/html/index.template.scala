@@ -30,17 +30,15 @@ Seq[Any](_display_(/*3.2*/main("Small things jump around")/*3.34*/ {_display_(Se
 
     """),format.raw/*5.5*/("""<h1>Simple chat</h1>
 
-    <input type="text" id="socket-input" placeholder="message to send" />
+
     <div id="socket-messages"></div>
 
+    <input type="text" id="socket-input" placeholder="message to send" />
 
-    <p id="test"></p>
-    <button type="button" onclick="myFunction()">Submit</button>
 
-    <script type="text/javascript" charset="utf-8" src=""""),_display_(/*14.58*/routes/*14.64*/.Application.wsJs()),format.raw/*14.83*/(""""></script>
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.0/jquery.min.js"></script>
+    <script type="text/javascript" charset="utf-8" src=""""),_display_(/*13.58*/routes/*13.64*/.Application.wsJs()),format.raw/*13.83*/(""""></script>
 
-""")))}),format.raw/*17.2*/("""
+""")))}),format.raw/*15.2*/("""
 
 """))}
   }
@@ -54,11 +52,11 @@ Seq[Any](_display_(/*3.2*/main("Small things jump around")/*3.34*/ {_display_(Se
 }
               /*
                   -- GENERATED --
-                  DATE: Sun Jul 12 20:34:04 BST 2015
+                  DATE: Sun Jul 12 21:24:30 BST 2015
                   SOURCE: /Users/jiaqichen/Desktop/RandChat/app/views/index.scala.html
-                  HASH: a88e8923c6bfb70f28ac6ecb1a8dd8c00b078bd7
-                  MATRIX: 798->3|838->35|877->37|909->43|1216->323|1231->329|1271->348|1404->451
-                  LINES: 29->3|29->3|29->3|31->5|40->14|40->14|40->14|43->17
+                  HASH: 1bd4524413590038c610ca893f019795f96cfbcf
+                  MATRIX: 798->3|838->35|877->37|909->43|1130->237|1145->243|1185->262|1229->276
+                  LINES: 29->3|29->3|29->3|31->5|39->13|39->13|39->13|41->15
                   -- GENERATED --
               */
           
