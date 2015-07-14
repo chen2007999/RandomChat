@@ -380,3 +380,377 @@ database [default] connected at jdbc:h2:mem:play
 2015-07-14 07:42:11,180 - [INFO] - from play in play-internal-execution-context-56 
 Application started (Dev)
 
+2015-07-14 07:54:21,932 - [INFO] - from play in play-internal-execution-context-65 
+database [default] connected at jdbc:h2:mem:play
+
+2015-07-14 07:54:22,078 - [INFO] - from play in play-internal-execution-context-65 
+Application started (Dev)
+
+2015-07-14 07:54:38,063 - [INFO] - from play in play-internal-execution-context-71 
+database [default] connected at jdbc:h2:mem:play
+
+2015-07-14 07:54:38,106 - [INFO] - from play in play-internal-execution-context-71 
+Application started (Dev)
+
+2015-07-14 07:58:34,448 - [ERROR] - from application in New I/O worker #8 
+
+
+! @6mn7efdl1 - Internal server error, for (GET) [/] ->
+
+play.PlayExceptions$CompilationException: Compilation error[cannot find symbol
+  symbol:   variable email
+  location: class models.Client]
+	at play.PlayExceptions$CompilationException$.apply(PlayExceptions.scala:27) ~[na:na]
+	at play.PlayExceptions$CompilationException$.apply(PlayExceptions.scala:27) ~[na:na]
+	at scala.Option.map(Option.scala:145) ~[scala-library-2.11.6.jar:na]
+	at play.PlayReload$$anonfun$taskFailureHandler$1.apply(PlayReload.scala:49) ~[na:na]
+	at play.PlayReload$$anonfun$taskFailureHandler$1.apply(PlayReload.scala:44) ~[na:na]
+	at scala.Option.map(Option.scala:145) ~[scala-library-2.11.6.jar:na]
+	at play.PlayReload$.taskFailureHandler(PlayReload.scala:44) ~[na:na]
+	at play.PlayReload$.compileFailure(PlayReload.scala:40) ~[na:na]
+	at play.PlayReload$$anonfun$compile$1.apply(PlayReload.scala:17) ~[na:na]
+	at play.PlayReload$$anonfun$compile$1.apply(PlayReload.scala:17) ~[na:na]
+	at scala.util.Either$LeftProjection.map(Either.scala:377) ~[scala-library-2.11.6.jar:na]
+	at play.PlayReload$.compile(PlayReload.scala:17) ~[na:na]
+	at play.PlayRun$$anonfun$playRunTask$1$$anonfun$apply$2$$anonfun$apply$3$$anonfun$2.apply(PlayRun.scala:62) ~[na:na]
+	at play.PlayRun$$anonfun$playRunTask$1$$anonfun$apply$2$$anonfun$apply$3$$anonfun$2.apply(PlayRun.scala:62) ~[na:na]
+	at play.runsupport.Reloader.reload(Reloader.scala:295) ~[na:na]
+	at play.core.ReloadableApplication$$anonfun$get$1.apply(ApplicationProvider.scala:122) ~[play_2.11-2.3.9.jar:2.3.9]
+	at play.core.ReloadableApplication$$anonfun$get$1.apply(ApplicationProvider.scala:120) ~[play_2.11-2.3.9.jar:2.3.9]
+	at scala.concurrent.impl.Future$PromiseCompletingRunnable.liftedTree1$1(Future.scala:24) ~[scala-library-2.11.6.jar:na]
+	at scala.concurrent.impl.Future$PromiseCompletingRunnable.run(Future.scala:24) ~[scala-library-2.11.6.jar:na]
+	at scala.concurrent.forkjoin.ForkJoinTask$AdaptedRunnableAction.exec(ForkJoinTask.java:1361) ~[scala-library-2.11.6.jar:na]
+	at scala.concurrent.forkjoin.ForkJoinTask.doExec(ForkJoinTask.java:260) ~[scala-library-2.11.6.jar:na]
+	at scala.concurrent.forkjoin.ForkJoinPool$WorkQueue.runTask(ForkJoinPool.java:1339) ~[scala-library-2.11.6.jar:na]
+	at scala.concurrent.forkjoin.ForkJoinPool.runWorker(ForkJoinPool.java:1979) ~[scala-library-2.11.6.jar:na]
+	at scala.concurrent.forkjoin.ForkJoinWorkerThread.run(ForkJoinWorkerThread.java:107) ~[scala-library-2.11.6.jar:na]
+
+2015-07-14 07:58:34,716 - [ERROR] - from application in New I/O worker #6 
+
+
+! @6mn7efe5a - Internal server error, for (GET) [/] ->
+
+play.PlayExceptions$CompilationException: Compilation error[cannot find symbol
+  symbol:   variable email
+  location: class models.Client]
+	at play.PlayExceptions$CompilationException$.apply(PlayExceptions.scala:27) ~[na:na]
+	at play.PlayExceptions$CompilationException$.apply(PlayExceptions.scala:27) ~[na:na]
+	at scala.Option.map(Option.scala:145) ~[scala-library-2.11.6.jar:na]
+	at play.PlayReload$$anonfun$taskFailureHandler$1.apply(PlayReload.scala:49) ~[na:na]
+	at play.PlayReload$$anonfun$taskFailureHandler$1.apply(PlayReload.scala:44) ~[na:na]
+	at scala.Option.map(Option.scala:145) ~[scala-library-2.11.6.jar:na]
+	at play.PlayReload$.taskFailureHandler(PlayReload.scala:44) ~[na:na]
+	at play.PlayReload$.compileFailure(PlayReload.scala:40) ~[na:na]
+	at play.PlayReload$$anonfun$compile$1.apply(PlayReload.scala:17) ~[na:na]
+	at play.PlayReload$$anonfun$compile$1.apply(PlayReload.scala:17) ~[na:na]
+	at scala.util.Either$LeftProjection.map(Either.scala:377) ~[scala-library-2.11.6.jar:na]
+	at play.PlayReload$.compile(PlayReload.scala:17) ~[na:na]
+	at play.PlayRun$$anonfun$playRunTask$1$$anonfun$apply$2$$anonfun$apply$3$$anonfun$2.apply(PlayRun.scala:62) ~[na:na]
+	at play.PlayRun$$anonfun$playRunTask$1$$anonfun$apply$2$$anonfun$apply$3$$anonfun$2.apply(PlayRun.scala:62) ~[na:na]
+	at play.runsupport.Reloader.reload(Reloader.scala:295) ~[na:na]
+	at play.core.ReloadableApplication$$anonfun$get$1.apply(ApplicationProvider.scala:122) ~[play_2.11-2.3.9.jar:2.3.9]
+	at play.core.ReloadableApplication$$anonfun$get$1.apply(ApplicationProvider.scala:120) ~[play_2.11-2.3.9.jar:2.3.9]
+	at scala.concurrent.impl.Future$PromiseCompletingRunnable.liftedTree1$1(Future.scala:24) ~[scala-library-2.11.6.jar:na]
+	at scala.concurrent.impl.Future$PromiseCompletingRunnable.run(Future.scala:24) ~[scala-library-2.11.6.jar:na]
+	at scala.concurrent.forkjoin.ForkJoinTask$AdaptedRunnableAction.exec(ForkJoinTask.java:1361) ~[scala-library-2.11.6.jar:na]
+	at scala.concurrent.forkjoin.ForkJoinTask.doExec(ForkJoinTask.java:260) ~[scala-library-2.11.6.jar:na]
+	at scala.concurrent.forkjoin.ForkJoinPool$WorkQueue.runTask(ForkJoinPool.java:1339) ~[scala-library-2.11.6.jar:na]
+	at scala.concurrent.forkjoin.ForkJoinPool.runWorker(ForkJoinPool.java:1979) ~[scala-library-2.11.6.jar:na]
+	at scala.concurrent.forkjoin.ForkJoinWorkerThread.run(ForkJoinWorkerThread.java:107) ~[scala-library-2.11.6.jar:na]
+
+2015-07-14 07:58:55,232 - [INFO] - from play in play-internal-execution-context-73 
+database [default] connected at jdbc:h2:mem:play
+
+2015-07-14 07:58:55,298 - [ERROR] - from application in New I/O worker #6 
+
+
+! @6mn7egih0 - Internal server error, for (GET) [/] ->
+
+play.api.db.evolutions.InvalidDatabaseRevision: Database 'default' needs evolution![An SQL script need to be run on your database.]
+	at play.api.db.evolutions.EvolutionsPlugin$$anonfun$onStart$1$$anonfun$apply$1.apply$mcV$sp(Evolutions.scala:510) ~[play-jdbc_2.11-2.3.9.jar:2.3.9]
+	at play.api.db.evolutions.EvolutionsPlugin.withLock(Evolutions.scala:531) ~[play-jdbc_2.11-2.3.9.jar:2.3.9]
+	at play.api.db.evolutions.EvolutionsPlugin$$anonfun$onStart$1.apply(Evolutions.scala:485) ~[play-jdbc_2.11-2.3.9.jar:2.3.9]
+	at play.api.db.evolutions.EvolutionsPlugin$$anonfun$onStart$1.apply(Evolutions.scala:483) ~[play-jdbc_2.11-2.3.9.jar:2.3.9]
+	at scala.collection.immutable.List.foreach(List.scala:381) ~[scala-library-2.11.6.jar:na]
+	at play.api.db.evolutions.EvolutionsPlugin.onStart(Evolutions.scala:483) ~[play-jdbc_2.11-2.3.9.jar:2.3.9]
+	at play.api.Play$$anonfun$start$1$$anonfun$apply$mcV$sp$1.apply(Play.scala:91) ~[play_2.11-2.3.9.jar:2.3.9]
+	at play.api.Play$$anonfun$start$1$$anonfun$apply$mcV$sp$1.apply(Play.scala:91) ~[play_2.11-2.3.9.jar:2.3.9]
+	at scala.collection.immutable.List.foreach(List.scala:381) ~[scala-library-2.11.6.jar:na]
+	at play.api.Play$$anonfun$start$1.apply$mcV$sp(Play.scala:91) ~[play_2.11-2.3.9.jar:2.3.9]
+	at play.api.Play$$anonfun$start$1.apply(Play.scala:91) ~[play_2.11-2.3.9.jar:2.3.9]
+	at play.api.Play$$anonfun$start$1.apply(Play.scala:91) ~[play_2.11-2.3.9.jar:2.3.9]
+	at play.utils.Threads$.withContextClassLoader(Threads.scala:21) ~[play_2.11-2.3.9.jar:2.3.9]
+	at play.api.Play$.start(Play.scala:90) ~[play_2.11-2.3.9.jar:2.3.9]
+	at play.core.ReloadableApplication$$anonfun$get$1$$anonfun$apply$1$$anonfun$1.apply(ApplicationProvider.scala:157) ~[play_2.11-2.3.9.jar:2.3.9]
+	at play.core.ReloadableApplication$$anonfun$get$1$$anonfun$apply$1$$anonfun$1.apply(ApplicationProvider.scala:130) ~[play_2.11-2.3.9.jar:2.3.9]
+	at scala.Option.map(Option.scala:146) ~[scala-library-2.11.6.jar:na]
+	at play.core.ReloadableApplication$$anonfun$get$1$$anonfun$apply$1.apply(ApplicationProvider.scala:130) ~[play_2.11-2.3.9.jar:2.3.9]
+	at play.core.ReloadableApplication$$anonfun$get$1$$anonfun$apply$1.apply(ApplicationProvider.scala:128) ~[play_2.11-2.3.9.jar:2.3.9]
+	at scala.util.Success.flatMap(Try.scala:230) ~[scala-library-2.11.6.jar:na]
+	at play.core.ReloadableApplication$$anonfun$get$1.apply(ApplicationProvider.scala:128) ~[play_2.11-2.3.9.jar:2.3.9]
+	at play.core.ReloadableApplication$$anonfun$get$1.apply(ApplicationProvider.scala:120) ~[play_2.11-2.3.9.jar:2.3.9]
+	at scala.concurrent.impl.Future$PromiseCompletingRunnable.liftedTree1$1(Future.scala:24) ~[scala-library-2.11.6.jar:na]
+	at scala.concurrent.impl.Future$PromiseCompletingRunnable.run(Future.scala:24) ~[scala-library-2.11.6.jar:na]
+	at scala.concurrent.forkjoin.ForkJoinTask$AdaptedRunnableAction.exec(ForkJoinTask.java:1361) ~[scala-library-2.11.6.jar:na]
+	at scala.concurrent.forkjoin.ForkJoinTask.doExec(ForkJoinTask.java:260) ~[scala-library-2.11.6.jar:na]
+	at scala.concurrent.forkjoin.ForkJoinPool$WorkQueue.runTask(ForkJoinPool.java:1339) ~[scala-library-2.11.6.jar:na]
+	at scala.concurrent.forkjoin.ForkJoinPool.runWorker(ForkJoinPool.java:1979) ~[scala-library-2.11.6.jar:na]
+	at scala.concurrent.forkjoin.ForkJoinWorkerThread.run(ForkJoinWorkerThread.java:107) ~[scala-library-2.11.6.jar:na]
+
+2015-07-14 07:58:57,198 - [WARN] - from play in play-internal-execution-context-73 
+Error stopping plugin
+java.lang.NullPointerException: null
+	at play.libs.ws.ning.NingWSPlugin.onStop(NingWSPlugin.java:31) ~[play-java-ws_2.11-2.3.9.jar:2.3.9]
+	at play.api.Play$$anonfun$stop$1$$anonfun$apply$1$$anonfun$apply$mcV$sp$2.apply(Play.scala:108) [play_2.11-2.3.9.jar:2.3.9]
+	at play.api.Play$$anonfun$stop$1$$anonfun$apply$1$$anonfun$apply$mcV$sp$2.apply(Play.scala:107) [play_2.11-2.3.9.jar:2.3.9]
+	at scala.collection.immutable.List.foreach(List.scala:381) [scala-library-2.11.6.jar:na]
+	at play.api.Play$$anonfun$stop$1$$anonfun$apply$1.apply$mcV$sp(Play.scala:107) [play_2.11-2.3.9.jar:2.3.9]
+	at play.api.Play$$anonfun$stop$1$$anonfun$apply$1.apply(Play.scala:107) [play_2.11-2.3.9.jar:2.3.9]
+	at play.api.Play$$anonfun$stop$1$$anonfun$apply$1.apply(Play.scala:107) [play_2.11-2.3.9.jar:2.3.9]
+	at play.utils.Threads$.withContextClassLoader(Threads.scala:21) [play_2.11-2.3.9.jar:2.3.9]
+	at play.api.Play$$anonfun$stop$1.apply(Play.scala:106) [play_2.11-2.3.9.jar:2.3.9]
+	at play.api.Play$$anonfun$stop$1.apply(Play.scala:105) [play_2.11-2.3.9.jar:2.3.9]
+	at scala.Option.map(Option.scala:146) [scala-library-2.11.6.jar:na]
+	at play.api.Play$.stop(Play.scala:105) [play_2.11-2.3.9.jar:2.3.9]
+	at play.core.ReloadableApplication$$anonfun$get$1$$anonfun$apply$1$$anonfun$1.apply(ApplicationProvider.scala:142) [play_2.11-2.3.9.jar:2.3.9]
+	at play.core.ReloadableApplication$$anonfun$get$1$$anonfun$apply$1$$anonfun$1.apply(ApplicationProvider.scala:130) [play_2.11-2.3.9.jar:2.3.9]
+	at scala.Option.map(Option.scala:146) [scala-library-2.11.6.jar:na]
+	at play.core.ReloadableApplication$$anonfun$get$1$$anonfun$apply$1.apply(ApplicationProvider.scala:130) [play_2.11-2.3.9.jar:2.3.9]
+	at play.core.ReloadableApplication$$anonfun$get$1$$anonfun$apply$1.apply(ApplicationProvider.scala:128) [play_2.11-2.3.9.jar:2.3.9]
+	at scala.util.Success.flatMap(Try.scala:230) [scala-library-2.11.6.jar:na]
+	at play.core.ReloadableApplication$$anonfun$get$1.apply(ApplicationProvider.scala:128) [play_2.11-2.3.9.jar:2.3.9]
+	at play.core.ReloadableApplication$$anonfun$get$1.apply(ApplicationProvider.scala:120) [play_2.11-2.3.9.jar:2.3.9]
+	at scala.concurrent.impl.Future$PromiseCompletingRunnable.liftedTree1$1(Future.scala:24) [scala-library-2.11.6.jar:na]
+	at scala.concurrent.impl.Future$PromiseCompletingRunnable.run(Future.scala:24) [scala-library-2.11.6.jar:na]
+	at scala.concurrent.forkjoin.ForkJoinTask$AdaptedRunnableAction.exec(ForkJoinTask.java:1361) [scala-library-2.11.6.jar:na]
+	at scala.concurrent.forkjoin.ForkJoinTask.doExec(ForkJoinTask.java:260) [scala-library-2.11.6.jar:na]
+	at scala.concurrent.forkjoin.ForkJoinPool$WorkQueue.runTask(ForkJoinPool.java:1339) [scala-library-2.11.6.jar:na]
+	at scala.concurrent.forkjoin.ForkJoinPool.runWorker(ForkJoinPool.java:1979) [scala-library-2.11.6.jar:na]
+	at scala.concurrent.forkjoin.ForkJoinWorkerThread.run(ForkJoinWorkerThread.java:107) [scala-library-2.11.6.jar:na]
+
+2015-07-14 07:58:57,213 - [INFO] - from play in play-internal-execution-context-73 
+database [default] connected at jdbc:h2:mem:play
+
+2015-07-14 07:58:57,253 - [INFO] - from play in play-internal-execution-context-73 
+Application started (Dev)
+
+2015-07-14 07:59:01,472 - [INFO] - from play in play-internal-execution-context-73 
+database [default] connected at jdbc:h2:mem:play
+
+2015-07-14 07:59:01,509 - [ERROR] - from application in New I/O worker #5 
+
+
+! @6mn7eh1ln - Internal server error, for (GET) [/landing] ->
+
+play.api.db.evolutions.InvalidDatabaseRevision: Database 'default' needs evolution![An SQL script need to be run on your database.]
+	at play.api.db.evolutions.EvolutionsPlugin$$anonfun$onStart$1$$anonfun$apply$1.apply$mcV$sp(Evolutions.scala:510) ~[play-jdbc_2.11-2.3.9.jar:2.3.9]
+	at play.api.db.evolutions.EvolutionsPlugin.withLock(Evolutions.scala:531) ~[play-jdbc_2.11-2.3.9.jar:2.3.9]
+	at play.api.db.evolutions.EvolutionsPlugin$$anonfun$onStart$1.apply(Evolutions.scala:485) ~[play-jdbc_2.11-2.3.9.jar:2.3.9]
+	at play.api.db.evolutions.EvolutionsPlugin$$anonfun$onStart$1.apply(Evolutions.scala:483) ~[play-jdbc_2.11-2.3.9.jar:2.3.9]
+	at scala.collection.immutable.List.foreach(List.scala:381) ~[scala-library-2.11.6.jar:na]
+	at play.api.db.evolutions.EvolutionsPlugin.onStart(Evolutions.scala:483) ~[play-jdbc_2.11-2.3.9.jar:2.3.9]
+	at play.api.Play$$anonfun$start$1$$anonfun$apply$mcV$sp$1.apply(Play.scala:91) ~[play_2.11-2.3.9.jar:2.3.9]
+	at play.api.Play$$anonfun$start$1$$anonfun$apply$mcV$sp$1.apply(Play.scala:91) ~[play_2.11-2.3.9.jar:2.3.9]
+	at scala.collection.immutable.List.foreach(List.scala:381) ~[scala-library-2.11.6.jar:na]
+	at play.api.Play$$anonfun$start$1.apply$mcV$sp(Play.scala:91) ~[play_2.11-2.3.9.jar:2.3.9]
+	at play.api.Play$$anonfun$start$1.apply(Play.scala:91) ~[play_2.11-2.3.9.jar:2.3.9]
+	at play.api.Play$$anonfun$start$1.apply(Play.scala:91) ~[play_2.11-2.3.9.jar:2.3.9]
+	at play.utils.Threads$.withContextClassLoader(Threads.scala:21) ~[play_2.11-2.3.9.jar:2.3.9]
+	at play.api.Play$.start(Play.scala:90) ~[play_2.11-2.3.9.jar:2.3.9]
+	at play.core.ReloadableApplication$$anonfun$get$1$$anonfun$apply$1$$anonfun$1.apply(ApplicationProvider.scala:157) ~[play_2.11-2.3.9.jar:2.3.9]
+	at play.core.ReloadableApplication$$anonfun$get$1$$anonfun$apply$1$$anonfun$1.apply(ApplicationProvider.scala:130) ~[play_2.11-2.3.9.jar:2.3.9]
+	at scala.Option.map(Option.scala:146) ~[scala-library-2.11.6.jar:na]
+	at play.core.ReloadableApplication$$anonfun$get$1$$anonfun$apply$1.apply(ApplicationProvider.scala:130) ~[play_2.11-2.3.9.jar:2.3.9]
+	at play.core.ReloadableApplication$$anonfun$get$1$$anonfun$apply$1.apply(ApplicationProvider.scala:128) ~[play_2.11-2.3.9.jar:2.3.9]
+	at scala.util.Success.flatMap(Try.scala:230) ~[scala-library-2.11.6.jar:na]
+	at play.core.ReloadableApplication$$anonfun$get$1.apply(ApplicationProvider.scala:128) ~[play_2.11-2.3.9.jar:2.3.9]
+	at play.core.ReloadableApplication$$anonfun$get$1.apply(ApplicationProvider.scala:120) ~[play_2.11-2.3.9.jar:2.3.9]
+	at scala.concurrent.impl.Future$PromiseCompletingRunnable.liftedTree1$1(Future.scala:24) ~[scala-library-2.11.6.jar:na]
+	at scala.concurrent.impl.Future$PromiseCompletingRunnable.run(Future.scala:24) ~[scala-library-2.11.6.jar:na]
+	at scala.concurrent.forkjoin.ForkJoinTask$AdaptedRunnableAction.exec(ForkJoinTask.java:1361) ~[scala-library-2.11.6.jar:na]
+	at scala.concurrent.forkjoin.ForkJoinTask.doExec(ForkJoinTask.java:260) ~[scala-library-2.11.6.jar:na]
+	at scala.concurrent.forkjoin.ForkJoinPool$WorkQueue.runTask(ForkJoinPool.java:1339) ~[scala-library-2.11.6.jar:na]
+	at scala.concurrent.forkjoin.ForkJoinPool.runWorker(ForkJoinPool.java:1979) ~[scala-library-2.11.6.jar:na]
+	at scala.concurrent.forkjoin.ForkJoinWorkerThread.run(ForkJoinWorkerThread.java:107) ~[scala-library-2.11.6.jar:na]
+
+2015-07-14 07:59:03,191 - [WARN] - from play in play-internal-execution-context-73 
+Error stopping plugin
+java.lang.NullPointerException: null
+	at play.libs.ws.ning.NingWSPlugin.onStop(NingWSPlugin.java:31) ~[play-java-ws_2.11-2.3.9.jar:2.3.9]
+	at play.api.Play$$anonfun$stop$1$$anonfun$apply$1$$anonfun$apply$mcV$sp$2.apply(Play.scala:108) [play_2.11-2.3.9.jar:2.3.9]
+	at play.api.Play$$anonfun$stop$1$$anonfun$apply$1$$anonfun$apply$mcV$sp$2.apply(Play.scala:107) [play_2.11-2.3.9.jar:2.3.9]
+	at scala.collection.immutable.List.foreach(List.scala:381) [scala-library-2.11.6.jar:na]
+	at play.api.Play$$anonfun$stop$1$$anonfun$apply$1.apply$mcV$sp(Play.scala:107) [play_2.11-2.3.9.jar:2.3.9]
+	at play.api.Play$$anonfun$stop$1$$anonfun$apply$1.apply(Play.scala:107) [play_2.11-2.3.9.jar:2.3.9]
+	at play.api.Play$$anonfun$stop$1$$anonfun$apply$1.apply(Play.scala:107) [play_2.11-2.3.9.jar:2.3.9]
+	at play.utils.Threads$.withContextClassLoader(Threads.scala:21) [play_2.11-2.3.9.jar:2.3.9]
+	at play.api.Play$$anonfun$stop$1.apply(Play.scala:106) [play_2.11-2.3.9.jar:2.3.9]
+	at play.api.Play$$anonfun$stop$1.apply(Play.scala:105) [play_2.11-2.3.9.jar:2.3.9]
+	at scala.Option.map(Option.scala:146) [scala-library-2.11.6.jar:na]
+	at play.api.Play$.stop(Play.scala:105) [play_2.11-2.3.9.jar:2.3.9]
+	at play.core.ReloadableApplication$$anonfun$get$1$$anonfun$apply$1$$anonfun$1.apply(ApplicationProvider.scala:142) [play_2.11-2.3.9.jar:2.3.9]
+	at play.core.ReloadableApplication$$anonfun$get$1$$anonfun$apply$1$$anonfun$1.apply(ApplicationProvider.scala:130) [play_2.11-2.3.9.jar:2.3.9]
+	at scala.Option.map(Option.scala:146) [scala-library-2.11.6.jar:na]
+	at play.core.ReloadableApplication$$anonfun$get$1$$anonfun$apply$1.apply(ApplicationProvider.scala:130) [play_2.11-2.3.9.jar:2.3.9]
+	at play.core.ReloadableApplication$$anonfun$get$1$$anonfun$apply$1.apply(ApplicationProvider.scala:128) [play_2.11-2.3.9.jar:2.3.9]
+	at scala.util.Success.flatMap(Try.scala:230) [scala-library-2.11.6.jar:na]
+	at play.core.ReloadableApplication$$anonfun$get$1.apply(ApplicationProvider.scala:128) [play_2.11-2.3.9.jar:2.3.9]
+	at play.core.ReloadableApplication$$anonfun$get$1.apply(ApplicationProvider.scala:120) [play_2.11-2.3.9.jar:2.3.9]
+	at scala.concurrent.impl.Future$PromiseCompletingRunnable.liftedTree1$1(Future.scala:24) [scala-library-2.11.6.jar:na]
+	at scala.concurrent.impl.Future$PromiseCompletingRunnable.run(Future.scala:24) [scala-library-2.11.6.jar:na]
+	at scala.concurrent.forkjoin.ForkJoinTask$AdaptedRunnableAction.exec(ForkJoinTask.java:1361) [scala-library-2.11.6.jar:na]
+	at scala.concurrent.forkjoin.ForkJoinTask.doExec(ForkJoinTask.java:260) [scala-library-2.11.6.jar:na]
+	at scala.concurrent.forkjoin.ForkJoinPool$WorkQueue.runTask(ForkJoinPool.java:1339) [scala-library-2.11.6.jar:na]
+	at scala.concurrent.forkjoin.ForkJoinPool.runWorker(ForkJoinPool.java:1979) [scala-library-2.11.6.jar:na]
+	at scala.concurrent.forkjoin.ForkJoinWorkerThread.run(ForkJoinWorkerThread.java:107) [scala-library-2.11.6.jar:na]
+
+2015-07-14 07:59:03,205 - [INFO] - from play in play-internal-execution-context-73 
+database [default] connected at jdbc:h2:mem:play
+
+2015-07-14 07:59:03,244 - [INFO] - from play in play-internal-execution-context-73 
+Application started (Dev)
+
+2015-07-14 07:59:22,929 - [ERROR] - from application in play-internal-execution-context-72 
+
+
+! @6mn7ei7di - Internal server error, for (GET) [/wsInterface] ->
+
+play.api.Application$$anon$1: Execution exception[[IndexOutOfBoundsException: Index: 1, Size: 0]]
+	at play.api.Application$class.handleError(Application.scala:296) ~[play_2.11-2.3.9.jar:2.3.9]
+	at play.api.DefaultApplication.handleError(Application.scala:402) [play_2.11-2.3.9.jar:2.3.9]
+	at play.core.server.netty.PlayDefaultUpstreamHandler$$anonfun$messageReceived$2.applyOrElse(PlayDefaultUpstreamHandler.scala:229) [play_2.11-2.3.9.jar:2.3.9]
+	at play.core.server.netty.PlayDefaultUpstreamHandler$$anonfun$messageReceived$2.applyOrElse(PlayDefaultUpstreamHandler.scala:227) [play_2.11-2.3.9.jar:2.3.9]
+	at scala.runtime.AbstractPartialFunction.apply(AbstractPartialFunction.scala:36) [scala-library-2.11.6.jar:na]
+	at scala.util.Failure$$anonfun$recover$1.apply(Try.scala:215) [scala-library-2.11.6.jar:na]
+	at scala.util.Try$.apply(Try.scala:191) [scala-library-2.11.6.jar:na]
+	at scala.util.Failure.recover(Try.scala:215) [scala-library-2.11.6.jar:na]
+	at scala.concurrent.Future$$anonfun$recover$1.apply(Future.scala:324) [scala-library-2.11.6.jar:na]
+	at scala.concurrent.Future$$anonfun$recover$1.apply(Future.scala:324) [scala-library-2.11.6.jar:na]
+	at scala.concurrent.impl.CallbackRunnable.run(Promise.scala:32) [scala-library-2.11.6.jar:na]
+	at play.api.libs.iteratee.Execution$trampoline$.execute(Execution.scala:46) [play-iteratees_2.11-2.3.9.jar:2.3.9]
+	at scala.concurrent.impl.CallbackRunnable.executeWithValue(Promise.scala:40) [scala-library-2.11.6.jar:na]
+	at scala.concurrent.impl.Promise$DefaultPromise.tryComplete(Promise.scala:248) [scala-library-2.11.6.jar:na]
+	at scala.concurrent.Promise$class.complete(Promise.scala:55) [scala-library-2.11.6.jar:na]
+	at scala.concurrent.impl.Promise$DefaultPromise.complete(Promise.scala:153) [scala-library-2.11.6.jar:na]
+	at scala.concurrent.Future$$anonfun$map$1.apply(Future.scala:235) [scala-library-2.11.6.jar:na]
+	at scala.concurrent.Future$$anonfun$map$1.apply(Future.scala:235) [scala-library-2.11.6.jar:na]
+	at scala.concurrent.impl.CallbackRunnable.run(Promise.scala:32) [scala-library-2.11.6.jar:na]
+	at scala.concurrent.forkjoin.ForkJoinTask$AdaptedRunnableAction.exec(ForkJoinTask.java:1361) [scala-library-2.11.6.jar:na]
+	at scala.concurrent.forkjoin.ForkJoinTask.doExec(ForkJoinTask.java:260) [scala-library-2.11.6.jar:na]
+	at scala.concurrent.forkjoin.ForkJoinPool$WorkQueue.runTask(ForkJoinPool.java:1339) [scala-library-2.11.6.jar:na]
+	at scala.concurrent.forkjoin.ForkJoinPool.runWorker(ForkJoinPool.java:1979) [scala-library-2.11.6.jar:na]
+	at scala.concurrent.forkjoin.ForkJoinWorkerThread.run(ForkJoinWorkerThread.java:107) [scala-library-2.11.6.jar:na]
+Caused by: java.lang.IndexOutOfBoundsException: Index: 1, Size: 0
+	at java.util.ArrayList.rangeCheck(ArrayList.java:653) ~[na:1.8.0_45]
+	at java.util.ArrayList.get(ArrayList.java:429) ~[na:1.8.0_45]
+	at models.RandChat.start(RandChat.java:29) ~[na:na]
+	at controllers.Application$1.onReady(Application.java:82) ~[na:na]
+	at play.core.j.JavaWebSocket$$anonfun$webSocketWrapper$1$$anonfun$apply$1$$anonfun$apply$3$$anonfun$apply$4.apply(JavaWebSocket.scala:71) ~[play_2.11-2.3.9.jar:2.3.9]
+	at play.core.j.JavaWebSocket$$anonfun$webSocketWrapper$1$$anonfun$apply$1$$anonfun$apply$3$$anonfun$apply$4.apply(JavaWebSocket.scala:45) ~[play_2.11-2.3.9.jar:2.3.9]
+	at play.core.server.netty.PlayDefaultUpstreamHandler$$anonfun$messageReceived$6.apply(PlayDefaultUpstreamHandler.scala:226) ~[play_2.11-2.3.9.jar:2.3.9]
+	at play.core.server.netty.PlayDefaultUpstreamHandler$$anonfun$messageReceived$6.apply(PlayDefaultUpstreamHandler.scala:217) ~[play_2.11-2.3.9.jar:2.3.9]
+	at scala.util.Success$$anonfun$map$1.apply(Try.scala:236) ~[scala-library-2.11.6.jar:na]
+	at scala.util.Try$.apply(Try.scala:191) [scala-library-2.11.6.jar:na]
+	at scala.util.Success.map(Try.scala:236) ~[scala-library-2.11.6.jar:na]
+	at scala.concurrent.Future$$anonfun$map$1.apply(Future.scala:235) [scala-library-2.11.6.jar:na]
+	at scala.concurrent.Future$$anonfun$map$1.apply(Future.scala:235) [scala-library-2.11.6.jar:na]
+	... 14 common frames omitted
+
+2015-07-14 07:59:43,013 - [ERROR] - from application in play-internal-execution-context-74 
+
+
+! @6mn7ejb64 - Internal server error, for (GET) [/wsInterface] ->
+
+play.api.Application$$anon$1: Execution exception[[IndexOutOfBoundsException: Index: 1, Size: 0]]
+	at play.api.Application$class.handleError(Application.scala:296) ~[play_2.11-2.3.9.jar:2.3.9]
+	at play.api.DefaultApplication.handleError(Application.scala:402) [play_2.11-2.3.9.jar:2.3.9]
+	at play.core.server.netty.PlayDefaultUpstreamHandler$$anonfun$messageReceived$2.applyOrElse(PlayDefaultUpstreamHandler.scala:229) [play_2.11-2.3.9.jar:2.3.9]
+	at play.core.server.netty.PlayDefaultUpstreamHandler$$anonfun$messageReceived$2.applyOrElse(PlayDefaultUpstreamHandler.scala:227) [play_2.11-2.3.9.jar:2.3.9]
+	at scala.runtime.AbstractPartialFunction.apply(AbstractPartialFunction.scala:36) [scala-library-2.11.6.jar:na]
+	at scala.util.Failure$$anonfun$recover$1.apply(Try.scala:215) [scala-library-2.11.6.jar:na]
+	at scala.util.Try$.apply(Try.scala:191) [scala-library-2.11.6.jar:na]
+	at scala.util.Failure.recover(Try.scala:215) [scala-library-2.11.6.jar:na]
+	at scala.concurrent.Future$$anonfun$recover$1.apply(Future.scala:324) [scala-library-2.11.6.jar:na]
+	at scala.concurrent.Future$$anonfun$recover$1.apply(Future.scala:324) [scala-library-2.11.6.jar:na]
+	at scala.concurrent.impl.CallbackRunnable.run(Promise.scala:32) [scala-library-2.11.6.jar:na]
+	at play.api.libs.iteratee.Execution$trampoline$.execute(Execution.scala:46) [play-iteratees_2.11-2.3.9.jar:2.3.9]
+	at scala.concurrent.impl.CallbackRunnable.executeWithValue(Promise.scala:40) [scala-library-2.11.6.jar:na]
+	at scala.concurrent.impl.Promise$DefaultPromise.tryComplete(Promise.scala:248) [scala-library-2.11.6.jar:na]
+	at scala.concurrent.Promise$class.complete(Promise.scala:55) [scala-library-2.11.6.jar:na]
+	at scala.concurrent.impl.Promise$DefaultPromise.complete(Promise.scala:153) [scala-library-2.11.6.jar:na]
+	at scala.concurrent.Future$$anonfun$map$1.apply(Future.scala:235) [scala-library-2.11.6.jar:na]
+	at scala.concurrent.Future$$anonfun$map$1.apply(Future.scala:235) [scala-library-2.11.6.jar:na]
+	at scala.concurrent.impl.CallbackRunnable.run(Promise.scala:32) [scala-library-2.11.6.jar:na]
+	at scala.concurrent.forkjoin.ForkJoinTask$AdaptedRunnableAction.exec(ForkJoinTask.java:1361) [scala-library-2.11.6.jar:na]
+	at scala.concurrent.forkjoin.ForkJoinTask.doExec(ForkJoinTask.java:260) [scala-library-2.11.6.jar:na]
+	at scala.concurrent.forkjoin.ForkJoinPool$WorkQueue.runTask(ForkJoinPool.java:1339) [scala-library-2.11.6.jar:na]
+	at scala.concurrent.forkjoin.ForkJoinPool.runWorker(ForkJoinPool.java:1979) [scala-library-2.11.6.jar:na]
+	at scala.concurrent.forkjoin.ForkJoinWorkerThread.run(ForkJoinWorkerThread.java:107) [scala-library-2.11.6.jar:na]
+Caused by: java.lang.IndexOutOfBoundsException: Index: 1, Size: 0
+	at java.util.ArrayList.rangeCheck(ArrayList.java:653) ~[na:1.8.0_45]
+	at java.util.ArrayList.get(ArrayList.java:429) ~[na:1.8.0_45]
+	at models.RandChat.start(RandChat.java:29) ~[na:na]
+	at controllers.Application$1.onReady(Application.java:82) ~[na:na]
+	at play.core.j.JavaWebSocket$$anonfun$webSocketWrapper$1$$anonfun$apply$1$$anonfun$apply$3$$anonfun$apply$4.apply(JavaWebSocket.scala:71) ~[play_2.11-2.3.9.jar:2.3.9]
+	at play.core.j.JavaWebSocket$$anonfun$webSocketWrapper$1$$anonfun$apply$1$$anonfun$apply$3$$anonfun$apply$4.apply(JavaWebSocket.scala:45) ~[play_2.11-2.3.9.jar:2.3.9]
+	at play.core.server.netty.PlayDefaultUpstreamHandler$$anonfun$messageReceived$6.apply(PlayDefaultUpstreamHandler.scala:226) ~[play_2.11-2.3.9.jar:2.3.9]
+	at play.core.server.netty.PlayDefaultUpstreamHandler$$anonfun$messageReceived$6.apply(PlayDefaultUpstreamHandler.scala:217) ~[play_2.11-2.3.9.jar:2.3.9]
+	at scala.util.Success$$anonfun$map$1.apply(Try.scala:236) ~[scala-library-2.11.6.jar:na]
+	at scala.util.Try$.apply(Try.scala:191) [scala-library-2.11.6.jar:na]
+	at scala.util.Success.map(Try.scala:236) ~[scala-library-2.11.6.jar:na]
+	at scala.concurrent.Future$$anonfun$map$1.apply(Future.scala:235) [scala-library-2.11.6.jar:na]
+	at scala.concurrent.Future$$anonfun$map$1.apply(Future.scala:235) [scala-library-2.11.6.jar:na]
+	... 14 common frames omitted
+
+2015-07-14 07:59:59,799 - [ERROR] - from application in play-internal-execution-context-72 
+
+
+! @6mn7eka1l - Internal server error, for (GET) [/wsInterface] ->
+
+play.api.Application$$anon$1: Execution exception[[IndexOutOfBoundsException: Index: 1, Size: 1]]
+	at play.api.Application$class.handleError(Application.scala:296) ~[play_2.11-2.3.9.jar:2.3.9]
+	at play.api.DefaultApplication.handleError(Application.scala:402) [play_2.11-2.3.9.jar:2.3.9]
+	at play.core.server.netty.PlayDefaultUpstreamHandler$$anonfun$messageReceived$2.applyOrElse(PlayDefaultUpstreamHandler.scala:229) [play_2.11-2.3.9.jar:2.3.9]
+	at play.core.server.netty.PlayDefaultUpstreamHandler$$anonfun$messageReceived$2.applyOrElse(PlayDefaultUpstreamHandler.scala:227) [play_2.11-2.3.9.jar:2.3.9]
+	at scala.runtime.AbstractPartialFunction.apply(AbstractPartialFunction.scala:36) [scala-library-2.11.6.jar:na]
+	at scala.util.Failure$$anonfun$recover$1.apply(Try.scala:215) [scala-library-2.11.6.jar:na]
+	at scala.util.Try$.apply(Try.scala:191) [scala-library-2.11.6.jar:na]
+	at scala.util.Failure.recover(Try.scala:215) [scala-library-2.11.6.jar:na]
+	at scala.concurrent.Future$$anonfun$recover$1.apply(Future.scala:324) [scala-library-2.11.6.jar:na]
+	at scala.concurrent.Future$$anonfun$recover$1.apply(Future.scala:324) [scala-library-2.11.6.jar:na]
+	at scala.concurrent.impl.CallbackRunnable.run(Promise.scala:32) [scala-library-2.11.6.jar:na]
+	at play.api.libs.iteratee.Execution$trampoline$.execute(Execution.scala:46) [play-iteratees_2.11-2.3.9.jar:2.3.9]
+	at scala.concurrent.impl.CallbackRunnable.executeWithValue(Promise.scala:40) [scala-library-2.11.6.jar:na]
+	at scala.concurrent.impl.Promise$DefaultPromise.tryComplete(Promise.scala:248) [scala-library-2.11.6.jar:na]
+	at scala.concurrent.Promise$class.complete(Promise.scala:55) [scala-library-2.11.6.jar:na]
+	at scala.concurrent.impl.Promise$DefaultPromise.complete(Promise.scala:153) [scala-library-2.11.6.jar:na]
+	at scala.concurrent.Future$$anonfun$map$1.apply(Future.scala:235) [scala-library-2.11.6.jar:na]
+	at scala.concurrent.Future$$anonfun$map$1.apply(Future.scala:235) [scala-library-2.11.6.jar:na]
+	at scala.concurrent.impl.CallbackRunnable.run(Promise.scala:32) [scala-library-2.11.6.jar:na]
+	at scala.concurrent.forkjoin.ForkJoinTask$AdaptedRunnableAction.exec(ForkJoinTask.java:1361) [scala-library-2.11.6.jar:na]
+	at scala.concurrent.forkjoin.ForkJoinTask.doExec(ForkJoinTask.java:260) [scala-library-2.11.6.jar:na]
+	at scala.concurrent.forkjoin.ForkJoinPool$WorkQueue.runTask(ForkJoinPool.java:1339) [scala-library-2.11.6.jar:na]
+	at scala.concurrent.forkjoin.ForkJoinPool.runWorker(ForkJoinPool.java:1979) [scala-library-2.11.6.jar:na]
+	at scala.concurrent.forkjoin.ForkJoinWorkerThread.run(ForkJoinWorkerThread.java:107) [scala-library-2.11.6.jar:na]
+Caused by: java.lang.IndexOutOfBoundsException: Index: 1, Size: 1
+	at java.util.ArrayList.rangeCheck(ArrayList.java:653) ~[na:1.8.0_45]
+	at java.util.ArrayList.remove(ArrayList.java:492) ~[na:1.8.0_45]
+	at models.RandChat.start(RandChat.java:28) ~[na:na]
+	at controllers.Application$1.onReady(Application.java:82) ~[na:na]
+	at play.core.j.JavaWebSocket$$anonfun$webSocketWrapper$1$$anonfun$apply$1$$anonfun$apply$3$$anonfun$apply$4.apply(JavaWebSocket.scala:71) ~[play_2.11-2.3.9.jar:2.3.9]
+	at play.core.j.JavaWebSocket$$anonfun$webSocketWrapper$1$$anonfun$apply$1$$anonfun$apply$3$$anonfun$apply$4.apply(JavaWebSocket.scala:45) ~[play_2.11-2.3.9.jar:2.3.9]
+	at play.core.server.netty.PlayDefaultUpstreamHandler$$anonfun$messageReceived$6.apply(PlayDefaultUpstreamHandler.scala:226) ~[play_2.11-2.3.9.jar:2.3.9]
+	at play.core.server.netty.PlayDefaultUpstreamHandler$$anonfun$messageReceived$6.apply(PlayDefaultUpstreamHandler.scala:217) ~[play_2.11-2.3.9.jar:2.3.9]
+	at scala.util.Success$$anonfun$map$1.apply(Try.scala:236) ~[scala-library-2.11.6.jar:na]
+	at scala.util.Try$.apply(Try.scala:191) [scala-library-2.11.6.jar:na]
+	at scala.util.Success.map(Try.scala:236) ~[scala-library-2.11.6.jar:na]
+	at scala.concurrent.Future$$anonfun$map$1.apply(Future.scala:235) [scala-library-2.11.6.jar:na]
+	at scala.concurrent.Future$$anonfun$map$1.apply(Future.scala:235) [scala-library-2.11.6.jar:na]
+	... 14 common frames omitted
+
+2015-07-14 08:01:43,761 - [INFO] - from play in play-internal-execution-context-73 
+database [default] connected at jdbc:h2:mem:play
+
+2015-07-14 08:01:43,920 - [INFO] - from play in play-internal-execution-context-73 
+Application started (Dev)
+
