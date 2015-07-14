@@ -6,7 +6,7 @@ import play.libs.F.*;
 
 import java.util.*;
 
-public class SimpleChat{
+public class RandChat {
 
     // collect all websockets here
     private static List<WebSocket.Out<String>> waiting = new ArrayList<WebSocket.Out<String>>();
@@ -23,7 +23,7 @@ public class SimpleChat{
                 index2 = rand.nextInt(waiting.size());
             }
             ChatPair chatPair = new ChatPair(waiting.get(index1), waiting.get(index2));
-            ChatPair.start(in);
+            chatPair.start(in);
 
         }
 
