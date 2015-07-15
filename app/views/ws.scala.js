@@ -9,13 +9,7 @@ $(function(){
             $('#socket-messages').append('<p>'+event.data+'</p>');
         }
 
-        var writeName = function(){
-             document.getElementById("the-other-side").innerHTML = "hey";
-        }
-
-
          socket.onmessage = writeMessages;
-         socket.onopen = writeName;
 
         $('#socket-input').keyup(function(event){
 

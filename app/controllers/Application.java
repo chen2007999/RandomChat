@@ -7,6 +7,7 @@ import views.html.*;
 public class Application extends Controller {
 
     public static Client currentClient;
+    public static String theOtherUserName;
 
     // index to landing page by default
     public static Result index() {
@@ -79,10 +80,11 @@ public class Application extends Controller {
             // called when websocket handshake is done
             public void onReady(WebSocket.In<String> in, WebSocket.Out<String> out){
 
-                RandChat.start(in, out, currentClient);
+                theOtherUserName =RandChat.start(in, out, currentClient);
             }
         };
     }
+
 
     public static Result wsJs() {
         return ok(views.js.ws.render());
