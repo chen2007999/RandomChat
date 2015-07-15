@@ -6,25 +6,26 @@ import play.mvc.WebSocket;
 
 public class ChatPair {
 
-    private static WebSocket.Out<String> client1;
-    private static WebSocket.Out<String> client2;
+    private static ClientConnection clientConnection1;
+    private static ClientConnection clientConnection2;
 
 
-    public ChatPair(WebSocket.Out<String> client1, WebSocket.Out<String> client2) {
-        this.client1 = client1;
-        this.client2 = client2;
+    public ChatPair(ClientConnection clientConnection1, ClientConnection clientConnection2) {
+        this.clientConnection1 = clientConnection1;
+        this.clientConnection2 = clientConnection2;
     }
 
-    public static WebSocket.Out<String> getClient1() {
-        return client1;
+    public static ClientConnection getClientConnection1() {
+        return clientConnection1;
     }
 
-    public static WebSocket.Out<String> getClient2() {
-        return client2;
+    public static ClientConnection getClientConnection2() {
+        return clientConnection2;
     }
 
 
     public static void start(WebSocket.In<String> in){
+
 
         in.onMessage(new F.Callback<String>(){
             public void invoke(String event){
@@ -41,7 +42,7 @@ public class ChatPair {
 
     // Iterate connection list and write incoming message
     public static void notifyPair(String message){
-        getClient1().write(message);
-        getClient2().write(message);
+        getClientConnection1().getConnection().write(message);
+        getClientConnection2().getConnection().write(message);
     }
 }

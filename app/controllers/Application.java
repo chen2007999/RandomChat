@@ -79,7 +79,7 @@ public class Application extends Controller {
             // called when websocket handshake is done
             public void onReady(WebSocket.In<String> in, WebSocket.Out<String> out){
 
-                RandChat.start(in, out);
+                RandChat.start(in, out, currentClient);
             }
         };
     }

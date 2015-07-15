@@ -31,9 +31,9 @@ Seq[Any](format.raw/*1.25*/("""
 """),_display_(/*3.2*/main("RandChat")/*3.18*/ {_display_(Seq[Any](format.raw/*3.20*/("""
 
     """),format.raw/*5.5*/("""<h1>Simple chat</h1>
-    <h3>current user: """),_display_(/*6.24*/client/*6.30*/.email),format.raw/*6.36*/("""</h3>
-    <h3>the other side: </h3>
 
+
+    <div id="the-other-side"></div>
     <div id="socket-messages"></div>
 
     <input type="text" id="socket-input" placeholder="message to send" />
@@ -55,11 +55,11 @@ Seq[Any](format.raw/*1.25*/("""
 }
               /*
                   -- GENERATED --
-                  DATE: Sun Jul 12 21:27:57 BST 2015
+                  DATE: Wed Jul 15 19:55:17 BST 2015
                   SOURCE: /Users/jiaqichen/Desktop/RandChat/app/views/index.scala.html
-                  HASH: 6a4027fd0254fa4ff1aa95b0270c9edddbd5b3a7
-                  MATRIX: 730->1|841->24|869->27|893->43|932->45|964->51|1034->95|1048->101|1074->107|1309->315|1324->321|1364->340|1408->354
-                  LINES: 26->1|29->1|31->3|31->3|31->3|33->5|34->6|34->6|34->6|42->14|42->14|42->14|44->16
+                  HASH: 35aa5638c8a172103a31b2411a6d855cfb138a4c
+                  MATRIX: 730->1|841->24|869->27|893->43|932->45|964->51|1221->281|1236->287|1276->306|1320->320
+                  LINES: 26->1|29->1|31->3|31->3|31->3|33->5|42->14|42->14|42->14|44->16
                   -- GENERATED --
               */
           
