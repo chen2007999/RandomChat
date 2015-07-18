@@ -3,9 +3,9 @@ package models;
 
 import play.libs.F;
 import play.mvc.WebSocket;
-import java.lang.Runnable;
 
-public class ChatPair implements Runnable{
+
+public class ChatPair {
 
     private static ClientConnection clientConnection1;
     private static ClientConnection clientConnection2;
@@ -24,14 +24,17 @@ public class ChatPair implements Runnable{
         return clientConnection2;
     }
 
-
-    @Override
-    public void run() {
-
-
+    public ClientConnection getTheOtherClientConnection(ClientConnection clientConnection) {
+        ClientConnection result;
+        if(clientConnection.equals(clientConnection1)) {
+            result = clientConnection2;
+        } else {
+            result = clientConnection1;
+        }
+        return result;
     }
 
-
+    
     /*public static void start(WebSocket.In<String> in, WebSocket.Out<String> out) {
 
         new Thread(new ChatPair()).run();

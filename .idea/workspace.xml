@@ -30,8 +30,8 @@
       <file leaf-file-name="Application.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/controllers/Application.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-16.88889">
-              <caret line="59" column="72" selection-start-line="59" selection-start-column="72" selection-end-line="59" selection-end-column="72" />
+            <state vertical-scroll-proportion="-31.11111">
+              <caret line="69" column="0" selection-start-line="69" selection-start-column="0" selection-end-line="69" selection-end-column="0" />
               <folding>
                 <element signature="imports" expanded="true" />
                 <element signature="e#284#285#0" expanded="true" />
@@ -40,19 +40,9 @@
                 <element signature="e#1871#1872#0" expanded="true" />
                 <element signature="e#2242#2243#0" expanded="true" />
                 <element signature="e#2319#2320#0" expanded="true" />
-                <element signature="e#3012#3013#0" expanded="true" />
-                <element signature="e#3059#3060#0" expanded="true" />
+                <element signature="e#2992#2993#0" expanded="true" />
+                <element signature="e#3039#3040#0" expanded="true" />
               </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="test.scala.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/views/test.scala.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-0.0">
-              <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="6" selection-end-column="1" />
-              <folding />
             </state>
           </provider>
         </entry>
@@ -67,16 +57,16 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="RandChat.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="RandChat.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/models/RandChat.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="1.2923077">
-              <caret line="83" column="5" selection-start-line="83" selection-start-column="5" selection-end-line="83" selection-end-column="5" />
+            <state vertical-scroll-proportion="-22.222221">
+              <caret line="48" column="43" selection-start-line="48" selection-start-column="43" selection-end-line="48" selection-end-column="43" />
               <folding>
                 <element signature="imports" expanded="true" />
                 <element signature="e#250#268#0" expanded="true" />
-                <element signature="e#2008#2009#0" expanded="true" />
-                <element signature="e#2089#2090#0" expanded="true" />
+                <element signature="e#711#712#0" expanded="true" />
+                <element signature="e#792#793#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -113,17 +103,17 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="ChatPair.java" pinned="false" current-in-tab="false">
+      <file leaf-file-name="ChatPair.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/models/ChatPair.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="18" column="35" selection-start-line="18" selection-start-column="35" selection-end-line="18" selection-end-column="57" />
+            <state vertical-scroll-proportion="0.7976366">
+              <caret line="36" column="4" selection-start-line="36" selection-start-column="4" selection-end-line="36" selection-end-column="4" />
               <folding>
                 <element signature="imports" expanded="true" />
-                <element signature="e#512#513#0" expanded="true" />
-                <element signature="e#552#553#0" expanded="true" />
-                <element signature="e#613#614#0" expanded="true" />
-                <element signature="e#653#654#0" expanded="true" />
+                <element signature="e#467#468#0" expanded="true" />
+                <element signature="e#507#508#0" expanded="true" />
+                <element signature="e#568#569#0" expanded="true" />
+                <element signature="e#608#609#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -190,13 +180,13 @@
         <option value="$PROJECT_DIR$/app/models/SimpleChat.java" />
         <option value="$PROJECT_DIR$/app/views/test.scala.html" />
         <option value="$PROJECT_DIR$/app/models/Client.java" />
-        <option value="$PROJECT_DIR$/app/models/ChatPair.java" />
         <option value="$PROJECT_DIR$/app/views/ws.scala.js" />
         <option value="$PROJECT_DIR$/conf/routes" />
         <option value="$PROJECT_DIR$/app/views/index.scala.html" />
-        <option value="$PROJECT_DIR$/app/controllers/Application.java" />
         <option value="$PROJECT_DIR$/app/models/ClientConnection.java" />
+        <option value="$PROJECT_DIR$/app/controllers/Application.java" />
         <option value="$PROJECT_DIR$/app/models/RandChat.java" />
+        <option value="$PROJECT_DIR$/app/models/ChatPair.java" />
       </list>
     </option>
   </component>
@@ -211,7 +201,7 @@
     <order />
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="64" />
+    <option name="x" value="39" />
     <option name="y" value="23" />
     <option name="width" value="1440" />
     <option name="height" value="797" />
@@ -599,7 +589,7 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="64" y="23" width="1440" height="797" extended-state="0" />
+    <frame x="39" y="23" width="1440" height="797" extended-state="0" />
     <editor active="true" />
     <layout>
       <window_info id="Palette&#9;" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
@@ -673,8 +663,8 @@
             <element signature="e#1871#1872#0" expanded="true" />
             <element signature="e#2242#2243#0" expanded="true" />
             <element signature="e#2319#2320#0" expanded="true" />
-            <element signature="e#3012#3013#0" expanded="true" />
-            <element signature="e#3059#3060#0" expanded="true" />
+            <element signature="e#2992#2993#0" expanded="true" />
+            <element signature="e#3039#3040#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -686,8 +676,8 @@
           <folding>
             <element signature="imports" expanded="true" />
             <element signature="e#250#268#0" expanded="true" />
-            <element signature="e#2008#2009#0" expanded="true" />
-            <element signature="e#2089#2090#0" expanded="true" />
+            <element signature="e#711#712#0" expanded="true" />
+            <element signature="e#792#793#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -735,8 +725,8 @@
             <element signature="e#1871#1872#0" expanded="true" />
             <element signature="e#2242#2243#0" expanded="true" />
             <element signature="e#2319#2320#0" expanded="true" />
-            <element signature="e#3012#3013#0" expanded="true" />
-            <element signature="e#3059#3060#0" expanded="true" />
+            <element signature="e#2992#2993#0" expanded="true" />
+            <element signature="e#3039#3040#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -748,8 +738,8 @@
           <folding>
             <element signature="imports" expanded="true" />
             <element signature="e#250#268#0" expanded="true" />
-            <element signature="e#2008#2009#0" expanded="true" />
-            <element signature="e#2089#2090#0" expanded="true" />
+            <element signature="e#711#712#0" expanded="true" />
+            <element signature="e#792#793#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -797,8 +787,8 @@
             <element signature="e#1871#1872#0" expanded="true" />
             <element signature="e#2242#2243#0" expanded="true" />
             <element signature="e#2319#2320#0" expanded="true" />
-            <element signature="e#3012#3013#0" expanded="true" />
-            <element signature="e#3059#3060#0" expanded="true" />
+            <element signature="e#2992#2993#0" expanded="true" />
+            <element signature="e#3039#3040#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -810,8 +800,8 @@
           <folding>
             <element signature="imports" expanded="true" />
             <element signature="e#250#268#0" expanded="true" />
-            <element signature="e#2008#2009#0" expanded="true" />
-            <element signature="e#2089#2090#0" expanded="true" />
+            <element signature="e#711#712#0" expanded="true" />
+            <element signature="e#792#793#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -852,8 +842,8 @@
             <element signature="e#1871#1872#0" expanded="true" />
             <element signature="e#2242#2243#0" expanded="true" />
             <element signature="e#2319#2320#0" expanded="true" />
-            <element signature="e#3012#3013#0" expanded="true" />
-            <element signature="e#3059#3060#0" expanded="true" />
+            <element signature="e#2992#2993#0" expanded="true" />
+            <element signature="e#3039#3040#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -865,8 +855,8 @@
           <folding>
             <element signature="imports" expanded="true" />
             <element signature="e#250#268#0" expanded="true" />
-            <element signature="e#2008#2009#0" expanded="true" />
-            <element signature="e#2089#2090#0" expanded="true" />
+            <element signature="e#711#712#0" expanded="true" />
+            <element signature="e#792#793#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -907,8 +897,8 @@
             <element signature="e#1871#1872#0" expanded="true" />
             <element signature="e#2242#2243#0" expanded="true" />
             <element signature="e#2319#2320#0" expanded="true" />
-            <element signature="e#3012#3013#0" expanded="true" />
-            <element signature="e#3059#3060#0" expanded="true" />
+            <element signature="e#2992#2993#0" expanded="true" />
+            <element signature="e#3039#3040#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -920,8 +910,8 @@
           <folding>
             <element signature="imports" expanded="true" />
             <element signature="e#250#268#0" expanded="true" />
-            <element signature="e#2008#2009#0" expanded="true" />
-            <element signature="e#2089#2090#0" expanded="true" />
+            <element signature="e#711#712#0" expanded="true" />
+            <element signature="e#792#793#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -1069,20 +1059,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/models/ChatPair.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="18" column="35" selection-start-line="18" selection-start-column="35" selection-end-line="18" selection-end-column="57" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#512#513#0" expanded="true" />
-            <element signature="e#552#553#0" expanded="true" />
-            <element signature="e#613#614#0" expanded="true" />
-            <element signature="e#653#654#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/models/Client.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
@@ -1100,24 +1076,6 @@
         <state vertical-scroll-proportion="-6.875">
           <caret line="11" column="12" selection-start-line="11" selection-start-column="12" selection-end-line="11" selection-end-column="12" />
           <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/controllers/Application.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-16.88889">
-          <caret line="59" column="72" selection-start-line="59" selection-start-column="72" selection-end-line="59" selection-end-column="72" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#284#285#0" expanded="true" />
-            <element signature="e#345#346#0" expanded="true" />
-            <element signature="e#1797#1798#0" expanded="true" />
-            <element signature="e#1871#1872#0" expanded="true" />
-            <element signature="e#2242#2243#0" expanded="true" />
-            <element signature="e#2319#2320#0" expanded="true" />
-            <element signature="e#3012#3013#0" expanded="true" />
-            <element signature="e#3059#3060#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1140,15 +1098,47 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/app/controllers/Application.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-31.11111">
+          <caret line="69" column="0" selection-start-line="69" selection-start-column="0" selection-end-line="69" selection-end-column="0" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#284#285#0" expanded="true" />
+            <element signature="e#345#346#0" expanded="true" />
+            <element signature="e#1797#1798#0" expanded="true" />
+            <element signature="e#1871#1872#0" expanded="true" />
+            <element signature="e#2242#2243#0" expanded="true" />
+            <element signature="e#2319#2320#0" expanded="true" />
+            <element signature="e#2992#2993#0" expanded="true" />
+            <element signature="e#3039#3040#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/app/models/RandChat.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="1.2923077">
-          <caret line="83" column="5" selection-start-line="83" selection-start-column="5" selection-end-line="83" selection-end-column="5" />
+        <state vertical-scroll-proportion="-22.222221">
+          <caret line="48" column="43" selection-start-line="48" selection-start-column="43" selection-end-line="48" selection-end-column="43" />
           <folding>
             <element signature="imports" expanded="true" />
             <element signature="e#250#268#0" expanded="true" />
-            <element signature="e#2008#2009#0" expanded="true" />
-            <element signature="e#2089#2090#0" expanded="true" />
+            <element signature="e#711#712#0" expanded="true" />
+            <element signature="e#792#793#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/models/ChatPair.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.7976366">
+          <caret line="36" column="4" selection-start-line="36" selection-start-column="4" selection-end-line="36" selection-end-column="4" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#467#468#0" expanded="true" />
+            <element signature="e#507#508#0" expanded="true" />
+            <element signature="e#568#569#0" expanded="true" />
+            <element signature="e#608#609#0" expanded="true" />
           </folding>
         </state>
       </provider>

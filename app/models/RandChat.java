@@ -14,28 +14,54 @@ public class RandChat {
     private static List<ChatPair> chatPairs = new ArrayList<>();
 
 
-    public  static synchronized String start(WebSocket.In<String> in, WebSocket.Out<String> out, Client client){
+    public  static synchronized void start(WebSocket.In<String> in, WebSocket.Out<String> out, Client client) {
 
         ClientConnection clientConnection1 = new ClientConnection(client, out);
+        connectionAndPairing(clientConnection1, client);
 
-            boolean notConnected = true;
-            for(ClientConnection w : waiting) {
-                if(w.getClient().equals(client)) {
-                    notConnected = false;
-                }
-            }
-            for(ChatPair chatPair : chatPairs) {
-                if(chatPair.getClientConnection1().getClient().equals(client)) {
-                    notConnected = false;
-                }
-                if(chatPair.getClientConnection2().getClient().equals(client)) {
-                    notConnected = false;
-                }
-            }
-            if(notConnected) {
-                waiting.add(clientConnection1);
-            }
 
+        // Server responses
+       in.onMessage(new F.Callback<String>() {
+            public void invoke(String event) {
+                clientConnection1.getChatPair().notifyPair(event);
+            }
+        });
+
+
+        in.onClose(new F.Callback0() {
+            public void invoke() {
+                //connections.remove(clientConnection1);
+                if (clientConnection1.isPaired()) {
+                    chatPairs.remove(clientConnection1.getChatPair());
+                    clientConnection1.getChatPair().notifyPair("A connection closed");
+                    ClientConnection theOtherClientConnection = clientConnection1.getChatPair().getTheOtherClientConnection(clientConnection1);
+                    start(in, theOtherClientConnection.getConnection(), theOtherClientConnection.getClient());
+                } else {
+                    waiting.remove(clientConnection1);
+                }
+            }
+        });
+    }
+
+
+    private static void connectionAndPairing(ClientConnection clientConnection1, Client client) {
+        boolean notConnected = true;
+        for(ClientConnection w : waiting) {
+            if(w.getClient().equals(client)) {
+                notConnected = false;
+            }
+        }
+        for(ChatPair chatPair : chatPairs) {
+            if(chatPair.getClientConnection1().getClient().equals(client)) {
+                notConnected = false;
+            }
+            if(chatPair.getClientConnection2().getClient().equals(client)) {
+                notConnected = false;
+            }
+        }
+        if(notConnected) {
+            waiting.add(clientConnection1);
+        }
 
         //   Pairing
         if(waiting.size() >= 2) {
@@ -51,37 +77,10 @@ public class RandChat {
             clientConnection1.setChatPair(chatPair);
             clientConnection2.setChatPair(chatPair);
             chatPairs.add(chatPair);
-            //chatPair.start(in, out);
-            //new Thread(chatPair).run();
-
-
-            return clientConnection2.getClient().getName();
 
         }
-
-        // Server responses
-        in.onMessage(new F.Callback<String>() {
-            public void invoke(String event) {
-                clientConnection1.getChatPair().notifyPair(event);
-            }
-        });
-
-
-        in.onClose(new F.Callback0() {
-            public void invoke() {
-                //connections.remove(clientConnection1);
-                if(clientConnection1.isPaired()) {
-                    waiting.add(clientConnection1.getChatPair().getClientConnection1());
-                    waiting.add(clientConnection1.getChatPair().getClientConnection2());
-                    chatPairs.remove(clientConnection1.getChatPair());
-                    clientConnection1.getChatPair().notifyPair("A connection closed");
-                }
-            }
-        });
-
-
-        return "currently no matching";
     }
+
 
 
     public static List<Client> getChatPairs() {
