@@ -8,7 +8,7 @@ public class ClientConnection {
     private static WebSocket.Out<String> connection;
 
     public ClientConnection(Client client, WebSocket.Out<String> connection) {
-        this.client = client;
+            this.client = client;
         this.connection = connection;
     }
 

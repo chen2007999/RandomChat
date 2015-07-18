@@ -41,7 +41,7 @@ public class Application extends Controller {
         }
         Client.createClient(client);
         currentClient = client;
-        return ok(index.render(currentClient));
+        return ok(index.render(currentClient, RandChat.getWaiting()));
     }
 
     public static  Result deleteClientFromDB(String email) {
@@ -57,7 +57,7 @@ public class Application extends Controller {
         Client client = getClient();
         if(Client.validate(client)) {
             currentClient = Client.findClient(client);
-            return ok(index.render(currentClient));
+            return ok(index.render(currentClient, RandChat.getWaiting()));
         }
         return ok(landing.render());
     }
@@ -76,11 +76,18 @@ public class Application extends Controller {
     // Websocket interface
     public static WebSocket<String> wsInterface(){
         return new WebSocket<String>(){
-
             // called when websocket handshake is done
             public void onReady(WebSocket.In<String> in, WebSocket.Out<String> out){
+                theOtherUserName = RandChat.start(in, out, currentClient);
+            }
+        };
+    }
 
-                theOtherUserName =RandChat.start(in, out, currentClient);
+    public static WebSocket<String> pairing() {
+        return new WebSocket<String>(){
+
+            public void onReady(WebSocket.In<String> in, WebSocket.Out<String> out){
+                theOtherUserName = RandChat.pairing(in, out, currentClient);
             }
         };
     }
@@ -95,7 +102,9 @@ public class Application extends Controller {
     }*/
 
 
-
+    public static Result showWaiting() {
+        return ok(test.render(RandChat.getWaiting()));
+    }
 
 
 

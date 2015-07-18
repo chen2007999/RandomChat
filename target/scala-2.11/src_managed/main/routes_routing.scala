@@ -1,6 +1,6 @@
 // @SOURCE:/Users/jiaqichen/Desktop/RandChat/conf/routes
-// @HASH:34675e5b6e9199fe12578a94b3138896bc75c81d
-// @DATE:Wed Jul 15 21:26:26 BST 2015
+// @HASH:4856df9f90e006ffdbbf1431c1214422559b1fa0
+// @DATE:Sat Jul 18 07:39:51 BST 2015
 
 
 import scala.language.reflectiveCalls
@@ -102,7 +102,21 @@ private[this] lazy val controllers_Application_wsJs9_invoker = createInvoker(
 controllers.Application.wsJs(),
 HandlerDef(this.getClass.getClassLoader, "", "controllers.Application", "wsJs", Nil,"GET", """""", Routes.prefix + """assets.javascript.ws.js"""))
         
-def documentation = List(("""GET""", prefix,"""controllers.Application.index()"""),("""GET""", prefix + (if(prefix.endsWith("/")) "" else "/") + """assets/$file<.+>""","""controllers.Assets.at(path:String = "/public", file:String)"""),("""POST""", prefix + (if(prefix.endsWith("/")) "" else "/") + """logIn""","""controllers.Application.logIn()"""),("""GET""", prefix + (if(prefix.endsWith("/")) "" else "/") + """register""","""controllers.Application.register(error:String ?= "")"""),("""GET""", prefix + (if(prefix.endsWith("/")) "" else "/") + """landing""","""controllers.Application.landing()"""),("""POST""", prefix + (if(prefix.endsWith("/")) "" else "/") + """createClient""","""controllers.Application.createClient()"""),("""POST""", prefix + (if(prefix.endsWith("/")) "" else "/") + """deleteClient/$email<[^/]+>/delete""","""controllers.Application.deleteClientFromDB(email:String)"""),("""GET""", prefix + (if(prefix.endsWith("/")) "" else "/") + """clients""","""controllers.Application.displayAllClientsFromDB()"""),("""GET""", prefix + (if(prefix.endsWith("/")) "" else "/") + """wsInterface""","""controllers.Application.wsInterface()"""),("""GET""", prefix + (if(prefix.endsWith("/")) "" else "/") + """assets.javascript.ws.js""","""controllers.Application.wsJs()""")).foldLeft(List.empty[(String,String,String)]) { (s,e) => e.asInstanceOf[Any] match {
+
+// @LINE:38
+private[this] lazy val controllers_Application_showWaiting10_route = Route("GET", PathPattern(List(StaticPart(Routes.prefix),StaticPart(Routes.defaultPrefix),StaticPart("showWaiting"))))
+private[this] lazy val controllers_Application_showWaiting10_invoker = createInvoker(
+controllers.Application.showWaiting(),
+HandlerDef(this.getClass.getClassLoader, "", "controllers.Application", "showWaiting", Nil,"GET", """""", Routes.prefix + """showWaiting"""))
+        
+
+// @LINE:39
+private[this] lazy val controllers_Application_pairing11_route = Route("GET", PathPattern(List(StaticPart(Routes.prefix),StaticPart(Routes.defaultPrefix),StaticPart("pairing"))))
+private[this] lazy val controllers_Application_pairing11_invoker = createInvoker(
+controllers.Application.pairing(),
+HandlerDef(this.getClass.getClassLoader, "", "controllers.Application", "pairing", Nil,"GET", """""", Routes.prefix + """pairing"""))
+        
+def documentation = List(("""GET""", prefix,"""controllers.Application.index()"""),("""GET""", prefix + (if(prefix.endsWith("/")) "" else "/") + """assets/$file<.+>""","""controllers.Assets.at(path:String = "/public", file:String)"""),("""POST""", prefix + (if(prefix.endsWith("/")) "" else "/") + """logIn""","""controllers.Application.logIn()"""),("""GET""", prefix + (if(prefix.endsWith("/")) "" else "/") + """register""","""controllers.Application.register(error:String ?= "")"""),("""GET""", prefix + (if(prefix.endsWith("/")) "" else "/") + """landing""","""controllers.Application.landing()"""),("""POST""", prefix + (if(prefix.endsWith("/")) "" else "/") + """createClient""","""controllers.Application.createClient()"""),("""POST""", prefix + (if(prefix.endsWith("/")) "" else "/") + """deleteClient/$email<[^/]+>/delete""","""controllers.Application.deleteClientFromDB(email:String)"""),("""GET""", prefix + (if(prefix.endsWith("/")) "" else "/") + """clients""","""controllers.Application.displayAllClientsFromDB()"""),("""GET""", prefix + (if(prefix.endsWith("/")) "" else "/") + """wsInterface""","""controllers.Application.wsInterface()"""),("""GET""", prefix + (if(prefix.endsWith("/")) "" else "/") + """assets.javascript.ws.js""","""controllers.Application.wsJs()"""),("""GET""", prefix + (if(prefix.endsWith("/")) "" else "/") + """showWaiting""","""controllers.Application.showWaiting()"""),("""GET""", prefix + (if(prefix.endsWith("/")) "" else "/") + """pairing""","""controllers.Application.pairing()""")).foldLeft(List.empty[(String,String,String)]) { (s,e) => e.asInstanceOf[Any] match {
   case r @ (_,_,_) => s :+ r.asInstanceOf[(String,String,String)]
   case l => s ++ l.asInstanceOf[List[(String,String,String)]]
 }}
@@ -186,6 +200,22 @@ case controllers_Application_wsInterface8_route(params) => {
 case controllers_Application_wsJs9_route(params) => {
    call { 
         controllers_Application_wsJs9_invoker.call(controllers.Application.wsJs())
+   }
+}
+        
+
+// @LINE:38
+case controllers_Application_showWaiting10_route(params) => {
+   call { 
+        controllers_Application_showWaiting10_invoker.call(controllers.Application.showWaiting())
+   }
+}
+        
+
+// @LINE:39
+case controllers_Application_pairing11_route(params) => {
+   call { 
+        controllers_Application_pairing11_invoker.call(controllers.Application.pairing())
    }
 }
         

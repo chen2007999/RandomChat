@@ -24,17 +24,21 @@ public class ChatPair {
     }
 
 
-    public static void start(WebSocket.In<String> in){
 
 
-        in.onMessage(new F.Callback<String>(){
-            public void invoke(String event){
+    public static void start(WebSocket.In<String> in, WebSocket.Out<String> out){
+
+        in.onMessage(new F.Callback<String>() {
+            public void invoke(String event) {
                 notifyPair(event);
             }
         });
 
+
         in.onClose(new F.Callback0(){
             public void invoke(){
+                clientConnection1 = null;
+                clientConnection2 = null;
                notifyPair("A connection closed");
             }
         });

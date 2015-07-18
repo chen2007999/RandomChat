@@ -39,6 +39,9 @@ public class Client extends Model{
 
     @Column(name = "name")
     public String name;
+
+    @Column(name = "online")
+    public boolean online;
     
     @Column(name = "image")
     public String image;
@@ -50,7 +53,15 @@ public class Client extends Model{
     public String getImage() {
         return image;
     }
-    
+
+    public boolean isOnline() {
+        return online;
+    }
+
+    public void setOnline(boolean online) {
+        this.online = online;
+    }
+
     public void setImage(String image) {
         this.image = image;
     }

@@ -1,6 +1,6 @@
 // @SOURCE:/Users/jiaqichen/Desktop/RandChat/conf/routes
-// @HASH:34675e5b6e9199fe12578a94b3138896bc75c81d
-// @DATE:Wed Jul 15 21:26:26 BST 2015
+// @HASH:4856df9f90e006ffdbbf1431c1214422559b1fa0
+// @DATE:Sat Jul 18 07:39:51 BST 2015
 
 import Routes.{prefix => _prefix, defaultPrefix => _defaultPrefix}
 import play.core._
@@ -15,6 +15,8 @@ import _root_.play.libs.F
 import Router.queryString
 
 
+// @LINE:39
+// @LINE:38
 // @LINE:35
 // @LINE:33
 // @LINE:29
@@ -41,6 +43,8 @@ def at(file:String): Call = {
 }
                           
 
+// @LINE:39
+// @LINE:38
 // @LINE:35
 // @LINE:33
 // @LINE:29
@@ -109,10 +113,24 @@ def wsInterface(): Call = {
 }
                         
 
+// @LINE:38
+def showWaiting(): Call = {
+   import ReverseRouteContext.empty
+   Call("GET", _prefix + { _defaultPrefix } + "showWaiting")
+}
+                        
+
 // @LINE:6
 def index(): Call = {
    import ReverseRouteContext.empty
    Call("GET", _prefix)
+}
+                        
+
+// @LINE:39
+def pairing(): Call = {
+   import ReverseRouteContext.empty
+   Call("GET", _prefix + { _defaultPrefix } + "pairing")
 }
                         
 
@@ -122,6 +140,8 @@ def index(): Call = {
                   
 
 
+// @LINE:39
+// @LINE:38
 // @LINE:35
 // @LINE:33
 // @LINE:29
@@ -153,6 +173,8 @@ def at : JavascriptReverseRoute = JavascriptReverseRoute(
 }
               
 
+// @LINE:39
+// @LINE:38
 // @LINE:35
 // @LINE:33
 // @LINE:29
@@ -253,6 +275,17 @@ def wsInterface : JavascriptReverseRoute = JavascriptReverseRoute(
 )
                         
 
+// @LINE:38
+def showWaiting : JavascriptReverseRoute = JavascriptReverseRoute(
+   "controllers.Application.showWaiting",
+   """
+      function() {
+      return _wA({method:"GET", url:"""" + _prefix + { _defaultPrefix } + """" + "showWaiting"})
+      }
+   """
+)
+                        
+
 // @LINE:6
 def index : JavascriptReverseRoute = JavascriptReverseRoute(
    "controllers.Application.index",
@@ -264,12 +297,25 @@ def index : JavascriptReverseRoute = JavascriptReverseRoute(
 )
                         
 
+// @LINE:39
+def pairing : JavascriptReverseRoute = JavascriptReverseRoute(
+   "controllers.Application.pairing",
+   """
+      function() {
+      return _wA({method:"GET", url:"""" + _prefix + { _defaultPrefix } + """" + "pairing"})
+      }
+   """
+)
+                        
+
 }
               
 }
         
 
 
+// @LINE:39
+// @LINE:38
 // @LINE:35
 // @LINE:33
 // @LINE:29
@@ -296,6 +342,8 @@ def at(path:String, file:String): play.api.mvc.HandlerRef[_] = new play.api.mvc.
 }
                           
 
+// @LINE:39
+// @LINE:38
 // @LINE:35
 // @LINE:33
 // @LINE:29
@@ -356,9 +404,21 @@ def wsInterface(): play.api.mvc.HandlerRef[_] = new play.api.mvc.HandlerRef(
 )
                       
 
+// @LINE:38
+def showWaiting(): play.api.mvc.HandlerRef[_] = new play.api.mvc.HandlerRef(
+   controllers.Application.showWaiting(), HandlerDef(this.getClass.getClassLoader, "", "controllers.Application", "showWaiting", Seq(), "GET", """""", _prefix + """showWaiting""")
+)
+                      
+
 // @LINE:6
 def index(): play.api.mvc.HandlerRef[_] = new play.api.mvc.HandlerRef(
    controllers.Application.index(), HandlerDef(this.getClass.getClassLoader, "", "controllers.Application", "index", Seq(), "GET", """ Home page""", _prefix + """""")
+)
+                      
+
+// @LINE:39
+def pairing(): play.api.mvc.HandlerRef[_] = new play.api.mvc.HandlerRef(
+   controllers.Application.pairing(), HandlerDef(this.getClass.getClassLoader, "", "controllers.Application", "pairing", Seq(), "GET", """""", _prefix + """pairing""")
 )
                       
 

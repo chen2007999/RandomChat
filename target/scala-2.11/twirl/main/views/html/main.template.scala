@@ -55,7 +55,7 @@ Seq[Any](format.raw/*1.32*/("""
 }
               /*
                   -- GENERATED --
-                  DATE: Sun Jul 12 20:46:33 BST 2015
+                  DATE: Wed Jul 15 22:02:05 BST 2015
                   SOURCE: /Users/jiaqichen/Desktop/RandChat/app/views/main.scala.html
                   HASH: a1f44e5694bd661273a5d14ce29a8ef2721c19fc
                   MATRIX: 727->1|845->31|873->33|950->84|975->89|1063->151|1077->157|1131->191|1218->252|1232->258|1284->290|1338->317|1353->323|1419->368|1513->435|1541->442|1573->447
