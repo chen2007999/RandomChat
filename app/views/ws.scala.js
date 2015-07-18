@@ -17,7 +17,7 @@ $(function(){
 
             // if enter (charcode 13) is pushed, send message, then clear input field
             if(charCode === 13){
-               socket.send($(this).val());
+              socket.send($(this).val());
               $(this).val('');
             }
         });

@@ -1,6 +1,6 @@
 // @SOURCE:/Users/jiaqichen/Desktop/RandChat/conf/routes
-// @HASH:4856df9f90e006ffdbbf1431c1214422559b1fa0
-// @DATE:Sat Jul 18 07:39:51 BST 2015
+// @HASH:63fef14cda9d24bde3add0ef0dc32cc7ffa5c4be
+// @DATE:Sat Jul 18 18:38:07 BST 2015
 
 
 import scala.language.reflectiveCalls
@@ -104,19 +104,12 @@ HandlerDef(this.getClass.getClassLoader, "", "controllers.Application", "wsJs", 
         
 
 // @LINE:38
-private[this] lazy val controllers_Application_showWaiting10_route = Route("GET", PathPattern(List(StaticPart(Routes.prefix),StaticPart(Routes.defaultPrefix),StaticPart("showWaiting"))))
-private[this] lazy val controllers_Application_showWaiting10_invoker = createInvoker(
-controllers.Application.showWaiting(),
-HandlerDef(this.getClass.getClassLoader, "", "controllers.Application", "showWaiting", Nil,"GET", """""", Routes.prefix + """showWaiting"""))
-        
-
-// @LINE:39
-private[this] lazy val controllers_Application_pairing11_route = Route("GET", PathPattern(List(StaticPart(Routes.prefix),StaticPart(Routes.defaultPrefix),StaticPart("pairing"))))
-private[this] lazy val controllers_Application_pairing11_invoker = createInvoker(
+private[this] lazy val controllers_Application_pairing10_route = Route("GET", PathPattern(List(StaticPart(Routes.prefix),StaticPart(Routes.defaultPrefix),StaticPart("pairing"))))
+private[this] lazy val controllers_Application_pairing10_invoker = createInvoker(
 controllers.Application.pairing(),
 HandlerDef(this.getClass.getClassLoader, "", "controllers.Application", "pairing", Nil,"GET", """""", Routes.prefix + """pairing"""))
         
-def documentation = List(("""GET""", prefix,"""controllers.Application.index()"""),("""GET""", prefix + (if(prefix.endsWith("/")) "" else "/") + """assets/$file<.+>""","""controllers.Assets.at(path:String = "/public", file:String)"""),("""POST""", prefix + (if(prefix.endsWith("/")) "" else "/") + """logIn""","""controllers.Application.logIn()"""),("""GET""", prefix + (if(prefix.endsWith("/")) "" else "/") + """register""","""controllers.Application.register(error:String ?= "")"""),("""GET""", prefix + (if(prefix.endsWith("/")) "" else "/") + """landing""","""controllers.Application.landing()"""),("""POST""", prefix + (if(prefix.endsWith("/")) "" else "/") + """createClient""","""controllers.Application.createClient()"""),("""POST""", prefix + (if(prefix.endsWith("/")) "" else "/") + """deleteClient/$email<[^/]+>/delete""","""controllers.Application.deleteClientFromDB(email:String)"""),("""GET""", prefix + (if(prefix.endsWith("/")) "" else "/") + """clients""","""controllers.Application.displayAllClientsFromDB()"""),("""GET""", prefix + (if(prefix.endsWith("/")) "" else "/") + """wsInterface""","""controllers.Application.wsInterface()"""),("""GET""", prefix + (if(prefix.endsWith("/")) "" else "/") + """assets.javascript.ws.js""","""controllers.Application.wsJs()"""),("""GET""", prefix + (if(prefix.endsWith("/")) "" else "/") + """showWaiting""","""controllers.Application.showWaiting()"""),("""GET""", prefix + (if(prefix.endsWith("/")) "" else "/") + """pairing""","""controllers.Application.pairing()""")).foldLeft(List.empty[(String,String,String)]) { (s,e) => e.asInstanceOf[Any] match {
+def documentation = List(("""GET""", prefix,"""controllers.Application.index()"""),("""GET""", prefix + (if(prefix.endsWith("/")) "" else "/") + """assets/$file<.+>""","""controllers.Assets.at(path:String = "/public", file:String)"""),("""POST""", prefix + (if(prefix.endsWith("/")) "" else "/") + """logIn""","""controllers.Application.logIn()"""),("""GET""", prefix + (if(prefix.endsWith("/")) "" else "/") + """register""","""controllers.Application.register(error:String ?= "")"""),("""GET""", prefix + (if(prefix.endsWith("/")) "" else "/") + """landing""","""controllers.Application.landing()"""),("""POST""", prefix + (if(prefix.endsWith("/")) "" else "/") + """createClient""","""controllers.Application.createClient()"""),("""POST""", prefix + (if(prefix.endsWith("/")) "" else "/") + """deleteClient/$email<[^/]+>/delete""","""controllers.Application.deleteClientFromDB(email:String)"""),("""GET""", prefix + (if(prefix.endsWith("/")) "" else "/") + """clients""","""controllers.Application.displayAllClientsFromDB()"""),("""GET""", prefix + (if(prefix.endsWith("/")) "" else "/") + """wsInterface""","""controllers.Application.wsInterface()"""),("""GET""", prefix + (if(prefix.endsWith("/")) "" else "/") + """assets.javascript.ws.js""","""controllers.Application.wsJs()"""),("""GET""", prefix + (if(prefix.endsWith("/")) "" else "/") + """pairing""","""controllers.Application.pairing()""")).foldLeft(List.empty[(String,String,String)]) { (s,e) => e.asInstanceOf[Any] match {
   case r @ (_,_,_) => s :+ r.asInstanceOf[(String,String,String)]
   case l => s ++ l.asInstanceOf[List[(String,String,String)]]
 }}
@@ -205,17 +198,9 @@ case controllers_Application_wsJs9_route(params) => {
         
 
 // @LINE:38
-case controllers_Application_showWaiting10_route(params) => {
+case controllers_Application_pairing10_route(params) => {
    call { 
-        controllers_Application_showWaiting10_invoker.call(controllers.Application.showWaiting())
-   }
-}
-        
-
-// @LINE:39
-case controllers_Application_pairing11_route(params) => {
-   call { 
-        controllers_Application_pairing11_invoker.call(controllers.Application.pairing())
+        controllers_Application_pairing10_invoker.call(controllers.Application.pairing())
    }
 }
         

@@ -20,60 +20,62 @@ import play.mvc.Http.Context.Implicit._
 import views.html._
 
 /**/
-object index extends BaseScalaTemplate[play.twirl.api.HtmlFormat.Appendable,Format[play.twirl.api.HtmlFormat.Appendable]](play.twirl.api.HtmlFormat) with play.twirl.api.Template2[models.Client,java.util.List[String],play.twirl.api.HtmlFormat.Appendable] {
+object index extends BaseScalaTemplate[play.twirl.api.HtmlFormat.Appendable,Format[play.twirl.api.HtmlFormat.Appendable]](play.twirl.api.HtmlFormat) with play.twirl.api.Template3[models.Client,java.util.List[Client],java.util.List[Client],play.twirl.api.HtmlFormat.Appendable] {
 
   /**/
-  def apply/*1.2*/(client: models.Client, waiting : java.util.List[String]):play.twirl.api.HtmlFormat.Appendable = {
+  def apply/*1.2*/(client: models.Client, waiting : java.util.List[Client], chatPairs : java.util.List[Client]):play.twirl.api.HtmlFormat.Appendable = {
       _display_ {
 
-Seq[Any](format.raw/*1.59*/("""
+Seq[Any](format.raw/*1.95*/("""
 
 """),_display_(/*3.2*/main("RandChat")/*3.18*/ {_display_(Seq[Any](format.raw/*3.20*/("""
 
 
 
 """),_display_(/*7.2*/for(w <- waiting) yield /*7.19*/ {_display_(Seq[Any](format.raw/*7.21*/("""
-  """),format.raw/*8.3*/("""<h1>User pool: """),_display_(/*8.19*/w),format.raw/*8.20*/("""</h1>
+  """),format.raw/*8.3*/("""<h1>Waiting pool: """),_display_(/*8.22*/w/*8.23*/.email),format.raw/*8.29*/("""</h1>
 """)))}),format.raw/*9.2*/("""
 
+"""),_display_(/*11.2*/for(w <- chatPairs) yield /*11.21*/ {_display_(Seq[Any](format.raw/*11.23*/("""
+"""),format.raw/*12.1*/("""<h1>ChatPair pool: """),_display_(/*12.21*/w/*12.22*/.email),format.raw/*12.28*/("""</h1>
+""")))}),format.raw/*13.2*/("""
 
-    """),format.raw/*12.5*/("""<h1>Simple chat</h1>
-    <h3>current user: """),_display_(/*13.24*/Application/*13.35*/.currentClient.getName()),format.raw/*13.59*/("""</h3>
-    <h3>the other side: """),_display_(/*14.26*/Application/*14.37*/.theOtherUserName),format.raw/*14.54*/(""" """),format.raw/*14.55*/("""</h3>
+
+    """),format.raw/*16.5*/("""<h1>Simple chat</h1>
+    <h3>current user: """),_display_(/*17.24*/Application/*17.35*/.currentClient.getName()),format.raw/*17.59*/("""</h3>
+    <h3>the other side: """),_display_(/*18.26*/Application/*18.37*/.theOtherUserName),format.raw/*18.54*/(""" """),format.raw/*18.55*/("""</h3>
 
     <div id="the-other-side"></div>
     <div id="socket-messages"></div>
 
     <input type="text" id="socket-input" placeholder="message to send" />
 
-"""),_display_(/*21.2*/helper/*21.8*/.form(routes.Application.pairing())/*21.43*/ {_display_(Seq[Any](format.raw/*21.45*/("""
-"""),format.raw/*22.1*/("""<button class="btn" href="/landing">Start</button>
-""")))}),format.raw/*23.2*/("""
+"""),_display_(/*25.2*/helper/*25.8*/.form(routes.Application.pairing())/*25.43*/ {_display_(Seq[Any](format.raw/*25.45*/("""
+"""),format.raw/*26.1*/("""<button class="btn" href="/landing">Start</button>
+""")))}),format.raw/*27.2*/("""
 
-    """),format.raw/*25.5*/("""<script type="text/javascript" charset="utf-8" src=""""),_display_(/*25.58*/routes/*25.64*/.Application.wsJs()),format.raw/*25.83*/(""""></script>
-"""),_display_(/*26.2*/helper/*26.8*/.form(routes.Application.showWaiting())/*26.47*/ {_display_(Seq[Any](format.raw/*26.49*/("""
-"""),format.raw/*27.1*/("""<button class="btn" href="/landing">Waiting</button>
-""")))}),format.raw/*28.2*/("""
+    """),format.raw/*29.5*/("""<script type="text/javascript" charset="utf-8" src=""""),_display_(/*29.58*/routes/*29.64*/.Application.wsJs()),format.raw/*29.83*/(""""></script>
 
-""")))}),format.raw/*30.2*/("""
+
+""")))}),format.raw/*32.2*/("""
 
 """))}
   }
 
-  def render(client:models.Client,waiting:java.util.List[String]): play.twirl.api.HtmlFormat.Appendable = apply(client,waiting)
+  def render(client:models.Client,waiting:java.util.List[Client],chatPairs:java.util.List[Client]): play.twirl.api.HtmlFormat.Appendable = apply(client,waiting,chatPairs)
 
-  def f:((models.Client,java.util.List[String]) => play.twirl.api.HtmlFormat.Appendable) = (client,waiting) => apply(client,waiting)
+  def f:((models.Client,java.util.List[Client],java.util.List[Client]) => play.twirl.api.HtmlFormat.Appendable) = (client,waiting,chatPairs) => apply(client,waiting,chatPairs)
 
   def ref: this.type = this
 
 }
               /*
                   -- GENERATED --
-                  DATE: Sat Jul 18 08:28:59 BST 2015
+                  DATE: Sat Jul 18 19:45:36 BST 2015
                   SOURCE: /Users/jiaqichen/Desktop/RandChat/app/views/index.scala.html
-                  HASH: 1909bc80da49e923df8ec6b7b6a86727d20b1e4e
-                  MATRIX: 753->1|898->58|926->61|950->77|989->79|1019->84|1051->101|1090->103|1119->106|1161->122|1182->123|1218->130|1252->137|1323->181|1343->192|1388->216|1446->247|1466->258|1504->275|1533->276|1716->433|1730->439|1774->474|1814->476|1842->477|1924->529|1957->535|2037->588|2052->594|2092->613|2131->626|2145->632|2193->671|2233->673|2261->674|2345->728|2378->731
-                  LINES: 26->1|29->1|31->3|31->3|31->3|35->7|35->7|35->7|36->8|36->8|36->8|37->9|40->12|41->13|41->13|41->13|42->14|42->14|42->14|42->14|49->21|49->21|49->21|49->21|50->22|51->23|53->25|53->25|53->25|53->25|54->26|54->26|54->26|54->26|55->27|56->28|58->30
+                  HASH: 154b2678b2d7f285acc68b87290fa41252b8b674
+                  MATRIX: 776->1|957->94|985->97|1009->113|1048->115|1078->120|1110->137|1149->139|1178->142|1223->161|1232->162|1258->168|1294->175|1323->178|1358->197|1398->199|1426->200|1473->220|1483->221|1510->227|1547->234|1581->241|1652->285|1672->296|1717->320|1775->351|1795->362|1833->379|1862->380|2045->537|2059->543|2103->578|2143->580|2171->581|2253->633|2286->639|2366->692|2381->698|2421->717|2466->732
+                  LINES: 26->1|29->1|31->3|31->3|31->3|35->7|35->7|35->7|36->8|36->8|36->8|36->8|37->9|39->11|39->11|39->11|40->12|40->12|40->12|40->12|41->13|44->16|45->17|45->17|45->17|46->18|46->18|46->18|46->18|53->25|53->25|53->25|53->25|54->26|55->27|57->29|57->29|57->29|57->29|60->32
                   -- GENERATED --
               */
           

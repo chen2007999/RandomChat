@@ -1,11 +1,15 @@
-@(client: models.Client, waiting : java.util.List[String])
+@(client: models.Client, waiting : java.util.List[Client], chatPairs : java.util.List[Client])
 
 @main("RandChat") {
 
 
 
 @for(w <- waiting) {
-  <h1>User pool: @w</h1>
+  <h1>Waiting pool: @w.email</h1>
+}
+
+@for(w <- chatPairs) {
+<h1>ChatPair pool: @w.email</h1>
 }
 
 
@@ -23,9 +27,7 @@
 }
 
     <script type="text/javascript" charset="utf-8" src="@routes.Application.wsJs()"></script>
-@helper.form(routes.Application.showWaiting()) {
-<button class="btn" href="/landing">Waiting</button>
-}
+
 
 }
 

@@ -29,4 +29,8 @@ public class ClientConnection {
     public ChatPair getChatPair() {
         return chatPair;
     }
+
+    public boolean isPaired() {
+        return chatPair != null;
+    }
 }

@@ -3,6 +3,7 @@ package models;
 import play.mvc.*;
 import play.libs.*;
 import play.libs.F.*;
+import java.lang.Thread;
 
 import java.util.*;
 
@@ -10,29 +11,33 @@ public class RandChat {
 
     // collect all websockets here
     private static List<ClientConnection> waiting = new ArrayList<ClientConnection>();
-    private static List<ClientConnection> connections = new ArrayList<ClientConnection>();
+    private static List<ChatPair> chatPairs = new ArrayList<>();
 
 
     public  static synchronized String start(WebSocket.In<String> in, WebSocket.Out<String> out, Client client){
 
         ClientConnection clientConnection1 = new ClientConnection(client, out);
-        connections.add(clientConnection1);
 
-        if(waiting.isEmpty()) {
-            waiting.add(clientConnection1);
-        } else {
-            boolean notAdded = true;
+            boolean notConnected = true;
             for(ClientConnection w : waiting) {
-                if(w.getConnection() == out) {
-                    notAdded = false;
+                if(w.getClient().equals(client)) {
+                    notConnected = false;
                 }
             }
-            if(notAdded) {
+            for(ChatPair chatPair : chatPairs) {
+                if(chatPair.getClientConnection1().getClient().equals(client)) {
+                    notConnected = false;
+                }
+                if(chatPair.getClientConnection2().getClient().equals(client)) {
+                    notConnected = false;
+                }
+            }
+            if(notConnected) {
                 waiting.add(clientConnection1);
             }
-        }
 
-        // Pairing
+
+        //   Pairing
         if(waiting.size() >= 2) {
             waiting.remove(clientConnection1);
 
@@ -45,8 +50,9 @@ public class RandChat {
             ChatPair chatPair = new ChatPair(clientConnection1, clientConnection2);
             clientConnection1.setChatPair(chatPair);
             clientConnection2.setChatPair(chatPair);
+            chatPairs.add(chatPair);
             //chatPair.start(in, out);
-            new Thread(chatPair).run();
+            //new Thread(chatPair).run();
 
 
             return clientConnection2.getClient().getName();
@@ -64,9 +70,12 @@ public class RandChat {
         in.onClose(new F.Callback0() {
             public void invoke() {
                 //connections.remove(clientConnection1);
-                waiting.add(clientConnection1.getChatPair().getClientConnection1());
-                waiting.add(clientConnection1.getChatPair().getClientConnection2());
-                clientConnection1.getChatPair().notifyPair("A connection closed");
+                if(clientConnection1.isPaired()) {
+                    waiting.add(clientConnection1.getChatPair().getClientConnection1());
+                    waiting.add(clientConnection1.getChatPair().getClientConnection2());
+                    chatPairs.remove(clientConnection1.getChatPair());
+                    clientConnection1.getChatPair().notifyPair("A connection closed");
+                }
             }
         });
 
@@ -75,32 +84,21 @@ public class RandChat {
     }
 
 
-    public static String pairing(WebSocket.In<String> in, WebSocket.Out<String> out, Client client) {
-        if(waiting.size() >= 2) {
-            ClientConnection clientConnection1 = new ClientConnection(client, out);
-            waiting.remove(clientConnection1);
-
-            Random rand = new Random();
-            int index2 = rand.nextInt(waiting.size());
-            ClientConnection clientConnection2 = waiting.get(index2);
-
-            waiting.remove(clientConnection2);
-
-            ChatPair chatPair = new ChatPair(clientConnection1, clientConnection2);
-            //chatPair.start(in, out);
-            return clientConnection2.getClient().getName();
+    public static List<Client> getChatPairs() {
+        List<Client> result = new ArrayList<>();
+        for(ChatPair cp : chatPairs) {
+            result.add(cp.getClientConnection1().getClient());
+            result.add(cp.getClientConnection2().getClient());
         }
-
-        return "currently no matching";
+        return result;
     }
 
+    public static List<Client> getWaiting() {
+        List<Client> result = new ArrayList<>();
+            for (ClientConnection c : waiting) {
+                result.add(c.getClient());
+            }
 
-
-    public static List<String> getWaiting() {
-        List<String> result = new ArrayList<String>();
-        for(ClientConnection c : waiting) {
-            result.add(c.getClient().getEmail());
-        }
         return result;
     }
 }
