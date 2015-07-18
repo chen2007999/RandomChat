@@ -4,19 +4,29 @@ import play.mvc.WebSocket;
 
 public class ClientConnection {
 
-    private static Client client;
-    private static WebSocket.Out<String> connection;
+    private Client client;
+    private WebSocket.Out<String> connection;
+    private ChatPair chatPair;
 
     public ClientConnection(Client client, WebSocket.Out<String> connection) {
             this.client = client;
         this.connection = connection;
     }
 
-    public static WebSocket.Out<String> getConnection() {
+    public WebSocket.Out<String> getConnection() {
         return connection;
     }
 
-    public static Client getClient() {
+    public Client getClient() {
         return client;
+    }
+
+
+    public void setChatPair(ChatPair chatPair) {
+        this.chatPair = chatPair;
+    }
+
+    public ChatPair getChatPair() {
+        return chatPair;
     }
 }
