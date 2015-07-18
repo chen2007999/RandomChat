@@ -70,8 +70,6 @@ public class Application extends Controller {
 
 
 
-
-
     // Websocket interface
     public static WebSocket<String> wsInterface(){
         return new WebSocket<String>(){
@@ -82,60 +80,12 @@ public class Application extends Controller {
         };
     }
 
-    public static WebSocket<String> pairing() {
-        return new WebSocket<String>(){
-
-            public void onReady(WebSocket.In<String> in, WebSocket.Out<String> out){
-                //theOtherUserName = RandChat.pairing(in, out, currentClient);
-            }
-        };
-    }
-
 
     public static Result wsJs() {
         return ok(views.js.ws.render());
     }
 
-   /* public static Result newChatMessage() {
-
-    }*/
 
 
 
-
-
-
-
-   /* public static WebSocket<String> socket() {
-        return new WebSocket<String>() {
-
-            // Called when the Websocket Handshake is done.
-            public void onReady(WebSocket.In<String> in, WebSocket.Out<String> out) {
-
-                // For each event received on the socket,
-                in.onMessage(new Callback<String>() {
-                    public void invoke(String event) {
-
-                        // Log events to the console
-                        System.out.println(event);
-
-                    }
-                });
-
-                // When the socket is closed.
-                in.onClose(new Callback0() {
-                    public void invoke() {
-
-                        System.out.println("Disconnected");
-
-                    }
-                });
-
-                // Send a single 'Hello!' message
-                out.write("Hello!");
-
-            }
-
-        };
-    } */
 }

@@ -1,6 +1,6 @@
 // @SOURCE:/Users/jiaqichen/Desktop/RandChat/conf/routes
-// @HASH:63fef14cda9d24bde3add0ef0dc32cc7ffa5c4be
-// @DATE:Sat Jul 18 18:38:07 BST 2015
+// @HASH:c265d41cf1c00cd9628c6dea9d86bf8748b582e1
+// @DATE:Sat Jul 18 22:55:02 BST 2015
 
 package controllers;
 

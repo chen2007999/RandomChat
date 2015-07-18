@@ -34,15 +34,6 @@ public class ChatPair {
         return result;
     }
 
-    
-    /*public static void start(WebSocket.In<String> in, WebSocket.Out<String> out) {
-
-        new Thread(new ChatPair()).run();
-
-
-    }*/
-
-    // Iterate connection list and write incoming message
     public static void notifyPair(String message){
         getClientConnection1().getConnection().write(message);
         getClientConnection2().getConnection().write(message);

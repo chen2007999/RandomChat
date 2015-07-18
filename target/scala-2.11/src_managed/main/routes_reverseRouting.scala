@@ -1,6 +1,6 @@
 // @SOURCE:/Users/jiaqichen/Desktop/RandChat/conf/routes
-// @HASH:63fef14cda9d24bde3add0ef0dc32cc7ffa5c4be
-// @DATE:Sat Jul 18 18:38:07 BST 2015
+// @HASH:c265d41cf1c00cd9628c6dea9d86bf8748b582e1
+// @DATE:Sat Jul 18 22:55:02 BST 2015
 
 import Routes.{prefix => _prefix, defaultPrefix => _defaultPrefix}
 import play.core._
@@ -15,7 +15,6 @@ import _root_.play.libs.F
 import Router.queryString
 
 
-// @LINE:38
 // @LINE:35
 // @LINE:33
 // @LINE:29
@@ -42,7 +41,6 @@ def at(file:String): Call = {
 }
                           
 
-// @LINE:38
 // @LINE:35
 // @LINE:33
 // @LINE:29
@@ -118,20 +116,12 @@ def index(): Call = {
 }
                         
 
-// @LINE:38
-def pairing(): Call = {
-   import ReverseRouteContext.empty
-   Call("GET", _prefix + { _defaultPrefix } + "pairing")
-}
-                        
-
 }
                           
 }
                   
 
 
-// @LINE:38
 // @LINE:35
 // @LINE:33
 // @LINE:29
@@ -163,7 +153,6 @@ def at : JavascriptReverseRoute = JavascriptReverseRoute(
 }
               
 
-// @LINE:38
 // @LINE:35
 // @LINE:33
 // @LINE:29
@@ -275,24 +264,12 @@ def index : JavascriptReverseRoute = JavascriptReverseRoute(
 )
                         
 
-// @LINE:38
-def pairing : JavascriptReverseRoute = JavascriptReverseRoute(
-   "controllers.Application.pairing",
-   """
-      function() {
-      return _wA({method:"GET", url:"""" + _prefix + { _defaultPrefix } + """" + "pairing"})
-      }
-   """
-)
-                        
-
 }
               
 }
         
 
 
-// @LINE:38
 // @LINE:35
 // @LINE:33
 // @LINE:29
@@ -319,7 +296,6 @@ def at(path:String, file:String): play.api.mvc.HandlerRef[_] = new play.api.mvc.
 }
                           
 
-// @LINE:38
 // @LINE:35
 // @LINE:33
 // @LINE:29
@@ -383,12 +359,6 @@ def wsInterface(): play.api.mvc.HandlerRef[_] = new play.api.mvc.HandlerRef(
 // @LINE:6
 def index(): play.api.mvc.HandlerRef[_] = new play.api.mvc.HandlerRef(
    controllers.Application.index(), HandlerDef(this.getClass.getClassLoader, "", "controllers.Application", "index", Seq(), "GET", """ Home page""", _prefix + """""")
-)
-                      
-
-// @LINE:38
-def pairing(): play.api.mvc.HandlerRef[_] = new play.api.mvc.HandlerRef(
-   controllers.Application.pairing(), HandlerDef(this.getClass.getClassLoader, "", "controllers.Application", "pairing", Seq(), "GET", """""", _prefix + """pairing""")
 )
                       
 
