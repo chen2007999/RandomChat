@@ -1,14 +1,13 @@
 package models;
 
-
 import play.libs.F;
 import play.mvc.WebSocket;
 
 
 public class ChatPair {
 
-    private static ClientConnection clientConnection1;
-    private static ClientConnection clientConnection2;
+    private ClientConnection clientConnection1;
+    private ClientConnection clientConnection2;
 
 
     public ChatPair(ClientConnection clientConnection1, ClientConnection clientConnection2) {
@@ -16,11 +15,11 @@ public class ChatPair {
         this.clientConnection2 = clientConnection2;
     }
 
-    public static ClientConnection getClientConnection1() {
+    public ClientConnection getClientConnection1() {
         return clientConnection1;
     }
 
-    public static ClientConnection getClientConnection2() {
+    public ClientConnection getClientConnection2() {
         return clientConnection2;
     }
 
@@ -34,8 +33,9 @@ public class ChatPair {
         return result;
     }
 
-    public static void notifyPair(String message){
+    public void notifyPair(String message){
         getClientConnection1().getConnection().write(message);
         getClientConnection2().getConnection().write(message);
     }
+
 }

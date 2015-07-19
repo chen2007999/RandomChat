@@ -3,7 +3,6 @@ package models;
 import play.mvc.*;
 import play.libs.*;
 import play.libs.F.*;
-import java.lang.Thread;
 
 import java.util.*;
 
@@ -14,27 +13,29 @@ public class RandChat {
     private static List<ChatPair> chatPairs = new ArrayList<>();
 
 
-    public  static synchronized void start(WebSocket.In<String> in, WebSocket.Out<String> out, Client client) {
-
-        ClientConnection clientConnection1 = new ClientConnection(client, out);
-        connectionAndPairing(clientConnection1, client);
-
+    public static synchronized void start(WebSocket.In<String> in, WebSocket.Out<String> out, Client client) {
+        ClientConnection clientConnection1 = setUpConnection(out, client);
 
         // Server responses
        in.onMessage(new F.Callback<String>() {
             public void invoke(String event) {
-                clientConnection1.getChatPair().notifyPair(event);
+                if (clientConnection1.isPaired()) {
+                    clientConnection1.getChatPair().notifyPair(event);
+                }
             }
         });
 
 
         in.onClose(new F.Callback0() {
             public void invoke() {
-                //connections.remove(clientConnection1);
                 if (clientConnection1.isPaired()) {
-                    chatPairs.remove(clientConnection1.getChatPair());
-                    clientConnection1.getChatPair().notifyPair("A connection closed");
                     ClientConnection theOtherClientConnection = clientConnection1.getChatPair().getTheOtherClientConnection(clientConnection1);
+
+                    theOtherClientConnection.notifyClosed();
+
+                    chatPairs.remove(clientConnection1.getChatPair());
+
+                    theOtherClientConnection.setChatPair(null);
                     start(in, theOtherClientConnection.getConnection(), theOtherClientConnection.getClient());
                 } else {
                     waiting.remove(clientConnection1);
@@ -43,6 +44,32 @@ public class RandChat {
         });
     }
 
+    private static ClientConnection setUpConnection(WebSocket.Out<String> out, Client client) {
+        ClientConnection clientConnection1 = null;
+        for(ClientConnection w : waiting) {
+            if(w.getClient().equals(client)) {
+                clientConnection1 = w;
+                return clientConnection1;
+            }
+        }
+
+        for (ChatPair chatPair : chatPairs) {
+            if (chatPair.getClientConnection1().getClient().equals(client)) {
+                clientConnection1 = chatPair.getClientConnection1();
+                break;
+            }
+            if (chatPair.getClientConnection2().getClient().equals(client)) {
+                clientConnection1 = chatPair.getClientConnection2();
+                break;
+            }
+        }
+
+        if(clientConnection1 == null) {
+            clientConnection1 = new ClientConnection(client, out);
+            connectionAndPairing(clientConnection1, client);
+        }
+        return clientConnection1;
+    }
 
     private static void connectionAndPairing(ClientConnection clientConnection1, Client client) {
         boolean notConnected = true;
@@ -76,11 +103,14 @@ public class RandChat {
             ChatPair chatPair = new ChatPair(clientConnection1, clientConnection2);
             clientConnection1.setChatPair(chatPair);
             clientConnection2.setChatPair(chatPair);
+
+            System.out.println("Conrrent user: " + clientConnection1.getClient().getEmail());
+            System.out.println("The other user: " + clientConnection2.getClient().getEmail());
+            System.out.println("The other user's pair user: " + chatPair.getTheOtherClientConnection(clientConnection2).getClient().getEmail());
             chatPairs.add(chatPair);
 
         }
     }
-
 
 
     public static List<Client> getChatPairs() {
@@ -97,7 +127,6 @@ public class RandChat {
             for (ClientConnection c : waiting) {
                 result.add(c.getClient());
             }
-
         return result;
     }
 }

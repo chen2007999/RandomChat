@@ -21,7 +21,6 @@ public class ClientConnection {
         return client;
     }
 
-
     public void setChatPair(ChatPair chatPair) {
         this.chatPair = chatPair;
     }
@@ -32,5 +31,9 @@ public class ClientConnection {
 
     public boolean isPaired() {
         return chatPair != null;
+    }
+
+    public void notifyClosed() {
+       connection.write("The other user just left, waiting to be connected to the next user.");
     }
 }
