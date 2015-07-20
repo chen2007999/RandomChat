@@ -20,6 +20,7 @@ public class RandChat {
         // Server responses
        in.onMessage(new F.Callback<String>() {
             public void invoke(String event) {
+                System.out.println("check: " + clientConnection1.getChatPair());
                 if (clientConnection1.isPaired()) {
                     clientConnection1.getChatPair().notifyPair(event);
                 }
@@ -38,22 +39,22 @@ public class RandChat {
 
 
                     theOtherClientConnection.setChatPair(null);
-                    System.out.println("before check  " + theOtherClientConnection.getChatPair());
+                    // System.out.println("before check  " + theOtherClientConnection.getChatPair());
 
-                    try {
+                   /* try {
                         // thread to sleep for 1000 milliseconds
                         Thread.sleep(10000);
                     } catch (Exception e) {
                         System.out.println(e);
-                    }
+                    }*/
                     //setUpConnection(theOtherClientConnection.getConnection(), theOtherClientConnection.getClient());
-                    start(in, theOtherClientConnection.getConnection(), theOtherClientConnection.getClient());
-
+                   // start(in, theOtherClientConnection.getConnection(), theOtherClientConnection.getClient());
+                    waiting.add(theOtherClientConnection);
                     //pairing
 
-                    ChatPair cp = new ChatPair(theOtherClientConnection, theOtherClientConnection);
-                    theOtherClientConnection.setChatPair(cp);
-                    
+                    /*ChatPair cp = new ChatPair(theOtherClientConnection, theOtherClientConnection);
+                    theOtherClientConnection.setChatPair(cp);*/
+
                     System.out.println("after check  " + theOtherClientConnection.getChatPair());
 
                 } else {
@@ -61,6 +62,7 @@ public class RandChat {
                 }
             }
         });
+        System.out.println(clientConnection1.getClient().getEmail() + "here");
     }
 
     private static ClientConnection setUpConnection(WebSocket.Out<String> out, Client client) {
@@ -110,7 +112,7 @@ public class RandChat {
         }
 
         //   Pairing
-        if(waiting.size() >= 2) {
+        while(waiting.size() >= 2 && waiting.contains(clientConnection1)) {
             waiting.remove(clientConnection1);
 
             Random rand = new Random();
@@ -126,9 +128,9 @@ public class RandChat {
             System.out.println("Conrrent user: " + clientConnection1.getClient().getEmail());
             System.out.println("The other user: " + clientConnection2.getClient().getEmail());
             System.out.println("The other user's pair user: " + clientConnection2.getChatPair().getTheOtherClientConnection(clientConnection2).getClient().getEmail());
-            System.out.println("---------");
-            System.out.println("The user1: " + clientConnection1.getChatPair());
-            System.out.println("The user2: " + clientConnection2.getChatPair());
+           // System.out.println("---------");
+            //System.out.println("The user1: " + clientConnection1.getChatPair());
+            //System.out.println("The user2: " + clientConnection2.getChatPair());
         }
     }
 
