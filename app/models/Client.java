@@ -51,14 +51,6 @@ public class Client extends Model{
         return image;
     }
 
-    public boolean isOnline() {
-        return online;
-    }
-
-    public void setOnline(boolean online) {
-        this.online = online;
-    }
-
     public void setImage(String image) {
         this.image = image;
     }

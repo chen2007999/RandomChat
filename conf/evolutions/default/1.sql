@@ -8,7 +8,6 @@ create table client (
   password                  varchar(255),
   password2                 varchar(255),
   name                      varchar(255),
-  online                    boolean,
   image                     varchar(255),
   constraint pk_client primary key (email))
 ;

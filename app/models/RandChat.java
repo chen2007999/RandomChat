@@ -140,6 +140,30 @@ public class RandChat {
 
 
     public static void nextUser(Client client) {
+        ClientConnection clientConnection1 = null;
+        ClientConnection clientConnection2 = null;
+        for (ChatPair chatPair : chatPairs) {
+            if (chatPair.getClientConnection1().getClient().equals(client)) {
+                clientConnection1 = chatPair.getClientConnection1();
+                clientConnection2 = chatPair.getClientConnection2();
+                chatPairs.remove(chatPair);
+                chatPair = null;
+                break;
+            }
+            if (chatPair.getClientConnection2().getClient().equals(client)) {
+                clientConnection1 = chatPair.getClientConnection2();
+                clientConnection2 = chatPair.getClientConnection1();
+                chatPairs.remove(chatPair);
+                chatPair = null;
+                break;
+            }
+        }
+
+        // Previous pairing is no longer allowed
+        waiting.add(clientConnection1);
+        waiting.add(clientConnection2);
+        pairing(clientConnection1);
+        pairing(clientConnection2);
 
     }
 
