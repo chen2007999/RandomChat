@@ -39,9 +39,6 @@ public class Client extends Model{
 
     @Column(name = "name")
     public String name;
-
-    @Column(name = "online")
-    public boolean online;
     
     @Column(name = "image")
     public String image;

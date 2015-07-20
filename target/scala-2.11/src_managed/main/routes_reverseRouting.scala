@@ -1,6 +1,6 @@
 // @SOURCE:/Users/jiaqichen/Desktop/RandChat/conf/routes
-// @HASH:c265d41cf1c00cd9628c6dea9d86bf8748b582e1
-// @DATE:Sat Jul 18 22:55:02 BST 2015
+// @HASH:1d038aa4f1cf976e45d208240b6870810a69595c
+// @DATE:Mon Jul 20 23:09:29 BST 2015
 
 import Routes.{prefix => _prefix, defaultPrefix => _defaultPrefix}
 import play.core._
@@ -15,7 +15,8 @@ import _root_.play.libs.F
 import Router.queryString
 
 
-// @LINE:35
+// @LINE:36
+// @LINE:34
 // @LINE:33
 // @LINE:29
 // @LINE:26
@@ -41,7 +42,8 @@ def at(file:String): Call = {
 }
                           
 
-// @LINE:35
+// @LINE:36
+// @LINE:34
 // @LINE:33
 // @LINE:29
 // @LINE:26
@@ -81,7 +83,7 @@ def landing(): Call = {
 }
                         
 
-// @LINE:35
+// @LINE:36
 def wsJs(): Call = {
    import ReverseRouteContext.empty
    Call("GET", _prefix + { _defaultPrefix } + "assets.javascript.ws.js")
@@ -109,6 +111,13 @@ def wsInterface(): Call = {
 }
                         
 
+// @LINE:34
+def nextUser(): Call = {
+   import ReverseRouteContext.empty
+   Call("PUT", _prefix + { _defaultPrefix } + "nextUser")
+}
+                        
+
 // @LINE:6
 def index(): Call = {
    import ReverseRouteContext.empty
@@ -122,7 +131,8 @@ def index(): Call = {
                   
 
 
-// @LINE:35
+// @LINE:36
+// @LINE:34
 // @LINE:33
 // @LINE:29
 // @LINE:26
@@ -153,7 +163,8 @@ def at : JavascriptReverseRoute = JavascriptReverseRoute(
 }
               
 
-// @LINE:35
+// @LINE:36
+// @LINE:34
 // @LINE:33
 // @LINE:29
 // @LINE:26
@@ -209,7 +220,7 @@ def landing : JavascriptReverseRoute = JavascriptReverseRoute(
 )
                         
 
-// @LINE:35
+// @LINE:36
 def wsJs : JavascriptReverseRoute = JavascriptReverseRoute(
    "controllers.Application.wsJs",
    """
@@ -253,6 +264,17 @@ def wsInterface : JavascriptReverseRoute = JavascriptReverseRoute(
 )
                         
 
+// @LINE:34
+def nextUser : JavascriptReverseRoute = JavascriptReverseRoute(
+   "controllers.Application.nextUser",
+   """
+      function() {
+      return _wA({method:"PUT", url:"""" + _prefix + { _defaultPrefix } + """" + "nextUser"})
+      }
+   """
+)
+                        
+
 // @LINE:6
 def index : JavascriptReverseRoute = JavascriptReverseRoute(
    "controllers.Application.index",
@@ -270,7 +292,8 @@ def index : JavascriptReverseRoute = JavascriptReverseRoute(
         
 
 
-// @LINE:35
+// @LINE:36
+// @LINE:34
 // @LINE:33
 // @LINE:29
 // @LINE:26
@@ -296,7 +319,8 @@ def at(path:String, file:String): play.api.mvc.HandlerRef[_] = new play.api.mvc.
 }
                           
 
-// @LINE:35
+// @LINE:36
+// @LINE:34
 // @LINE:33
 // @LINE:29
 // @LINE:26
@@ -332,7 +356,7 @@ def landing(): play.api.mvc.HandlerRef[_] = new play.api.mvc.HandlerRef(
 )
                       
 
-// @LINE:35
+// @LINE:36
 def wsJs(): play.api.mvc.HandlerRef[_] = new play.api.mvc.HandlerRef(
    controllers.Application.wsJs(), HandlerDef(this.getClass.getClassLoader, "", "controllers.Application", "wsJs", Seq(), "GET", """""", _prefix + """assets.javascript.ws.js""")
 )
@@ -353,6 +377,12 @@ def displayAllClientsFromDB(): play.api.mvc.HandlerRef[_] = new play.api.mvc.Han
 // @LINE:33
 def wsInterface(): play.api.mvc.HandlerRef[_] = new play.api.mvc.HandlerRef(
    controllers.Application.wsInterface(), HandlerDef(this.getClass.getClassLoader, "", "controllers.Application", "wsInterface", Seq(), "GET", """""", _prefix + """wsInterface""")
+)
+                      
+
+// @LINE:34
+def nextUser(): play.api.mvc.HandlerRef[_] = new play.api.mvc.HandlerRef(
+   controllers.Application.nextUser(), HandlerDef(this.getClass.getClassLoader, "", "controllers.Application", "nextUser", Seq(), "PUT", """""", _prefix + """nextUser""")
 )
                       
 

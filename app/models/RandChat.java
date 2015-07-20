@@ -139,6 +139,10 @@ public class RandChat {
     }
 
 
+    public static void nextUser(Client client) {
+
+    }
+
     public static List<Client> getChatPairs() {
         List<Client> result = new ArrayList<>();
         for(ChatPair cp : chatPairs) {
