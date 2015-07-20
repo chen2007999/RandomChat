@@ -3,6 +3,7 @@ package models;
 import play.mvc.*;
 import play.libs.*;
 import play.libs.F.*;
+import java.lang.Thread;
 
 import java.util.*;
 
@@ -35,8 +36,26 @@ public class RandChat {
 
                     chatPairs.remove(clientConnection1.getChatPair());
 
+
                     theOtherClientConnection.setChatPair(null);
+                    System.out.println("before check  " + theOtherClientConnection.getChatPair());
+
+                    try {
+                        // thread to sleep for 1000 milliseconds
+                        Thread.sleep(10000);
+                    } catch (Exception e) {
+                        System.out.println(e);
+                    }
+                    //setUpConnection(theOtherClientConnection.getConnection(), theOtherClientConnection.getClient());
                     start(in, theOtherClientConnection.getConnection(), theOtherClientConnection.getClient());
+
+                    //pairing
+
+                    ChatPair cp = new ChatPair(theOtherClientConnection, theOtherClientConnection);
+                    theOtherClientConnection.setChatPair(cp);
+                    
+                    System.out.println("after check  " + theOtherClientConnection.getChatPair());
+
                 } else {
                     waiting.remove(clientConnection1);
                 }
@@ -106,9 +125,10 @@ public class RandChat {
 
             System.out.println("Conrrent user: " + clientConnection1.getClient().getEmail());
             System.out.println("The other user: " + clientConnection2.getClient().getEmail());
-            System.out.println("The other user's pair user: " + chatPair.getTheOtherClientConnection(clientConnection2).getClient().getEmail());
-            chatPairs.add(chatPair);
-
+            System.out.println("The other user's pair user: " + clientConnection2.getChatPair().getTheOtherClientConnection(clientConnection2).getClient().getEmail());
+            System.out.println("---------");
+            System.out.println("The user1: " + clientConnection1.getChatPair());
+            System.out.println("The user2: " + clientConnection2.getChatPair());
         }
     }
 
