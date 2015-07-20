@@ -50,6 +50,7 @@ public class RandChat {
                     //setUpConnection(theOtherClientConnection.getConnection(), theOtherClientConnection.getClient());
                    // start(in, theOtherClientConnection.getConnection(), theOtherClientConnection.getClient());
                     waiting.add(theOtherClientConnection);
+                    pairing(theOtherClientConnection);
                     //pairing
 
                     /*ChatPair cp = new ChatPair(theOtherClientConnection, theOtherClientConnection);
@@ -110,9 +111,12 @@ public class RandChat {
         if(notConnected) {
             waiting.add(clientConnection1);
         }
+        pairing(clientConnection1);
+    }
 
+    private static void pairing(ClientConnection clientConnection1) {
         //   Pairing
-        while(waiting.size() >= 2 && waiting.contains(clientConnection1)) {
+        if(waiting.size() >= 2) {
             waiting.remove(clientConnection1);
 
             Random rand = new Random();
@@ -128,7 +132,7 @@ public class RandChat {
             System.out.println("Conrrent user: " + clientConnection1.getClient().getEmail());
             System.out.println("The other user: " + clientConnection2.getClient().getEmail());
             System.out.println("The other user's pair user: " + clientConnection2.getChatPair().getTheOtherClientConnection(clientConnection2).getClient().getEmail());
-           // System.out.println("---------");
+            // System.out.println("---------");
             //System.out.println("The user1: " + clientConnection1.getChatPair());
             //System.out.println("The user2: " + clientConnection2.getChatPair());
         }
