@@ -37,7 +37,6 @@ public class RandChat {
 
                     chatPairs.remove(clientConnection1.getChatPair());
 
-
                     theOtherClientConnection.setChatPair(null);
                     // System.out.println("before check  " + theOtherClientConnection.getChatPair());
 
@@ -123,11 +122,18 @@ public class RandChat {
             int index2 = rand.nextInt(waiting.size());
             ClientConnection clientConnection2 = waiting.get(index2);
 
+            while(clientConnection1.inHistory(clientConnection2.getClient())) {
+                index2 = rand.nextInt(waiting.size());
+                clientConnection2 = waiting.get(index2);
+            }
+
             waiting.remove(clientConnection2);
 
             ChatPair chatPair = new ChatPair(clientConnection1, clientConnection2);
             clientConnection1.setChatPair(chatPair);
             clientConnection2.setChatPair(chatPair);
+            clientConnection1.addToHistory(clientConnection2.getClient());
+            clientConnection2.addToHistory(clientConnection1.getClient());
 
             System.out.println("Conrrent user: " + clientConnection1.getClient().getEmail());
             System.out.println("The other user: " + clientConnection2.getClient().getEmail());
