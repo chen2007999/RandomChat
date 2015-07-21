@@ -8,7 +8,6 @@ public class ClientConnection {
     private Client client;
     private WebSocket.Out<String> connection;
     private ChatPair chatPair;
-    private List<Client> pairingHistory = new ArrayList<>();
 
     public ClientConnection(Client client, WebSocket.Out<String> connection) {
             this.client = client;
@@ -39,11 +38,5 @@ public class ClientConnection {
        connection.write("The other user just left, waiting to be connected to the next user.");
     }
 
-    public void addToHistory(Client client) {
-        pairingHistory.add(client);
-    }
 
-    public boolean inHistory(Client client) {
-        return pairingHistory.contains(client);
-    }
 }

@@ -33,12 +33,15 @@ public class PairHistory extends Model {
 
     public  static Finder<String, PairHistory> find = new Finder<String, PairHistory>(String.class, PairHistory.class);
 
-    public void createPairHistory(Client client1, Client client2) {
+    public static void createPairHistory(Client client1, Client client2) {
         PairHistory pairHistory = new PairHistory();
         pairHistory.setEmail(client1.getEmail());
         pairHistory.setPairedId(client2.getEmail());
         pairHistory.save();
     }
 
+    public static boolean inHistory(Client client1, Client client2) {
+        return find.where().eq("email", client1.getEmail()).eq("pairedId", client2.getEmail()).findList().size() != 0;
+    }
 
 }

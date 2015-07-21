@@ -9,6 +9,7 @@ create table client (
   password2                 varchar(255),
   name                      varchar(255),
   image                     varchar(255),
+  pairedEmail               varchar(255),
   constraint pk_client primary key (email))
 ;
 
