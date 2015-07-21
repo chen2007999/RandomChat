@@ -31,6 +31,6 @@ GET    /clients                           controllers.Application.displayAllClie
 
 
 GET /wsInterface                controllers.Application.wsInterface()
-PUT /nextUser               controllers.Application.nextUser()
+GET /nextUser               controllers.Application.nextUser()
 
 GET /assets.javascript.ws.js     controllers.Application.wsJs()

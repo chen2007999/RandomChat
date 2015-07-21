@@ -1,6 +1,6 @@
 // @SOURCE:/Users/jiaqichen/Desktop/RandChat/conf/routes
-// @HASH:1d038aa4f1cf976e45d208240b6870810a69595c
-// @DATE:Mon Jul 20 23:09:29 BST 2015
+// @HASH:de5e214b36a711cc3c58481671cff77d11284528
+// @DATE:Tue Jul 21 19:17:21 BST 2015
 
 
 import scala.language.reflectiveCalls
@@ -97,10 +97,10 @@ HandlerDef(this.getClass.getClassLoader, "", "controllers.Application", "wsInter
         
 
 // @LINE:34
-private[this] lazy val controllers_Application_nextUser9_route = Route("PUT", PathPattern(List(StaticPart(Routes.prefix),StaticPart(Routes.defaultPrefix),StaticPart("nextUser"))))
+private[this] lazy val controllers_Application_nextUser9_route = Route("GET", PathPattern(List(StaticPart(Routes.prefix),StaticPart(Routes.defaultPrefix),StaticPart("nextUser"))))
 private[this] lazy val controllers_Application_nextUser9_invoker = createInvoker(
 controllers.Application.nextUser(),
-HandlerDef(this.getClass.getClassLoader, "", "controllers.Application", "nextUser", Nil,"PUT", """""", Routes.prefix + """nextUser"""))
+HandlerDef(this.getClass.getClassLoader, "", "controllers.Application", "nextUser", Nil,"GET", """""", Routes.prefix + """nextUser"""))
         
 
 // @LINE:36
@@ -109,7 +109,7 @@ private[this] lazy val controllers_Application_wsJs10_invoker = createInvoker(
 controllers.Application.wsJs(),
 HandlerDef(this.getClass.getClassLoader, "", "controllers.Application", "wsJs", Nil,"GET", """""", Routes.prefix + """assets.javascript.ws.js"""))
         
-def documentation = List(("""GET""", prefix,"""controllers.Application.index()"""),("""GET""", prefix + (if(prefix.endsWith("/")) "" else "/") + """assets/$file<.+>""","""controllers.Assets.at(path:String = "/public", file:String)"""),("""POST""", prefix + (if(prefix.endsWith("/")) "" else "/") + """logIn""","""controllers.Application.logIn()"""),("""GET""", prefix + (if(prefix.endsWith("/")) "" else "/") + """register""","""controllers.Application.register(error:String ?= "")"""),("""GET""", prefix + (if(prefix.endsWith("/")) "" else "/") + """landing""","""controllers.Application.landing()"""),("""POST""", prefix + (if(prefix.endsWith("/")) "" else "/") + """createClient""","""controllers.Application.createClient()"""),("""POST""", prefix + (if(prefix.endsWith("/")) "" else "/") + """deleteClient/$email<[^/]+>/delete""","""controllers.Application.deleteClientFromDB(email:String)"""),("""GET""", prefix + (if(prefix.endsWith("/")) "" else "/") + """clients""","""controllers.Application.displayAllClientsFromDB()"""),("""GET""", prefix + (if(prefix.endsWith("/")) "" else "/") + """wsInterface""","""controllers.Application.wsInterface()"""),("""PUT""", prefix + (if(prefix.endsWith("/")) "" else "/") + """nextUser""","""controllers.Application.nextUser()"""),("""GET""", prefix + (if(prefix.endsWith("/")) "" else "/") + """assets.javascript.ws.js""","""controllers.Application.wsJs()""")).foldLeft(List.empty[(String,String,String)]) { (s,e) => e.asInstanceOf[Any] match {
+def documentation = List(("""GET""", prefix,"""controllers.Application.index()"""),("""GET""", prefix + (if(prefix.endsWith("/")) "" else "/") + """assets/$file<.+>""","""controllers.Assets.at(path:String = "/public", file:String)"""),("""POST""", prefix + (if(prefix.endsWith("/")) "" else "/") + """logIn""","""controllers.Application.logIn()"""),("""GET""", prefix + (if(prefix.endsWith("/")) "" else "/") + """register""","""controllers.Application.register(error:String ?= "")"""),("""GET""", prefix + (if(prefix.endsWith("/")) "" else "/") + """landing""","""controllers.Application.landing()"""),("""POST""", prefix + (if(prefix.endsWith("/")) "" else "/") + """createClient""","""controllers.Application.createClient()"""),("""POST""", prefix + (if(prefix.endsWith("/")) "" else "/") + """deleteClient/$email<[^/]+>/delete""","""controllers.Application.deleteClientFromDB(email:String)"""),("""GET""", prefix + (if(prefix.endsWith("/")) "" else "/") + """clients""","""controllers.Application.displayAllClientsFromDB()"""),("""GET""", prefix + (if(prefix.endsWith("/")) "" else "/") + """wsInterface""","""controllers.Application.wsInterface()"""),("""GET""", prefix + (if(prefix.endsWith("/")) "" else "/") + """nextUser""","""controllers.Application.nextUser()"""),("""GET""", prefix + (if(prefix.endsWith("/")) "" else "/") + """assets.javascript.ws.js""","""controllers.Application.wsJs()""")).foldLeft(List.empty[(String,String,String)]) { (s,e) => e.asInstanceOf[Any] match {
   case r @ (_,_,_) => s :+ r.asInstanceOf[(String,String,String)]
   case l => s ++ l.asInstanceOf[List[(String,String,String)]]
 }}

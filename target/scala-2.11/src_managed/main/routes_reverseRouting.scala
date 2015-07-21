@@ -1,6 +1,6 @@
 // @SOURCE:/Users/jiaqichen/Desktop/RandChat/conf/routes
-// @HASH:1d038aa4f1cf976e45d208240b6870810a69595c
-// @DATE:Mon Jul 20 23:09:29 BST 2015
+// @HASH:de5e214b36a711cc3c58481671cff77d11284528
+// @DATE:Tue Jul 21 19:17:21 BST 2015
 
 import Routes.{prefix => _prefix, defaultPrefix => _defaultPrefix}
 import play.core._
@@ -114,7 +114,7 @@ def wsInterface(): Call = {
 // @LINE:34
 def nextUser(): Call = {
    import ReverseRouteContext.empty
-   Call("PUT", _prefix + { _defaultPrefix } + "nextUser")
+   Call("GET", _prefix + { _defaultPrefix } + "nextUser")
 }
                         
 
@@ -269,7 +269,7 @@ def nextUser : JavascriptReverseRoute = JavascriptReverseRoute(
    "controllers.Application.nextUser",
    """
       function() {
-      return _wA({method:"PUT", url:"""" + _prefix + { _defaultPrefix } + """" + "nextUser"})
+      return _wA({method:"GET", url:"""" + _prefix + { _defaultPrefix } + """" + "nextUser"})
       }
    """
 )
@@ -382,7 +382,7 @@ def wsInterface(): play.api.mvc.HandlerRef[_] = new play.api.mvc.HandlerRef(
 
 // @LINE:34
 def nextUser(): play.api.mvc.HandlerRef[_] = new play.api.mvc.HandlerRef(
-   controllers.Application.nextUser(), HandlerDef(this.getClass.getClassLoader, "", "controllers.Application", "nextUser", Seq(), "PUT", """""", _prefix + """nextUser""")
+   controllers.Application.nextUser(), HandlerDef(this.getClass.getClassLoader, "", "controllers.Application", "nextUser", Seq(), "GET", """""", _prefix + """nextUser""")
 )
                       
 

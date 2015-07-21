@@ -43,6 +43,9 @@ public class Client extends Model{
     @Column(name = "image")
     public String image;
 
+    @Column(name = "pairedEmail")
+    public String pairedEmail;
+
     public String getName() {
         return name;
     }
