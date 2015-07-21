@@ -121,17 +121,21 @@ public class RandChat {
             Random rand = new Random();
             int index2 = rand.nextInt(waiting.size());
             ClientConnection clientConnection2 = waiting.get(index2);
+System.out.println("yes1" + clientConnection1.getClient().getEmail());
 
             while(PairHistory.inHistory(clientConnection1.getClient(), clientConnection2.getClient())) {
+                System.out.println("yes2"+ clientConnection1.getClient().getEmail());
                 index2 = rand.nextInt(waiting.size());
                 clientConnection2 = waiting.get(index2);
             }
 
+            System.out.println("yes3"+ clientConnection1.getClient().getEmail());
             waiting.remove(clientConnection2);
 
             ChatPair chatPair = new ChatPair(clientConnection1, clientConnection2);
             clientConnection1.setChatPair(chatPair);
             clientConnection2.setChatPair(chatPair);
+
             PairHistory.createPairHistory(clientConnection1.getClient(), clientConnection2.getClient());
             PairHistory.createPairHistory(clientConnection2.getClient(), clientConnection1.getClient());
 

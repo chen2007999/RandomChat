@@ -6,11 +6,13 @@ import javax.persistence.*;
 import javax.persistence.Column;
 
 
+@Entity
 public class PairHistory extends Model {
 
-    @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
+
+    @Column(name = "email")
     public String email;
+
 
     public String getEmail() {
         return email;
@@ -42,6 +44,13 @@ public class PairHistory extends Model {
 
     public static boolean inHistory(Client client1, Client client2) {
         return find.where().eq("email", client1.getEmail()).eq("pairedId", client2.getEmail()).findList().size() != 0;
+       /* List<PairHistory> pairings = find.where().eq("email", client1.getEmail()).findList();
+        for(PairHistory p : pairings) {
+            if (p.getPairedId().equals(client2.getEmail())) {
+                return true;
+            }
+        }
+        return false;*/
     }
 
 }
