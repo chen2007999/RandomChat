@@ -15,16 +15,20 @@
 
     <h1>Simple chat</h1>
     <h3>current user: @Application.currentClient.getName()</h3>
-    <h3>the other side: @Application.theOtherUserName </h3>
+
+
+@helper.form(routes.Application.friendProfile()) {
+<button type="submit">The other user's profile </button>
+}
 
     <div id="the-other-side"></div>
     <div id="socket-messages"></div>
 
     <input type="text" id="socket-input" placeholder="message to send" />
 
-@helper.form(routes.Application.nextUser()) {
-<button type="submit">Next User</button>
-}
+<button onclick="nextUser()">Next User</button>
+
+
 
     <script type="text/javascript" charset="utf-8" src="@routes.Application.wsJs()"></script>
 

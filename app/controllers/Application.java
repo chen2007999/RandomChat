@@ -85,6 +85,7 @@ public class Application extends Controller {
 
             public void onReady(WebSocket.In<String> in, WebSocket.Out<String> out){
                 RandChat.nextUser(currentClient);
+                RandChat.start(in, out, currentClient);
             }
         };
 
@@ -93,6 +94,14 @@ public class Application extends Controller {
 
     public static Result wsJs() {
         return ok(views.js.ws.render());
+    }
+
+    public static Result friendProfile() {
+        ClientConnection clientConnection = RandChat.findClientConnection(currentClient);
+        if(clientConnection.isPaired()) {
+            return ok(friendProfile.render(clientConnection.getChatPair().getTheOtherClientConnection(clientConnection).getClient()));
+        }
+        return ok("hey");
     }
 
 

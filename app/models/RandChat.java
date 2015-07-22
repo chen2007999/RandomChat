@@ -38,22 +38,9 @@ public class RandChat {
                     chatPairs.remove(clientConnection1.getChatPair());
 
                     theOtherClientConnection.setChatPair(null);
-                    // System.out.println("before check  " + theOtherClientConnection.getChatPair());
 
-                   /* try {
-                        // thread to sleep for 1000 milliseconds
-                        Thread.sleep(10000);
-                    } catch (Exception e) {
-                        System.out.println(e);
-                    }*/
-                    //setUpConnection(theOtherClientConnection.getConnection(), theOtherClientConnection.getClient());
-                   // start(in, theOtherClientConnection.getConnection(), theOtherClientConnection.getClient());
                     waiting.add(theOtherClientConnection);
                     pairing(theOtherClientConnection);
-                    //pairing
-
-                    /*ChatPair cp = new ChatPair(theOtherClientConnection, theOtherClientConnection);
-                    theOtherClientConnection.setChatPair(cp);*/
 
                     System.out.println("after check  " + theOtherClientConnection.getChatPair());
 
@@ -66,24 +53,7 @@ public class RandChat {
     }
 
     private static ClientConnection setUpConnection(WebSocket.Out<String> out, Client client) {
-        ClientConnection clientConnection1 = null;
-        for(ClientConnection w : waiting) {
-            if(w.getClient().equals(client)) {
-                clientConnection1 = w;
-                return clientConnection1;
-            }
-        }
-
-        for (ChatPair chatPair : chatPairs) {
-            if (chatPair.getClientConnection1().getClient().equals(client)) {
-                clientConnection1 = chatPair.getClientConnection1();
-                break;
-            }
-            if (chatPair.getClientConnection2().getClient().equals(client)) {
-                clientConnection1 = chatPair.getClientConnection2();
-                break;
-            }
-        }
+        ClientConnection clientConnection1 = findClientConnection(client);
 
         if(clientConnection1 == null) {
             clientConnection1 = new ClientConnection(client, out);
@@ -139,8 +109,8 @@ System.out.println("yes1" + clientConnection1.getClient().getEmail());
             PairHistory.createPairHistory(clientConnection1.getClient(), clientConnection2.getClient());
             PairHistory.createPairHistory(clientConnection2.getClient(), clientConnection1.getClient());
 
-            clientConnection1.getConnection().write("Just got connected with " + clientConnection2.getClient().getName());
-            clientConnection2.getConnection().write("Just got connected with " + clientConnection1.getClient().getName());
+            clientConnection1.getConnection().write("Just got connected to " + clientConnection2.getClient().getName());
+            clientConnection2.getConnection().write("Just got connected to " + clientConnection1.getClient().getName());
 
             System.out.println("Conrrent user: " + clientConnection1.getClient().getEmail());
             System.out.println("The other user: " + clientConnection2.getClient().getEmail());
@@ -176,6 +146,28 @@ System.out.println("yes1" + clientConnection1.getClient().getEmail());
         pairing(clientConnection1);
         pairing(clientConnection2);
 
+    }
+
+    public static ClientConnection findClientConnection(Client client) {
+        ClientConnection clientConnection = null;
+        for(ClientConnection w : waiting) {
+            if(w.getClient().equals(client)) {
+                clientConnection = w;
+                break;
+            }
+        }
+
+        for (ChatPair chatPair : chatPairs) {
+            if (chatPair.getClientConnection1().getClient().equals(client)) {
+                clientConnection = chatPair.getClientConnection1();
+                break;
+            }
+            if (chatPair.getClientConnection2().getClient().equals(client)) {
+                clientConnection = chatPair.getClientConnection2();
+                break;
+            }
+        }
+        return clientConnection;
     }
 
     public static List<Client> getChatPairs() {

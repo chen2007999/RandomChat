@@ -1,6 +1,6 @@
 // @SOURCE:/Users/jiaqichen/Desktop/RandChat/conf/routes
-// @HASH:de5e214b36a711cc3c58481671cff77d11284528
-// @DATE:Tue Jul 21 19:17:21 BST 2015
+// @HASH:67c9cf49b86e6d9056ab8a74abc75fc4d3c51871
+// @DATE:Wed Jul 22 22:03:07 BST 2015
 
 import Routes.{prefix => _prefix, defaultPrefix => _defaultPrefix}
 import play.core._
@@ -16,6 +16,7 @@ import Router.queryString
 
 
 // @LINE:36
+// @LINE:35
 // @LINE:34
 // @LINE:33
 // @LINE:29
@@ -43,6 +44,7 @@ def at(file:String): Call = {
                           
 
 // @LINE:36
+// @LINE:35
 // @LINE:34
 // @LINE:33
 // @LINE:29
@@ -104,6 +106,13 @@ def displayAllClientsFromDB(): Call = {
 }
                         
 
+// @LINE:35
+def friendProfile(): Call = {
+   import ReverseRouteContext.empty
+   Call("GET", _prefix + { _defaultPrefix } + "friendProfile")
+}
+                        
+
 // @LINE:33
 def wsInterface(): Call = {
    import ReverseRouteContext.empty
@@ -132,6 +141,7 @@ def index(): Call = {
 
 
 // @LINE:36
+// @LINE:35
 // @LINE:34
 // @LINE:33
 // @LINE:29
@@ -164,6 +174,7 @@ def at : JavascriptReverseRoute = JavascriptReverseRoute(
               
 
 // @LINE:36
+// @LINE:35
 // @LINE:34
 // @LINE:33
 // @LINE:29
@@ -253,6 +264,17 @@ def displayAllClientsFromDB : JavascriptReverseRoute = JavascriptReverseRoute(
 )
                         
 
+// @LINE:35
+def friendProfile : JavascriptReverseRoute = JavascriptReverseRoute(
+   "controllers.Application.friendProfile",
+   """
+      function() {
+      return _wA({method:"GET", url:"""" + _prefix + { _defaultPrefix } + """" + "friendProfile"})
+      }
+   """
+)
+                        
+
 // @LINE:33
 def wsInterface : JavascriptReverseRoute = JavascriptReverseRoute(
    "controllers.Application.wsInterface",
@@ -293,6 +315,7 @@ def index : JavascriptReverseRoute = JavascriptReverseRoute(
 
 
 // @LINE:36
+// @LINE:35
 // @LINE:34
 // @LINE:33
 // @LINE:29
@@ -320,6 +343,7 @@ def at(path:String, file:String): play.api.mvc.HandlerRef[_] = new play.api.mvc.
                           
 
 // @LINE:36
+// @LINE:35
 // @LINE:34
 // @LINE:33
 // @LINE:29
@@ -371,6 +395,12 @@ def register(error:String): play.api.mvc.HandlerRef[_] = new play.api.mvc.Handle
 // @LINE:29
 def displayAllClientsFromDB(): play.api.mvc.HandlerRef[_] = new play.api.mvc.HandlerRef(
    controllers.Application.displayAllClientsFromDB(), HandlerDef(this.getClass.getClassLoader, "", "controllers.Application", "displayAllClientsFromDB", Seq(), "GET", """ Display all clients in the database""", _prefix + """clients""")
+)
+                      
+
+// @LINE:35
+def friendProfile(): play.api.mvc.HandlerRef[_] = new play.api.mvc.HandlerRef(
+   controllers.Application.friendProfile(), HandlerDef(this.getClass.getClassLoader, "", "controllers.Application", "friendProfile", Seq(), "GET", """""", _prefix + """friendProfile""")
 )
                       
 

@@ -43,21 +43,25 @@ Seq[Any](format.raw/*1.95*/("""
 
     """),format.raw/*16.5*/("""<h1>Simple chat</h1>
     <h3>current user: """),_display_(/*17.24*/Application/*17.35*/.currentClient.getName()),format.raw/*17.59*/("""</h3>
-    <h3>the other side: """),_display_(/*18.26*/Application/*18.37*/.theOtherUserName),format.raw/*18.54*/(""" """),format.raw/*18.55*/("""</h3>
 
-    <div id="the-other-side"></div>
+
+"""),_display_(/*20.2*/helper/*20.8*/.form(routes.Application.friendProfile())/*20.49*/ {_display_(Seq[Any](format.raw/*20.51*/("""
+"""),format.raw/*21.1*/("""<button type="submit">The other user's profile </button>
+""")))}),format.raw/*22.2*/("""
+
+    """),format.raw/*24.5*/("""<div id="the-other-side"></div>
     <div id="socket-messages"></div>
 
     <input type="text" id="socket-input" placeholder="message to send" />
 
-"""),_display_(/*25.2*/helper/*25.8*/.form(routes.Application.nextUser())/*25.44*/ {_display_(Seq[Any](format.raw/*25.46*/("""
-"""),format.raw/*26.1*/("""<button type="submit">Next User</button>
-""")))}),format.raw/*27.2*/("""
-
-    """),format.raw/*29.5*/("""<script type="text/javascript" charset="utf-8" src=""""),_display_(/*29.58*/routes/*29.64*/.Application.wsJs()),format.raw/*29.83*/(""""></script>
+<button onclick="nextUser()">Next User</button>
 
 
-""")))}),format.raw/*32.2*/("""
+
+    <script type="text/javascript" charset="utf-8" src=""""),_display_(/*33.58*/routes/*33.64*/.Application.wsJs()),format.raw/*33.83*/(""""></script>
+
+
+""")))}),format.raw/*36.2*/("""
 
 """))}
   }
@@ -71,11 +75,11 @@ Seq[Any](format.raw/*1.95*/("""
 }
               /*
                   -- GENERATED --
-                  DATE: Mon Jul 20 23:09:29 BST 2015
+                  DATE: Wed Jul 22 22:03:08 BST 2015
                   SOURCE: /Users/jiaqichen/Desktop/RandChat/app/views/index.scala.html
-                  HASH: 092825d19872a34a68597134c5603b1b813c025a
-                  MATRIX: 776->1|957->94|985->97|1009->113|1048->115|1078->120|1110->137|1149->139|1178->142|1223->161|1232->162|1258->168|1294->175|1323->178|1358->197|1398->199|1426->200|1473->220|1483->221|1510->227|1547->234|1581->241|1652->285|1672->296|1717->320|1775->351|1795->362|1833->379|1862->380|2045->537|2059->543|2104->579|2144->581|2172->582|2244->624|2277->630|2357->683|2372->689|2412->708|2457->723
-                  LINES: 26->1|29->1|31->3|31->3|31->3|35->7|35->7|35->7|36->8|36->8|36->8|36->8|37->9|39->11|39->11|39->11|40->12|40->12|40->12|40->12|41->13|44->16|45->17|45->17|45->17|46->18|46->18|46->18|46->18|53->25|53->25|53->25|53->25|54->26|55->27|57->29|57->29|57->29|57->29|60->32
+                  HASH: d1c34531f058390233ff206039bfa6f8ac4b7e8e
+                  MATRIX: 776->1|957->94|985->97|1009->113|1048->115|1078->120|1110->137|1149->139|1178->142|1223->161|1232->162|1258->168|1294->175|1323->178|1358->197|1398->199|1426->200|1473->220|1483->221|1510->227|1547->234|1581->241|1652->285|1672->296|1717->320|1752->329|1766->335|1816->376|1856->378|1884->379|1972->437|2005->443|2285->696|2300->702|2340->721|2385->736
+                  LINES: 26->1|29->1|31->3|31->3|31->3|35->7|35->7|35->7|36->8|36->8|36->8|36->8|37->9|39->11|39->11|39->11|40->12|40->12|40->12|40->12|41->13|44->16|45->17|45->17|45->17|48->20|48->20|48->20|48->20|49->21|50->22|52->24|61->33|61->33|61->33|64->36
                   -- GENERATED --
               */
           

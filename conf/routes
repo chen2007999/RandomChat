@@ -32,5 +32,5 @@ GET    /clients                           controllers.Application.displayAllClie
 
 GET /wsInterface                controllers.Application.wsInterface()
 GET /nextUser               controllers.Application.nextUser()
-
+GET /friendProfile             controllers.Application.friendProfile()
 GET /assets.javascript.ws.js     controllers.Application.wsJs()

@@ -21,4 +21,8 @@ $(function(){
               $(this).val('');
             }
         });
+
+        /*function myFunction() {
+            models.RandChat.nextUser(socket);
+        }*/
 });
