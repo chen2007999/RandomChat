@@ -86,35 +86,41 @@ public class RandChat {
     private static void pairing(ClientConnection clientConnection1) {
         //   Pairing
         if(waiting.size() >= 2) {
-            waiting.remove(clientConnection1);
 
-            Random rand = new Random();
-            int index2 = rand.nextInt(waiting.size());
-            ClientConnection clientConnection2 = waiting.get(index2);
-System.out.println("yes1" + clientConnection1.getClient().getEmail());
+            System.out.println("yes1" + clientConnection1.getClient().getEmail());
 
-            while(PairHistory.inHistory(clientConnection1.getClient(), clientConnection2.getClient())) {
-                System.out.println("yes2"+ clientConnection1.getClient().getEmail());
-                index2 = rand.nextInt(waiting.size());
-                clientConnection2 = waiting.get(index2);
+            ClientConnection clientConnection2 = null;
+
+            for(int i=0; i<waiting.size(); i++) {
+                if(!PairHistory.inHistory(clientConnection1.getClient(), waiting.get(i).getClient())) {
+                    if(!waiting.get(i).getClient().equals(clientConnection1.getClient())) {
+                        clientConnection2 = waiting.get(i);
+                        break;
+                    }
+                }
             }
+                //System.out.println("yes2"+ clientConnection1.getClient().getEmail());
 
-            System.out.println("yes3" + clientConnection1.getClient().getEmail());
-            waiting.remove(clientConnection2);
+            if(clientConnection2 != null) {
 
-            ChatPair chatPair = new ChatPair(clientConnection1, clientConnection2);
-            clientConnection1.setChatPair(chatPair);
-            clientConnection2.setChatPair(chatPair);
+                System.out.println("yes3" + clientConnection1.getClient().getEmail());
+                waiting.remove(clientConnection1);
+                waiting.remove(clientConnection2);
 
-            PairHistory.createPairHistory(clientConnection1.getClient(), clientConnection2.getClient());
-            PairHistory.createPairHistory(clientConnection2.getClient(), clientConnection1.getClient());
+                ChatPair chatPair = new ChatPair(clientConnection1, clientConnection2);
+                clientConnection1.setChatPair(chatPair);
+                clientConnection2.setChatPair(chatPair);
 
-            clientConnection1.getConnection().write("Just got connected to " + clientConnection2.getClient().getName());
-            clientConnection2.getConnection().write("Just got connected to " + clientConnection1.getClient().getName());
+                PairHistory.createPairHistory(clientConnection1.getClient(), clientConnection2.getClient());
+                PairHistory.createPairHistory(clientConnection2.getClient(), clientConnection1.getClient());
 
-            System.out.println("Conrrent user: " + clientConnection1.getClient().getEmail());
-            System.out.println("The other user: " + clientConnection2.getClient().getEmail());
-            System.out.println("The other user's pair user: " + clientConnection2.getChatPair().getTheOtherClientConnection(clientConnection2).getClient().getEmail());
+                clientConnection1.getConnection().write("Just got connected to " + clientConnection2.getClient().getName());
+                clientConnection2.getConnection().write("Just got connected to " + clientConnection1.getClient().getName());
+
+                System.out.println("Conrrent user: " + clientConnection1.getClient().getEmail());
+                System.out.println("The other user: " + clientConnection2.getClient().getEmail());
+                System.out.println("The other user's pair user: " + clientConnection2.getChatPair().getTheOtherClientConnection(clientConnection2).getClient().getEmail());
+            }
         }
     }
 
