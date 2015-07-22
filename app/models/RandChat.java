@@ -33,7 +33,7 @@ public class RandChat {
                 if (clientConnection1.isPaired()) {
                     ClientConnection theOtherClientConnection = clientConnection1.getChatPair().getTheOtherClientConnection(clientConnection1);
 
-                    theOtherClientConnection.notifyClosed();
+                    theOtherClientConnection.notifyClosed(clientConnection1.getClient());
 
                     chatPairs.remove(clientConnection1.getChatPair());
 
@@ -129,7 +129,7 @@ System.out.println("yes1" + clientConnection1.getClient().getEmail());
                 clientConnection2 = waiting.get(index2);
             }
 
-            System.out.println("yes3"+ clientConnection1.getClient().getEmail());
+            System.out.println("yes3" + clientConnection1.getClient().getEmail());
             waiting.remove(clientConnection2);
 
             ChatPair chatPair = new ChatPair(clientConnection1, clientConnection2);
@@ -139,12 +139,12 @@ System.out.println("yes1" + clientConnection1.getClient().getEmail());
             PairHistory.createPairHistory(clientConnection1.getClient(), clientConnection2.getClient());
             PairHistory.createPairHistory(clientConnection2.getClient(), clientConnection1.getClient());
 
+            clientConnection1.getConnection().write("Just got connected with " + clientConnection2.getClient().getName());
+            clientConnection2.getConnection().write("Just got connected with " + clientConnection1.getClient().getName());
+
             System.out.println("Conrrent user: " + clientConnection1.getClient().getEmail());
             System.out.println("The other user: " + clientConnection2.getClient().getEmail());
             System.out.println("The other user's pair user: " + clientConnection2.getChatPair().getTheOtherClientConnection(clientConnection2).getClient().getEmail());
-            // System.out.println("---------");
-            //System.out.println("The user1: " + clientConnection1.getChatPair());
-            //System.out.println("The user2: " + clientConnection2.getChatPair());
         }
     }
 
@@ -152,6 +152,7 @@ System.out.println("yes1" + clientConnection1.getClient().getEmail());
     public static void nextUser(Client client) {
         ClientConnection clientConnection1 = null;
         ClientConnection clientConnection2 = null;
+
         for (ChatPair chatPair : chatPairs) {
             if (chatPair.getClientConnection1().getClient().equals(client)) {
                 clientConnection1 = chatPair.getClientConnection1();

@@ -82,7 +82,7 @@ public class Application extends Controller {
 
     public static WebSocket<String> nextUser(){
         return new WebSocket<String>(){
-            // called when websocket handshake is done
+
             public void onReady(WebSocket.In<String> in, WebSocket.Out<String> out){
                 RandChat.nextUser(currentClient);
             }

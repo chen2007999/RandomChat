@@ -34,8 +34,8 @@ public class ClientConnection {
         return chatPair != null;
     }
 
-    public void notifyClosed() {
-       connection.write("The other user just left, waiting to be connected to the next user.");
+    public void notifyClosed(Client client) {
+       connection.write(client.getName() + " just left, waiting to be connected to the next user.");
     }
 
 
