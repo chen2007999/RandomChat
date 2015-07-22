@@ -84,7 +84,6 @@ public class RandChat {
     }
 
     private static void pairing(ClientConnection clientConnection1) {
-        //   Pairing
         if(waiting.size() >= 2) {
 
             System.out.println("yes1" + clientConnection1.getClient().getEmail());
@@ -99,7 +98,7 @@ public class RandChat {
                     }
                 }
             }
-                //System.out.println("yes2"+ clientConnection1.getClient().getEmail());
+
 
             if(clientConnection2 != null) {
 
@@ -108,6 +107,7 @@ public class RandChat {
                 waiting.remove(clientConnection2);
 
                 ChatPair chatPair = new ChatPair(clientConnection1, clientConnection2);
+                chatPairs.add(chatPair);
                 clientConnection1.setChatPair(chatPair);
                 clientConnection2.setChatPair(chatPair);
 

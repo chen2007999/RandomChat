@@ -98,7 +98,7 @@ public class Application extends Controller {
 
     public static Result friendProfile() {
         ClientConnection clientConnection = RandChat.findClientConnection(currentClient);
-        if(clientConnection.isPaired()) {
+        if(clientConnection != null && clientConnection.isPaired()) {
             return ok(friendProfile.render(clientConnection.getChatPair().getTheOtherClientConnection(clientConnection).getClient()));
         }
         return ok("hey");
