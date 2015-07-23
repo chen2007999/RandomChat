@@ -1,13 +1,13 @@
-2015-07-22 22:30:50,843 - [INFO] - from play in pool-6-thread-1 
+2015-07-23 20:05:30,782 - [INFO] - from play in pool-6-thread-5 
 Listening for HTTP on /0:0:0:0:0:0:0:0:9000
 
-2015-07-22 22:30:55,604 - [INFO] - from play in play-internal-execution-context-1 
+2015-07-23 20:05:37,238 - [INFO] - from play in play-internal-execution-context-1 
 database [default] connected at jdbc:h2:mem:play
 
-2015-07-22 22:30:56,000 - [ERROR] - from application in New I/O worker #1 
+2015-07-23 20:05:37,622 - [ERROR] - from application in New I/O worker #1 
 
 
-! @6mpi3hn8l - Internal server error, for (GET) [/] ->
+! @6mpohhgpc - Internal server error, for (POST) [/logIn] ->
 
 play.api.db.evolutions.InvalidDatabaseRevision: Database 'default' needs evolution![An SQL script need to be run on your database.]
 	at play.api.db.evolutions.EvolutionsPlugin$$anonfun$onStart$1$$anonfun$apply$1.apply$mcV$sp(Evolutions.scala:510) ~[play-jdbc_2.11-2.3.9.jar:2.3.9]
@@ -40,7 +40,7 @@ play.api.db.evolutions.InvalidDatabaseRevision: Database 'default' needs evoluti
 	at scala.concurrent.forkjoin.ForkJoinPool.runWorker(ForkJoinPool.java:1979) ~[scala-library-2.11.6.jar:na]
 	at scala.concurrent.forkjoin.ForkJoinWorkerThread.run(ForkJoinWorkerThread.java:107) ~[scala-library-2.11.6.jar:na]
 
-2015-07-22 22:30:57,506 - [WARN] - from play in play-internal-execution-context-1 
+2015-07-23 20:05:39,256 - [WARN] - from play in play-internal-execution-context-1 
 Error stopping plugin
 java.lang.NullPointerException: null
 	at play.libs.ws.ning.NingWSPlugin.onStop(NingWSPlugin.java:31) ~[play-java-ws_2.11-2.3.9.jar:2.3.9]
@@ -71,9 +71,39 @@ java.lang.NullPointerException: null
 	at scala.concurrent.forkjoin.ForkJoinPool.runWorker(ForkJoinPool.java:1979) [scala-library-2.11.6.jar:na]
 	at scala.concurrent.forkjoin.ForkJoinWorkerThread.run(ForkJoinWorkerThread.java:107) [scala-library-2.11.6.jar:na]
 
-2015-07-22 22:30:57,542 - [INFO] - from play in play-internal-execution-context-1 
+2015-07-23 20:05:39,297 - [INFO] - from play in play-internal-execution-context-1 
 database [default] connected at jdbc:h2:mem:play
 
-2015-07-22 22:30:57,697 - [INFO] - from play in play-internal-execution-context-1 
+2015-07-23 20:05:39,441 - [INFO] - from play in play-internal-execution-context-1 
+Application started (Dev)
+
+2015-07-23 20:06:20,834 - [INFO] - from play in play-internal-execution-context-1 
+database [default] connected at jdbc:h2:mem:play
+
+2015-07-23 20:06:20,922 - [INFO] - from play in play-internal-execution-context-1 
+Application started (Dev)
+
+2015-07-23 20:06:37,596 - [INFO] - from play in play-internal-execution-context-1 
+database [default] connected at jdbc:h2:mem:play
+
+2015-07-23 20:06:37,661 - [INFO] - from play in play-internal-execution-context-1 
+Application started (Dev)
+
+2015-07-23 20:07:27,944 - [INFO] - from play in play-internal-execution-context-3 
+database [default] connected at jdbc:h2:mem:play
+
+2015-07-23 20:07:28,013 - [INFO] - from play in play-internal-execution-context-3 
+Application started (Dev)
+
+2015-07-23 20:08:34,487 - [INFO] - from play in play-internal-execution-context-3 
+database [default] connected at jdbc:h2:mem:play
+
+2015-07-23 20:08:34,760 - [INFO] - from play in play-internal-execution-context-3 
+Application started (Dev)
+
+2015-07-23 20:09:37,366 - [INFO] - from play in play-internal-execution-context-3 
+database [default] connected at jdbc:h2:mem:play
+
+2015-07-23 20:09:37,439 - [INFO] - from play in play-internal-execution-context-3 
 Application started (Dev)
 

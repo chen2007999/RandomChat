@@ -16,10 +16,19 @@
     <h1>Welcome to RandChat</h1>
     <h3>current user: @Application.currentClient.getName()</h3>
 
-
-@helper.form(routes.Application.friendProfile()) {
-<button type="submit">The other user's profile </button>
+<script language="javascript">
+var popupWindow = null;
+function centeredPopup(url,winName,w,h,scroll){
+LeftPosition = (screen.width) ? (screen.width-w)/2 : 0;
+TopPosition = (screen.height) ? (screen.height-h)/2 : 0;
+settings =
+'height='+h+',width='+w+',top='+TopPosition+',left='+LeftPosition+',scrollbars='+scroll+',resizable'
+popupWindow = window.open(url,winName,settings)
 }
+</script>
+<p><button href="friendProfile" onclick="centeredPopup(this.href,'myWindow','700','300','yes');return false">the other user's profile</button></p>
+
+
 
     <div id="the-other-side"></div>
     <div id="socket-messages"></div>
@@ -27,7 +36,6 @@
     <input type="text" id="socket-input" placeholder="message to send" />
 
 <button onclick="nextUser()">Next User</button>
-
 
 
     <script type="text/javascript" charset="utf-8" src="@routes.Application.wsJs()"></script>
