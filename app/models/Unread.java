@@ -37,6 +37,10 @@ public class Unread extends Model{
         return friendRequestClientEmail;
     }
 
+    public void setClientEmail(String clientEmail) {
+        this.clientEmail = clientEmail;
+    }
+
     public  static Finder<Long, Unread> find = new Finder<Long, Unread>(Long.class, Unread.class);
 
 
@@ -51,7 +55,12 @@ public class Unread extends Model{
     }
 
 
-
+    public static void createUnreadFriendRequest(Client currentClient, String friendRequestClientEmail) {
+        Unread unread = new Unread();
+        unread.setClientEmail(currentClient.getEmail());
+        unread.setFriendRequestClientEmail(friendRequestClientEmail);
+        unread.save();
+    }
 
    /* public static void updateUnreadComment(Long commentId) {
         Unread unread = find.where().eq("commentID", commentId).findList().get(0);

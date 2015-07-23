@@ -104,8 +104,8 @@ public class Application extends Controller {
         return ok("Not connected to a user yet, please wait for the next user. :)");
     }
 
-    public static Result addFriend(String clientEmail) {
-
+    public static Result addFriend(String friendRequestClientEmail) {
+        Unread.createUnreadFriendRequest(currentClient, friendRequestClientEmail);
         return ok("Friend request sent, waiting to be comfirmed..");
     }
 
