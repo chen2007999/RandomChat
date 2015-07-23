@@ -3,9 +3,8 @@
 @main(client.name) {
 
 <h3>@client.name</h3>
-<h3>@client.email</h3>
-@client.image
+@helper.form(routes.Application.addFriend(@client.email)) {
+<button type="submit">add firend</button><br>
+}
 
-
-yeahhh
 }

@@ -101,10 +101,13 @@ public class Application extends Controller {
         if(clientConnection != null && clientConnection.isPaired()) {
             return ok(friendProfile.render(clientConnection.getChatPair().getTheOtherClientConnection(clientConnection).getClient()));
         }
-        return ok("hey");
+        return ok("Not connected to a user yet, please wait for the next user. :)");
     }
 
+    public static Result addFriend(String clientEmail) {
 
+        return ok("Friend request sent, waiting to be comfirmed..");
+    }
 
 
 }
