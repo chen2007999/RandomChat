@@ -16,18 +16,27 @@ public class Friend extends Model{
         return email;
     }
 
-    @Column(name = "firendId")
-    public String firendId;
+    @Column(name = "friendEmail")
+    public String friendEmail;
 
     public void setEmail(String email) {
         this.email = email;
     }
 
-    public void setPairedId(String firendId) {
-        this.firendId = firendId;
+    public void setPairedEmail(String friendEmail) {
+        this.friendEmail = friendEmail;
     }
 
-    public String getFirendId() {
-        return firendId;
+    public String getfriendEmail() {
+        return friendEmail;
     }
+
+    public void createFriend(Client client, String friendEmail) {
+        Friend friend = new Friend();
+        friend.setEmail(client.getEmail());
+        friend.setPairedEmail(friendEmail);
+        friend.save();
+    }
+
+
 }

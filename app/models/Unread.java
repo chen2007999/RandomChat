@@ -44,10 +44,22 @@ public class Unread extends Model{
     public  static Finder<Long, Unread> find = new Finder<Long, Unread>(Long.class, Unread.class);
 
 
-
     public static List<Unread> getUnread(Client client) {
         return find.where().eq("clientEmail", client.getEmail()).findList();
     }
+
+    public static List<Client> getUnreadFriendRequest(Client client) {
+        List<Unread> unreads = getUnread(client);
+        List<Client> friendRequestEmails = new ArrayList<Client>();
+        for(Unread unread : unreads) {
+            String friendRequestEmail = unread.getFriendRequestClientEmail();
+            if(friendRequestEmail != null) {
+                friendRequestEmails.add(Client.findClientByEmail(friendRequestEmail));
+            }
+        }
+        return friendRequestEmails;
+    }
+
 
     public static int getUnreadNum(Client client) {
         List<Unread> unreads = getUnread(client);
@@ -55,28 +67,17 @@ public class Unread extends Model{
     }
 
 
-    public static void createUnreadFriendRequest(Client currentClient, String friendRequestClientEmail) {
+    public static void createUnreadFriendRequest(Client friendRequestClient, String clientEmail) {
         Unread unread = new Unread();
-        unread.setClientEmail(currentClient.getEmail());
-        unread.setFriendRequestClientEmail(friendRequestClientEmail);
+        unread.setClientEmail(clientEmail);
+        unread.setFriendRequestClientEmail(friendRequestClient.getEmail());
         unread.save();
     }
 
-   /* public static void updateUnreadComment(Long commentId) {
-        Unread unread = find.where().eq("commentID", commentId).findList().get(0);
+    public static void updateUnreadFriendRequest(String friendRequestClientEmail) {
+        Unread unread = find.where().eq("friendRequestClientEmail", friendRequestClientEmail).findList().get(0);
         unread.delete();
     }
-
-    public static void updateUnreadTask(Long taskId) {
-        Unread unread = find.where().eq("taskId", taskId).findList().get(0);
-        unread.delete();
-    }
-
-    public static void updateUnreadEvent(Long eventId, Client client) {
-        Unread unread = find.where().eq("eventId", eventId).eq("userEmail", client.getEmail()).findList().get(0);
-        unread.delete();
-    }*/
-
 
 
 }

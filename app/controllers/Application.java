@@ -41,7 +41,7 @@ public class Application extends Controller {
         }
         Client.createClient(client);
         currentClient = client;
-        return ok(index.render(currentClient, RandChat.getWaiting(), RandChat.getChatPairs()));
+        return ok(randChat.render(currentClient, RandChat.getWaiting(), RandChat.getChatPairs(), Unread.getUnreadNum(currentClient)));
     }
 
     public static  Result deleteClientFromDB(String email) {
@@ -57,7 +57,7 @@ public class Application extends Controller {
         Client client = getClient();
         if(Client.validate(client)) {
             currentClient = Client.findClient(client);
-            return ok(index.render(currentClient, RandChat.getWaiting(), RandChat.getChatPairs()));
+            return ok(randChat.render(currentClient, RandChat.getWaiting(), RandChat.getChatPairs(), Unread.getUnreadNum(currentClient)));
         }
         return ok(landing.render());
     }
@@ -107,6 +107,14 @@ public class Application extends Controller {
     public static Result addFriend(String friendRequestClientEmail) {
         Unread.createUnreadFriendRequest(currentClient, friendRequestClientEmail);
         return ok("Friend request sent, waiting to be comfirmed..");
+    }
+
+    public static Result showUnread() {
+        if(Unread.getUnreadNum(currentClient) == 0) {
+            return ok("Everything has been read.");
+        } else {
+            return ok(unread.render(Unread.getUnreadFriendRequest(currentClient)));
+        }
     }
 
 

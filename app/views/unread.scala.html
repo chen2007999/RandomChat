@@ -1,0 +1,19 @@
+@(clients: java.util.List[Client])
+
+@main("Unread") {
+
+<h1>Unread</h1>
+
+<ul>
+    @for(client <- clients) {
+    <li>
+        @helper.form(routes.Application.landing()) {
+        <button type="submit"> <h3> @client.name sent you a friend request</h3></button><br>
+        }
+    </li>
+    }
+</ul>
+
+
+
+}
