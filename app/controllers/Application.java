@@ -96,10 +96,18 @@ public class Application extends Controller {
         return ok(views.js.ws.render());
     }
 
+    public static Result findFriendProfileWithClientEmail(String clientEmail) {
+        Client client = Client.findClientByEmail(clientEmail);
+
+        return ok(friendProfile.render(client, Unread.friendRequestReceived(currentClient, client)));
+
+    }
+
     public static Result friendProfile() {
         ClientConnection clientConnection = RandChat.findClientConnection(currentClient);
         if(clientConnection != null && clientConnection.isPaired()) {
-            return ok(friendProfile.render(clientConnection.getChatPair().getTheOtherClientConnection(clientConnection).getClient()));
+            Client client2 = clientConnection.getChatPair().getTheOtherClientConnection(clientConnection).getClient();
+            return ok(friendProfile.render(client2, Unread.friendRequestReceived(currentClient, client2)));
         }
         return ok("Not connected to a user yet, please wait for the next user. :)");
     }

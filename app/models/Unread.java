@@ -79,5 +79,8 @@ public class Unread extends Model{
         unread.delete();
     }
 
+    public static boolean friendRequestReceived(Client client1, Client client2) {
+        return find.where().eq("clientEmail", client1.getEmail()).eq("friendRequestClientEmail", client2.getEmail()).findList().size() != 0;
+    }
 
 }

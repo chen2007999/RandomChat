@@ -1,10 +1,36 @@
-@(client: models.Client)
+@(client: models.Client, requestReceived : Boolean)
 
 @main(client.name) {
 
 <h3>@client.name</h3>
+
+
 @helper.form(routes.Application.addFriend(client.email)) {
-<button type="submit">add firend</button><br>
+<button id="add" type="submit">add friend</button><br>
 }
+
+@helper.form(routes.Application.addFriend(client.email)) {
+<button id="confirm" type="submit">confirm friend request</button><br>
+};
+
+<script language="javascript">
+function switch() {
+            var confirm = document.getElementById( 'confirm' ),
+            add = document.getElementById( 'add' );
+
+            if(requestReceived){
+                 confirm.style.display = "none";
+                 add.style.display = "block";
+            }
+
+            else{
+               add.style.display = "none";
+                 confirm.style.display = "block";
+            }
+}
+
+</script>
+
+
 
 }

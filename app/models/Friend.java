@@ -31,12 +31,16 @@ public class Friend extends Model{
         return friendEmail;
     }
 
-    public void createFriend(Client client, String friendEmail) {
+    public static void createFriend(Client client, String friendEmail) {
         Friend friend = new Friend();
         friend.setEmail(client.getEmail());
         friend.setPairedEmail(friendEmail);
         friend.save();
     }
 
+    public static boolean friendWith(Client client1, Client client2) {
+        return find.where().eq("email", client1.getEmail()).eq("friendEmail", client2.getEmail()).findList().size() != 0;
+    }
 
+    public static Finder<String, Friend> find = new Finder<String, Friend>(String.class, Friend.class);
 }

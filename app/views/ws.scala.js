@@ -22,7 +22,8 @@ $(function(){
             }
         });
 
-        /*function myFunction() {
+      /*  function nextUser() {
+            $('#socket-messages').append('test');
             models.RandChat.nextUser(socket);
         }*/
 });
