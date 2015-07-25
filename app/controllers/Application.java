@@ -68,8 +68,6 @@ public class Application extends Controller {
 
 
 
-
-
     // Websocket interface
     public static WebSocket<String> wsInterface(){
         return new WebSocket<String>(){
@@ -80,14 +78,11 @@ public class Application extends Controller {
         };
     }
 
-    public static WebSocket<String> nextUser(){
-        return new WebSocket<String>(){
+    public static Result nextUser(){
 
-            public void onReady(WebSocket.In<String> in, WebSocket.Out<String> out){
-                RandChat.nextUser(currentClient);
-                RandChat.start(in, out, currentClient);
-            }
-        };
+     //RandChat.nextUser(currentClient);
+
+      return ok("hello");
 
     }
 

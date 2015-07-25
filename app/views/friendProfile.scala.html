@@ -4,32 +4,32 @@
 
 <h3>@client.name</h3>
 
-
 @helper.form(routes.Application.addFriend(client.email)) {
 <button id="add" type="submit">add friend</button><br>
 }
 
 @helper.form(routes.Application.addFriend(client.email)) {
 <button id="confirm" type="submit">confirm friend request</button><br>
-};
+}
 
-<script language="javascript">
-function switch() {
-            var confirm = document.getElementById( 'confirm' ),
-            add = document.getElementById( 'add' );
 
-            if(requestReceived){
+<script type="text/javascript">
+            var confirm = document.getElementById('confirm');
+            var add = document.getElementById('add');
+
+            if(@requestReceived){
                  confirm.style.display = "none";
-                 add.style.display = "block";
+                 add.style.display = "";
             }
 
             else{
-               add.style.display = "none";
-                 confirm.style.display = "block";
+                 add.style.display = "none";
+                 confirm.style.display = "";
             }
-}
-
 </script>
+
+
+
 
 
 

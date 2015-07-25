@@ -51,12 +51,27 @@ popupWindow = window.open(url,winName,settings)
     <input type="text" id="socket-input" placeholder="message to send" />
 
 
-<script language="javascript">
-function nextUser() {
-$('#socket-messages').append('test');
-models.RandChat.nextUser(socket);
+
+<script type="text/javascript">
+function nextUser()
+{
+        $.ajax(
+           "/nextUser", // URL/URI--> http://127.0.0.1//nextUser/   http://localhost/nextUser/
+        {
+        type: 'GET',
+        dataType: 'text',  // "text html"
+        success: function (data, textStatus, jqXHR){
+            var rText = jqXHR.responseText;
+            $('#socket-messages').append(rText);
+        },
+        error: function (jqXHR, textStatus, errorThown){
+            // alert('Load failed');
+        },
+        cache:false
+    });
 }
-</script>
+ </script>
+
 
 
 
