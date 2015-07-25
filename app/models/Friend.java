@@ -23,7 +23,7 @@ public class Friend extends Model{
         this.email = email;
     }
 
-    public void setPairedEmail(String friendEmail) {
+    public void setFriendEmail(String friendEmail) {
         this.friendEmail = friendEmail;
     }
 
@@ -34,7 +34,7 @@ public class Friend extends Model{
     public static void createFriend(Client client, String friendEmail) {
         Friend friend = new Friend();
         friend.setEmail(client.getEmail());
-        friend.setPairedEmail(friendEmail);
+        friend.setFriendEmail(friendEmail);
         friend.save();
     }
 

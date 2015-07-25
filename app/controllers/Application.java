@@ -7,7 +7,7 @@ import views.html.*;
 public class Application extends Controller {
 
     public static Client currentClient;
-    public static String theOtherUserName;
+
 
     // index to landing page by default
     public static Result index() {
@@ -59,7 +59,15 @@ public class Application extends Controller {
             currentClient = Client.findClient(client);
             return ok(randChat.render(currentClient, RandChat.getWaiting(), RandChat.getChatPairs(), Unread.getUnreadNum(currentClient)));
         }
-        return ok(landing.render());
+        //response().setCookie("client", client.getEmail());
+        String user = session("connected");
+        if(user != null) {
+            session("connected", client.getEmail());
+            return ok(landing.render());
+        } else {
+            return unauthorized("Oops, you are not connected");
+        }
+
     }
 
     public  static Result register(String error) {
@@ -79,8 +87,7 @@ public class Application extends Controller {
     }
 
     public static Result nextUser(){
-
-     //RandChat.nextUser(currentClient);
+        RandChat.nextUser(currentClient);
 
       return ok("hello");
 
@@ -93,8 +100,7 @@ public class Application extends Controller {
 
     public static Result findFriendProfileWithClientEmail(String clientEmail) {
         Client client = Client.findClientByEmail(clientEmail);
-
-        return ok(friendProfile.render(client, Unread.friendRequestReceived(currentClient, client)));
+        return ok(friendProfile.render(client, Unread.friendRequestReceived(currentClient, client), Friend.friendWith(client, currentClient)));
 
     }
 
@@ -102,7 +108,7 @@ public class Application extends Controller {
         ClientConnection clientConnection = RandChat.findClientConnection(currentClient);
         if(clientConnection != null && clientConnection.isPaired()) {
             Client client2 = clientConnection.getChatPair().getTheOtherClientConnection(clientConnection).getClient();
-            return ok(friendProfile.render(client2, Unread.friendRequestReceived(currentClient, client2)));
+            return ok(friendProfile.render(client2, Unread.friendRequestReceived(currentClient, client2), Friend.friendWith(currentClient, client2)));
         }
         return ok("Not connected to a user yet, please wait for the next user. :)");
     }
@@ -111,6 +117,13 @@ public class Application extends Controller {
         Unread.createUnreadFriendRequest(currentClient, friendRequestClientEmail);
         return ok("Friend request sent, waiting to be comfirmed..");
     }
+
+    public static Result acceptFriendRequest(String friendRequestClientEmail) {
+        Unread.updateUnreadFriendRequest(friendRequestClientEmail);
+        Friend.createFriend(currentClient, friendRequestClientEmail);
+        return redirect(routes.Application.findFriendProfileWithClientEmail(friendRequestClientEmail));
+    }
+
 
     public static Result showUnread() {
         if(Unread.getUnreadNum(currentClient) == 0) {

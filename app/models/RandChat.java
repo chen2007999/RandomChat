@@ -126,11 +126,22 @@ public class RandChat {
 
 
     public static void nextUser(Client client) {
+        System.out.println("current user:  " + client.getEmail());
+
         ClientConnection clientConnection1 = null;
         ClientConnection clientConnection2 = null;
+       System.out.println(chatPairs.size() + "chatpairs:  ");
+        for (ChatPair chatPair : chatPairs) {
+            System.out.println("1   " +chatPair.getClientConnection1().getClient().getEmail());
+            System.out.println("2   " +chatPair.getClientConnection2().getClient().getEmail());
+            System.out.println(".................");
+
+        }
 
         for (ChatPair chatPair : chatPairs) {
+            System.out.println(chatPairs.size());
             if (chatPair.getClientConnection1().getClient().equals(client)) {
+                System.out.println("found a");
                 clientConnection1 = chatPair.getClientConnection1();
                 clientConnection2 = chatPair.getClientConnection2();
                 chatPairs.remove(chatPair);
@@ -138,19 +149,29 @@ public class RandChat {
                 break;
             }
             if (chatPair.getClientConnection2().getClient().equals(client)) {
+                System.out.println("found b");
                 clientConnection1 = chatPair.getClientConnection2();
                 clientConnection2 = chatPair.getClientConnection1();
                 chatPairs.remove(chatPair);
                 chatPair = null;
                 break;
             }
+            System.out.println("yayayya");
         }
 
+        System.out.println(chatPairs.size());
         // Previous pairing is no longer allowed
-        waiting.add(clientConnection1);
-        waiting.add(clientConnection2);
-        pairing(clientConnection1);
-        pairing(clientConnection2);
+        if(clientConnection1 != null && clientConnection2 != null) {
+            System.out.println("test");
+            clientConnection1.setChatPair(null);
+            clientConnection2.setChatPair(null);
+            clientConnection2.notifyClosed(clientConnection1.getClient());
+            clientConnection1.getConnection().write("waiting to be connected to the next user.");
+            waiting.add(clientConnection1);
+            waiting.add(clientConnection2);
+            pairing(clientConnection1);
+            pairing(clientConnection2);
+        }
 
     }
 
