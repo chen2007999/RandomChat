@@ -99,6 +99,8 @@ public class Application extends Controller {
     }
 
     public static Result findFriendProfileWithClientEmail(String clientEmail) {
+        Unread.updateUnreadFriendRequest(clientEmail);
+        RandChat.removeOneUnread(currentClient);
         Client client = Client.findClientByEmail(clientEmail);
         return ok(friendProfile.render(client, Unread.friendRequestReceived(currentClient, client), Friend.friendWith(client, currentClient)));
 
@@ -120,7 +122,6 @@ public class Application extends Controller {
     }
 
     public static Result acceptFriendRequest(String friendRequestClientEmail) {
-        Unread.updateUnreadFriendRequest(friendRequestClientEmail);
         Friend.createFriend(currentClient, friendRequestClientEmail);
         return redirect(routes.Application.findFriendProfileWithClientEmail(friendRequestClientEmail));
     }

@@ -201,6 +201,10 @@ public class RandChat {
         findClientConnection(client).getConnection().write("NEW UNREAD PLEASE CHECK.");
     }
 
+    public static void removeOneUnread(Client client) {
+        findClientConnection(client).getConnection().write("PLEASE REMOVE ONE UNREAD.");
+    }
+
     public static List<Client> getChatPairs() {
         List<Client> result = new ArrayList<>();
         for(ChatPair cp : chatPairs) {

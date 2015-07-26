@@ -7,13 +7,24 @@ $(function(){
 
         var writeMessages = function(event){
             if(event.data.localeCompare("NEW UNREAD PLEASE CHECK.") == 0) {
+
                var unread = document.getElementById("unread").value;
                var unreadNum = unread.substring(7);
                var unreadNumInt = parseInt(unreadNum);
                unreadNumInt = unreadNumInt + 1;
                var unreadNumStr = unreadNumInt.toString();
                document.getElementById("unread").value="Unread " + unreadNumStr;
-            } else {
+
+            } else if (event.data.localeCompare("PLEASE REMOVE ONE UNREAD.") == 0){
+
+               var unread = document.getElementById("unread").value;
+               var unreadNum = unread.substring(7);
+               var unreadNumInt = parseInt(unreadNum);
+               unreadNumInt = unreadNumInt - 1;
+               var unreadNumStr = unreadNumInt.toString();
+               document.getElementById("unread").value="Unread " + unreadNumStr;
+
+            }else {
                 $('#socket-messages').append('<p>'+event.data+'</p>');
             }
         }
