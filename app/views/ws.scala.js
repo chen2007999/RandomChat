@@ -6,10 +6,20 @@ $(function(){
 
 
         var writeMessages = function(event){
-            $('#socket-messages').append('<p>'+event.data+'</p>');
+            if(event.data.localeCompare("NEW UNREAD PLEASE CHECK.") == 0) {
+               var unread = document.getElementById("unread").value;
+               var unreadNum = unread.substring(7);
+               var unreadNumInt = parseInt(unreadNum);
+               unreadNumInt = unreadNumInt + 1;
+               var unreadNumStr = unreadNumInt.toString();
+               document.getElementById("unread").value="Unread " + unreadNumStr;
+            } else {
+                $('#socket-messages').append('<p>'+event.data+'</p>');
+            }
         }
 
          socket.onmessage = writeMessages;
+
 
         $('#socket-input').keyup(function(event){
 
@@ -22,8 +32,5 @@ $(function(){
             }
         });
 
-      /*  function nextUser() {
-            $('#socket-messages').append('test');
-            models.RandChat.nextUser(socket);
-        }*/
+
 });

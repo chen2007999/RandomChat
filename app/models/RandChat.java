@@ -14,7 +14,7 @@ public class RandChat {
     private static List<ChatPair> chatPairs = new ArrayList<>();
 
 
-    public static synchronized void start(WebSocket.In<String> in, WebSocket.Out<String> out, Client client) {
+    public static void start(WebSocket.In<String> in, WebSocket.Out<String> out, Client client) {
         ClientConnection clientConnection1 = setUpConnection(out, client);
 
         // Server responses
@@ -195,6 +195,10 @@ public class RandChat {
             }
         }
         return clientConnection;
+    }
+
+    public static void newUnread(Client client) {
+        findClientConnection(client).getConnection().write("NEW UNREAD PLEASE CHECK.");
     }
 
     public static List<Client> getChatPairs() {

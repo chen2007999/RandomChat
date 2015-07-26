@@ -15,12 +15,24 @@ create table client (
 
 create table friend (
   email                     varchar(255),
-  firendId                  varchar(255))
+  friendEmail               varchar(255))
+;
+
+create table interests (
+  interest                  varchar(255),
+  description               varchar(255))
 ;
 
 create table pair_history (
   email                     varchar(255),
   pairedId                  varchar(255))
+;
+
+create table unread (
+  id                        bigint auto_increment not null,
+  clientEmail               varchar(255),
+  friendRequestClientEmail  varchar(255),
+  constraint pk_unread primary key (id))
 ;
 
 
@@ -34,7 +46,11 @@ drop table if exists client;
 
 drop table if exists friend;
 
+drop table if exists interests;
+
 drop table if exists pair_history;
+
+drop table if exists unread;
 
 SET REFERENTIAL_INTEGRITY TRUE;
 

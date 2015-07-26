@@ -26,11 +26,17 @@ POST   /createClient                        controllers.Application.createClient
 POST   /deleteClient/:email/delete          controllers.Application.deleteClientFromDB(email:String)
 
 # Display all clients in the database
-GET    /clients                           controllers.Application.displayAllClientsFromDB()
+GET    /clients                              controllers.Application.displayAllClientsFromDB()
 
 
 
-GET /wsInterface                controllers.Application.wsInterface()
-GET /nextUser               controllers.Application.nextUser()
-GET /friendProfile             controllers.Application.friendProfile()
-GET /assets.javascript.ws.js     controllers.Application.wsJs()
+GET /wsInterface                                      controllers.Application.wsInterface()
+GET /nextUser                                        controllers.Application.nextUser()
+GET /friendProfile                                controllers.Application.friendProfile()
+GET /assets.javascript.ws.js                      controllers.Application.wsJs()
+GET /addFriend/:clientEmail                        controllers.Application.addFriend(clientEmail:String)
+GET /acceptFriendRequest/:clientEmail  controllers.Application.acceptFriendRequest(clientEmail:String)
+
+GET /showUnread                                      controllers.Application.showUnread()
+GET /unreadNum                                        controllers.Application.unreadNum()
+GET /findFriendProfileWithClientEmail/:clientEmail    controllers.Application.findFriendProfileWithClientEmail(clientEmail:String)
