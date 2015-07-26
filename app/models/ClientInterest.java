@@ -4,6 +4,7 @@ import javax.persistence.Column;
 import javax.persistence.Entity;
 import play.db.ebean.*;
 
+import java.util.ArrayList;
 import java.util.Hashtable;
 import java.util.List;
 
@@ -44,13 +45,15 @@ public class ClientInterest extends Model{
     }
 
 
-    public static Hashtable<String, Integer> allInteretsWithFigures(List<String> interets) {
-        Hashtable<String, Integer> hash = new Hashtable<>();
+    public static List<InterestLikes> allInteretsWithLikes(List<String> interets) {
+        List<InterestLikes> result = new ArrayList<>();
         for(String i : interets) {
-            int figure = find.where().eq("interest", i).findList().size();
-            hash.put(i, figure);
+            int likes = find.where().eq("interest", i).findList().size();
+            InterestLikes interestLikes = new InterestLikes(i, likes);
+            result.add(interestLikes);
         }
-        return hash;
+
+        return result;
     }
 
 }

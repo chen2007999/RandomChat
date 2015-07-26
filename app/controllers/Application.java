@@ -143,9 +143,12 @@ public class Application extends Controller {
         }
     }
 
-    public static Result interestsListPage(){
-        return ok(interestsList.render(Interest.allInterests()));
+    public static Result interestsListPage() {
+        return ok(interestsList.render(ClientInterest.allInteretsWithLikes(Interest.allInterests())));
     }
 
+    public static Result createInterest() {
+        return ok(createInterest.render());
+    }
 
 }

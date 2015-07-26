@@ -1,0 +1,16 @@
+@(interestLikes : java.util.List[InterestLikes])
+
+@helper.form(routes.Application.createInterest()) {
+<button type="submit"> <h3>+ New Interest</h3></button><br>
+}
+
+@for(interestLike <- interestLikes) {
+<li>
+    @helper.form(routes.Application.landing()) {
+    <button type="submit"> <h3>@interestLike.interest   @interestLike.likes</h3></button><br>
+    }
+</li>
+}
+
+
+

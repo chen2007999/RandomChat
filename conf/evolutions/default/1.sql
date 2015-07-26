@@ -13,12 +13,17 @@ create table client (
   constraint pk_client primary key (email))
 ;
 
+create table client_interest (
+  interest                  varchar(255),
+  clientEmail               varchar(255))
+;
+
 create table friend (
   email                     varchar(255),
   friendEmail               varchar(255))
 ;
 
-create table interests (
+create table interest (
   interest                  varchar(255),
   description               varchar(255))
 ;
@@ -44,9 +49,11 @@ SET REFERENTIAL_INTEGRITY FALSE;
 
 drop table if exists client;
 
+drop table if exists client_interest;
+
 drop table if exists friend;
 
-drop table if exists interests;
+drop table if exists interest;
 
 drop table if exists pair_history;
 
