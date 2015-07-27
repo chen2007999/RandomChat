@@ -1,12 +1,13 @@
 package controllers;
 import models.*;
+import play.api.mvc.Session;
 import play.mvc.*;
 
 import views.html.*;
 
 public class Application extends Controller {
 
-    public static Client currentClient;
+   // public static Client currentClient;
 
 
     // index to landing page by default
@@ -15,7 +16,7 @@ public class Application extends Controller {
     }
 
     public static Result landing() {
-        currentClient = null;
+        //currentClient = null;
         return ok(landing.render());
     }
 
@@ -40,7 +41,9 @@ public class Application extends Controller {
             return redirect(routes.Application.register("Client with email " + client.email + " already exists"));
         }
         Client.createClient(client);
-        currentClient = client;
+        session().put("clientEmail", client.getEmail());
+        //response().setCookie("clientEmail", client.getEmail());
+        Client currentClient = client;
         return ok(randChat.render(currentClient, RandChat.getWaiting(), RandChat.getChatPairs()));
     }
 
@@ -56,18 +59,14 @@ public class Application extends Controller {
     public static Result logIn() {
         Client client = getClient();
         if(Client.validate(client)) {
-            currentClient = Client.findClient(client);
+            Client currentClient = Client.findClient(client);
             return ok(randChat.render(currentClient, RandChat.getWaiting(), RandChat.getChatPairs()));
         }
-        //response().setCookie("client", client.getEmail());
-        String user = session("connected");
-        if(user != null) {
-            session("connected", client.getEmail());
-            return ok(landing.render());
-        } else {
-            return unauthorized("Oops, you are not connected");
-        }
 
+        session().put("clientEmail", client.getEmail());
+
+        //session().clear();
+        return ok(landing.render());
     }
 
     public  static Result register(String error) {
@@ -78,6 +77,8 @@ public class Application extends Controller {
 
     // Websocket interface
     public static WebSocket<String> wsInterface(){
+        String email = session().get("clientEmail");
+        Client currentClient = Client.findClientByEmail(email);
         return new WebSocket<String>(){
             // called when websocket handshake is done
             public void onReady(WebSocket.In<String> in, WebSocket.Out<String> out){
@@ -87,12 +88,13 @@ public class Application extends Controller {
     }
 
     public static Result nextUser(){
-        RandChat.nextUser(currentClient);
+        String email = session().get("clientEmail");
+        Client client = Client.findClientByEmail(email);
+        RandChat.nextUser(client);
 
       return ok("hello");
 
     }
-
 
     public static Result wsJs() {
         return ok(views.js.ws.render());
@@ -100,6 +102,8 @@ public class Application extends Controller {
 
     public static Result findFriendProfileWithClientEmail(String clientEmail) {
         Unread.updateUnreadFriendRequest(clientEmail);
+        String email = session().get("clientEmail");
+        Client currentClient = Client.findClientByEmail(email);
         RandChat.removeOneUnread(currentClient);
         Client client = Client.findClientByEmail(clientEmail);
         return ok(friendProfile.render(client, Unread.friendRequestReceived(currentClient, client), Friend.friendWith(client, currentClient)));
@@ -107,6 +111,8 @@ public class Application extends Controller {
     }
 
     public static Result friendProfile() {
+        String email = session().get("clientEmail");
+        Client currentClient = Client.findClientByEmail(email);
         ClientConnection clientConnection = RandChat.findClientConnection(currentClient);
         if(clientConnection != null && clientConnection.isPaired()) {
             Client client2 = clientConnection.getChatPair().getTheOtherClientConnection(clientConnection).getClient();
@@ -116,17 +122,23 @@ public class Application extends Controller {
     }
 
     public static Result addFriend(String friendRequestClientEmail) {
+        String email = session().get("clientEmail");
+        Client currentClient = Client.findClientByEmail(email);
         Unread.createUnreadFriendRequest(currentClient, friendRequestClientEmail);
         RandChat.newUnread(currentClient);
         return ok("Friend request sent, waiting to be comfirmed..");
     }
 
     public static Result acceptFriendRequest(String friendRequestClientEmail) {
+        String email = session().get("clientEmail");
+        Client currentClient = Client.findClientByEmail(email);
         Friend.createFriend(currentClient, friendRequestClientEmail);
         return redirect(routes.Application.findFriendProfileWithClientEmail(friendRequestClientEmail));
     }
 
     public static Result unreadNum() {
+        String email = session().get("clientEmail");
+        Client currentClient = Client.findClientByEmail(email);
         int unreadNum = Unread.getUnreadNum(currentClient);
         StringBuilder sb = new StringBuilder();
         sb.append("");
@@ -136,6 +148,8 @@ public class Application extends Controller {
     }
 
     public static Result showUnread() {
+        String email = session().get("clientEmail");
+        Client currentClient = Client.findClientByEmail(email);
         if(Unread.getUnreadNum(currentClient) == 0) {
             return ok("Everything has been read.");
         } else {
@@ -147,7 +161,7 @@ public class Application extends Controller {
         return ok(interestsList.render(ClientInterest.allInteretsWithLikes(Interest.allInterests())));
     }
 
-    public static Result createInterest() {
+    public static Result createInterestPage() {
         return ok(createInterest.render());
     }
 
