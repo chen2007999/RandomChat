@@ -27,11 +27,7 @@ popupWindow = window.open(url,winName,settings)
 </script>
 
 
-    @helper.form(routes.Application.interestsListPage()) {
-    <button type="submit"> <h4> Interests</h4></button><br>
-    }
-
-
+<input type="button" value="Interests" onclick="InterestPopUp('interestsListPage','myWindow','700','620','yes');return false">
 
 
 <input type="button" value="Unread" onclick="unreadPopUp('showUnread','myWindow','700','620','yes');return false" id="unread">
@@ -39,6 +35,17 @@ popupWindow = window.open(url,winName,settings)
 
     <h3>current user: @client.name</h3>
 
+
+<script language="javascript">
+var popupWindow = null;
+function InterestPopUp(url,winName,w,h,scroll){
+LeftPosition = (screen.width) ? (screen.width-w)/2 : 0;
+TopPosition = (screen.height) ? (screen.height-h)/2 : 0;
+settings =
+'height='+h+',width='+w+',top='+TopPosition+',left='+LeftPosition+',scrollbars='+scroll+',resizable'
+popupWindow = window.open(url,winName,settings)
+}
+</script>
 
 <script language="javascript">
 var popupWindow = null;
