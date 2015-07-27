@@ -30,8 +30,8 @@ GET    /clients                              controllers.Application.displayAllC
 
 
 
-GET /wsInterface                                      controllers.Application.wsInterface()
-GET /nextUser                                        controllers.Application.nextUser()
+GET /wsInterface                                  controllers.Application.wsInterface()
+GET /nextUser                                     controllers.Application.nextUser()
 GET /friendProfile                                controllers.Application.friendProfile()
 GET /assets.javascript.ws.js                      controllers.Application.wsJs()
 GET /addFriend/:clientEmail                        controllers.Application.addFriend(clientEmail:String)
@@ -42,4 +42,5 @@ GET /unreadNum                                        controllers.Application.un
 GET /findFriendProfileWithClientEmail/:clientEmail    controllers.Application.findFriendProfileWithClientEmail(clientEmail:String)
 
 GET /interestsListPage                                 controllers.Application.interestsListPage()
-GET /createInterest                                    controllers.Application.createInterest()
+GET /createInterestPage                                controllers.Application.createInterestPage()
+GET /createInterest                                   controllers.Application.createInterest()

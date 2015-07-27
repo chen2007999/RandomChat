@@ -168,4 +168,11 @@ public class Application extends Controller {
         return ok(createInterest.render());
     }
 
+    public static Result createInterest() {
+        play.data.Form<Interest> interestForm = play.data.Form.form(Interest.class);
+        Interest interest = interestForm.bindFromRequest().get();
+        interest.save();
+        return ok(successCreateInterest.render(interest.getInterest()));
+    }
+
 }

@@ -1,0 +1,7 @@
+@(interestTitle : String)
+
+<h2>Successfuly created @interestTitle!</h2>
+
+@helper.form(routes.Application.interestsListPage()) {
+<button type="submit">Go back</button>
+}
