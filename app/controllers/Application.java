@@ -2,7 +2,6 @@ package controllers;
 import models.*;
 import play.api.mvc.Session;
 import play.mvc.*;
-
 import views.html.*;
 
 public class Application extends Controller {
@@ -101,12 +100,13 @@ public class Application extends Controller {
     }
 
     public static Result findFriendProfileWithClientEmail(String clientEmail) {
-        Unread.updateUnreadFriendRequest(clientEmail);
         String email = session().get("clientEmail");
-        Client currentClient = Client.findClientByEmail(email);
-        RandChat.removeOneUnread(currentClient);
         Client client = Client.findClientByEmail(clientEmail);
-        return ok(friendProfile.render(client, Unread.friendRequestReceived(currentClient, client), Friend.friendWith(client, currentClient)));
+        Client currentClient = Client.findClientByEmail(email);
+        boolean friendRequestReceived = Unread.friendRequestReceived(currentClient, client);
+        Unread.updateUnreadFriendRequest(clientEmail);
+        RandChat.removeOneUnread(currentClient);
+        return ok(friendProfile.render(client, friendRequestReceived, Friend.friendWith(client, currentClient)));
 
     }
 
@@ -125,15 +125,18 @@ public class Application extends Controller {
         String email = session().get("clientEmail");
         Client currentClient = Client.findClientByEmail(email);
         Unread.createUnreadFriendRequest(currentClient, friendRequestClientEmail);
-        RandChat.newUnread(currentClient);
+        RandChat.newUnread(Client.findClientByEmail(friendRequestClientEmail));
         return ok("Friend request sent, waiting to be comfirmed..");
     }
 
     public static Result acceptFriendRequest(String friendRequestClientEmail) {
         String email = session().get("clientEmail");
         Client currentClient = Client.findClientByEmail(email);
+        Client client = Client.findClientByEmail(friendRequestClientEmail);
         Friend.createFriend(currentClient, friendRequestClientEmail);
-        return redirect(routes.Application.findFriendProfileWithClientEmail(friendRequestClientEmail));
+        Friend.createFriend(client, email);
+        boolean friendRequestReceived = Unread.friendRequestReceived(currentClient, client);
+        return ok(friendProfile.render(client, friendRequestReceived, Friend.friendWith(client, currentClient)));
     }
 
     public static Result unreadNum() {

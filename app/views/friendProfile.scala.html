@@ -13,13 +13,14 @@
 <button id="accept" type="submit">accept friend request</button><br>
 }
 
-
 <script type="text/javascript">
             var accept = document.getElementById('accept');
             var add = document.getElementById('add');
 
             if(@friendAlready) {
                 document.getElementById("friend").innerHTML = "friend";
+                add.style.display = "none";
+                accept.style.display = "none";
             } else {
                  if(@requestReceived){
                        add.style.display = "none";
