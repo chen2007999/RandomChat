@@ -6,7 +6,7 @@
 
 @for(interestLike <- interestLikes) {
 <li>
-    @helper.form(routes.Application.landing()) {
+    @helper.form(routes.Application.interestPage(interestLike.interest)) {
     <button type="submit"> <h3>@interestLike.interest  @interestLike.likes</h3></button><br>
     }
 </li>

@@ -44,6 +44,9 @@ public class ClientInterest extends Model{
         clientInterest.save();
     }
 
+    public static int findLikesNumOfAnInterest(String interest) {
+        return find.where().eq("interest", interest).findList().size();
+    }
 
     public static List<InterestLikes> allInteretsWithLikes(List<String> interets) {
         List<InterestLikes> result = new ArrayList<>();

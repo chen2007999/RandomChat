@@ -44,3 +44,4 @@ GET /findFriendProfileWithClientEmail/:e/:k       controllers.Application.findFr
 GET /interestsListPage                                 controllers.Application.interestsListPage()
 GET /createInterestPage                                controllers.Application.createInterestPage()
 GET /createInterest                                   controllers.Application.createInterest()
+GET /interestPage/:interest                           controllers.Application.interestPage(interest:String)

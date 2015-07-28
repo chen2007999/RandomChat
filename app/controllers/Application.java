@@ -181,4 +181,8 @@ public class Application extends Controller {
         return ok(successCreateInterest.render(interest.getInterest()));
     }
 
+    public static Result interestPage(String interestTitle) {
+        return ok(interestPage.render(Interest.getInterestWithTitle(interestTitle), ClientInterest.findLikesNumOfAnInterest(interestTitle)));
+    }
+
 }

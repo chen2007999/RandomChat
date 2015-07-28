@@ -43,6 +43,10 @@ public class Interest extends Model {
         newInterest.save();
     }
 
+    public static Interest getInterestWithTitle(String title) {
+        return find.where().eq("interest", title).findList().get(0);
+    }
+
     public static List<String> allInterests() {
         List<Interest> interestList = find.all();
         List<String> allInterests = new ArrayList<String>();
