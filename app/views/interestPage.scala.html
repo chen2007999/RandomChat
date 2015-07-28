@@ -4,4 +4,12 @@
 <h2>@interest.interest<h2>     <h2>@LikesNum likes</h2>
 
 
-<h3>@interest.description</h3>
+<h3>Description: @interest.description</h3>
+
+    @helper.form(routes.Application.likeInterest(interest.interest)) {
+    <button type="submit">Like!</button>
+    }
+
+    @helper.form(routes.Application.interestsListPage()) {
+    <button type="submit">Go back</button>
+    }

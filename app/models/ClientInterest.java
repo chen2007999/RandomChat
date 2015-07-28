@@ -48,6 +48,10 @@ public class ClientInterest extends Model{
         return find.where().eq("interest", interest).findList().size();
     }
 
+    public static boolean alreadyLiked(String interest, String clientEmail) {
+        return find.where().eq("interest", interest).eq("clientEmail", clientEmail).findList().size() != 0;
+    }
+
     public static List<InterestLikes> allInteretsWithLikes(List<String> interets) {
         List<InterestLikes> result = new ArrayList<>();
         for(String i : interets) {
@@ -55,8 +59,21 @@ public class ClientInterest extends Model{
             InterestLikes interestLikes = new InterestLikes(i, likes);
             result.add(interestLikes);
         }
-
-        return result;
+        List<InterestLikes> sortedResult = new ArrayList<>();
+        int size = result.size();
+        while(sortedResult.size() != size) {
+            InterestLikes var = null;
+            int likes = -1;
+            for (InterestLikes interestLikes : result) {
+                if (interestLikes.getLikes() > likes) {
+                    likes = interestLikes.getLikes();
+                    var = interestLikes;
+                }
+            }
+            sortedResult.add(var);
+            result.remove(var);
+        }
+        return sortedResult;
     }
 
 }

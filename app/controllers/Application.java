@@ -178,11 +178,21 @@ public class Application extends Controller {
         play.data.Form<Interest> interestForm = play.data.Form.form(Interest.class);
         Interest interest = interestForm.bindFromRequest().get();
         interest.save();
+        String email = session().get("clientEmail");
+        ClientInterest.createClientInterest(interest.getInterest(), email);
         return ok(successCreateInterest.render(interest.getInterest()));
     }
 
     public static Result interestPage(String interestTitle) {
         return ok(interestPage.render(Interest.getInterestWithTitle(interestTitle), ClientInterest.findLikesNumOfAnInterest(interestTitle)));
+    }
+
+    public static Result likeInterest(String interest) {
+        String email = session().get("clientEmail");
+        if(!ClientInterest.alreadyLiked(interest, email)) {
+            ClientInterest.createClientInterest(interest, email);
+        }
+        return interestPage(interest);
     }
 
 }

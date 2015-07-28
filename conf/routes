@@ -45,3 +45,4 @@ GET /interestsListPage                                 controllers.Application.i
 GET /createInterestPage                                controllers.Application.createInterestPage()
 GET /createInterest                                   controllers.Application.createInterest()
 GET /interestPage/:interest                           controllers.Application.interestPage(interest:String)
+GET /likeInterest/:interest                            controllers.Application.likeInterest(interest:String)

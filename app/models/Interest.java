@@ -11,8 +11,8 @@ import java.lang.String;
 @Entity
 public class Interest extends Model {
 
-
-    @Column(name = "interest")
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     public String interest;
 
     @Column(name = "description")

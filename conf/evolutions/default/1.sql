@@ -24,8 +24,9 @@ create table friend (
 ;
 
 create table interest (
-  interest                  varchar(255),
-  description               varchar(255))
+  interest                  varchar(255) not null,
+  description               varchar(255),
+  constraint pk_interest primary key (interest))
 ;
 
 create table pair_history (
