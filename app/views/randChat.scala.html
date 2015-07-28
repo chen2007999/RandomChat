@@ -15,30 +15,22 @@
 
     <h1>Welcome to RandChat</h1>
 
-<script language="javascript">
-var popupWindow = null;
-function unreadPopUp(url,winName,w,h,scroll){
-LeftPosition = (screen.width) ? (screen.width-w)/2 : 0;
-TopPosition = (screen.height) ? (screen.height-h)/2 : 0;
-settings =
-'height='+h+',width='+w+',top='+TopPosition+',left='+LeftPosition+',scrollbars='+scroll+',resizable'
-popupWindow = window.open(url,winName,settings)
-}
-</script>
 
 
-<input type="button" value="Interests" onclick="InterestPopUp('interestsListPage','myWindow','700','620','yes');return false">
+<input type="button" value="Interests" onclick="popUp('interestsListPage','myWindow','700','620','yes');return false">
 
+<input type="button" value="My Profile" onclick="popUp('showUnread','myWindow','700','620','yes');return false" id="myProfile">
 
-<input type="button" value="Unread" onclick="unreadPopUp('showUnread','myWindow','700','620','yes');return false" id="unread">
+<input type="button" value="Unread" onclick="popUp('showUnread','myWindow','700','620','yes');return false" id="unread">
 
 
     <h3>current user: @client.name</h3>
 
 
+
 <script language="javascript">
 var popupWindow = null;
-function InterestPopUp(url,winName,w,h,scroll){
+function popUp(url,winName,w,h,scroll){
 LeftPosition = (screen.width) ? (screen.width-w)/2 : 0;
 TopPosition = (screen.height) ? (screen.height-h)/2 : 0;
 settings =
@@ -47,18 +39,7 @@ popupWindow = window.open(url,winName,settings)
 }
 </script>
 
-<script language="javascript">
-var popupWindow = null;
-function friendProfilePopUp(url,winName,w,h,scroll){
-LeftPosition = (screen.width) ? (screen.width-w)/2 : 0;
-TopPosition = (screen.height) ? (screen.height-h)/2 : 0;
-settings =
-'height='+h+',width='+w+',top='+TopPosition+',left='+LeftPosition+',scrollbars='+scroll+',resizable'
-popupWindow = window.open(url,winName,settings)
-}
-</script>
-
-<input type="button" value="the other user's profile" onclick="friendProfilePopUp('friendProfile','myWindow','700','620','yes');return false">
+<input type="button" value="the other user's profile" onclick="popUp('friendProfile','myWindow','700','620','yes');return false">
 
     <div id="the-other-side"></div>
     <div id="socket-messages"></div>
