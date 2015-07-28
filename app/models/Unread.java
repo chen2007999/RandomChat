@@ -23,7 +23,16 @@ public class Unread extends Model{
     @Column(name = "friendRequestClientEmail")
     public String friendRequestClientEmail;
 
+    @Column(name = "friendConfirmationClientEmail")
+    public String friendConfirmationClientEmail;
 
+    public String getFriendConfirmationClientEmail() {
+        return friendConfirmationClientEmail;
+    }
+
+    public void setFriendConfirmationClientEmail(String friendConfirmationClientEmail) {
+        this.friendConfirmationClientEmail = friendConfirmationClientEmail;
+    }
 
     public void setClientEmailEmail(String clientEmail) {
         this.clientEmail = clientEmail;
@@ -60,6 +69,18 @@ public class Unread extends Model{
         return friendRequestEmails;
     }
 
+    public static List<Client> getUnreadFriendConfirmation(Client client) {
+        List<Unread> unreads = getUnread(client);
+        List<Client> friendRequestEmails = new ArrayList<Client>();
+        for(Unread unread : unreads) {
+            String friendConfirmationClientEmail = unread.getFriendConfirmationClientEmail();
+            if(friendConfirmationClientEmail != null) {
+                friendRequestEmails.add(Client.findClientByEmail(friendConfirmationClientEmail));
+            }
+        }
+        return friendRequestEmails;
+    }
+
 
     public static int getUnreadNum(Client client) {
         List<Unread> unreads = getUnread(client);
@@ -78,6 +99,19 @@ public class Unread extends Model{
         Unread unread = find.where().eq("friendRequestClientEmail", friendRequestClientEmail).findList().get(0);
         unread.delete();
     }
+
+    public static void createUnreadFriendConfirmation(Client friendConfirmationClient, String clientEmail) {
+        Unread unread = new Unread();
+        unread.setClientEmail(clientEmail);
+        unread.setFriendConfirmationClientEmail(friendConfirmationClient.getEmail());
+        unread.save();
+    }
+
+    public static void updateUnreadFriendConfirmation(String friendConfirmationClientEmail) {
+        Unread unread = find.where().eq("friendConfirmationClientEmail", friendConfirmationClientEmail).findList().get(0);
+        unread.delete();
+    }
+
 
     public static boolean friendRequestReceived(Client client1, Client client2) {
         return find.where().eq("clientEmail", client1.getEmail()).eq("friendRequestClientEmail", client2.getEmail()).findList().size() != 0;

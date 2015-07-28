@@ -39,7 +39,7 @@ GET /acceptFriendRequest/:clientEmail  controllers.Application.acceptFriendReque
 
 GET /showUnread                                      controllers.Application.showUnread()
 GET /unreadNum                                        controllers.Application.unreadNum()
-GET /findFriendProfileWithClientEmail/:clientEmail    controllers.Application.findFriendProfileWithClientEmail(clientEmail:String)
+GET /findFriendProfileWithClientEmail/:e/:k       controllers.Application.findFriendProfileWithClientEmail(e:String, k:String)
 
 GET /interestsListPage                                 controllers.Application.interestsListPage()
 GET /createInterestPage                                controllers.Application.createInterestPage()

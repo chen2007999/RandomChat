@@ -1,14 +1,24 @@
-@(clients: java.util.List[Client])
+@(requestClients: java.util.List[Client], confirmationClients : java.util.List[Client])
 
 @main("Unread") {
 
 <h1>Unread</h1>
 
 <ul>
-    @for(client <- clients) {
+    @for(requestClient <- requestClients) {
     <li>
-        @helper.form(routes.Application.findFriendProfileWithClientEmail(client.email)) {
-        <button type="submit"> <h3> @client.name sent you a friend request</h3></button><br>
+        @helper.form(routes.Application.findFriendProfileWithClientEmail(requestClient.email, "request")) {
+        <button type="submit"> <h3> @requestClient.name sent you a friend request</h3></button><br>
+        }
+    </li>
+    }
+</ul>
+
+<ul>
+    @for(confirmationClient <- confirmationClients) {
+    <li>
+        @helper.form(routes.Application.findFriendProfileWithClientEmail(confirmationClient.email, "confirmation")) {
+        <button type="submit"> <h3> @confirmationClient.name has accepeted your friend request</h3></button><br>
         }
     </li>
     }

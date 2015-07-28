@@ -99,15 +99,19 @@ public class Application extends Controller {
         return ok(views.js.ws.render());
     }
 
-    public static Result findFriendProfileWithClientEmail(String clientEmail) {
+    public static Result findFriendProfileWithClientEmail(String clientEmail, String key) {
         String email = session().get("clientEmail");
         Client client = Client.findClientByEmail(clientEmail);
         Client currentClient = Client.findClientByEmail(email);
         boolean friendRequestReceived = Unread.friendRequestReceived(currentClient, client);
-        Unread.updateUnreadFriendRequest(clientEmail);
+        if(key.equals("request")) {
+            Unread.updateUnreadFriendRequest(clientEmail);
+        }
+        if(key.equals("confirmation")) {
+            Unread.updateUnreadFriendConfirmation(clientEmail);
+        }
         RandChat.removeOneUnread(currentClient);
         return ok(friendProfile.render(client, friendRequestReceived, Friend.friendWith(client, currentClient)));
-
     }
 
     public static Result friendProfile() {
@@ -136,6 +140,8 @@ public class Application extends Controller {
         Friend.createFriend(currentClient, friendRequestClientEmail);
         Friend.createFriend(client, email);
         boolean friendRequestReceived = Unread.friendRequestReceived(currentClient, client);
+        Unread.createUnreadFriendConfirmation(currentClient, friendRequestClientEmail);
+        RandChat.newUnread(Client.findClientByEmail(friendRequestClientEmail));
         return ok(friendProfile.render(client, friendRequestReceived, Friend.friendWith(client, currentClient)));
     }
 
@@ -156,7 +162,7 @@ public class Application extends Controller {
         if(Unread.getUnreadNum(currentClient) == 0) {
             return ok("Everything has been read.");
         } else {
-            return ok(unread.render(Unread.getUnreadFriendRequest(currentClient)));
+            return ok(unread.render(Unread.getUnreadFriendRequest(currentClient), Unread.getUnreadFriendConfirmation(currentClient)));
         }
     }
 
