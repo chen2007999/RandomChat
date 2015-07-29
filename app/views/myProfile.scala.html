@@ -1,0 +1,25 @@
+@(client: models.Client, interestLikes : java.util.List[InterestLikes])
+
+@main("My Profile") {
+
+
+
+<input type="button" value="Edit My Profile" style="float: right">
+<div style="overflow: hidden; padding-right: .5em;">
+<h1>@client.name</h1>
+</div>​
+
+<h3>My Interests:</h3>
+@for(interestLike <- interestLikes) {
+<li>
+    @helper.form(routes.Application.interestPage(interestLike.interest)) {
+    <button type="submit"> <h4>@interestLike.interest  @interestLike.likes</h4></button><br>
+    }
+</li>
+}
+
+
+
+
+
+}

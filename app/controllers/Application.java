@@ -125,6 +125,12 @@ public class Application extends Controller {
         return ok("Not connected to a user yet, please wait for the next user. :)");
     }
 
+    public static Result myProfile() {
+        String email = session().get("clientEmail");
+        Client currentClient = Client.findClientByEmail(email);
+        return ok(myProfile.render(currentClient, ClientInterest.findInterestsOfAClient(email)));
+    }
+
     public static Result addFriend(String friendRequestClientEmail) {
         String email = session().get("clientEmail");
         Client currentClient = Client.findClientByEmail(email);

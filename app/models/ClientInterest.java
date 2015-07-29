@@ -52,9 +52,18 @@ public class ClientInterest extends Model{
         return find.where().eq("interest", interest).eq("clientEmail", clientEmail).findList().size() != 0;
     }
 
-    public static List<InterestLikes> allInteretsWithLikes(List<String> interets) {
+    public static List<InterestLikes> findInterestsOfAClient(String clientEmail) {
+        List<ClientInterest> clientInterests = find.where().eq("clientEmail", clientEmail).findList();
+        List<String> interests = new ArrayList<>();
+        for(ClientInterest ci : clientInterests) {
+            interests.add(ci.getInterest());
+        }
+        return allInteretsWithLikes(interests);
+    }
+
+    public static List<InterestLikes> allInteretsWithLikes(List<String> interests) {
         List<InterestLikes> result = new ArrayList<>();
-        for(String i : interets) {
+        for(String i : interests) {
             int likes = find.where().eq("interest", i).findList().size();
             InterestLikes interestLikes = new InterestLikes(i, likes);
             result.add(interestLikes);

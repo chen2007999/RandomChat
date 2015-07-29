@@ -13,21 +13,18 @@
 }
 
 
-    <h1>Welcome to RandChat</h1>
 
 
+<input type="button" value="My Profile" onclick="popUp('myProfile','myWindow','700','620','yes');return false" id="myProfile" style="float: right">
 
-<input type="button" value="Interests" onclick="popUp('interestsListPage','myWindow','700','620','yes');return false">
+<input type="button" value="Interests" onclick="popUp('interestsListPage','myWindow','700','620','yes');return false" style="float: right">
 
-<input type="button" value="My Profile" onclick="popUp('showUnread','myWindow','700','620','yes');return false" id="myProfile">
+<input type="button" value="Unread" onclick="popUp('showUnread','myWindow','700','620','yes');return false" id="unread" style="float: right">
 
-<input type="button" value="Unread" onclick="popUp('showUnread','myWindow','700','620','yes');return false" id="unread">
+<h1>Welcome to RandChat, @client.name.</h1>
 
-
-    <h3>current user: @client.name</h3>
-
-
-
+<input type="button" value="the other user's profile" onclick="popUp('friendProfile','myWindow','700','620','yes');return false"><br/>
+<br/>
 <script language="javascript">
 var popupWindow = null;
 function popUp(url,winName,w,h,scroll){
@@ -39,7 +36,7 @@ popupWindow = window.open(url,winName,settings)
 }
 </script>
 
-<input type="button" value="the other user's profile" onclick="popUp('friendProfile','myWindow','700','620','yes');return false">
+
 
     <div id="the-other-side"></div>
     <div id="socket-messages"></div>
