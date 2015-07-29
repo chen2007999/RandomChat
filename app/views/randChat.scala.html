@@ -3,9 +3,13 @@
 @main("RandChat") {
 
 
+<input type="button" value="Log Out" onclick="popUp('interestsListPage','myWindow','700','620','yes');return false" style="float: right;height:40px;width:100px">
+
 <input type="button" value="My Profile" onclick="popUp('myProfile','myWindow','700','620','yes');return false" id="myProfile" style="float: right;height:40px;width:100px">
 
 <input type="button" value="Interests" onclick="popUp('interestsListPage','myWindow','700','620','yes');return false" style="float: right;height:40px;width:100px">
+
+<input type="button" value="My Friends" onclick="popUp('interestsListPage','myWindow','700','620','yes');return false" style="float: right;height:40px;width:100px">
 
 <input type="button" value="Unread" onclick="popUp('showUnread','myWindow','700','620','yes');return false" id="unread" style="float: right;height:40px;width:100px">
 
@@ -39,6 +43,8 @@ popupWindow = window.open(url,winName,settings)
 
     overflow:auto;
     }
+
+
 </style>
 
     <input type="text" id="socket-input" placeholder="message to send" style="height:30px;width:800px" />

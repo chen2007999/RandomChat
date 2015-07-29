@@ -3,11 +3,16 @@
 @main("My Profile") {
 
 
+@helper.form(routes.Application.editMyProfilePage()) {
+<input type="submit" value="Edit My Profile" style="float: right">
+}
 
-<input type="button" value="Edit My Profile" style="float: right">
 <div style="overflow: hidden; padding-right: .5em;">
 <h1>@client.name</h1>
 </div>​
+
+<h3>My Description:</h3>
+<h3>@client.description</h3>
 
 <h3>My Interests:</h3>
 @for(interestLike <- interestLikes) {

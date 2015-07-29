@@ -111,7 +111,7 @@ public class Application extends Controller {
             Unread.updateUnreadFriendConfirmation(clientEmail);
         }
         RandChat.removeOneUnread(currentClient);
-        return ok(friendProfile.render(client, friendRequestReceived, Friend.friendWith(client, currentClient)));
+        return ok(friendProfile.render(client, friendRequestReceived, Friend.friendWith(client, currentClient), ClientInterest.findInterestsOfAClient(clientEmail)));
     }
 
     public static Result friendProfile() {
@@ -120,7 +120,7 @@ public class Application extends Controller {
         ClientConnection clientConnection = RandChat.findClientConnection(currentClient);
         if(clientConnection != null && clientConnection.isPaired()) {
             Client client2 = clientConnection.getChatPair().getTheOtherClientConnection(clientConnection).getClient();
-            return ok(friendProfile.render(client2, Unread.friendRequestReceived(currentClient, client2), Friend.friendWith(currentClient, client2)));
+            return ok(friendProfile.render(client2, Unread.friendRequestReceived(currentClient, client2), Friend.friendWith(currentClient, client2), ClientInterest.findInterestsOfAClient(client2.getEmail())));
         }
         return ok("Not connected to a user yet, please wait for the next user. :)");
     }
@@ -148,7 +148,7 @@ public class Application extends Controller {
         boolean friendRequestReceived = Unread.friendRequestReceived(currentClient, client);
         Unread.createUnreadFriendConfirmation(currentClient, friendRequestClientEmail);
         RandChat.newUnread(Client.findClientByEmail(friendRequestClientEmail));
-        return ok(friendProfile.render(client, friendRequestReceived, Friend.friendWith(client, currentClient)));
+        return ok(friendProfile.render(client, friendRequestReceived, Friend.friendWith(client, currentClient), ClientInterest.findInterestsOfAClient(friendRequestClientEmail)));
     }
 
     public static Result unreadNum() {
@@ -199,6 +199,19 @@ public class Application extends Controller {
             ClientInterest.createClientInterest(interest, email);
         }
         return interestPage(interest);
+    }
+
+    public static Result editMyProfilePage() {
+        String email = session().get("clientEmail");
+        Client currentClient = Client.findClientByEmail(email);
+        return ok(editMyProfile.render(currentClient));
+    }
+
+    public static Result editMyProfile() {
+        String description = getClient().getDescription();
+        String email = session().get("clientEmail");
+        Client.updateDescription(email, description);
+        return ok(description);
     }
 
 }

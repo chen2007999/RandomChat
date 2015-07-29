@@ -1,0 +1,32 @@
+@(client: models.Client)
+
+@main("Edit Profile") {
+
+<div class="container">
+<div style="overflow: hidden; padding-right: .5em;">
+    <h1 align="center">@client.name</h1>
+</div>​
+
+<div class="row-fluid" id="login-div">
+
+    <div class="well span4 offset4" style="background: rgba(234, 239, 244, .5);" align="center">
+@helper.form(routes.Application.editMyProfile()) {
+<div class="form-group">
+    <label class="col-sm-3 control-label"><h2>Describe Yourself!</h2> </label>
+    <div class="col-sm-4">
+        <input type="text" class="form-control" name="description" placeholder="Description" size="70" style="height: 70px;" >
+    </div>
+</div>
+        <br>
+<button type="submit" style="height:30px;width:60px">Save</button>
+}
+
+    </div>
+</div>
+</div>
+}
+
+
+
+
+

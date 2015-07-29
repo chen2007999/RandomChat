@@ -5,6 +5,7 @@
 
 create table client (
   email                     varchar(255) not null,
+  description               varchar(255),
   password                  varchar(255),
   password2                 varchar(255),
   name                      varchar(255),

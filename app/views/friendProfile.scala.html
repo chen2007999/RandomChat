@@ -1,17 +1,31 @@
-@(client: models.Client, requestReceived : Boolean, friendAlready : Boolean)
+@(client: models.Client, requestReceived : Boolean, friendAlready : Boolean, interestLikes : java.util.List[InterestLikes])
 
 @main(client.name) {
 
-<h3>@client.name</h3>
+<h1>@client.name</h1>
 
 <div id="friend"></div>
+
 @helper.form(routes.Application.addFriend(client.email)) {
-<button id="add" type="submit">add friend</button><br>
+<button id="add" type="submit">add friend</button>
 }
 
 @helper.form(routes.Application.acceptFriendRequest(client.email)) {
-<button id="accept" type="submit">accept friend request</button><br>
+<button id="accept" type="submit">accept friend request</button>
 }
+
+<h3>Description:</h3>
+<h3>@client.description</h3>
+
+<h3>Interests:</h3>
+@for(interestLike <- interestLikes) {
+<li>
+    @helper.form(routes.Application.interestPage(interestLike.interest)) {
+    <button type="submit"> <h4>@interestLike.interest  @interestLike.likes</h4></button>
+    }
+</li>
+}
+
 
 <script type="text/javascript">
             var accept = document.getElementById('accept');

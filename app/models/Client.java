@@ -18,6 +18,9 @@ public class Client extends Model{
         return email;
     }
 
+    @Column(name = "description")
+    public String description;
+
     @Column(name = "password")
     public String password;
 
@@ -57,7 +60,15 @@ public class Client extends Model{
     public void setImage(String image) {
         this.image = image;
     }
-    
+
+    public String getDescription() {
+        return description;
+    }
+
+    public void setDescription(String description) {
+        this.description = description;
+    }
+
     public static void updateImage(Client client, String image) {
         if(image.length() > 0){
             client.setImage(image);
@@ -119,13 +130,16 @@ public class Client extends Model{
         return false;
     }
 
+    public static void updateDescription(String email, String description) {
+        Client client = find.byId(email);
+        client.setDescription(description);
+        client.update();
+    }
+
     public static boolean clientEmailExists(Client client) {
         return find.byId(client.getEmail()) != null;
     }
 
-
-
-    
     public static Client findClient(Client client) {
         return find.byId(client.getEmail());
     }
@@ -137,7 +151,5 @@ public class Client extends Model{
     public static String getImageByEmail(String email){
         return find.byId(email).image;
     }
-
-
 
 }

@@ -47,3 +47,5 @@ GET /createInterest                                   controllers.Application.cr
 GET /interestPage/:interest                           controllers.Application.interestPage(interest:String)
 GET /likeInterest/:interest                            controllers.Application.likeInterest(interest:String)
 GET /myProfile                                        controllers.Application.myProfile()
+GET /editMyProfilePage                                controllers.Application.editMyProfilePage()
+GET /editMyProfile                                    controllers.Application.editMyProfile()
