@@ -26,7 +26,10 @@ $(function(){
 
             }else {
                 $('#socket-messages').append('<p>'+event.data+'</p>');
+                var objDiv = document.getElementById("socket-messages");
+                objDiv.scrollTop = objDiv.scrollHeight;
             }
+
         }
 
          socket.onmessage = writeMessages;
