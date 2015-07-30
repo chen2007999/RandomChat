@@ -13,7 +13,9 @@
 
 <input type="button" value="Interests" onclick="popUp('interestsListPage','myWindow','700','620','yes');return false" style="float: right;height:40px;width:100px">
 
-<input type="button" value="My Friends" onclick="popUp('interestsListPage','myWindow','700','620','yes');return false" style="float: right;height:40px;width:100px">
+@helper.form(routes.Application.friendListPage()) {
+<input type="submit" value="My Friends" style="float: right;height:40px;width:100px">
+}
 
 <input type="button" value="Unread" onclick="popUp('showUnread','myWindow','700','620','yes');return false" id="unread" style="float: right;height:40px;width:100px">
 

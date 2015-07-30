@@ -25,6 +25,11 @@ public class Application extends Controller {
         return clientForm.bindFromRequest().get();
     }
 
+    public static Client currentClient() {
+        String email = session().get("clientEmail");
+        return Client.findClientByEmail(email);
+    }
+
     // methods deal with client account
     public static  Result createClient() {
 
@@ -74,8 +79,7 @@ public class Application extends Controller {
 
     // Websocket interface
     public static WebSocket<String> wsInterface(){
-        String email = session().get("clientEmail");
-        Client currentClient = Client.findClientByEmail(email);
+        Client currentClient = currentClient();
         return new WebSocket<String>(){
             // called when websocket handshake is done
             public void onReady(WebSocket.In<String> in, WebSocket.Out<String> out){
@@ -85,8 +89,7 @@ public class Application extends Controller {
     }
 
     public static Result nextUser(){
-        String email = session().get("clientEmail");
-        Client client = Client.findClientByEmail(email);
+        Client client = currentClient();
         RandChat.nextUser(client);
 
       return ok("hello");
@@ -130,8 +133,7 @@ public class Application extends Controller {
     }
 
     public static Result addFriend(String friendRequestClientEmail) {
-        String email = session().get("clientEmail");
-        Client currentClient = Client.findClientByEmail(email);
+        Client currentClient = currentClient();
         Unread.createUnreadFriendRequest(currentClient, friendRequestClientEmail);
         RandChat.newUnread(Client.findClientByEmail(friendRequestClientEmail));
         return ok("Friend request sent, waiting to be comfirmed..");
@@ -150,8 +152,7 @@ public class Application extends Controller {
     }
 
     public static Result unreadNum() {
-        String email = session().get("clientEmail");
-        Client currentClient = Client.findClientByEmail(email);
+        Client currentClient = currentClient();
         int unreadNum = Unread.getUnreadNum(currentClient);
         StringBuilder sb = new StringBuilder();
         sb.append("");
@@ -161,8 +162,7 @@ public class Application extends Controller {
     }
 
     public static Result showUnread() {
-        String email = session().get("clientEmail");
-        Client currentClient = Client.findClientByEmail(email);
+        Client currentClient = currentClient();
         if(Unread.getUnreadNum(currentClient) == 0) {
             return ok("Everything has been read.");
         } else {
@@ -200,8 +200,7 @@ public class Application extends Controller {
     }
 
     public static Result editMyProfilePage() {
-        String email = session().get("clientEmail");
-        Client currentClient = Client.findClientByEmail(email);
+        Client currentClient = currentClient();
         return ok(editMyProfile.render(currentClient));
     }
 
@@ -217,4 +216,7 @@ public class Application extends Controller {
         return redirect(routes.Application.landing());
     }
 
+    public static Result friendListPage() {
+        return ok(friendList.render());
+    }
 }

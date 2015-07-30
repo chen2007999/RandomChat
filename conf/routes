@@ -51,3 +51,4 @@ GET /likeInterest/:interest                            controllers.Application.l
 GET /myProfile                                        controllers.Application.myProfile()
 GET /editMyProfilePage                                controllers.Application.editMyProfilePage()
 GET /editMyProfile                                    controllers.Application.editMyProfile()
+GET /friendListPage                                   controllers.Application.friendListPage()
