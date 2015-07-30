@@ -11,6 +11,8 @@ GET     /assets/*file               controllers.Assets.at(path="/public", file)
 # Check client's login information and determines success or failure
 POST   /logIn                             controllers.Application.logIn()
 
+POST    /logOut                            controllers.Application.logOut()
+
 # Take client's registration information and create a new account
 GET    /register                          controllers.Application.register(error:String?="")
 

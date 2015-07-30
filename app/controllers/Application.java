@@ -41,7 +41,6 @@ public class Application extends Controller {
         }
         Client.createClient(client);
         session().put("clientEmail", client.getEmail());
-        //response().setCookie("clientEmail", client.getEmail());
         Client currentClient = client;
         return ok(randChat.render(currentClient, RandChat.getWaiting(), RandChat.getChatPairs()));
     }
@@ -59,12 +58,11 @@ public class Application extends Controller {
         Client client = getClient();
         if(Client.validate(client)) {
             Client currentClient = Client.findClient(client);
+            session().put("clientEmail", client.getEmail());
             return ok(randChat.render(currentClient, RandChat.getWaiting(), RandChat.getChatPairs()));
+
         }
 
-        session().put("clientEmail", client.getEmail());
-
-        //session().clear();
         return ok(landing.render());
     }
 
@@ -212,6 +210,11 @@ public class Application extends Controller {
         String email = session().get("clientEmail");
         Client.updateDescription(email, description);
         return ok(description);
+    }
+
+    public static Result logOut() {
+        session().clear();
+        return redirect(routes.Application.landing());
     }
 
 }
