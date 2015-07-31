@@ -4,7 +4,9 @@
 
 <h1>@client.name</h1>
 
-<div id="friend"></div>
+@helper.form(routes.Application.friendChat(client.email)) {
+<button type="submit" id="friend">
+}
 
 @helper.form(routes.Application.addFriend(client.email)) {
 <button id="add" type="submit">add friend</button>
@@ -32,7 +34,7 @@
             var add = document.getElementById('add');
 
             if(@friendAlready) {
-                document.getElementById("friend").innerHTML = "friend";
+                document.getElementById("friend").innerHTML = "Message";
                 add.style.display = "none";
                 accept.style.display = "none";
             } else {

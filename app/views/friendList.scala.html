@@ -1,10 +1,11 @@
-<!DOCTYPE html>
-<html>
-<head lang="en">
-    <meta charset="UTF-8">
-    <title></title>
-</head>
-<body>
+@(friends : java.util.List[Client])
 
-</body>
-</html>
+<h1>Friends</h1>
+
+@for(friend <- friends) {
+<li>
+    @helper.form(routes.Application.findFriendProfileWithClientEmail(friend.email, "nothing")) {
+    <button type="submit"> <h2>@friend.name   @friend.description</h2></button>
+    }
+</li>
+}

@@ -1,0 +1,82 @@
+@(client: models.Client)
+
+@main("Friend Chat") {
+
+<h1>Messaging @client.name</h1>
+
+<script language="javascript">
+var popupWindow = null;
+function popUp(url,winName,w,h,scroll){
+LeftPosition = (screen.width) ? (screen.width-w)/2 : 0;
+TopPosition = (screen.height) ? (screen.height-h)/2 : 0;
+settings =
+'height='+h+',width='+w+',top='+TopPosition+',left='+LeftPosition+',scrollbars='+scroll+',resizable'
+popupWindow = window.open(url,winName,settings)
+}
+</script>
+
+
+
+<div id="socket-messages" ></div>
+<style type="text/css">
+    #socket-messages{
+    text-align:left;
+
+    margin-bottom:25px;
+    padding:10px;
+    background:#fff;
+    height:380px;
+    width:550px;
+
+    overflow:auto;
+    }
+
+
+</style>
+
+<input type="text" id="socket-input" placeholder="message to send" style="height:30px;width:550px" />
+
+
+<script type="text/javascript">
+
+        $.ajax(
+           "/unreadNum",
+        {
+        type: 'GET',
+        dataType: 'text',
+        success: function (data, textStatus, jqXHR){
+            var rText = jqXHR.responseText;
+            var elem = document.getElementById("unread");
+           elem.value = "Unread " + rText;
+        },
+        error: function (jqXHR, textStatus, errorThown){
+            // alert('Load failed');
+        },
+        cache:false
+    });
+
+ </script>
+
+<script type="text/javascript">
+
+        $.ajax(
+           "/friendChatEmail",
+        {
+        type: 'GET',
+        data: client.email,
+        dataType: 'text',
+        success: function (data, textStatus, jqXHR){
+
+        },
+        error: function (jqXHR, textStatus, errorThown){
+            // alert('Load failed');
+        },
+        cache:false
+    });
+
+ </script>
+
+
+
+}
+

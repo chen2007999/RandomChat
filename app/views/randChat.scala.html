@@ -1,4 +1,4 @@
-@(client: models.Client, waiting : java.util.List[Client], chatPairs : java.util.List[Client])
+@(client: models.Client)
 
 @main("RandChat") {
 
@@ -13,9 +13,7 @@
 
 <input type="button" value="Interests" onclick="popUp('interestsListPage','myWindow','700','620','yes');return false" style="float: right;height:40px;width:100px">
 
-@helper.form(routes.Application.friendListPage()) {
-<input type="submit" value="My Friends" style="float: right;height:40px;width:100px">
-}
+<input type="button" value="My Friends" onclick="popUp('friendListPage','myWindow','700','620','yes');return false" style="float: right;height:40px;width:100px">
 
 <input type="button" value="Unread" onclick="popUp('showUnread','myWindow','700','620','yes');return false" id="unread" style="float: right;height:40px;width:100px">
 
@@ -103,7 +101,7 @@ function nextUser()
 <input type="button" value="Next User" onclick="popUp('nextUser','myWindow','700','620','yes');return false" style="height:40px;width:100px" >
 
 
-    <script type="text/javascript" charset="utf-8" src="@routes.Application.wsJs()"></script>
+    <script type="text/javascript" charset="utf-8" src="@routes.Application.randChatWS()"></script>
 
 
 }

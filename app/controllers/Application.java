@@ -47,7 +47,7 @@ public class Application extends Controller {
         Client.createClient(client);
         session().put("clientEmail", client.getEmail());
         Client currentClient = client;
-        return ok(randChat.render(currentClient, RandChat.getWaiting(), RandChat.getChatPairs()));
+        return ok(randChat.render(currentClient));
     }
 
     public static  Result deleteClientFromDB(String email) {
@@ -64,7 +64,7 @@ public class Application extends Controller {
         if(Client.validate(client)) {
             Client currentClient = Client.findClient(client);
             session().put("clientEmail", client.getEmail());
-            return ok(randChat.render(currentClient, RandChat.getWaiting(), RandChat.getChatPairs()));
+            return ok(randChat.render(currentClient));
 
         }
 
@@ -96,8 +96,8 @@ public class Application extends Controller {
 
     }
 
-    public static Result wsJs() {
-        return ok(views.js.ws.render());
+    public static Result randChatWS() {
+        return ok(views.js.randChatWebSocket.render());
     }
 
     public static Result findFriendProfileWithClientEmail(String clientEmail, String key) {
@@ -107,11 +107,12 @@ public class Application extends Controller {
         boolean friendRequestReceived = Unread.friendRequestReceived(currentClient, client);
         if(key.equals("request")) {
             Unread.updateUnreadFriendRequest(clientEmail);
+            RandChat.removeOneUnread(currentClient);
         }
         if(key.equals("confirmation")) {
             Unread.updateUnreadFriendConfirmation(clientEmail);
+            RandChat.removeOneUnread(currentClient);
         }
-        RandChat.removeOneUnread(currentClient);
         return ok(friendProfile.render(client, friendRequestReceived, Friend.friendWith(client, currentClient), ClientInterest.findInterestsOfAClient(clientEmail)));
     }
 
@@ -217,6 +218,11 @@ public class Application extends Controller {
     }
 
     public static Result friendListPage() {
-        return ok(friendList.render());
+        Client currentClient = currentClient();
+        return ok(friendList.render(Friend.findfriends(currentClient)));
+    }
+
+    public static Result friendChat(String clientEmail) {
+        return ok(friendChat.render(Client.findClientByEmail(clientEmail)));
     }
 }
