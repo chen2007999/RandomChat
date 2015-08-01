@@ -4,12 +4,15 @@ import play.db.ebean.Model;
 
 import java.util.ArrayList;
 import java.util.List;
-import javax.persistence.Column;
-import javax.persistence.Entity;
+import javax.persistence.*;
 import java.sql.Timestamp;
 
 @Entity
 public class ChatHistory extends Model{
+
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    public Long id;
 
     @Column(name = "fromClient")
     public String fromClient;

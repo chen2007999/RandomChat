@@ -16,11 +16,9 @@
 
 <h3>My Interests:</h3>
 @for(interestLike <- interestLikes) {
-<li>
     @helper.form(routes.Application.interestPage(interestLike.interest)) {
     <button type="submit"> <h4>@interestLike.interest  @interestLike.likes</h4></button><br>
     }
-</li>
 }
 
 

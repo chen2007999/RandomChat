@@ -4,10 +4,12 @@
 # --- !Ups
 
 create table chat_history (
+  id                        bigint auto_increment not null,
   fromClient                varchar(255),
   toClient                  varchar(255),
   sentTime                  timestamp,
-  content                   varchar(255))
+  content                   varchar(255),
+  constraint pk_chat_history primary key (id))
 ;
 
 create table client (

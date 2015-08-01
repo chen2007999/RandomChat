@@ -35,7 +35,7 @@ GET    /clients                              controllers.Application.displayAllC
 GET /wsInterface                                  controllers.Application.wsInterface()
 
 GET /friendProfile                                controllers.Application.friendProfile()
-
+GET /nextUser                                     controllers.Application.nextUser()
 GET /assets.javascript.randChatWebSocket.js                      controllers.Application.randChatWS()
 
 GET /addFriend/:clientEmail                        controllers.Application.addFriend(clientEmail:String)

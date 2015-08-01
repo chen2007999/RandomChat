@@ -90,9 +90,12 @@ public class Application extends Controller {
         };
     }
 
-    public static void nextUser(){
+    public static Result nextUser(){
         Client client = currentClient();
+        System.out.println("t1");
         RandChat.nextUser(client);
+        System.out.println("t2");
+        return ok("");
     }
 
     public static Result randChatWS() {
