@@ -5,15 +5,15 @@
 <h1>@client.name</h1>
 
 @helper.form(routes.Application.message(client.email, "nothing", 0)) {
-<button type="submit" id="message">Message</button>
+<button type="submit" id="message" class="message">Message</button>
 }
 
 @helper.form(routes.Application.addFriend(client.email)) {
-<button id="add" type="submit">add friend</button>
+<button id="add" type="submit" class="action">add friend</button>
 }
 
 @helper.form(routes.Application.acceptFriendRequest(client.email)) {
-<button id="accept" type="submit">accept friend request</button>
+<button id="accept" type="submit" class="action">accept friend request</button>
 }
 
 <h3>Description:</h3>
@@ -50,7 +50,58 @@
 </script>
 
 
+<style type="text/css">
+    .action{
 
+    border-style: solid;
+    border-width: 0px 0px 3px;
+    box-shadow: 0 -1px 0 rgba(255, 255, 255, 0.1) inset;
+    color: #FFFFFF;
+    border-radius: 6px;
+    cursor: pointer;
+    display: inline-block;
+    font-style: normal;
+    overflow: hidden;
+    text-align: center;
+    text-decoration: none;
+    text-overflow: ellipsis;
+    transition: all 200ms ease-in-out 0s;
+    white-space: nowrap;
+    font-family: "Gotham Rounded A","Gotham Rounded B",Helvetica,Arial,sans-serif;
+    font-weight: 700;
+    padding: 4px 13px 4px;
+    font-size: 15px;
+    border-color: #3AC162;
+    background-color: #5FCF80;
+
+    }
+
+    .message{
+
+    border-style: solid;
+    border-width: 0px 0px 3px;
+    box-shadow: 0 -1px 0 rgba(255, 255, 255, 0.1) inset;
+    color: #FFFFFF;
+    border-radius: 6px;
+    cursor: pointer;
+    display: inline-block;
+    font-style: normal;
+    overflow: hidden;
+    text-align: center;
+    text-decoration: none;
+    text-overflow: ellipsis;
+    transition: all 200ms ease-in-out 0s;
+    white-space: nowrap;
+    font-family: "Gotham Rounded A","Gotham Rounded B",Helvetica,Arial,sans-serif;
+    font-weight: 700;
+    padding: 4px 13px 4px;
+    font-size: 15px;
+    background-color: #397CAC;
+    border-color: #326E99;
+
+    }
+
+</style>
 
 
 
