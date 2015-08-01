@@ -3,6 +3,8 @@ import models.*;
 import play.api.mvc.Session;
 import play.mvc.*;
 import views.html.*;
+import java.util.List;
+import java.sql.Timestamp;
 
 public class Application extends Controller {
 
@@ -222,7 +224,20 @@ public class Application extends Controller {
         return ok(friendList.render(Friend.findfriends(currentClient)));
     }
 
-    public static Result friendChat(String clientEmail) {
-        return ok(friendChat.render(Client.findClientByEmail(clientEmail)));
+    public static Result message(String clientEmail) {
+        String email = session().get("clientEmail");
+        List<String> history = ChatHistory.findHistory(email, clientEmail);
+        return ok(message.render(Client.findClientByEmail(clientEmail), history));
+    }
+
+    public static Result sendMessage(String friendEmail) {
+        play.data.Form<ChatHistory> messageForm = play.data.Form.form(ChatHistory.class);
+        ChatHistory chatHistory = messageForm.bindFromRequest().get();
+        String email = session().get("clientEmail");
+        java.util.Date date= new java.util.Date();
+        Timestamp time = new Timestamp(date.getTime());
+
+        ChatHistory.createNewHistory(email, friendEmail, chatHistory.getContent(), time);
+        return ok(messageSuccess.render());
     }
 }

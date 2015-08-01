@@ -3,6 +3,13 @@
 
 # --- !Ups
 
+create table chat_history (
+  fromClient                varchar(255),
+  toClient                  varchar(255),
+  sentTime                  timestamp,
+  content                   varchar(255))
+;
+
 create table client (
   email                     varchar(255) not null,
   description               varchar(255),
@@ -49,6 +56,8 @@ create table unread (
 # --- !Downs
 
 SET REFERENTIAL_INTEGRITY FALSE;
+
+drop table if exists chat_history;
 
 drop table if exists client;
 

@@ -56,4 +56,5 @@ GET /editMyProfilePage                                controllers.Application.ed
 GET /editMyProfile                                    controllers.Application.editMyProfile()
 GET /friendListPage                                   controllers.Application.friendListPage()
 
-GET /friendChat/:clientEmail                        controllers.Application.friendChat(clientEmail:String)
+GET /message/:clientEmail                        controllers.Application.message(clientEmail:String)
+GET /sendMessage/:friendEmail                        controllers.Application.sendMessage(friendEmail:String)

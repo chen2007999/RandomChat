@@ -1,0 +1,21 @@
+@(client : models.Client, history : java.util.List[String])
+
+@main("Message") {
+
+<h1>Messaging @client.name</h1>
+
+
+@for(h <- history) {
+
+<h3>@h</h3>
+}
+
+
+@helper.form(routes.Application.sendMessage(client.email)) {
+<input type="text" id="socket-input" placeholder="message to send" style="height:30px;width:550px" name="content"/>
+<button type="Send">Send</button>
+}
+
+
+}
+

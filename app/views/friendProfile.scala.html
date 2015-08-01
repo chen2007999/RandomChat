@@ -4,8 +4,8 @@
 
 <h1>@client.name</h1>
 
-@helper.form(routes.Application.friendChat(client.email)) {
-<button type="submit" id="friend">
+@helper.form(routes.Application.message(client.email)) {
+<button type="submit" id="friend"></button>
 }
 
 @helper.form(routes.Application.addFriend(client.email)) {
