@@ -182,6 +182,9 @@ public class Application extends Controller {
     public static Result createInterest() {
         play.data.Form<Interest> interestForm = play.data.Form.form(Interest.class);
         Interest interest = interestForm.bindFromRequest().get();
+        if(Interest.find.byId(interest.getInterest()) != null) {
+            return ok(interestExists.render());
+        }
         interest.save();
         String email = session().get("clientEmail");
         ClientInterest.createClientInterest(interest.getInterest(), email);

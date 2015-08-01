@@ -85,4 +85,15 @@ public class ClientInterest extends Model{
         return sortedResult;
     }
 
+    public static boolean hasCommonInterest(Client c1, Client c2) {
+        List<InterestLikes> i1 = findInterestsOfAClient(c1.getEmail());
+        List<InterestLikes> i2 = findInterestsOfAClient(c2.getEmail());
+        for(InterestLikes i : i1) {
+            if(i2.contains(i)) {
+                return true;
+            }
+        }
+        return false;
+    }
+
 }

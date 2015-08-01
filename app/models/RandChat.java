@@ -19,12 +19,12 @@ public class RandChat {
 
         // Server responses
        in.onMessage(new F.Callback<String>() {
-            public void invoke(String event) {
-                if (clientConnection1.isPaired()) {
-                    clientConnection1.getChatPair().notifyPair(event);
-                }
-            }
-        });
+           public void invoke(String event) {
+               if (clientConnection1.isPaired()) {
+                   clientConnection1.getChatPair().notifyPair(event);
+               }
+           }
+       });
 
 
         in.onClose(new F.Callback0() {
@@ -78,17 +78,30 @@ public class RandChat {
         pairing(clientConnection1);
     }
 
+
     private static void pairing(ClientConnection clientConnection1) {
         if(waiting.size() >= 2) {
             ClientConnection clientConnection2 = null;
 
+            List<ClientConnection> commonInterestsClients = new ArrayList<>();
+            ClientConnection backUp = null;
+
             for(int i=0; i<waiting.size(); i++) {
-                if(!PairHistory.inHistory(clientConnection1.getClient(), waiting.get(i).getClient())) {
-                    if(!waiting.get(i).getClient().equals(clientConnection1.getClient())) {
-                        clientConnection2 = waiting.get(i);
-                        break;
+                ClientConnection currentCC = waiting.get(i);
+                if(!PairHistory.inHistory(clientConnection1.getClient(), currentCC.getClient())) {
+                    if(!currentCC.getClient().equals(clientConnection1.getClient())) {
+                        backUp = currentCC;
+                        if(ClientInterest.hasCommonInterest(clientConnection1.getClient(), currentCC.getClient())) {
+                            commonInterestsClients.add(currentCC);
+                        }
                     }
                 }
+            }
+
+            if(commonInterestsClients.size() != 0) {
+                clientConnection2 = commonInterestsClients.get(0);
+            } else {
+                clientConnection2 = backUp;
             }
 
             if(clientConnection2 != null) {
