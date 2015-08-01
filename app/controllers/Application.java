@@ -92,9 +92,7 @@ public class Application extends Controller {
 
     public static Result nextUser(){
         Client client = currentClient();
-        System.out.println("t1");
         RandChat.nextUser(client);
-        System.out.println("t2");
         return ok("");
     }
 
@@ -139,7 +137,7 @@ public class Application extends Controller {
         Client currentClient = currentClient();
         Unread.createUnreadFriendRequest(currentClient, friendRequestClientEmail);
         RandChat.newUnread(Client.findClientByEmail(friendRequestClientEmail));
-        return ok("Friend request sent, waiting to be comfirmed..");
+        return ok(friendRequestSent.render());
     }
 
     public static Result acceptFriendRequest(String friendRequestClientEmail) {
@@ -167,7 +165,7 @@ public class Application extends Controller {
     public static Result showUnread() {
         Client currentClient = currentClient();
         if(Unread.getUnreadNum(currentClient) == 0) {
-            return ok("Everything has been read.");
+            return ok(everythingRead.render());
         } else {
             return ok(unread.render(Unread.getUnreadFriendRequest(currentClient), Unread.getUnreadFriendConfirmation(currentClient), Unread.getUnreadMessage(currentClient)));
         }
