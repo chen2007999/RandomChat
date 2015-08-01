@@ -86,7 +86,7 @@ function nextUser()
         success: function (data, textStatus, jqXHR){
             var rText = jqXHR.responseText;
             var elem = document.getElementById("unread");
-           elem.value = "Unread " + rText;
+            elem.value = "Unread " + rText;
         },
         error: function (jqXHR, textStatus, errorThown){
             // alert('Load failed');
@@ -97,9 +97,7 @@ function nextUser()
  </script>
 
 
-
-<input type="button" value="Next User" onclick="popUp('nextUser','myWindow','700','620','yes');return false" style="height:40px;width:100px" >
-
+<button onclick="nextUser()">Next User</button>
 
     <script type="text/javascript" charset="utf-8" src="@routes.Application.randChatWS()"></script>
 

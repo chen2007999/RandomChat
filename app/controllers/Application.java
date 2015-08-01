@@ -90,12 +90,9 @@ public class Application extends Controller {
         };
     }
 
-    public static Result nextUser(){
+    public static void nextUser(){
         Client client = currentClient();
         RandChat.nextUser(client);
-
-      return ok("hello");
-
     }
 
     public static Result randChatWS() {
@@ -169,7 +166,7 @@ public class Application extends Controller {
         if(Unread.getUnreadNum(currentClient) == 0) {
             return ok("Everything has been read.");
         } else {
-            return ok(unread.render(Unread.getUnreadFriendRequest(currentClient), Unread.getUnreadFriendConfirmation(currentClient)));
+            return ok(unread.render(Unread.getUnreadFriendRequest(currentClient), Unread.getUnreadFriendConfirmation(currentClient), Unread.getUnreadMessage(currentClient)));
         }
     }
 
@@ -224,9 +221,13 @@ public class Application extends Controller {
         return ok(friendList.render(Friend.findfriends(currentClient)));
     }
 
-    public static Result message(String clientEmail) {
+    public static Result message(String clientEmail, String key, int number) {
         String email = session().get("clientEmail");
         List<String> history = ChatHistory.findHistory(email, clientEmail);
+       if(key.equals("updateUnread")) {
+            Unread.updateUnreadMessage(email, number);
+            RandChat.removeOneUnread(currentClient());
+        }
         return ok(message.render(Client.findClientByEmail(clientEmail), history));
     }
 
@@ -236,8 +237,9 @@ public class Application extends Controller {
         String email = session().get("clientEmail");
         java.util.Date date= new java.util.Date();
         Timestamp time = new Timestamp(date.getTime());
-
         ChatHistory.createNewHistory(email, friendEmail, chatHistory.getContent(), time);
+        Unread.createUnreadMessage(friendEmail, email);
+        RandChat.newUnread(Client.findClientByEmail(friendEmail));
         return ok(messageSuccess.render());
     }
 }

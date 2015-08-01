@@ -1,4 +1,4 @@
-@(requestClients: java.util.List[Client], confirmationClients : java.util.List[Client])
+@(requestClients: java.util.List[Client], confirmationClients : java.util.List[Client], messageForms : java.util.List[UnreadMessage])
 
 @main("Unread") {
 
@@ -24,6 +24,15 @@
     }
 </ul>
 
+<ul>
+    @for(messageForm <- messageForms) {
+    <li>
+        @helper.form(routes.Application.message(messageForm.email, "updateUnread", messageForm.number)) {
+        <button type="submit"> <h3>@messageForm.clientName has sent you a message.</h3></button><br>
+        }
+    </li>
+    }
+</ul>
 
 
 }

@@ -4,8 +4,8 @@
 
 <h1>@client.name</h1>
 
-@helper.form(routes.Application.message(client.email)) {
-<button type="submit" id="friend"></button>
+@helper.form(routes.Application.message(client.email, "nothing", 0)) {
+<button type="submit" id="message">Message</button>
 }
 
 @helper.form(routes.Application.addFriend(client.email)) {
@@ -32,16 +32,19 @@
 <script type="text/javascript">
             var accept = document.getElementById('accept');
             var add = document.getElementById('add');
+            var message = document.getElementById('message');
 
             if(@friendAlready) {
-                document.getElementById("friend").innerHTML = "Message";
+                message.style.display = "";
                 add.style.display = "none";
                 accept.style.display = "none";
             } else {
                  if(@requestReceived){
+                       message.style.display = "none";
                        add.style.display = "none";
                        accept.style.display = "";
                  } else {
+                       message.style.display = "none";
                        accept.style.display = "none";
                        add.style.display = "";
                  }

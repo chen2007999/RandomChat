@@ -47,6 +47,8 @@ create table unread (
   clientEmail               varchar(255),
   friendRequestClientEmail  varchar(255),
   friendConfirmationClientEmail varchar(255),
+  messageFrom               varchar(255),
+  unreadMessageNumber       integer,
   constraint pk_unread primary key (id))
 ;
 

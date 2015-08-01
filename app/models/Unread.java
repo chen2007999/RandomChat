@@ -26,6 +26,12 @@ public class Unread extends Model{
     @Column(name = "friendConfirmationClientEmail")
     public String friendConfirmationClientEmail;
 
+    @Column(name = "messageFrom")
+    public String messageFrom;
+
+    @Column(name = "unreadMessageNumber")
+    public int unreadMessageNumber;
+
     public String getFriendConfirmationClientEmail() {
         return friendConfirmationClientEmail;
     }
@@ -42,12 +48,28 @@ public class Unread extends Model{
         this.friendRequestClientEmail = friendRequestClientEmail;
     }
 
+    public void setMessageFrom(String messageFrom) {
+        this.messageFrom = messageFrom;
+    }
+
     public String getFriendRequestClientEmail() {
         return friendRequestClientEmail;
     }
 
     public void setClientEmail(String clientEmail) {
         this.clientEmail = clientEmail;
+    }
+
+    public String getMessageFrom() {
+        return messageFrom;
+    }
+
+    public int getUnreadMessageNumber() {
+        return unreadMessageNumber;
+    }
+
+    public void setUnreadMessageNumber(int unreadMessageNumber) {
+        this.unreadMessageNumber = unreadMessageNumber;
     }
 
     public  static Finder<Long, Unread> find = new Finder<Long, Unread>(Long.class, Unread.class);
@@ -81,6 +103,20 @@ public class Unread extends Model{
         return friendRequestEmails;
     }
 
+    public static List<UnreadMessage> getUnreadMessage(Client client) {
+        List<Unread> unreads = getUnread(client);
+        List<UnreadMessage> messages = new ArrayList<>();
+        for(Unread unread : unreads) {
+            String messageFrom = unread.getMessageFrom();
+            if(messageFrom != null) {
+                Client clientToAdd = Client.findClientByEmail(messageFrom);
+                int number = unread.getUnreadMessageNumber();
+                messages.add(new UnreadMessage(number, clientToAdd.getName(), clientToAdd.getEmail()));
+            }
+        }
+        return messages;
+    }
+
 
     public static int getUnreadNum(Client client) {
         List<Unread> unreads = getUnread(client);
@@ -92,6 +128,7 @@ public class Unread extends Model{
         Unread unread = new Unread();
         unread.setClientEmail(clientEmail);
         unread.setFriendRequestClientEmail(friendRequestClient.getEmail());
+        unread.setUnreadMessageNumber(0);
         unread.save();
     }
 
@@ -104,6 +141,7 @@ public class Unread extends Model{
         Unread unread = new Unread();
         unread.setClientEmail(clientEmail);
         unread.setFriendConfirmationClientEmail(friendConfirmationClient.getEmail());
+        unread.setUnreadMessageNumber(0);
         unread.save();
     }
 
@@ -111,6 +149,32 @@ public class Unread extends Model{
         Unread unread = find.where().eq("friendConfirmationClientEmail", friendConfirmationClientEmail).findList().get(0);
         unread.delete();
     }
+
+    private static int latestUnreadMessageNumber(Client client) {
+        List<Unread> unreads = getUnread(client);
+        int result = 0;
+        for(Unread unread : unreads) {
+            int num = unread.getUnreadMessageNumber();
+            if(num != 0 && num > result) {
+               result = num;
+            }
+        }
+        return result;
+    }
+
+    public static void createUnreadMessage(String clientEmail, String messageFrom) {
+        Unread unread = new Unread();
+        unread.setClientEmail(clientEmail);
+        unread.setMessageFrom(messageFrom);
+        unread.setUnreadMessageNumber(latestUnreadMessageNumber(Client.findClientByEmail(clientEmail))+1);
+        unread.save();
+    }
+
+    public static void updateUnreadMessage(String clientEmail, int unreadMessageNumber) {
+        Unread unread = find.where().eq("clientEmail", clientEmail).eq("unreadMessageNumber", unreadMessageNumber).findList().get(0);
+        unread.delete();
+    }
+
 
 
     public static boolean friendRequestReceived(Client client1, Client client2) {
