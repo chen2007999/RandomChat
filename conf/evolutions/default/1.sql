@@ -4,7 +4,7 @@
 # --- !Ups
 
 create table chat_history (
-  id                        bigint auto_increment not null,
+  id                        bigint serial PRIMARY KEY,
   fromClient                varchar(255),
   toClient                  varchar(255),
   sentTime                  timestamp,
@@ -45,7 +45,7 @@ create table pair_history (
 ;
 
 create table unread (
-  id                        bigint auto_increment not null,
+  id                        bigint serial PRIMARY KEY,
   clientEmail               varchar(255),
   friendRequestClientEmail  varchar(255),
   friendConfirmationClientEmail varchar(255),
