@@ -35,6 +35,17 @@ $(function(){
                document.getElementById("unread").value="Unread " + unreadNumStr;
 
             }else {
+                var x1 =  Boolean(event.data.indexOf("Welcome to RandChat, waiting to be connected to a user.") > -1);
+                var x2 =  Boolean(event.data.indexOf("waiting to be connected to the next user.") > -1);
+                var x3 = Boolean(event.data.indexOf("just left, waiting to be connected to the next user.") > -1);
+                var x4 =  Boolean(event.data.indexOf("Just got connected to") > -1);
+                var otherProfile = document.getElementById('other');
+                if(x1 || x2 || x3) {
+                     otherProfile.style.display="none";
+                }
+                if(x4) {
+                     otherProfile.style.display="";
+                }
                 $('#socket-messages').append('<p>'+event.data+'</p>');
                 var objDiv = document.getElementById("socket-messages");
                 objDiv.scrollTop = objDiv.scrollHeight;
