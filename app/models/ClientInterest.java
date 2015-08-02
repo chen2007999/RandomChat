@@ -56,7 +56,7 @@ public class ClientInterest extends Model{
 
     public static List<InterestLikes> findInterestsOfAClient(String clientEmail) {
         List<ClientInterest> clientInterests = find.where().eq("clientEmail", clientEmail).findList();
-        List<String> interests = new ArrayList<>();
+        List<String> interests = new ArrayList<String>();
         for(ClientInterest ci : clientInterests) {
             interests.add(ci.getInterest());
         }
@@ -64,13 +64,13 @@ public class ClientInterest extends Model{
     }
 
     public static List<InterestLikes> allInteretsWithLikes(List<String> interests) {
-        List<InterestLikes> result = new ArrayList<>();
+        List<InterestLikes> result = new ArrayList<InterestLikes>();
         for(String i : interests) {
             int likes = find.where().eq("interest", i).findList().size();
             InterestLikes interestLikes = new InterestLikes(i, likes);
             result.add(interestLikes);
         }
-        List<InterestLikes> sortedResult = new ArrayList<>();
+        List<InterestLikes> sortedResult = new ArrayList<InterestLikes>();
         int size = result.size();
         while(sortedResult.size() != size) {
             InterestLikes var = null;

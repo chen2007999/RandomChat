@@ -105,7 +105,7 @@ public class Unread extends Model{
 
     public static List<UnreadMessage> getUnreadMessage(Client client) {
         List<Unread> unreads = getUnread(client);
-        List<UnreadMessage> messages = new ArrayList<>();
+        List<UnreadMessage> messages = new ArrayList<UnreadMessage>();
         for(Unread unread : unreads) {
             String messageFrom = unread.getMessageFrom();
             if(messageFrom != null) {

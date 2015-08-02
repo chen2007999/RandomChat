@@ -67,7 +67,7 @@ public class ChatHistory extends Model{
         List<ChatHistory> historyA = find.where().eq("fromClient", email).eq("toClient", clientEmail).findList();
         List<ChatHistory> historyB = find.where().eq("toClient", email).eq("fromClient", clientEmail).findList();
         historyA.addAll(historyB);
-        List<String> result = new ArrayList<>();
+        List<String> result = new ArrayList<String>();
 
         while(!historyA.isEmpty()) {
             ChatHistory toAdd = historyA.get(0);

@@ -11,7 +11,7 @@ public class RandChat {
 
     // collect all websockets here
     private static List<ClientConnection> waiting = new ArrayList<ClientConnection>();
-    private static List<ChatPair> chatPairs = new ArrayList<>();
+    private static List<ChatPair> chatPairs = new ArrayList<ChatPair>();
 
 
     public static void start(WebSocket.In<String> in, WebSocket.Out<String> out, Client client) {
@@ -84,7 +84,7 @@ public class RandChat {
         if(waiting.size() >= 2) {
             ClientConnection clientConnection2 = null;
 
-            List<ClientConnection> commonInterestsClients = new ArrayList<>();
+            List<ClientConnection> commonInterestsClients = new ArrayList<ClientConnection>();
             ClientConnection backUp = null;
 
             for(int i=0; i<waiting.size(); i++) {
@@ -193,7 +193,7 @@ public class RandChat {
     }
 
     public static List<Client> getChatPairs() {
-        List<Client> result = new ArrayList<>();
+        List<Client> result = new ArrayList<Client>();
         for(ChatPair cp : chatPairs) {
             result.add(cp.getClientConnection1().getClient());
             result.add(cp.getClientConnection2().getClient());
@@ -202,7 +202,7 @@ public class RandChat {
     }
 
     public static List<Client> getWaiting() {
-        List<Client> result = new ArrayList<>();
+        List<Client> result = new ArrayList<Client>();
             for (ClientConnection c : waiting) {
                 result.add(c.getClient());
             }

@@ -49,7 +49,7 @@ public class Friend extends Model{
 
     public static List<Client> findfriends(Client client) {
         List<Friend> friends = find.where().eq("email", client.getEmail()).findList();
-        List<Client> result = new ArrayList<>();
+        List<Client> result = new ArrayList<Client>();
         for(Friend f : friends) {
             result.add(Client.findClientByEmail(f.getfriendEmail()));
         }
