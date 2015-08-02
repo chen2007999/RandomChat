@@ -1,7 +1,7 @@
 package models;
 
-import javax.persistence.Column;
-import javax.persistence.Entity;
+import javax.persistence.*;
+
 import play.db.ebean.*;
 
 import java.util.ArrayList;
@@ -9,7 +9,9 @@ import java.util.List;
 
 @Entity
 public class Friend extends Model{
-
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    public Long id;
 
     @Column(name = "email")
     public String email;

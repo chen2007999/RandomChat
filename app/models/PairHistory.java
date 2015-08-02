@@ -8,7 +8,9 @@ import javax.persistence.Column;
 
 @Entity
 public class PairHistory extends Model {
-
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    public Long id;
 
     @Column(name = "email")
     public String email;
