@@ -7,7 +7,7 @@
 <ul>
     @for(requestClient <- requestClients) {
         @helper.form(routes.Application.findFriendProfileWithClientEmail(requestClient.email, "request")) {
-        <button type="submit"> <h3> @requestClient.name sent you a friend request</h3></button><br>
+        <button type="submit" class="blue"> <h3> @requestClient.name sent you a friend request</h3></button><br>
         }
     }
 </ul>
@@ -15,7 +15,7 @@
 <ul>
     @for(confirmationClient <- confirmationClients) {
         @helper.form(routes.Application.findFriendProfileWithClientEmail(confirmationClient.email, "confirmation")) {
-        <button type="submit"> <h3> @confirmationClient.name has accepeted your friend request</h3></button><br>
+        <button type="submit" class="blue"> <h3> @confirmationClient.name has accepeted your friend request</h3></button><br>
         }
     }
 </ul>
@@ -23,10 +23,33 @@
 <ul>
     @for(messageForm <- messageForms) {
         @helper.form(routes.Application.message(messageForm.email, "updateUnread", messageForm.number)) {
-        <button type="submit"> <h3>@messageForm.clientName has sent you a message.</h3></button><br>
+        <button type="submit" class="blue"> <h3>@messageForm.clientName has sent you a message.</h3></button><br>
         }
     }
 </ul>
 
-
+<style type="text/css">
+.blue{
+border-style: solid;
+border-width: 0px 0px 3px;
+box-shadow: 0 -1px 0 rgba(255, 255, 255, 0.1) inset;
+color: #FFFFFF;
+border-radius: 6px;
+cursor: pointer;
+display: inline-block;
+font-style: normal;
+overflow: hidden;
+text-align: center;
+text-decoration: none;
+text-overflow: ellipsis;
+transition: all 200ms ease-in-out 0s;
+white-space: nowrap;
+font-family: "Gotham Rounded A","Gotham Rounded B",Helvetica,Arial,sans-serif;
+font-weight: 700;
+padding: 4px 8px 4px;
+font-size: 15px;
+background-color: #397CAC;
+border-color: #326E99;
+}
+</style>
 }

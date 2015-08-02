@@ -5,7 +5,7 @@
 <h1>@client.name</h1>
 
 @helper.form(routes.Application.message(client.email, "nothing", 0)) {
-<button type="submit" id="message" class="message">Message</button>
+<button type="submit" id="message" class="action">Message</button>
 }
 
 @helper.form(routes.Application.addFriend(client.email)) {
@@ -22,7 +22,7 @@
 <h3>Interests:</h3>
 @for(interestLike <- interestLikes) {
     @helper.form(routes.Application.interestPage(interestLike.interest)) {
-    <button type="submit"> <h4>@interestLike.interest  @interestLike.likes</h4></button>
+    <button type="submit" class="blue"> <h4>@interestLike.interest  @interestLike.likes</h4></button>
     }
 }
 
@@ -76,8 +76,7 @@
 
     }
 
-    .message{
-
+    .blue{
     border-style: solid;
     border-width: 0px 0px 3px;
     box-shadow: 0 -1px 0 rgba(255, 255, 255, 0.1) inset;
@@ -94,11 +93,10 @@
     white-space: nowrap;
     font-family: "Gotham Rounded A","Gotham Rounded B",Helvetica,Arial,sans-serif;
     font-weight: 700;
-    padding: 4px 13px 4px;
+    padding: 3px 6px 3px;
     font-size: 15px;
     background-color: #397CAC;
     border-color: #326E99;
-
     }
 
 </style>

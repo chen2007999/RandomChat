@@ -124,7 +124,7 @@ public class Application extends Controller {
             Client client2 = clientConnection.getChatPair().getTheOtherClientConnection(clientConnection).getClient();
             return ok(friendProfile.render(client2, Unread.friendRequestReceived(currentClient, client2), Friend.friendWith(currentClient, client2), ClientInterest.findInterestsOfAClient(client2.getEmail())));
         }
-        return ok("Not connected to a user yet, please wait for the next user. :)");
+        return ok(notPairedYet.render());
     }
 
     public static Result myProfile() {

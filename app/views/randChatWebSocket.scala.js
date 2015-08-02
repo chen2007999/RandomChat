@@ -12,6 +12,11 @@ $(function(){
                var unreadNum = unread.substring(7);
                var unreadNumInt = parseInt(unreadNum);
                unreadNumInt = unreadNumInt + 1;
+               if(unreadNumInt == 0) {
+                    document.getElementById("unread").className = "grey";
+               } else {
+                    document.getElementById("unread").className = "red";
+               }
                var unreadNumStr = unreadNumInt.toString();
                document.getElementById("unread").value="Unread " + unreadNumStr;
 
@@ -21,6 +26,11 @@ $(function(){
                var unreadNum = unread.substring(7);
                var unreadNumInt = parseInt(unreadNum);
                unreadNumInt = unreadNumInt - 1;
+               if(unreadNumInt == 0) {
+                     document.getElementById("unread").className = "grey";
+                } else {
+                     document.getElementById("unread").className = "red";
+                }
                var unreadNumStr = unreadNumInt.toString();
                document.getElementById("unread").value="Unread " + unreadNumStr;
 
