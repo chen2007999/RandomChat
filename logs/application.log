@@ -1,13 +1,13 @@
-2015-08-02 09:52:33,933 - [INFO] - from play in pool-6-thread-7 
+2015-08-02 14:06:23,862 - [INFO] - from play in pool-6-thread-6 
 Listening for HTTP on /0:0:0:0:0:0:0:0:9000
 
-2015-08-02 09:52:40,986 - [INFO] - from play in play-internal-execution-context-1 
-database [default] connected at jdbc:h2:mem:play
+2015-08-02 14:06:33,579 - [INFO] - from play in play-internal-execution-context-1 
+database [default] connected at jdbc:postgresql://localhost:5432/postgres
 
-2015-08-02 09:52:41,317 - [ERROR] - from application in New I/O worker #1 
+2015-08-02 14:06:34,156 - [ERROR] - from application in New I/O worker #1 
 
 
-! @6n2g7n4hd - Internal server error, for (POST) [/logIn] ->
+! @6n2hf5mbn - Internal server error, for (GET) [/] ->
 
 play.api.db.evolutions.InvalidDatabaseRevision: Database 'default' needs evolution![An SQL script need to be run on your database.]
 	at play.api.db.evolutions.EvolutionsPlugin$$anonfun$onStart$1$$anonfun$apply$1.apply$mcV$sp(Evolutions.scala:510) ~[play-jdbc_2.11-2.3.9.jar:2.3.9]
@@ -40,7 +40,7 @@ play.api.db.evolutions.InvalidDatabaseRevision: Database 'default' needs evoluti
 	at scala.concurrent.forkjoin.ForkJoinPool.runWorker(ForkJoinPool.java:1979) ~[scala-library-2.11.6.jar:na]
 	at scala.concurrent.forkjoin.ForkJoinWorkerThread.run(ForkJoinWorkerThread.java:107) ~[scala-library-2.11.6.jar:na]
 
-2015-08-02 09:52:43,380 - [WARN] - from play in play-internal-execution-context-1 
+2015-08-02 14:06:34,369 - [WARN] - from play in play-internal-execution-context-1 
 Error stopping plugin
 java.lang.NullPointerException: null
 	at play.libs.ws.ning.NingWSPlugin.onStop(NingWSPlugin.java:31) ~[play-java-ws_2.11-2.3.9.jar:2.3.9]
@@ -71,785 +71,79 @@ java.lang.NullPointerException: null
 	at scala.concurrent.forkjoin.ForkJoinPool.runWorker(ForkJoinPool.java:1979) [scala-library-2.11.6.jar:na]
 	at scala.concurrent.forkjoin.ForkJoinWorkerThread.run(ForkJoinWorkerThread.java:107) [scala-library-2.11.6.jar:na]
 
-2015-08-02 09:52:43,414 - [INFO] - from play in play-internal-execution-context-1 
-database [default] connected at jdbc:h2:mem:play
-
-2015-08-02 09:52:43,570 - [INFO] - from play in play-internal-execution-context-1 
-Application started (Dev)
-
-2015-08-02 09:53:40,787 - [INFO] - from play in play-internal-execution-context-1 
-database [default] connected at jdbc:h2:mem:play
-
-2015-08-02 09:53:40,877 - [INFO] - from play in play-internal-execution-context-1 
-Application started (Dev)
-
-2015-08-02 09:54:29,711 - [INFO] - from play in play-internal-execution-context-2 
-database [default] connected at jdbc:h2:mem:play
-
-2015-08-02 09:54:29,788 - [INFO] - from play in play-internal-execution-context-2 
-Application started (Dev)
-
-2015-08-02 09:54:46,327 - [INFO] - from play in play-internal-execution-context-4 
-database [default] connected at jdbc:h2:mem:play
-
-2015-08-02 09:54:46,396 - [INFO] - from play in play-internal-execution-context-4 
-Application started (Dev)
-
-2015-08-02 09:55:48,160 - [INFO] - from play in play-internal-execution-context-6 
-database [default] connected at jdbc:h2:mem:play
-
-2015-08-02 09:55:48,232 - [INFO] - from play in play-internal-execution-context-6 
-Application started (Dev)
-
-2015-08-02 09:56:06,679 - [INFO] - from play in play-internal-execution-context-6 
-database [default] connected at jdbc:h2:mem:play
-
-2015-08-02 09:56:06,747 - [INFO] - from play in play-internal-execution-context-6 
-Application started (Dev)
-
-2015-08-02 09:56:54,456 - [INFO] - from play in play-internal-execution-context-6 
-database [default] connected at jdbc:h2:mem:play
-
-2015-08-02 09:56:54,521 - [INFO] - from play in play-internal-execution-context-6 
-Application started (Dev)
-
-2015-08-02 09:57:20,880 - [INFO] - from play in play-internal-execution-context-15 
-database [default] connected at jdbc:h2:mem:play
-
-2015-08-02 09:57:20,945 - [INFO] - from play in play-internal-execution-context-15 
-Application started (Dev)
-
-2015-08-02 09:59:20,072 - [INFO] - from play in play-internal-execution-context-16 
-database [default] connected at jdbc:h2:mem:play
-
-2015-08-02 09:59:20,141 - [INFO] - from play in play-internal-execution-context-16 
-Application started (Dev)
-
-2015-08-02 09:59:32,105 - [INFO] - from play in play-internal-execution-context-20 
-database [default] connected at jdbc:h2:mem:play
-
-2015-08-02 09:59:32,175 - [INFO] - from play in play-internal-execution-context-20 
-Application started (Dev)
-
-2015-08-02 10:00:44,611 - [INFO] - from play in play-internal-execution-context-19 
-database [default] connected at jdbc:h2:mem:play
-
-2015-08-02 10:00:44,677 - [INFO] - from play in play-internal-execution-context-19 
-Application started (Dev)
-
-2015-08-02 10:00:52,079 - [INFO] - from play in play-internal-execution-context-22 
-database [default] connected at jdbc:h2:mem:play
-
-2015-08-02 10:00:52,150 - [INFO] - from play in play-internal-execution-context-22 
-Application started (Dev)
-
-2015-08-02 10:01:04,639 - [INFO] - from play in play-internal-execution-context-23 
-database [default] connected at jdbc:h2:mem:play
-
-2015-08-02 10:01:04,705 - [INFO] - from play in play-internal-execution-context-23 
-Application started (Dev)
-
-2015-08-02 10:01:41,785 - [INFO] - from play in play-internal-execution-context-23 
-database [default] connected at jdbc:h2:mem:play
-
-2015-08-02 10:01:41,848 - [INFO] - from play in play-internal-execution-context-23 
-Application started (Dev)
-
-2015-08-02 10:02:01,943 - [INFO] - from play in play-internal-execution-context-23 
-database [default] connected at jdbc:h2:mem:play
-
-2015-08-02 10:02:02,012 - [INFO] - from play in play-internal-execution-context-23 
-Application started (Dev)
-
-2015-08-02 10:02:25,814 - [INFO] - from play in play-internal-execution-context-23 
-database [default] connected at jdbc:h2:mem:play
-
-2015-08-02 10:02:25,881 - [INFO] - from play in play-internal-execution-context-23 
-Application started (Dev)
-
-2015-08-02 10:02:47,881 - [INFO] - from play in play-internal-execution-context-23 
-database [default] connected at jdbc:h2:mem:play
-
-2015-08-02 10:02:47,952 - [INFO] - from play in play-internal-execution-context-23 
-Application started (Dev)
-
-2015-08-02 10:03:23,127 - [INFO] - from play in play-internal-execution-context-29 
-database [default] connected at jdbc:h2:mem:play
-
-2015-08-02 10:03:23,190 - [INFO] - from play in play-internal-execution-context-29 
-Application started (Dev)
-
-2015-08-02 10:04:39,064 - [INFO] - from play in play-internal-execution-context-31 
-database [default] connected at jdbc:h2:mem:play
-
-2015-08-02 10:04:39,133 - [INFO] - from play in play-internal-execution-context-31 
-Application started (Dev)
-
-2015-08-02 10:07:15,305 - [INFO] - from play in play-internal-execution-context-35 
-database [default] connected at jdbc:h2:mem:play
-
-2015-08-02 10:07:15,368 - [INFO] - from play in play-internal-execution-context-35 
-Application started (Dev)
-
-2015-08-02 10:14:51,383 - [INFO] - from play in play-internal-execution-context-35 
-database [default] connected at jdbc:h2:mem:play
-
-2015-08-02 10:14:51,444 - [INFO] - from play in play-internal-execution-context-35 
-Application started (Dev)
-
-2015-08-02 10:17:53,764 - [INFO] - from play in play-internal-execution-context-46 
-database [default] connected at jdbc:h2:mem:play
-
-2015-08-02 10:17:53,828 - [INFO] - from play in play-internal-execution-context-46 
-Application started (Dev)
-
-2015-08-02 10:22:07,199 - [INFO] - from play in play-internal-execution-context-54 
-database [default] connected at jdbc:h2:mem:play
-
-2015-08-02 10:22:07,461 - [INFO] - from play in play-internal-execution-context-54 
-Application started (Dev)
-
-2015-08-02 10:22:49,167 - [INFO] - from play in play-internal-execution-context-55 
-database [default] connected at jdbc:h2:mem:play
-
-2015-08-02 10:22:49,231 - [INFO] - from play in play-internal-execution-context-55 
-Application started (Dev)
-
-2015-08-02 10:23:35,573 - [INFO] - from play in play-internal-execution-context-54 
-database [default] connected at jdbc:h2:mem:play
-
-2015-08-02 10:23:35,634 - [INFO] - from play in play-internal-execution-context-54 
-Application started (Dev)
-
-2015-08-02 10:23:47,657 - [INFO] - from play in play-internal-execution-context-54 
-database [default] connected at jdbc:h2:mem:play
-
-2015-08-02 10:23:47,726 - [INFO] - from play in play-internal-execution-context-54 
-Application started (Dev)
-
-2015-08-02 10:24:13,708 - [INFO] - from play in play-internal-execution-context-61 
-database [default] connected at jdbc:h2:mem:play
-
-2015-08-02 10:24:13,768 - [INFO] - from play in play-internal-execution-context-61 
-Application started (Dev)
-
-2015-08-02 10:24:22,291 - [INFO] - from play in play-internal-execution-context-61 
-database [default] connected at jdbc:h2:mem:play
-
-2015-08-02 10:24:22,352 - [INFO] - from play in play-internal-execution-context-61 
-Application started (Dev)
-
-2015-08-02 10:24:31,647 - [INFO] - from play in play-internal-execution-context-61 
-database [default] connected at jdbc:h2:mem:play
-
-2015-08-02 10:24:31,709 - [INFO] - from play in play-internal-execution-context-61 
-Application started (Dev)
-
-2015-08-02 10:24:39,137 - [INFO] - from play in play-internal-execution-context-64 
-database [default] connected at jdbc:h2:mem:play
-
-2015-08-02 10:24:39,236 - [INFO] - from play in play-internal-execution-context-64 
-Application started (Dev)
-
-2015-08-02 10:26:18,067 - [INFO] - from play in play-internal-execution-context-64 
-database [default] connected at jdbc:h2:mem:play
-
-2015-08-02 10:26:18,171 - [INFO] - from play in play-internal-execution-context-64 
-Application started (Dev)
-
-2015-08-02 10:28:41,326 - [INFO] - from play in play-internal-execution-context-68 
-database [default] connected at jdbc:h2:mem:play
-
-2015-08-02 10:28:41,389 - [INFO] - from play in play-internal-execution-context-68 
-Application started (Dev)
-
-2015-08-02 10:29:28,220 - [INFO] - from play in play-internal-execution-context-73 
-database [default] connected at jdbc:h2:mem:play
-
-2015-08-02 10:29:28,446 - [INFO] - from play in play-internal-execution-context-73 
-Application started (Dev)
-
-2015-08-02 10:30:28,734 - [INFO] - from play in play-internal-execution-context-73 
-database [default] connected at jdbc:h2:mem:play
-
-2015-08-02 10:30:28,801 - [INFO] - from play in play-internal-execution-context-73 
-Application started (Dev)
-
-2015-08-02 10:31:33,302 - [INFO] - from play in play-internal-execution-context-78 
-database [default] connected at jdbc:h2:mem:play
-
-2015-08-02 10:31:33,362 - [INFO] - from play in play-internal-execution-context-78 
-Application started (Dev)
-
-2015-08-02 10:31:54,981 - [INFO] - from play in play-internal-execution-context-80 
-database [default] connected at jdbc:h2:mem:play
-
-2015-08-02 10:31:55,041 - [INFO] - from play in play-internal-execution-context-80 
-Application started (Dev)
-
-2015-08-02 10:32:35,135 - [INFO] - from play in play-internal-execution-context-81 
-database [default] connected at jdbc:h2:mem:play
-
-2015-08-02 10:32:35,203 - [INFO] - from play in play-internal-execution-context-81 
-Application started (Dev)
-
-2015-08-02 10:33:00,480 - [INFO] - from play in play-internal-execution-context-81 
-database [default] connected at jdbc:h2:mem:play
-
-2015-08-02 10:33:00,544 - [INFO] - from play in play-internal-execution-context-81 
-Application started (Dev)
-
-2015-08-02 10:34:15,694 - [INFO] - from play in play-internal-execution-context-84 
-database [default] connected at jdbc:h2:mem:play
-
-2015-08-02 10:34:15,761 - [INFO] - from play in play-internal-execution-context-84 
-Application started (Dev)
-
-2015-08-02 10:34:40,665 - [INFO] - from play in play-internal-execution-context-84 
-database [default] connected at jdbc:h2:mem:play
-
-2015-08-02 10:34:40,732 - [INFO] - from play in play-internal-execution-context-84 
-Application started (Dev)
-
-2015-08-02 10:34:59,697 - [INFO] - from play in play-internal-execution-context-84 
-database [default] connected at jdbc:h2:mem:play
-
-2015-08-02 10:34:59,757 - [INFO] - from play in play-internal-execution-context-84 
-Application started (Dev)
-
-2015-08-02 10:35:35,680 - [INFO] - from play in play-internal-execution-context-84 
-database [default] connected at jdbc:h2:mem:play
-
-2015-08-02 10:35:35,741 - [INFO] - from play in play-internal-execution-context-84 
-Application started (Dev)
-
-2015-08-02 10:35:52,480 - [INFO] - from play in play-internal-execution-context-84 
-database [default] connected at jdbc:h2:mem:play
-
-2015-08-02 10:35:52,692 - [INFO] - from play in play-internal-execution-context-84 
-Application started (Dev)
-
-2015-08-02 10:36:31,294 - [INFO] - from play in play-internal-execution-context-84 
-database [default] connected at jdbc:h2:mem:play
-
-2015-08-02 10:36:31,353 - [INFO] - from play in play-internal-execution-context-84 
-Application started (Dev)
-
-2015-08-02 10:37:21,385 - [INFO] - from play in play-internal-execution-context-84 
-database [default] connected at jdbc:h2:mem:play
-
-2015-08-02 10:37:21,446 - [INFO] - from play in play-internal-execution-context-84 
-Application started (Dev)
-
-2015-08-02 10:37:31,881 - [INFO] - from play in play-internal-execution-context-84 
-database [default] connected at jdbc:h2:mem:play
-
-2015-08-02 10:37:31,940 - [INFO] - from play in play-internal-execution-context-84 
-Application started (Dev)
-
-2015-08-02 10:45:08,206 - [INFO] - from play in play-internal-execution-context-84 
-database [default] connected at jdbc:h2:mem:play
-
-2015-08-02 10:45:08,265 - [INFO] - from play in play-internal-execution-context-84 
-Application started (Dev)
-
-2015-08-02 10:45:46,895 - [INFO] - from play in play-internal-execution-context-84 
-database [default] connected at jdbc:h2:mem:play
-
-2015-08-02 10:45:47,084 - [INFO] - from play in play-internal-execution-context-84 
-Application started (Dev)
-
-2015-08-02 10:46:29,783 - [INFO] - from play in play-internal-execution-context-84 
-database [default] connected at jdbc:h2:mem:play
-
-2015-08-02 10:46:29,844 - [INFO] - from play in play-internal-execution-context-84 
-Application started (Dev)
-
-2015-08-02 10:48:01,319 - [INFO] - from play in play-internal-execution-context-84 
-database [default] connected at jdbc:h2:mem:play
-
-2015-08-02 10:48:01,383 - [INFO] - from play in play-internal-execution-context-84 
-Application started (Dev)
-
-2015-08-02 10:48:22,909 - [INFO] - from play in play-internal-execution-context-84 
-database [default] connected at jdbc:h2:mem:play
-
-2015-08-02 10:48:22,967 - [INFO] - from play in play-internal-execution-context-84 
-Application started (Dev)
-
-2015-08-02 10:48:40,778 - [INFO] - from play in play-internal-execution-context-84 
-database [default] connected at jdbc:h2:mem:play
-
-2015-08-02 10:48:40,985 - [INFO] - from play in play-internal-execution-context-84 
-Application started (Dev)
-
-2015-08-02 10:49:45,821 - [INFO] - from play in play-internal-execution-context-84 
-database [default] connected at jdbc:h2:mem:play
-
-2015-08-02 10:49:45,885 - [INFO] - from play in play-internal-execution-context-84 
-Application started (Dev)
-
-2015-08-02 10:51:58,661 - [INFO] - from play in play-internal-execution-context-97 
-database [default] connected at jdbc:h2:mem:play
-
-2015-08-02 10:51:58,722 - [INFO] - from play in play-internal-execution-context-97 
-Application started (Dev)
-
-2015-08-02 10:52:53,871 - [ERROR] - from play in play-akka.actor.default-dispatcher-182 
-Cannot invoke the action, eventually got an error: java.lang.NullPointerException
-
-2015-08-02 10:52:53,877 - [ERROR] - from application in play-akka.actor.default-dispatcher-182 
-
-
-! @6n2gfkii8 - Internal server error, for (GET) [/sendMessage/v@v.com?content=dd] ->
-
-play.api.Application$$anon$1: Execution exception[[NullPointerException: null]]
-	at play.api.Application$class.handleError(Application.scala:296) ~[play_2.11-2.3.9.jar:2.3.9]
-	at play.api.DefaultApplication.handleError(Application.scala:402) [play_2.11-2.3.9.jar:2.3.9]
-	at play.core.server.netty.PlayDefaultUpstreamHandler$$anonfun$3$$anonfun$applyOrElse$4.apply(PlayDefaultUpstreamHandler.scala:320) [play_2.11-2.3.9.jar:2.3.9]
-	at play.core.server.netty.PlayDefaultUpstreamHandler$$anonfun$3$$anonfun$applyOrElse$4.apply(PlayDefaultUpstreamHandler.scala:320) [play_2.11-2.3.9.jar:2.3.9]
+2015-08-02 14:06:34,461 - [INFO] - from play in play-internal-execution-context-1 
+database [default] connected at jdbc:postgresql://localhost:5432/postgres
+
+2015-08-02 14:06:34,541 - [ERROR] - from application in New I/O worker #2 
+
+
+! @6n2hf5n0p - Internal server error, for (GET) [/] ->
+
+play.api.db.evolutions.InvalidDatabaseRevision: Database 'default' needs evolution![An SQL script need to be run on your database.]
+	at play.api.db.evolutions.EvolutionsPlugin$$anonfun$onStart$1$$anonfun$apply$1.apply$mcV$sp(Evolutions.scala:510) ~[play-jdbc_2.11-2.3.9.jar:2.3.9]
+	at play.api.db.evolutions.EvolutionsPlugin.withLock(Evolutions.scala:531) ~[play-jdbc_2.11-2.3.9.jar:2.3.9]
+	at play.api.db.evolutions.EvolutionsPlugin$$anonfun$onStart$1.apply(Evolutions.scala:485) ~[play-jdbc_2.11-2.3.9.jar:2.3.9]
+	at play.api.db.evolutions.EvolutionsPlugin$$anonfun$onStart$1.apply(Evolutions.scala:483) ~[play-jdbc_2.11-2.3.9.jar:2.3.9]
+	at scala.collection.immutable.List.foreach(List.scala:381) ~[scala-library-2.11.6.jar:na]
+	at play.api.db.evolutions.EvolutionsPlugin.onStart(Evolutions.scala:483) ~[play-jdbc_2.11-2.3.9.jar:2.3.9]
+	at play.api.Play$$anonfun$start$1$$anonfun$apply$mcV$sp$1.apply(Play.scala:91) ~[play_2.11-2.3.9.jar:2.3.9]
+	at play.api.Play$$anonfun$start$1$$anonfun$apply$mcV$sp$1.apply(Play.scala:91) ~[play_2.11-2.3.9.jar:2.3.9]
+	at scala.collection.immutable.List.foreach(List.scala:381) ~[scala-library-2.11.6.jar:na]
+	at play.api.Play$$anonfun$start$1.apply$mcV$sp(Play.scala:91) ~[play_2.11-2.3.9.jar:2.3.9]
+	at play.api.Play$$anonfun$start$1.apply(Play.scala:91) ~[play_2.11-2.3.9.jar:2.3.9]
+	at play.api.Play$$anonfun$start$1.apply(Play.scala:91) ~[play_2.11-2.3.9.jar:2.3.9]
+	at play.utils.Threads$.withContextClassLoader(Threads.scala:21) ~[play_2.11-2.3.9.jar:2.3.9]
+	at play.api.Play$.start(Play.scala:90) ~[play_2.11-2.3.9.jar:2.3.9]
+	at play.core.ReloadableApplication$$anonfun$get$1$$anonfun$apply$1$$anonfun$1.apply(ApplicationProvider.scala:157) ~[play_2.11-2.3.9.jar:2.3.9]
+	at play.core.ReloadableApplication$$anonfun$get$1$$anonfun$apply$1$$anonfun$1.apply(ApplicationProvider.scala:130) ~[play_2.11-2.3.9.jar:2.3.9]
+	at scala.Option.map(Option.scala:146) ~[scala-library-2.11.6.jar:na]
+	at play.core.ReloadableApplication$$anonfun$get$1$$anonfun$apply$1.apply(ApplicationProvider.scala:130) ~[play_2.11-2.3.9.jar:2.3.9]
+	at play.core.ReloadableApplication$$anonfun$get$1$$anonfun$apply$1.apply(ApplicationProvider.scala:128) ~[play_2.11-2.3.9.jar:2.3.9]
+	at scala.util.Success.flatMap(Try.scala:230) ~[scala-library-2.11.6.jar:na]
+	at play.core.ReloadableApplication$$anonfun$get$1.apply(ApplicationProvider.scala:128) ~[play_2.11-2.3.9.jar:2.3.9]
+	at play.core.ReloadableApplication$$anonfun$get$1.apply(ApplicationProvider.scala:120) ~[play_2.11-2.3.9.jar:2.3.9]
+	at scala.concurrent.impl.Future$PromiseCompletingRunnable.liftedTree1$1(Future.scala:24) ~[scala-library-2.11.6.jar:na]
+	at scala.concurrent.impl.Future$PromiseCompletingRunnable.run(Future.scala:24) ~[scala-library-2.11.6.jar:na]
+	at scala.concurrent.forkjoin.ForkJoinTask$AdaptedRunnableAction.exec(ForkJoinTask.java:1361) ~[scala-library-2.11.6.jar:na]
+	at scala.concurrent.forkjoin.ForkJoinTask.doExec(ForkJoinTask.java:260) ~[scala-library-2.11.6.jar:na]
+	at scala.concurrent.forkjoin.ForkJoinPool$WorkQueue.runTask(ForkJoinPool.java:1339) ~[scala-library-2.11.6.jar:na]
+	at scala.concurrent.forkjoin.ForkJoinPool.runWorker(ForkJoinPool.java:1979) ~[scala-library-2.11.6.jar:na]
+	at scala.concurrent.forkjoin.ForkJoinWorkerThread.run(ForkJoinWorkerThread.java:107) ~[scala-library-2.11.6.jar:na]
+
+2015-08-02 14:06:40,196 - [WARN] - from play in play-internal-execution-context-1 
+Error stopping plugin
+java.lang.NullPointerException: null
+	at play.libs.ws.ning.NingWSPlugin.onStop(NingWSPlugin.java:31) ~[play-java-ws_2.11-2.3.9.jar:2.3.9]
+	at play.api.Play$$anonfun$stop$1$$anonfun$apply$1$$anonfun$apply$mcV$sp$2.apply(Play.scala:108) [play_2.11-2.3.9.jar:2.3.9]
+	at play.api.Play$$anonfun$stop$1$$anonfun$apply$1$$anonfun$apply$mcV$sp$2.apply(Play.scala:107) [play_2.11-2.3.9.jar:2.3.9]
+	at scala.collection.immutable.List.foreach(List.scala:381) [scala-library-2.11.6.jar:na]
+	at play.api.Play$$anonfun$stop$1$$anonfun$apply$1.apply$mcV$sp(Play.scala:107) [play_2.11-2.3.9.jar:2.3.9]
+	at play.api.Play$$anonfun$stop$1$$anonfun$apply$1.apply(Play.scala:107) [play_2.11-2.3.9.jar:2.3.9]
+	at play.api.Play$$anonfun$stop$1$$anonfun$apply$1.apply(Play.scala:107) [play_2.11-2.3.9.jar:2.3.9]
+	at play.utils.Threads$.withContextClassLoader(Threads.scala:21) [play_2.11-2.3.9.jar:2.3.9]
+	at play.api.Play$$anonfun$stop$1.apply(Play.scala:106) [play_2.11-2.3.9.jar:2.3.9]
+	at play.api.Play$$anonfun$stop$1.apply(Play.scala:105) [play_2.11-2.3.9.jar:2.3.9]
 	at scala.Option.map(Option.scala:146) [scala-library-2.11.6.jar:na]
-	at play.core.server.netty.PlayDefaultUpstreamHandler$$anonfun$3.applyOrElse(PlayDefaultUpstreamHandler.scala:320) [play_2.11-2.3.9.jar:2.3.9]
-	at play.core.server.netty.PlayDefaultUpstreamHandler$$anonfun$3.applyOrElse(PlayDefaultUpstreamHandler.scala:316) [play_2.11-2.3.9.jar:2.3.9]
-	at scala.concurrent.Future$$anonfun$recoverWith$1.apply(Future.scala:344) [scala-library-2.11.6.jar:na]
-	at scala.concurrent.Future$$anonfun$recoverWith$1.apply(Future.scala:343) [scala-library-2.11.6.jar:na]
-	at scala.concurrent.impl.CallbackRunnable.run(Promise.scala:32) [scala-library-2.11.6.jar:na]
-	at play.api.libs.iteratee.Execution$trampoline$.execute(Execution.scala:46) [play-iteratees_2.11-2.3.9.jar:2.3.9]
-	at scala.concurrent.impl.CallbackRunnable.executeWithValue(Promise.scala:40) [scala-library-2.11.6.jar:na]
-	at scala.concurrent.impl.Promise$DefaultPromise.tryComplete(Promise.scala:248) [scala-library-2.11.6.jar:na]
-	at scala.concurrent.Promise$class.complete(Promise.scala:55) [scala-library-2.11.6.jar:na]
-	at scala.concurrent.impl.Promise$DefaultPromise.complete(Promise.scala:153) [scala-library-2.11.6.jar:na]
-	at scala.concurrent.impl.Future$PromiseCompletingRunnable.run(Future.scala:23) [scala-library-2.11.6.jar:na]
-	at akka.dispatch.TaskInvocation.run(AbstractDispatcher.scala:41) [akka-actor_2.11-2.3.4.jar:na]
-	at akka.dispatch.ForkJoinExecutorConfigurator$AkkaForkJoinTask.exec(AbstractDispatcher.scala:393) [akka-actor_2.11-2.3.4.jar:na]
+	at play.api.Play$.stop(Play.scala:105) [play_2.11-2.3.9.jar:2.3.9]
+	at play.core.ReloadableApplication$$anonfun$get$1$$anonfun$apply$1$$anonfun$1.apply(ApplicationProvider.scala:142) [play_2.11-2.3.9.jar:2.3.9]
+	at play.core.ReloadableApplication$$anonfun$get$1$$anonfun$apply$1$$anonfun$1.apply(ApplicationProvider.scala:130) [play_2.11-2.3.9.jar:2.3.9]
+	at scala.Option.map(Option.scala:146) [scala-library-2.11.6.jar:na]
+	at play.core.ReloadableApplication$$anonfun$get$1$$anonfun$apply$1.apply(ApplicationProvider.scala:130) [play_2.11-2.3.9.jar:2.3.9]
+	at play.core.ReloadableApplication$$anonfun$get$1$$anonfun$apply$1.apply(ApplicationProvider.scala:128) [play_2.11-2.3.9.jar:2.3.9]
+	at scala.util.Success.flatMap(Try.scala:230) [scala-library-2.11.6.jar:na]
+	at play.core.ReloadableApplication$$anonfun$get$1.apply(ApplicationProvider.scala:128) [play_2.11-2.3.9.jar:2.3.9]
+	at play.core.ReloadableApplication$$anonfun$get$1.apply(ApplicationProvider.scala:120) [play_2.11-2.3.9.jar:2.3.9]
+	at scala.concurrent.impl.Future$PromiseCompletingRunnable.liftedTree1$1(Future.scala:24) [scala-library-2.11.6.jar:na]
+	at scala.concurrent.impl.Future$PromiseCompletingRunnable.run(Future.scala:24) [scala-library-2.11.6.jar:na]
+	at scala.concurrent.forkjoin.ForkJoinTask$AdaptedRunnableAction.exec(ForkJoinTask.java:1361) [scala-library-2.11.6.jar:na]
 	at scala.concurrent.forkjoin.ForkJoinTask.doExec(ForkJoinTask.java:260) [scala-library-2.11.6.jar:na]
 	at scala.concurrent.forkjoin.ForkJoinPool$WorkQueue.runTask(ForkJoinPool.java:1339) [scala-library-2.11.6.jar:na]
 	at scala.concurrent.forkjoin.ForkJoinPool.runWorker(ForkJoinPool.java:1979) [scala-library-2.11.6.jar:na]
 	at scala.concurrent.forkjoin.ForkJoinWorkerThread.run(ForkJoinWorkerThread.java:107) [scala-library-2.11.6.jar:na]
-Caused by: java.lang.NullPointerException: null
-	at models.RandChat.newUnread(RandChat.java:188) ~[classes/:na]
-	at controllers.Application.sendMessage(Application.java:246) ~[classes/:2.3.9]
-	at Routes$$anonfun$routes$1$$anonfun$applyOrElse$29$$anonfun$apply$29.apply(routes_routing.scala:473) ~[classes/:na]
-	at Routes$$anonfun$routes$1$$anonfun$applyOrElse$29$$anonfun$apply$29.apply(routes_routing.scala:473) ~[classes/:na]
-	at play.core.Router$HandlerInvokerFactory$$anon$4.resultCall(Router.scala:264) ~[play_2.11-2.3.9.jar:2.3.9]
-	at play.core.Router$HandlerInvokerFactory$JavaActionInvokerFactory$$anon$15$$anon$1.invocation(Router.scala:255) ~[play_2.11-2.3.9.jar:2.3.9]
-	at play.core.j.JavaAction$$anon$1.call(JavaAction.scala:55) ~[play_2.11-2.3.9.jar:2.3.9]
-	at play.core.j.JavaAction$$anonfun$11.apply(JavaAction.scala:82) ~[play_2.11-2.3.9.jar:2.3.9]
-	at play.core.j.JavaAction$$anonfun$11.apply(JavaAction.scala:82) ~[play_2.11-2.3.9.jar:2.3.9]
-	at scala.concurrent.impl.Future$PromiseCompletingRunnable.liftedTree1$1(Future.scala:24) [scala-library-2.11.6.jar:na]
-	at scala.concurrent.impl.Future$PromiseCompletingRunnable.run(Future.scala:24) [scala-library-2.11.6.jar:na]
-	at play.core.j.HttpExecutionContext$$anon$2.run(HttpExecutionContext.scala:40) ~[play_2.11-2.3.9.jar:2.3.9]
-	at play.api.libs.iteratee.Execution$trampoline$.execute(Execution.scala:46) [play-iteratees_2.11-2.3.9.jar:2.3.9]
-	at play.core.j.HttpExecutionContext.execute(HttpExecutionContext.scala:32) ~[play_2.11-2.3.9.jar:2.3.9]
-	at scala.concurrent.impl.Future$.apply(Future.scala:31) ~[scala-library-2.11.6.jar:na]
-	at scala.concurrent.Future$.apply(Future.scala:492) ~[scala-library-2.11.6.jar:na]
-	at play.core.j.JavaAction$class.apply(JavaAction.scala:82) ~[play_2.11-2.3.9.jar:2.3.9]
-	at play.core.Router$HandlerInvokerFactory$JavaActionInvokerFactory$$anon$15$$anon$1.apply(Router.scala:252) ~[play_2.11-2.3.9.jar:2.3.9]
-	at play.api.mvc.Action$$anonfun$apply$1$$anonfun$apply$4$$anonfun$apply$5.apply(Action.scala:130) ~[play_2.11-2.3.9.jar:2.3.9]
-	at play.api.mvc.Action$$anonfun$apply$1$$anonfun$apply$4$$anonfun$apply$5.apply(Action.scala:130) ~[play_2.11-2.3.9.jar:2.3.9]
-	at play.utils.Threads$.withContextClassLoader(Threads.scala:21) ~[play_2.11-2.3.9.jar:2.3.9]
-	at play.api.mvc.Action$$anonfun$apply$1$$anonfun$apply$4.apply(Action.scala:129) ~[play_2.11-2.3.9.jar:2.3.9]
-	at play.api.mvc.Action$$anonfun$apply$1$$anonfun$apply$4.apply(Action.scala:128) ~[play_2.11-2.3.9.jar:2.3.9]
-	at scala.Option.map(Option.scala:146) [scala-library-2.11.6.jar:na]
-	at play.api.mvc.Action$$anonfun$apply$1.apply(Action.scala:128) ~[play_2.11-2.3.9.jar:2.3.9]
-	at play.api.mvc.Action$$anonfun$apply$1.apply(Action.scala:121) ~[play_2.11-2.3.9.jar:2.3.9]
-	at play.api.libs.iteratee.Iteratee$$anonfun$mapM$1.apply(Iteratee.scala:483) ~[play-iteratees_2.11-2.3.9.jar:2.3.9]
-	at play.api.libs.iteratee.Iteratee$$anonfun$mapM$1.apply(Iteratee.scala:483) ~[play-iteratees_2.11-2.3.9.jar:2.3.9]
-	at play.api.libs.iteratee.Iteratee$$anonfun$flatMapM$1.apply(Iteratee.scala:519) ~[play-iteratees_2.11-2.3.9.jar:2.3.9]
-	at play.api.libs.iteratee.Iteratee$$anonfun$flatMapM$1.apply(Iteratee.scala:519) ~[play-iteratees_2.11-2.3.9.jar:2.3.9]
-	at play.api.libs.iteratee.Iteratee$$anonfun$flatMap$1$$anonfun$apply$14.apply(Iteratee.scala:496) ~[play-iteratees_2.11-2.3.9.jar:2.3.9]
-	at play.api.libs.iteratee.Iteratee$$anonfun$flatMap$1$$anonfun$apply$14.apply(Iteratee.scala:496) ~[play-iteratees_2.11-2.3.9.jar:2.3.9]
-	at scala.concurrent.impl.Future$PromiseCompletingRunnable.liftedTree1$1(Future.scala:24) [scala-library-2.11.6.jar:na]
-	at scala.concurrent.impl.Future$PromiseCompletingRunnable.run(Future.scala:24) [scala-library-2.11.6.jar:na]
-	... 6 common frames omitted
 
-2015-08-02 11:01:21,288 - [INFO] - from play in play-internal-execution-context-90 
-database [default] connected at jdbc:h2:mem:play
+2015-08-02 14:06:40,278 - [INFO] - from play in play-internal-execution-context-1 
+database [default] connected at jdbc:postgresql://localhost:5432/postgres
 
-2015-08-02 11:01:21,512 - [INFO] - from play in play-internal-execution-context-90 
-Application started (Dev)
-
-2015-08-02 11:01:30,171 - [INFO] - from play in play-internal-execution-context-102 
-database [default] connected at jdbc:h2:mem:play
-
-2015-08-02 11:01:30,230 - [INFO] - from play in play-internal-execution-context-102 
-Application started (Dev)
-
-2015-08-02 11:01:41,645 - [INFO] - from play in play-internal-execution-context-102 
-database [default] connected at jdbc:h2:mem:play
-
-2015-08-02 11:01:41,702 - [INFO] - from play in play-internal-execution-context-102 
-Application started (Dev)
-
-2015-08-02 11:01:55,865 - [INFO] - from play in play-internal-execution-context-104 
-database [default] connected at jdbc:h2:mem:play
-
-2015-08-02 11:01:55,925 - [INFO] - from play in play-internal-execution-context-104 
-Application started (Dev)
-
-2015-08-02 11:02:14,612 - [INFO] - from play in play-internal-execution-context-103 
-database [default] connected at jdbc:h2:mem:play
-
-2015-08-02 11:02:14,671 - [INFO] - from play in play-internal-execution-context-103 
-Application started (Dev)
-
-2015-08-02 11:16:49,268 - [INFO] - from play in play-internal-execution-context-90 
-database [default] connected at jdbc:h2:mem:play
-
-2015-08-02 11:16:49,501 - [INFO] - from play in play-internal-execution-context-90 
-Application started (Dev)
-
-2015-08-02 11:18:51,857 - [INFO] - from play in play-internal-execution-context-90 
-database [default] connected at jdbc:h2:mem:play
-
-2015-08-02 11:18:51,913 - [INFO] - from play in play-internal-execution-context-90 
-Application started (Dev)
-
-2015-08-02 11:19:20,391 - [INFO] - from play in play-internal-execution-context-90 
-database [default] connected at jdbc:h2:mem:play
-
-2015-08-02 11:19:20,459 - [INFO] - from play in play-internal-execution-context-90 
-Application started (Dev)
-
-2015-08-02 11:19:41,146 - [INFO] - from play in play-internal-execution-context-90 
-database [default] connected at jdbc:h2:mem:play
-
-2015-08-02 11:19:41,346 - [INFO] - from play in play-internal-execution-context-90 
-Application started (Dev)
-
-2015-08-02 11:20:11,952 - [INFO] - from play in play-internal-execution-context-90 
-database [default] connected at jdbc:h2:mem:play
-
-2015-08-02 11:20:12,005 - [INFO] - from play in play-internal-execution-context-90 
-Application started (Dev)
-
-2015-08-02 11:20:45,065 - [INFO] - from play in play-internal-execution-context-90 
-database [default] connected at jdbc:h2:mem:play
-
-2015-08-02 11:20:45,130 - [INFO] - from play in play-internal-execution-context-90 
-Application started (Dev)
-
-2015-08-02 11:21:21,010 - [INFO] - from play in play-internal-execution-context-90 
-database [default] connected at jdbc:h2:mem:play
-
-2015-08-02 11:21:21,074 - [INFO] - from play in play-internal-execution-context-90 
-Application started (Dev)
-
-2015-08-02 11:21:58,673 - [INFO] - from play in play-internal-execution-context-90 
-database [default] connected at jdbc:h2:mem:play
-
-2015-08-02 11:21:58,727 - [INFO] - from play in play-internal-execution-context-90 
-Application started (Dev)
-
-2015-08-02 11:23:05,854 - [INFO] - from play in play-internal-execution-context-90 
-database [default] connected at jdbc:h2:mem:play
-
-2015-08-02 11:23:06,099 - [INFO] - from play in play-internal-execution-context-90 
-Application started (Dev)
-
-2015-08-02 11:25:43,837 - [INFO] - from play in play-internal-execution-context-90 
-database [default] connected at jdbc:h2:mem:play
-
-2015-08-02 11:25:43,909 - [INFO] - from play in play-internal-execution-context-90 
-Application started (Dev)
-
-2015-08-02 11:27:13,455 - [INFO] - from play in play-internal-execution-context-90 
-database [default] connected at jdbc:h2:mem:play
-
-2015-08-02 11:27:13,708 - [INFO] - from play in play-internal-execution-context-90 
-Application started (Dev)
-
-2015-08-02 11:29:30,376 - [INFO] - from play in play-internal-execution-context-90 
-database [default] connected at jdbc:h2:mem:play
-
-2015-08-02 11:29:30,463 - [INFO] - from play in play-internal-execution-context-90 
-Application started (Dev)
-
-2015-08-02 11:31:05,417 - [INFO] - from play in play-internal-execution-context-108 
-database [default] connected at jdbc:h2:mem:play
-
-2015-08-02 11:31:05,661 - [INFO] - from play in play-internal-execution-context-108 
-Application started (Dev)
-
-2015-08-02 11:32:18,875 - [INFO] - from play in play-internal-execution-context-106 
-database [default] connected at jdbc:h2:mem:play
-
-2015-08-02 11:32:18,933 - [INFO] - from play in play-internal-execution-context-106 
-Application started (Dev)
-
-2015-08-02 11:33:14,488 - [INFO] - from play in play-internal-execution-context-106 
-database [default] connected at jdbc:h2:mem:play
-
-2015-08-02 11:33:14,548 - [INFO] - from play in play-internal-execution-context-106 
-Application started (Dev)
-
-2015-08-02 11:33:53,541 - [INFO] - from play in play-internal-execution-context-113 
-database [default] connected at jdbc:h2:mem:play
-
-2015-08-02 11:33:53,599 - [INFO] - from play in play-internal-execution-context-113 
-Application started (Dev)
-
-2015-08-02 11:34:17,769 - [INFO] - from play in play-internal-execution-context-117 
-database [default] connected at jdbc:h2:mem:play
-
-2015-08-02 11:34:17,825 - [INFO] - from play in play-internal-execution-context-117 
-Application started (Dev)
-
-2015-08-02 11:36:11,993 - [INFO] - from play in play-internal-execution-context-118 
-database [default] connected at jdbc:h2:mem:play
-
-2015-08-02 11:36:12,214 - [INFO] - from play in play-internal-execution-context-118 
-Application started (Dev)
-
-2015-08-02 11:36:55,859 - [INFO] - from play in play-internal-execution-context-118 
-database [default] connected at jdbc:h2:mem:play
-
-2015-08-02 11:36:55,936 - [INFO] - from play in play-internal-execution-context-118 
-Application started (Dev)
-
-2015-08-02 11:40:36,940 - [INFO] - from play in play-internal-execution-context-125 
-database [default] connected at jdbc:h2:mem:play
-
-2015-08-02 11:40:37,227 - [INFO] - from play in play-internal-execution-context-125 
-Application started (Dev)
-
-2015-08-02 11:40:51,346 - [INFO] - from play in play-internal-execution-context-126 
-database [default] connected at jdbc:h2:mem:play
-
-2015-08-02 11:40:51,400 - [INFO] - from play in play-internal-execution-context-126 
-Application started (Dev)
-
-2015-08-02 11:41:10,289 - [INFO] - from play in play-internal-execution-context-121 
-database [default] connected at jdbc:h2:mem:play
-
-2015-08-02 11:41:10,350 - [INFO] - from play in play-internal-execution-context-121 
-Application started (Dev)
-
-2015-08-02 11:41:18,864 - [INFO] - from play in play-internal-execution-context-129 
-database [default] connected at jdbc:h2:mem:play
-
-2015-08-02 11:41:18,922 - [INFO] - from play in play-internal-execution-context-129 
-Application started (Dev)
-
-2015-08-02 11:41:33,938 - [INFO] - from play in play-internal-execution-context-121 
-database [default] connected at jdbc:h2:mem:play
-
-2015-08-02 11:41:34,000 - [INFO] - from play in play-internal-execution-context-121 
-Application started (Dev)
-
-2015-08-02 11:42:09,326 - [INFO] - from play in play-internal-execution-context-129 
-database [default] connected at jdbc:h2:mem:play
-
-2015-08-02 11:42:09,386 - [INFO] - from play in play-internal-execution-context-129 
-Application started (Dev)
-
-2015-08-02 11:43:35,735 - [INFO] - from play in play-internal-execution-context-129 
-database [default] connected at jdbc:h2:mem:play
-
-2015-08-02 11:43:35,797 - [INFO] - from play in play-internal-execution-context-129 
-Application started (Dev)
-
-2015-08-02 11:46:44,632 - [INFO] - from play in play-internal-execution-context-131 
-database [default] connected at jdbc:h2:mem:play
-
-2015-08-02 11:46:44,915 - [INFO] - from play in play-internal-execution-context-131 
-Application started (Dev)
-
-2015-08-02 11:47:32,831 - [INFO] - from play in play-internal-execution-context-131 
-database [default] connected at jdbc:h2:mem:play
-
-2015-08-02 11:47:32,897 - [INFO] - from play in play-internal-execution-context-131 
-Application started (Dev)
-
-2015-08-02 11:48:16,940 - [INFO] - from play in play-internal-execution-context-131 
-database [default] connected at jdbc:h2:mem:play
-
-2015-08-02 11:48:17,000 - [INFO] - from play in play-internal-execution-context-131 
-Application started (Dev)
-
-2015-08-02 11:48:26,864 - [INFO] - from play in play-internal-execution-context-131 
-database [default] connected at jdbc:h2:mem:play
-
-2015-08-02 11:48:26,922 - [INFO] - from play in play-internal-execution-context-131 
-Application started (Dev)
-
-2015-08-02 11:48:33,392 - [INFO] - from play in play-internal-execution-context-131 
-database [default] connected at jdbc:h2:mem:play
-
-2015-08-02 11:48:33,462 - [INFO] - from play in play-internal-execution-context-131 
-Application started (Dev)
-
-2015-08-02 11:50:19,819 - [INFO] - from play in play-internal-execution-context-135 
-database [default] connected at jdbc:h2:mem:play
-
-2015-08-02 11:50:19,881 - [INFO] - from play in play-internal-execution-context-135 
-Application started (Dev)
-
-2015-08-02 11:52:29,401 - [INFO] - from play in play-internal-execution-context-135 
-database [default] connected at jdbc:h2:mem:play
-
-2015-08-02 11:52:29,650 - [INFO] - from play in play-internal-execution-context-135 
-Application started (Dev)
-
-2015-08-02 11:52:57,669 - [INFO] - from play in play-internal-execution-context-135 
-database [default] connected at jdbc:h2:mem:play
-
-2015-08-02 11:52:57,732 - [INFO] - from play in play-internal-execution-context-135 
-Application started (Dev)
-
-2015-08-02 11:53:38,401 - [INFO] - from play in play-internal-execution-context-135 
-database [default] connected at jdbc:h2:mem:play
-
-2015-08-02 11:53:38,469 - [INFO] - from play in play-internal-execution-context-135 
-Application started (Dev)
-
-2015-08-02 11:54:14,134 - [INFO] - from play in play-internal-execution-context-136 
-database [default] connected at jdbc:h2:mem:play
-
-2015-08-02 11:54:14,195 - [INFO] - from play in play-internal-execution-context-136 
-Application started (Dev)
-
-2015-08-02 11:54:35,633 - [INFO] - from play in play-internal-execution-context-141 
-database [default] connected at jdbc:h2:mem:play
-
-2015-08-02 11:54:35,691 - [INFO] - from play in play-internal-execution-context-141 
-Application started (Dev)
-
-2015-08-02 11:54:46,050 - [INFO] - from play in play-internal-execution-context-135 
-database [default] connected at jdbc:h2:mem:play
-
-2015-08-02 11:54:46,118 - [INFO] - from play in play-internal-execution-context-135 
-Application started (Dev)
-
-2015-08-02 11:54:54,500 - [INFO] - from play in play-internal-execution-context-141 
-database [default] connected at jdbc:h2:mem:play
-
-2015-08-02 11:54:54,563 - [INFO] - from play in play-internal-execution-context-141 
-Application started (Dev)
-
-2015-08-02 11:55:01,751 - [INFO] - from play in play-internal-execution-context-135 
-database [default] connected at jdbc:h2:mem:play
-
-2015-08-02 11:55:01,808 - [INFO] - from play in play-internal-execution-context-135 
-Application started (Dev)
-
-2015-08-02 11:55:13,393 - [INFO] - from play in play-internal-execution-context-141 
-database [default] connected at jdbc:h2:mem:play
-
-2015-08-02 11:55:13,462 - [INFO] - from play in play-internal-execution-context-141 
-Application started (Dev)
-
-2015-08-02 11:55:19,448 - [INFO] - from play in play-internal-execution-context-136 
-database [default] connected at jdbc:h2:mem:play
-
-2015-08-02 11:55:19,507 - [INFO] - from play in play-internal-execution-context-136 
-Application started (Dev)
-
-2015-08-02 11:55:36,635 - [INFO] - from play in play-internal-execution-context-141 
-database [default] connected at jdbc:h2:mem:play
-
-2015-08-02 11:55:36,696 - [INFO] - from play in play-internal-execution-context-141 
-Application started (Dev)
-
-2015-08-02 11:55:42,533 - [INFO] - from play in play-internal-execution-context-143 
-database [default] connected at jdbc:h2:mem:play
-
-2015-08-02 11:55:42,797 - [INFO] - from play in play-internal-execution-context-143 
-Application started (Dev)
-
-2015-08-02 11:55:47,593 - [INFO] - from play in play-internal-execution-context-136 
-database [default] connected at jdbc:h2:mem:play
-
-2015-08-02 11:55:47,662 - [INFO] - from play in play-internal-execution-context-136 
-Application started (Dev)
-
-2015-08-02 11:56:10,712 - [INFO] - from play in play-internal-execution-context-136 
-database [default] connected at jdbc:h2:mem:play
-
-2015-08-02 11:56:10,777 - [INFO] - from play in play-internal-execution-context-136 
-Application started (Dev)
-
-2015-08-02 11:57:05,497 - [INFO] - from play in play-internal-execution-context-145 
-database [default] connected at jdbc:h2:mem:play
-
-2015-08-02 11:57:05,555 - [INFO] - from play in play-internal-execution-context-145 
-Application started (Dev)
-
-2015-08-02 11:59:21,646 - [INFO] - from play in play-internal-execution-context-146 
-database [default] connected at jdbc:h2:mem:play
-
-2015-08-02 11:59:21,718 - [INFO] - from play in play-internal-execution-context-146 
-Application started (Dev)
-
-2015-08-02 12:01:05,094 - [INFO] - from play in play-internal-execution-context-151 
-database [default] connected at jdbc:h2:mem:play
-
-2015-08-02 12:01:05,373 - [INFO] - from play in play-internal-execution-context-151 
-Application started (Dev)
-
-2015-08-02 12:01:20,294 - [INFO] - from play in play-internal-execution-context-151 
-database [default] connected at jdbc:h2:mem:play
-
-2015-08-02 12:01:20,360 - [INFO] - from play in play-internal-execution-context-151 
-Application started (Dev)
-
-2015-08-02 12:01:28,199 - [INFO] - from play in play-internal-execution-context-153 
-database [default] connected at jdbc:h2:mem:play
-
-2015-08-02 12:01:28,257 - [INFO] - from play in play-internal-execution-context-153 
-Application started (Dev)
-
-2015-08-02 12:01:56,134 - [INFO] - from play in play-internal-execution-context-152 
-database [default] connected at jdbc:h2:mem:play
-
-2015-08-02 12:01:56,192 - [INFO] - from play in play-internal-execution-context-152 
-Application started (Dev)
-
-2015-08-02 12:04:21,022 - [INFO] - from play in play-internal-execution-context-162 
-database [default] connected at jdbc:h2:mem:play
-
-2015-08-02 12:04:21,272 - [INFO] - from play in play-internal-execution-context-162 
-Application started (Dev)
-
-2015-08-02 12:04:54,709 - [INFO] - from play in play-internal-execution-context-161 
-database [default] connected at jdbc:h2:mem:play
-
-2015-08-02 12:04:54,777 - [INFO] - from play in play-internal-execution-context-161 
-Application started (Dev)
-
-2015-08-02 12:05:45,993 - [INFO] - from play in play-internal-execution-context-156 
-database [default] connected at jdbc:h2:mem:play
-
-2015-08-02 12:05:46,057 - [INFO] - from play in play-internal-execution-context-156 
-Application started (Dev)
-
-2015-08-02 12:06:23,787 - [INFO] - from play in play-internal-execution-context-156 
-database [default] connected at jdbc:h2:mem:play
-
-2015-08-02 12:06:23,845 - [INFO] - from play in play-internal-execution-context-156 
-Application started (Dev)
-
-2015-08-02 12:06:45,783 - [INFO] - from play in play-internal-execution-context-156 
-database [default] connected at jdbc:h2:mem:play
-
-2015-08-02 12:06:45,839 - [INFO] - from play in play-internal-execution-context-156 
-Application started (Dev)
-
-2015-08-02 12:07:02,501 - [INFO] - from play in play-internal-execution-context-156 
-database [default] connected at jdbc:h2:mem:play
-
-2015-08-02 12:07:02,556 - [INFO] - from play in play-internal-execution-context-156 
-Application started (Dev)
-
-2015-08-02 12:07:55,554 - [INFO] - from play in play-internal-execution-context-156 
-database [default] connected at jdbc:h2:mem:play
-
-2015-08-02 12:07:55,630 - [INFO] - from play in play-internal-execution-context-156 
-Application started (Dev)
-
-2015-08-02 12:08:59,835 - [INFO] - from play in play-internal-execution-context-156 
-database [default] connected at jdbc:h2:mem:play
-
-2015-08-02 12:09:00,095 - [INFO] - from play in play-internal-execution-context-156 
+2015-08-02 14:06:40,438 - [INFO] - from play in play-internal-execution-context-1 
 Application started (Dev)
 

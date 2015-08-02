@@ -4,7 +4,7 @@
 # --- !Ups
 
 create table chat_history (
-  id                        bigint auto_increment not null,
+  id                        bigint not null,
   fromClient                varchar(255),
   toClient                  varchar(255),
   sentTime                  timestamp,
@@ -45,7 +45,7 @@ create table pair_history (
 ;
 
 create table unread (
-  id                        bigint auto_increment not null,
+  id                        bigint not null,
   clientEmail               varchar(255),
   friendRequestClientEmail  varchar(255),
   friendConfirmationClientEmail varchar(255),
@@ -54,26 +54,38 @@ create table unread (
   constraint pk_unread primary key (id))
 ;
 
+create sequence chat_history_seq;
+
+create sequence client_seq;
+
+create sequence interest_seq;
+
+create sequence unread_seq;
+
 
 
 
 # --- !Downs
 
-SET REFERENTIAL_INTEGRITY FALSE;
+drop table if exists chat_history cascade;
 
-drop table if exists chat_history;
+drop table if exists client cascade;
 
-drop table if exists client;
+drop table if exists client_interest cascade;
 
-drop table if exists client_interest;
+drop table if exists friend cascade;
 
-drop table if exists friend;
+drop table if exists interest cascade;
 
-drop table if exists interest;
+drop table if exists pair_history cascade;
 
-drop table if exists pair_history;
+drop table if exists unread cascade;
 
-drop table if exists unread;
+drop sequence if exists chat_history_seq;
 
-SET REFERENTIAL_INTEGRITY TRUE;
+drop sequence if exists client_seq;
+
+drop sequence if exists interest_seq;
+
+drop sequence if exists unread_seq;
 
