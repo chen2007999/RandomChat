@@ -16,13 +16,13 @@
 <button id="accept" type="submit" class="action">accept friend request</button>
 }
 
-<h3>Description:</h3>
-<h3>@client.description</h3>
+<h2>Description:</h2>
+<h2>@client.description</h2>
 
-<h3>Interests:</h3>
+<h2>Interests:</h2>
 @for(interestLike <- interestLikes) {
     @helper.form(routes.Application.interestPage(interestLike.interest)) {
-    <button type="submit" class="blue"> <h4>@interestLike.interest  @interestLike.likes</h4></button>
+    <button type="submit" class="blue"> <h4>@interestLike.interest - @interestLike.likes likes</h4></button>
     }
 }
 
@@ -51,6 +51,54 @@
 
 
 <style type="text/css">
+    h1 {
+    font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    font-size: 40px;
+    font-style: normal;
+    font-variant: normal;
+    font-weight: 500;
+    line-height: 26.3999996185303px;
+    }
+    h2 {
+    font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    font-size: 20px;
+    font-style: normal;
+    font-variant: normal;
+    font-weight: 500;
+    line-height: 20px;
+    }
+    h3 {
+    font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    font-size: 18px;
+    font-style: normal;
+    font-variant: normal;
+    font-weight: 500;
+    line-height: 15.3999996185303px;
+    }
+    p {
+    font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    font-size: 17px;
+    font-style: normal;
+    font-variant: normal;
+    font-weight: 400;
+    line-height: 20px;
+    }
+    blockquote {
+    font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    font-size: 21px;
+    font-style: normal;
+    font-variant: normal;
+    font-weight: 400;
+    line-height: 30px;
+    }
+    pre {
+    font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    font-size: 13px;
+    font-style: normal;
+    font-variant: normal;
+    font-weight: 400;
+    line-height: 18.5714302062988px;
+    }
     .action{
 
     border-style: solid;
