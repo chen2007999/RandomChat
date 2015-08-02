@@ -27,6 +27,16 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
+      <file leaf-file-name="Application.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/controllers/Application.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0">
+              <caret line="83" column="54" selection-start-line="83" selection-start-column="54" selection-end-line="83" selection-end-column="54" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
       <file leaf-file-name="ClientInterest.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/models/ClientInterest.java">
           <provider selected="true" editor-type-id="text-editor">
@@ -36,18 +46,6 @@
                 <element signature="e#1720#1728#0" expanded="true" />
                 <element signature="e#2028#2043#0" expanded="true" />
                 <element signature="e#2333#2348#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="ChatPair.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/models/ChatPair.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="32" column="22" selection-start-line="32" selection-start-column="22" selection-end-line="32" selection-end-column="22" />
-              <folding>
-                <element signature="imports" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -75,25 +73,25 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="RandChat.java" pinned="false" current-in-tab="false">
+      <file leaf-file-name="RandChat.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/models/RandChat.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="186" column="49" selection-start-line="186" selection-start-column="49" selection-end-line="186" selection-end-column="49" />
+            <state vertical-scroll-proportion="0.20059435">
+              <caret line="29" column="0" selection-start-line="29" selection-start-column="0" selection-end-line="29" selection-end-column="0" />
               <folding>
                 <element signature="e#331#341#0" expanded="true" />
-                <element signature="e#2957#2975#0" expanded="true" />
-                <element signature="e#7363#7371#0" expanded="true" />
-                <element signature="e#7669#7677#0" expanded="true" />
+                <element signature="e#2963#2981#0" expanded="true" />
+                <element signature="e#7369#7377#0" expanded="true" />
+                <element signature="e#7675#7683#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Unread.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="Unread.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/models/Unread.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.7578009">
+            <state vertical-scroll-proportion="0.0">
               <caret line="107" column="68" selection-start-line="107" selection-start-column="68" selection-end-line="107" selection-end-column="68" />
               <folding>
                 <element signature="e#3349#3364#0" expanded="true" />
@@ -185,7 +183,6 @@
         <option value="$PROJECT_DIR$/app/views/randChatWebSocket.scala.js" />
         <option value="$PROJECT_DIR$/app/views/registration.scala.html" />
         <option value="$PROJECT_DIR$/app/views/landing.scala.html" />
-        <option value="$PROJECT_DIR$/app/controllers/Application.java" />
         <option value="$PROJECT_DIR$/app/views/message.scala.html" />
         <option value="$PROJECT_DIR$/app/views/randChat.scala.html" />
         <option value="$PROJECT_DIR$/app/views/friendList.scala.html" />
@@ -211,8 +208,9 @@
         <option value="$PROJECT_DIR$/app/models/ChatHistory.java" />
         <option value="$PROJECT_DIR$/app/models/ClientInterest.java" />
         <option value="$PROJECT_DIR$/app/models/Friend.java" />
-        <option value="$PROJECT_DIR$/app/models/RandChat.java" />
         <option value="$PROJECT_DIR$/app/models/Unread.java" />
+        <option value="$PROJECT_DIR$/app/controllers/Application.java" />
+        <option value="$PROJECT_DIR$/app/models/RandChat.java" />
       </list>
     </option>
   </component>
@@ -802,14 +800,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/controllers/Application.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="214" column="44" selection-start-line="214" selection-start-column="44" selection-end-line="214" selection-end-column="44" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/views/randChat.scala.html">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-17.041666">
@@ -1132,25 +1122,33 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/models/RandChat.java">
+    <entry file="file://$PROJECT_DIR$/app/models/Unread.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
-          <caret line="186" column="49" selection-start-line="186" selection-start-column="49" selection-end-line="186" selection-end-column="49" />
+          <caret line="107" column="68" selection-start-line="107" selection-start-column="68" selection-end-line="107" selection-end-column="68" />
           <folding>
-            <element signature="e#331#341#0" expanded="true" />
-            <element signature="e#2957#2975#0" expanded="true" />
-            <element signature="e#7363#7371#0" expanded="true" />
-            <element signature="e#7669#7677#0" expanded="true" />
+            <element signature="e#3349#3364#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/models/Unread.java">
+    <entry file="file://$PROJECT_DIR$/app/controllers/Application.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.7578009">
-          <caret line="107" column="68" selection-start-line="107" selection-start-column="68" selection-end-line="107" selection-end-column="68" />
+        <state vertical-scroll-proportion="0.0">
+          <caret line="83" column="54" selection-start-line="83" selection-start-column="54" selection-end-line="83" selection-end-column="54" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/models/RandChat.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.20059435">
+          <caret line="29" column="0" selection-start-line="29" selection-start-column="0" selection-end-line="29" selection-end-column="0" />
           <folding>
-            <element signature="e#3349#3364#0" expanded="true" />
+            <element signature="e#331#341#0" expanded="true" />
+            <element signature="e#2963#2981#0" expanded="true" />
+            <element signature="e#7369#7377#0" expanded="true" />
+            <element signature="e#7675#7683#0" expanded="true" />
           </folding>
         </state>
       </provider>

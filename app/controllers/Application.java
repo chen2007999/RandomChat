@@ -73,7 +73,7 @@ public class Application extends Controller {
         return ok(landing.render());
     }
 
-    public  static Result register(String error) {
+    public static Result register(String error) {
         return ok(registration.render(Client.find.findList(), error));
     }
 
@@ -81,7 +81,7 @@ public class Application extends Controller {
 
     // Websocket interface
     public static WebSocket<String> wsInterface(){
-        Client currentClient = currentClient();
+        final Client  currentClient = currentClient();
         return new WebSocket<String>(){
             // called when websocket handshake is done
             public void onReady(WebSocket.In<String> in, WebSocket.Out<String> out){

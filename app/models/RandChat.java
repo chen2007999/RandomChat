@@ -16,7 +16,7 @@ public class RandChat {
 
     public static void start(WebSocket.In<String> in, WebSocket.Out<String> out, Client client) {
         out.write("Waiting to be connected to a user.");
-        ClientConnection clientConnection1 = setUpConnection(out, client);
+        final ClientConnection clientConnection1 = setUpConnection(out, client);
 
         // Server responses
        in.onMessage(new F.Callback<String>() {
