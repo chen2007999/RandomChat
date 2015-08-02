@@ -1,10 +1,11 @@
 @(interest : models.Interest, LikesNum : Integer)
 
 
-<h2>@interest.interest<h2>     <h2>@LikesNum likes</h2>
+<h1>@interest.interest<h1>
+    <h2>@LikesNum likes</h2>
 
 
-<h3>Description: @interest.description</h3>
+<h2>Description: @interest.description</h2>
 
     @helper.form(routes.Application.likeInterest(interest.interest)) {
     <button type="submit" class="like">Like this!</button>
@@ -34,7 +35,7 @@
         }
         h3 {
         font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
-        font-size: 14px;
+        font-size: 15px;
         font-style: normal;
         font-variant: normal;
         font-weight: 500;
@@ -108,5 +109,8 @@
         font-size: 15px;
         background-color: #397CAC;
         border-color: #326E99;
+        }
+        body {
+        background-image: url('https://unsplash.imgix.net/40/10294420724_0300cf921d_o.jpg?dpr=2&fit=crop&fm=jpg&h=700&q=75&w=1050');
         }
     </style>
