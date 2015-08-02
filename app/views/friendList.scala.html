@@ -4,7 +4,7 @@
 
 @for(friend <- friends) {
     @helper.form(routes.Application.findFriendProfileWithClientEmail(friend.email, "nothing")) {
-    <button type="submit" class="green"> <h2>@friend.name   @friend.description</h2></button>
+    <button type="submit" class="green"> <h2>@friend.name ← @friend.description</h2></button>
     }
 }
 

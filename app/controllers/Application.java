@@ -212,7 +212,7 @@ public class Application extends Controller {
         String description = getClient().getDescription();
         String email = session().get("clientEmail");
         Client.updateDescription(email, description);
-        return ok(description);
+        return ok(editProfileSuccess.render());
     }
 
     public static Result logOut() {
