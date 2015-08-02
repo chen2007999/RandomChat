@@ -37,20 +37,6 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="ClientInterest.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/models/ClientInterest.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="69" column="70" selection-start-line="69" selection-start-column="70" selection-end-line="69" selection-end-column="70" />
-              <folding>
-                <element signature="e#1720#1728#0" expanded="true" />
-                <element signature="e#2028#2043#0" expanded="true" />
-                <element signature="e#2333#2348#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="RandChat.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/models/RandChat.java">
           <provider selected="true" editor-type-id="text-editor">
@@ -78,11 +64,21 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="application.conf" pinned="false" current-in-tab="true">
+      <file leaf-file-name="application.conf" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/conf/application.conf">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.31203565">
+            <state vertical-scroll-proportion="0.0">
               <caret line="14" column="23" selection-start-line="14" selection-start-column="23" selection-end-line="14" selection-end-column="23" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="landing.scala.html" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/app/views/landing.scala.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.5285054">
+              <caret line="28" column="101" selection-start-line="28" selection-start-column="101" selection-end-line="28" selection-end-column="101" />
               <folding />
             </state>
           </provider>
@@ -179,7 +175,6 @@
         <option value="$PROJECT_DIR$/app/models/Interest.java" />
         <option value="$PROJECT_DIR$/app/views/randChatWebSocket.scala.js" />
         <option value="$PROJECT_DIR$/app/views/registration.scala.html" />
-        <option value="$PROJECT_DIR$/app/views/landing.scala.html" />
         <option value="$PROJECT_DIR$/app/views/message.scala.html" />
         <option value="$PROJECT_DIR$/app/views/randChat.scala.html" />
         <option value="$PROJECT_DIR$/app/views/friendList.scala.html" />
@@ -209,6 +204,7 @@
         <option value="$PROJECT_DIR$/app/models/RandChat.java" />
         <option value="$PROJECT_DIR$/project/build.properties" />
         <option value="$PROJECT_DIR$/conf/application.conf" />
+        <option value="$PROJECT_DIR$/app/views/landing.scala.html" />
       </list>
     </option>
   </component>
@@ -223,8 +219,8 @@
     <order />
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="600" />
-    <option name="y" value="39" />
+    <option name="x" value="16" />
+    <option name="y" value="25" />
     <option name="width" value="1440" />
     <option name="height" value="793" />
   </component>
@@ -670,7 +666,7 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="600" y="39" width="1440" height="793" extended-state="0" />
+    <frame x="16" y="25" width="1440" height="793" extended-state="0" />
     <editor active="true" />
     <layout>
       <window_info id="Palette&#9;" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
@@ -689,7 +685,7 @@
       <window_info id="SBT" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.21131805" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.21131805" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Gradle" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
@@ -898,16 +894,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/landing.scala.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-4.2916665">
-          <caret line="28" column="133" selection-start-line="28" selection-start-column="133" selection-end-line="28" selection-end-column="133" />
-          <folding>
-            <element signature="n#style#0;n#div#0;n#div#0;n#div#0;n#head#0;n#!!top" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/views/message.scala.html">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-21.166666">
@@ -1067,7 +1053,7 @@
         <state vertical-scroll-proportion="0.0">
           <caret line="61" column="42" selection-start-line="61" selection-start-column="42" selection-end-line="61" selection-end-column="42" />
           <folding>
-            <element signature="e#1827#1835#0" expanded="true" />
+            <element signature="e#1827#1835#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -1159,8 +1145,16 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/conf/application.conf">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.31203565">
+        <state vertical-scroll-proportion="0.0">
           <caret line="14" column="23" selection-start-line="14" selection-start-column="23" selection-end-line="14" selection-end-column="23" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/landing.scala.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.5285054">
+          <caret line="28" column="101" selection-start-line="28" selection-start-column="101" selection-end-line="28" selection-end-column="101" />
           <folding />
         </state>
       </provider>
