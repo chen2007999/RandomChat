@@ -11,6 +11,8 @@ GET     /assets/*file               controllers.Assets.at(path="/public", file)
 # Check client's login information and determines success or failure
 POST   /logIn                             controllers.Application.logIn()
 
+POST    /logOut                            controllers.Application.logOut()
+
 # Take client's registration information and create a new account
 GET    /register                          controllers.Application.register(error:String?="")
 
@@ -26,11 +28,32 @@ POST   /createClient                        controllers.Application.createClient
 POST   /deleteClient/:email/delete          controllers.Application.deleteClientFromDB(email:String)
 
 # Display all clients in the database
-GET    /clients                           controllers.Application.displayAllClientsFromDB()
+GET    /clients                              controllers.Application.displayAllClientsFromDB()
 
 
 
-GET /wsInterface                controllers.Application.wsInterface()
-GET /nextUser               controllers.Application.nextUser()
-GET /friendProfile             controllers.Application.friendProfile()
-GET /assets.javascript.ws.js     controllers.Application.wsJs()
+GET /wsInterface                                  controllers.Application.wsInterface()
+
+GET /friendProfile                                controllers.Application.friendProfile()
+GET /nextUser                                     controllers.Application.nextUser()
+GET /assets.javascript.randChatWebSocket.js                      controllers.Application.randChatWS()
+
+GET /addFriend/:clientEmail                        controllers.Application.addFriend(clientEmail:String)
+GET /acceptFriendRequest/:clientEmail  controllers.Application.acceptFriendRequest(clientEmail:String)
+
+GET /showUnread                                      controllers.Application.showUnread()
+GET /unreadNum                                        controllers.Application.unreadNum()
+GET /findFriendProfileWithClientEmail/:e/:k       controllers.Application.findFriendProfileWithClientEmail(e:String, k:String)
+
+GET /interestsListPage                                 controllers.Application.interestsListPage()
+GET /createInterestPage                                controllers.Application.createInterestPage()
+GET /createInterest                                   controllers.Application.createInterest()
+GET /interestPage/:interest                           controllers.Application.interestPage(interest:String)
+GET /likeInterest/:interest                            controllers.Application.likeInterest(interest:String)
+GET /myProfile                                        controllers.Application.myProfile()
+GET /editMyProfilePage                                controllers.Application.editMyProfilePage()
+GET /editMyProfile                                    controllers.Application.editMyProfile()
+GET /friendListPage                                   controllers.Application.friendListPage()
+
+GET /message/:clientEmail/:key/:number                controllers.Application.message(clientEmail:String, key:String, number:Integer)
+GET /sendMessage/:friendEmail                        controllers.Application.sendMessage(friendEmail:String)
