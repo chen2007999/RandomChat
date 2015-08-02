@@ -1,4 +1,4 @@
-name := """randChat"""
+name := """RandChat"""
 
 version := "1.0-SNAPSHOT"
 
@@ -14,5 +14,5 @@ libraryDependencies ++= Seq(
   javaJdbc,
   javaEbean,
   cache,
-  javaWs
-)
+
+)javaWs
