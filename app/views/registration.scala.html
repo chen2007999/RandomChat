@@ -28,7 +28,8 @@
             position: fixed;
             }
             #background {
-            background-image: url('https://unsplash.imgix.net/40/10294420724_0300cf921d_o.jpg?dpr=2&fit=crop&fm=jpg&h=700&q=75&w=1050');
+           background-size: 145% 175%;
+            background-image: url('https://vast-gorge-5265.herokuapp.com/assets/images/background.jpg');
             }
         </style>
             @if(error.length() >0){
@@ -50,7 +51,7 @@
 <script src="@routes.Assets.at("javascripts/parallax/mouse.parallax.js")"></script>
     <script>
     $(document).ready(function() {
-    				$('#background').mouseParallax({ moveFactor: 5 });
+    				$('#background').mouseParallax({ moveFactor: 2 });
     			});
     </script>
 <div class="container">
