@@ -1,6 +1,6 @@
-# RandChat is a web app designed to connect people with simialr background and interests in a random fashion.
+## RandChat is a web app designed to connect people with simialr background and interests in a random fashion.
 
-##URL: www.randchat.org
+###URL: www.randchat.org
 
 ###Main features:
 
@@ -25,4 +25,6 @@
 
 ######5. Network: Websocket 
 
+![alt tag](https://vast-gorge-5265.herokuapp.com/assets/images/background.jpg)
+![alt tag](https://vast-gorge-5265.herokuapp.com/assets/images/screenshot1.png)
 
