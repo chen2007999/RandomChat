@@ -10,17 +10,22 @@
 ######4. Users can choose to get connected with next user when connected.
 ![alt tag](https://vast-gorge-5265.herokuapp.com/assets/images/screenshot2.png)
 ######5. Users can view the other user's profile when connected.
-![alt tag](https://vast-gorge-5265.herokuapp.com/assets/images/screenshot3.png)
+
 ######6. Users can send friend request the other user when connected.
+![alt tag](https://vast-gorge-5265.herokuapp.com/assets/images/screenshot3.png)
 ######7. Users can create interest and like interest.
+######8. Users with common interests will get connected first.
 ![alt tag](https://vast-gorge-5265.herokuapp.com/assets/images/screenshot4.png)
 ![alt tag](https://vast-gorge-5265.herokuapp.com/assets/images/screenshot8.png)
-######8. Users with common interests will get connected first.
+
 ######9. User get notifications when he/she receives a friend request/confirmation or a new message.
+
+######10. Each user has a friend list.
 ![alt tag](https://vast-gorge-5265.herokuapp.com/assets/images/screenshot6.png)
-######10. User has a friend list.
+######11. User get notifications when he/she receives a friend request/confirmation or a new message.
+
 ![alt tag](https://vast-gorge-5265.herokuapp.com/assets/images/screenshot9.png)
-######11. Users can message their friends.
+######12. Users can message their friends.
 ![alt tag](https://vast-gorge-5265.herokuapp.com/assets/images/screenshot5.png)
 
 ###Architecture:
