@@ -18,7 +18,7 @@ public class RandChat {
         out.write("Waiting to be connected to a user.");
         final ClientConnection clientConnection1 = setUpConnection(out, client);
 
-        // Server responses
+        // Server notifies the pair when it receives a message from one of the connections
        in.onMessage(new F.Callback<String>() {
            public void invoke(String event) {
                if (clientConnection1.isPaired()) {
@@ -28,6 +28,7 @@ public class RandChat {
        });
 
 
+        // Server's response when one connection is closed
         in.onClose(new F.Callback0() {
             public void invoke() {
                 if (clientConnection1.isPaired()) {
@@ -80,6 +81,7 @@ public class RandChat {
     }
 
 
+    // Try to pair the current connection with a waiting connection
     private static void pairing(ClientConnection clientConnection1) {
         if(waiting.size() >= 2) {
             ClientConnection clientConnection2 = null;
@@ -125,7 +127,7 @@ public class RandChat {
         }
     }
 
-
+    // connect the current connection to next user
     public static void nextUser(Client client) {
         ClientConnection clientConnection1 = null;
         ClientConnection clientConnection2 = null;
@@ -147,7 +149,6 @@ public class RandChat {
             }
         }
 
-        System.out.println(chatPairs.size());
         // Previous pairing is no longer allowed
         if(clientConnection1 != null && clientConnection2 != null) {
             clientConnection1.setChatPair(null);
