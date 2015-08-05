@@ -1,19 +1,4 @@
-<<<<<<< HEAD
 ## RandChat is a web app designed to connect people with similar backgrounds and interests in a random fashion.
-=======
-## RandChat is a web app designed to connect people with simialr background and interests in a random fashion.
-###Architecture:
-
-######1. Hosting: Heroku
-
-######2. Database: PostgreSQL
-
-######3. Business logic: Play!2 framework for Java
-
-######4. Frontend: html + javascript + CSS 
-
-######5. Network: Websocket 
->>>>>>> 4020af6113f458f2f7698f44310f9164b70519c8
 
 ###Architecture:
 
