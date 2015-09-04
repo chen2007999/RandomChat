@@ -1,6 +1,8 @@
-## RandChat is a web app designed to connect people with similar backgrounds and interests in a random fashion.
+### RandomChat is a web app designed to connect people with similar backgrounds and interests in a random fashion.
 
-###Architecture:
+######(originally named as RandChat before people pointed out that RandChat sounds a bit evil..)
+
+####Architecture:
 
 ######1. Hosting: Heroku
 
@@ -14,7 +16,7 @@
 
 ![alt tag](https://vast-gorge-5265.herokuapp.com/assets/images/demo_pic1.png)
 
-###Main features:
+####Main features:
 
 ######1. Allowing users randomly get connected with another user.
 ######2. Users never get connected to people that have been connected with.
