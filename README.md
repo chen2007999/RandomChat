@@ -1,6 +1,6 @@
 ### RandomChat is a web app designed to connect people with similar backgrounds and interests in a random fashion.
 
-######(originally named as RandChat before people pointed out that RandChat sounds a bit evil..)
+######(RandomChat was originally named as RandChat before some people pointed out that RandChat sounds a bit evil.)
 
 ####Architecture:
 
